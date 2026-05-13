@@ -1,0 +1,2003 @@
+{
+  "entryPoints": [
+    {
+      "pageSlug": "/index",
+      "primaryKeyword": "Mediterranean restaurant Carmichael",
+      "supportingKeywords": [
+        "Armenian Georgian cuisine Sacramento",
+        "best kebabs in Carmichael",
+        "Yerevan restaurant Sacramento",
+        "authentic Caucasian food"
+      ],
+      "faqKeywords": [
+        "what is Armenian Georgian food",
+        "best Mediterranean food Carmichael"
+      ],
+      "intent": "navigational",
+      "competitionLevel": "medium",
+      "volume": 880,
+      "rationale": "The homepage targets the core brand identity and primary location. By combining Mediterranean and Caucasian terms, we capture broad local intent while establishing the niche."
+    },
+    {
+      "pageSlug": "/about",
+      "primaryKeyword": "authentic Armenian restaurant Sacramento",
+      "supportingKeywords": [
+        "history of Georgian cuisine",
+        "traditional Caucasian hospitality",
+        "handmade Mediterranean food",
+        "Yerevan Sac story"
+      ],
+      "faqKeywords": [
+        "who owns Yerevan Sac",
+        "traditional Armenian cooking methods"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Builds brand authority and trust by focusing on the 'handmade' and 'authentic' aspects highlighted in the UVP."
+    },
+    {
+      "pageSlug": "/contact-us",
+      "primaryKeyword": "Yerevan Sac location",
+      "supportingKeywords": [
+        "Mediterranean restaurant phone number",
+        "Carmichael restaurant directions",
+        "contact Armenian grill Sacramento"
+      ],
+      "faqKeywords": [
+        "restaurant hours Carmichael",
+        "parking at Yerevan Sac"
+      ],
+      "intent": "navigational",
+      "competitionLevel": "low",
+      "volume": 90,
+      "rationale": "Essential for local SEO and capturing users looking for direct contact information or physical location details."
+    },
+    {
+      "pageSlug": "/menu",
+      "primaryKeyword": "Armenian Georgian menu Sacramento",
+      "supportingKeywords": [
+        "Adjaruli Khachapuri Carmichael",
+        "Khinkali soup dumplings menu",
+        "lula kebab price",
+        "Mediterranean grill menu"
+      ],
+      "faqKeywords": [
+        "what is on a Georgian menu",
+        "gluten free Mediterranean options"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 450,
+      "rationale": "High transactional intent page targeting users looking for specific dishes like Khachapuri and Khinkali which are the restaurant's unique value propositions."
+    },
+    {
+      "pageSlug": "/reservations",
+      "primaryKeyword": "book a table Carmichael restaurant",
+      "supportingKeywords": [
+        "group dining Sacramento",
+        "private celebration venue Carmichael",
+        "restaurant table booking Sacramento",
+        "dinner reservations Carmichael"
+      ],
+      "faqKeywords": [
+        "how to book large groups",
+        "restaurant reservation policy"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 210,
+      "rationale": "Focuses on conversion for high-intent users looking to visit. Targets group dining keywords to increase average ticket price as per business research."
+    },
+    {
+      "pageSlug": "/gallery",
+      "primaryKeyword": "Georgian food photos Sacramento",
+      "supportingKeywords": [
+        "Mediterranean restaurant interior Carmichael",
+        "Khinkali pictures",
+        "cocktail bar photos Sacramento"
+      ],
+      "faqKeywords": [
+        "what does Adjaruli Khachapuri look like"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 110,
+      "rationale": "Visual confirmation of the 'premium' atmosphere and unique dishes to entice users in the consideration phase."
+    },
+    {
+      "pageSlug": "/guides/what-is-georgian-food",
+      "primaryKeyword": "traditional georgian food guide",
+      "supportingKeywords": [
+        "georgian cuisine overview",
+        "common georgian ingredients",
+        "georgian food sacramento"
+      ],
+      "faqKeywords": [
+        "what is the most popular food in georgia",
+        "is georgian food spicy"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 450,
+      "rationale": "Acts as the top-of-funnel entry point for users unfamiliar with the cuisine, establishing the restaurant as an authority."
+    },
+    {
+      "pageSlug": "/guides/khinkali-vs-manti-dumplings",
+      "primaryKeyword": "khinkali vs manti",
+      "supportingKeywords": [
+        "difference between armenian and georgian dumplings",
+        "traditional caucasian dumplings",
+        "manti dumplings guide"
+      ],
+      "faqKeywords": [
+        "what is the difference between manti and khinkali",
+        "are khinkali and manti the same"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 180,
+      "rationale": "Targets high-intent foodies comparing specific menu items; leverages the unique culinary monopoly of the brand."
+    },
+    {
+      "pageSlug": "/guides/how-to-eat-khinkali-guide",
+      "primaryKeyword": "how to eat khinkali",
+      "supportingKeywords": [
+        "khinkali etiquette",
+        "eating georgian soup dumplings",
+        "khinkali eating technique"
+      ],
+      "faqKeywords": [
+        "do you eat the top of khinkali",
+        "why don't you eat the khinkali handle"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 320,
+      "rationale": "High-engagement educational content that builds brand trust and prepares customers for the dining experience."
+    },
+    {
+      "pageSlug": "/guides/mediterranean-vs-caucasian-cuisine",
+      "primaryKeyword": "mediterranean vs georgian food",
+      "supportingKeywords": [
+        "middle eastern vs caucasian flavors",
+        "armenian food vs mediterranean food",
+        "caucasian cuisine characteristics"
+      ],
+      "faqKeywords": [
+        "is georgian food considered mediterranean",
+        "how is armenian food different from greek food"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 140,
+      "rationale": "Directly addresses the 'Blue Ocean' niche by explaining the distinction from common local competitors."
+    },
+    {
+      "pageSlug": "/guides/best-georgian-wines-pairing-guide",
+      "primaryKeyword": "georgian wine pairing guide",
+      "supportingKeywords": [
+        "kvevri wine pairings",
+        "best wine for khachapuri",
+        "armenian wine vs georgian wine"
+      ],
+      "faqKeywords": [
+        "what wine goes best with georgian food",
+        "what is kvevri wine"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 210,
+      "rationale": "Supports the high-margin wine program and targets users interested in the 'cradle of wine' history."
+    },
+    {
+      "pageSlug": "/guides/armenian-kebab-marination-secrets",
+      "primaryKeyword": "armenian kebab marination",
+      "supportingKeywords": [
+        "traditional lula kebab recipe",
+        "mangal grill techniques",
+        "armenian meat seasoning"
+      ],
+      "faqKeywords": [
+        "what makes armenian kebabs different",
+        "how to marinate meat for mangal"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 260,
+      "rationale": "Showcases the 'handmade craftsmanship' UVP and targets users searching for authentic grilling methods."
+    },
+    {
+      "pageSlug": "/guides/event-catering-cost-guide-sacramento",
+      "primaryKeyword": "catering cost per person sacramento",
+      "supportingKeywords": [
+        "mediterranean catering prices sacramento",
+        "wedding catering costs carmichael",
+        "affordable event catering sacramento"
+      ],
+      "faqKeywords": [
+        "how much does catering cost for 50 people in sacramento",
+        "what is included in catering prices"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "high",
+      "volume": 590,
+      "rationale": "Captures users in the planning phase for high-value group dining and catering services."
+    },
+    {
+      "pageSlug": "/guides/how-khachapuri-is-made",
+      "primaryKeyword": "how to make adjaruli khachapuri",
+      "supportingKeywords": [
+        "georgian cheese bread recipe",
+        "khachapuri dough secrets",
+        "authentic khachapuri ingredients"
+      ],
+      "faqKeywords": [
+        "what kind of cheese is in khachapuri",
+        "how do you eat the egg in khachapuri"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 880,
+      "rationale": "Targets the most viral and recognizable dish to drive traffic and local brand awareness."
+    },
+    {
+      "pageSlug": "/guides/history-of-the-mangal-grill",
+      "primaryKeyword": "history of mangal grill",
+      "supportingKeywords": [
+        "traditional caucasian grilling",
+        "origin of kebabs",
+        "middle eastern open flame cooking"
+      ],
+      "faqKeywords": [
+        "what is a mangal grill",
+        "where did the mangal originate"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 90,
+      "rationale": "Niche historical content that supports the 'authenticity' pillar of the brand's identity."
+    },
+    {
+      "pageSlug": "/guides/is-georgian-food-healthy",
+      "primaryKeyword": "is georgian food healthy",
+      "supportingKeywords": [
+        "mediterranean diet vs georgian food",
+        "georgian cuisine nutrition",
+        "healthy armenian dishes"
+      ],
+      "faqKeywords": [
+        "is khachapuri healthy",
+        "benefits of georgian walnuts and pomegranate"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 170,
+      "rationale": "Addresses health-conscious diners in the Sacramento/Fair Oaks demographic."
+    },
+    {
+      "pageSlug": "/guides/top-10-mediterranean-dishes-to-try",
+      "primaryKeyword": "best mediterranean dishes to try",
+      "supportingKeywords": [
+        "must try armenian food",
+        "popular georgian dishes",
+        "mediterranean food bucket list"
+      ],
+      "faqKeywords": [
+        "what should I order at a georgian restaurant",
+        "best mediterranean food for beginners"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 720,
+      "rationale": "A listicle format designed for high click-through rates and social sharing."
+    },
+    {
+      "pageSlug": "/guides/guide-to-armenian-coffee-culture",
+      "primaryKeyword": "armenian coffee culture",
+      "supportingKeywords": [
+        "how to make armenian coffee",
+        "armenian coffee vs turkish coffee",
+        "traditional armenian coffee service"
+      ],
+      "faqKeywords": [
+        "what is armenian coffee called",
+        "how do you drink armenian coffee"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 130,
+      "rationale": "Supports the secondary service of dessert and coffee to increase average ticket price."
+    },
+    {
+      "pageSlug": "/locations/carmichael",
+      "primaryKeyword": "mediterranean restaurant carmichael",
+      "supportingKeywords": [
+        "carmichael armenian food",
+        "georgian cuisine carmichael ca",
+        "best kebabs in carmichael",
+        "carmichael dining and cocktails"
+      ],
+      "faqKeywords": [
+        "where to eat in carmichael",
+        "best dinner spots carmichael",
+        "carmichael mediterranean grill alternative"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 480,
+      "rationale": "As the primary physical location, this page targets high-intent local diners looking for Mediterranean options while differentiating with Armenian/Georgian modifiers to beat generic local grills."
+    },
+    {
+      "pageSlug": "/locations/sacramento",
+      "primaryKeyword": "armenian georgian restaurant sacramento",
+      "supportingKeywords": [
+        "sacramento mediterranean dining",
+        "best khinkali sacramento",
+        "sacramento lula kebab",
+        "georgian wine sacramento"
+      ],
+      "faqKeywords": [
+        "authentic georgian food sacramento",
+        "where to find khachapuri in sacramento",
+        "sacramento mediterranean restaurant with bar"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "high",
+      "volume": 720,
+      "rationale": "Sacramento is the broader market. We use the unique niche (Armenian/Georgian) as the primary hook to capture high-value destination diners from the city center."
+    },
+    {
+      "pageSlug": "/locations/fair-oaks",
+      "primaryKeyword": "mediterranean food fair oaks",
+      "supportingKeywords": [
+        "fair oaks catering services",
+        "kebabs fair oaks ca",
+        "fair oaks group dining",
+        "mediterranean grill fair oaks"
+      ],
+      "faqKeywords": [
+        "restaurants near fair oaks village",
+        "fair oaks mediterranean delivery",
+        "best family restaurants fair oaks"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 210,
+      "rationale": "Fair Oaks is a high-income demographic adjacent to Carmichael. Focus is on quality dining and catering services for residential clusters."
+    },
+    {
+      "pageSlug": "/locations/arden-arcade",
+      "primaryKeyword": "arden-arcade mediterranean restaurant",
+      "supportingKeywords": [
+        "arden-arcade dinner spots",
+        "kebabs near arden mall",
+        "mediterranean catering arden-arcade",
+        "cocktail bar arden-arcade"
+      ],
+      "faqKeywords": [
+        "best restaurants arden-arcade ca",
+        "arden arcade mediterranean lunch",
+        "private dining arden-arcade"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 170,
+      "rationale": "Targets the professional and shopping demographic near Arden-Arcade, emphasizing the cocktail bar and evening atmosphere."
+    },
+    {
+      "pageSlug": "/locations/citrus-heights",
+      "primaryKeyword": "mediterranean catering citrus heights",
+      "supportingKeywords": [
+        "citrus heights armenian food",
+        "citrus heights kebab house",
+        "mediterranean restaurant citrus heights ca",
+        "party platters citrus heights"
+      ],
+      "faqKeywords": [
+        "citrus heights mediterranean delivery",
+        "best kebabs citrus heights",
+        "catering for events citrus heights"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Focuses on service-area expansion, specifically targeting catering and delivery intent for the Citrus Heights residential market."
+    },
+    {
+      "pageSlug": "/locations/roseville",
+      "primaryKeyword": "mediterranean catering roseville ca",
+      "supportingKeywords": [
+        "roseville armenian cuisine",
+        "roseville event catering",
+        "georgian food roseville",
+        "mediterranean party platters roseville"
+      ],
+      "faqKeywords": [
+        "best mediterranean catering roseville",
+        "roseville wedding catering mediterranean",
+        "where to buy khachapuri roseville"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 190,
+      "rationale": "Roseville is a lucrative catering market. Since the physical location is in Carmichael, this page captures the high-value 'event' and 'catering' searches in the North."
+    },
+    {
+      "pageSlug": "/areas-served/carmichael-mediterranean-restaurant",
+      "primaryKeyword": "mediterranean restaurant carmichael",
+      "supportingKeywords": [
+        "best mediterranean food carmichael ca",
+        "carmichael mediterranean dining",
+        "mediterranean grill carmichael"
+      ],
+      "faqKeywords": [
+        "where to find mediterranean food in carmichael",
+        "outdoor dining carmichael"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "high",
+      "volume": 480,
+      "rationale": "Directly targets the local market against established competitors like Mediterranean Grill by emphasizing a premium sit-down experience."
+    },
+    {
+      "pageSlug": "/areas-served/carmichael-catering",
+      "primaryKeyword": "mediterranean catering carmichael",
+      "supportingKeywords": [
+        "event catering carmichael ca",
+        "carmichael party platters",
+        "corporate lunch catering carmichael"
+      ],
+      "faqKeywords": [
+        "how much does catering cost in carmichael",
+        "mediterranean buffet catering for weddings"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 140,
+      "rationale": "Leverages proximity to the physical location to capture high-intent local event planning searches."
+    },
+    {
+      "pageSlug": "/areas-served/carmichael-group-dining",
+      "primaryKeyword": "group dining carmichael ca",
+      "supportingKeywords": [
+        "private party restaurant carmichael",
+        "large group restaurant reservations carmichael",
+        "birthday dinner carmichael"
+      ],
+      "faqKeywords": [
+        "restaurants with private rooms carmichael",
+        "group dining menus carmichael"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 90,
+      "rationale": "Targets a specific gap in the Carmichael market for upscale group celebrations and private events."
+    },
+    {
+      "pageSlug": "/areas-served/sacramento-armenian-georgian-food",
+      "primaryKeyword": "armenian georgian food sacramento",
+      "supportingKeywords": [
+        "best georgian restaurant sacramento",
+        "armenian cuisine sacramento ca",
+        "khachapuri sacramento",
+        "khinkali sacramento"
+      ],
+      "faqKeywords": [
+        "what is georgian food",
+        "where to get authentic khinkali in sacramento"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 320,
+      "rationale": "Capitalizes on the 'Blue Ocean' niche where Yerevan Sac has a culinary monopoly in the greater Sacramento area."
+    },
+    {
+      "pageSlug": "/areas-served/sacramento-catering",
+      "primaryKeyword": "mediterranean catering sacramento",
+      "supportingKeywords": [
+        "armenian catering sacramento",
+        "wedding catering sacramento ca",
+        "office catering sacramento"
+      ],
+      "faqKeywords": [
+        "best mediterranean caterers sacramento",
+        "sacramento event catering prices"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "high",
+      "volume": 590,
+      "rationale": "High-volume transactional keyword to compete with established players like Sami's Kitchen in the broader city market."
+    },
+    {
+      "pageSlug": "/areas-served/sacramento-kebabs",
+      "primaryKeyword": "kebabs sacramento",
+      "supportingKeywords": [
+        "best lula kebab sacramento",
+        "mangal grill sacramento",
+        "sacramento kebab house"
+      ],
+      "faqKeywords": [
+        "where to find authentic lamb kebabs in sacramento",
+        "best grilled meats sacramento"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 260,
+      "rationale": "Targets meat-centric diners looking for authentic charcoal-grilled Caucasian style meats over standard fast-casual options."
+    },
+    {
+      "pageSlug": "/areas-served/fair-oaks-mediterranean-dining",
+      "primaryKeyword": "mediterranean restaurant fair oaks",
+      "supportingKeywords": [
+        "best food fair oaks ca",
+        "fair oaks mediterranean grill",
+        "dining near fair oaks village"
+      ],
+      "faqKeywords": [
+        "restaurants in fair oaks with outdoor seating",
+        "mediterranean dinner fair oaks"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 210,
+      "rationale": "Targets the adjacent affluent Fair Oaks demographic seeking high-quality Mediterranean dining."
+    },
+    {
+      "pageSlug": "/areas-served/fair-oaks-catering",
+      "primaryKeyword": "catering fair oaks ca",
+      "supportingKeywords": [
+        "party platters fair oaks",
+        "mediterranean catering fair oaks",
+        "event food delivery fair oaks"
+      ],
+      "faqKeywords": [
+        "who caters in fair oaks",
+        "mediterranean party food fair oaks"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 70,
+      "rationale": "Captures hyper-local catering intent for residential parties and local businesses in Fair Oaks."
+    },
+    {
+      "pageSlug": "/areas-served/arden-arcade-restaurant",
+      "primaryKeyword": "restaurant arden arcade",
+      "supportingKeywords": [
+        "mediterranean food arden arcade",
+        "best dinner arden arcade ca",
+        "arden arcade dining"
+      ],
+      "faqKeywords": [
+        "best mediterranean restaurants near arden arcade",
+        "where to eat in arden arcade"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 390,
+      "rationale": "Arden-Arcade is a major commercial hub; targeting this area captures high-intent diners looking for a 'night out' experience."
+    },
+    {
+      "pageSlug": "/areas-served/arden-arcade-catering",
+      "primaryKeyword": "catering arden arcade",
+      "supportingKeywords": [
+        "office lunch catering arden arcade",
+        "corporate catering arden arcade ca",
+        "mediterranean platters arden arcade"
+      ],
+      "faqKeywords": [
+        "business catering services arden arcade",
+        "best office food delivery arden arcade"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 50,
+      "rationale": "Focuses on the high density of corporate offices in the Arden-Arcade area for weekday lunch business."
+    },
+    {
+      "pageSlug": "/areas-served/citrus-heights-mediterranean-food",
+      "primaryKeyword": "mediterranean food citrus heights",
+      "supportingKeywords": [
+        "citrus heights restaurants",
+        "best kebabs citrus heights",
+        "armenian food citrus heights"
+      ],
+      "faqKeywords": [
+        "where to get mediterranean food in citrus heights",
+        "best citrus heights dining"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 170,
+      "rationale": "Expands reach into the Citrus Heights market where there is less competition for authentic Caucasian-style Mediterranean."
+    },
+    {
+      "pageSlug": "/areas-served/roseville-catering-services",
+      "primaryKeyword": "catering roseville ca",
+      "supportingKeywords": [
+        "mediterranean catering roseville",
+        "wedding caterers roseville",
+        "roseville party catering"
+      ],
+      "faqKeywords": [
+        "best catering companies in roseville",
+        "mediterranean food for events roseville"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 320,
+      "rationale": "Roseville is a high-growth area for weddings and large events; essential for the high-margin catering side of the business."
+    },
+    {
+      "pageSlug": "/services/mediterranean-restaurant/hummus-mezza-spreads",
+      "primaryKeyword": "hummus mezza spreads",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is hummus mezza spreads",
+        "hummus mezza spreads cost",
+        "hummus mezza spreads near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/mediterranean-restaurant/falafel-platters",
+      "primaryKeyword": "falafel platters",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is falafel platters",
+        "falafel platters cost",
+        "falafel platters near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1360,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/mediterranean-restaurant/tabbouleh-salads",
+      "primaryKeyword": "tabbouleh salads",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is tabbouleh salads",
+        "tabbouleh salads cost",
+        "tabbouleh salads near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1250,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/mediterranean-restaurant/baba-ganoush",
+      "primaryKeyword": "baba ganoush",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is baba ganoush",
+        "baba ganoush cost",
+        "baba ganoush near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1250,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/mediterranean-restaurant/mediterranean-lunch-bowls",
+      "primaryKeyword": "mediterranean lunch bowls",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is mediterranean lunch bowls",
+        "mediterranean lunch bowls cost",
+        "mediterranean lunch bowls near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+      "primaryKeyword": "adjaruli khachapuri sacramento",
+      "supportingKeywords": [
+        "georgian cheese boat",
+        "authentic khachapuri",
+        "sacramento georgian food"
+      ],
+      "faqKeywords": [
+        "how to eat adjaruli khachapuri",
+        "best cheese for khachapuri"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 480,
+      "rationale": "Leverages the culinary monopoly identified in research. High intent for a specialty dish with zero local competition."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/armenian-manti",
+      "primaryKeyword": "armenian manti",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is armenian manti",
+        "armenian manti cost",
+        "armenian manti near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/imeruli-khachapuri",
+      "primaryKeyword": "imeruli khachapuri",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is imeruli khachapuri",
+        "imeruli khachapuri cost",
+        "imeruli khachapuri near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/basturma-sujuk",
+      "primaryKeyword": "basturma sujuk",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is basturma sujuk",
+        "basturma sujuk cost",
+        "basturma sujuk near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1360,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/armenian-coffee-gata",
+      "primaryKeyword": "armenian coffee gata",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is armenian coffee gata",
+        "armenian coffee gata cost",
+        "armenian coffee gata near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1250,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+      "primaryKeyword": "lula kebab carmichael",
+      "supportingKeywords": [
+        "lamb lula kebab",
+        "ground beef kebab",
+        "mangal grilled meats"
+      ],
+      "faqKeywords": [
+        "what is a lula kebab",
+        "best meat for lula kebab"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 210,
+      "rationale": "Targets the core 'Mangal' service. Uses location-specific modifiers to compete with Mediterranean Grill across the street."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/shish-kebab-chicken",
+      "primaryKeyword": "shish kebab chicken",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is shish kebab chicken",
+        "shish kebab chicken cost",
+        "shish kebab chicken near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/lamb-chops-mangal",
+      "primaryKeyword": "lamb chops mangal",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is lamb chops mangal",
+        "lamb chops mangal cost",
+        "lamb chops mangal near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1690,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/pork-shashlik",
+      "primaryKeyword": "pork shashlik",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is pork shashlik",
+        "pork shashlik cost",
+        "pork shashlik near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/grilled-vegetable-skewers",
+      "primaryKeyword": "grilled vegetable skewers",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is grilled vegetable skewers",
+        "grilled vegetable skewers cost",
+        "grilled vegetable skewers near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1360,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+      "primaryKeyword": "georgian khinkali sacramento",
+      "supportingKeywords": [
+        "handmade soup dumplings",
+        "traditional khinkali recipe",
+        "authentic georgian dumplings"
+      ],
+      "faqKeywords": [
+        "what is khinkali",
+        "how many khinkali to order"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 320,
+      "rationale": "High-priority specialty item. Focuses on the 'handmade' UVP to differentiate from standard Mediterranean shops."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/lamb-khinkali",
+      "primaryKeyword": "lamb khinkali",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is lamb khinkali",
+        "lamb khinkali cost",
+        "lamb khinkali near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1690,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/cheese-khinkali",
+      "primaryKeyword": "cheese khinkali",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is cheese khinkali",
+        "cheese khinkali cost",
+        "cheese khinkali near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/mushroom-khinkali",
+      "primaryKeyword": "mushroom khinkali",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is mushroom khinkali",
+        "mushroom khinkali cost",
+        "mushroom khinkali near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1360,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/khinkali-frozen-to-go",
+      "primaryKeyword": "khinkali frozen to go",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is khinkali frozen to go",
+        "khinkali frozen to go cost",
+        "khinkali frozen to go near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1250,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/cocktail-bar-drinks/pomegranate-martinis",
+      "primaryKeyword": "pomegranate martinis",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is pomegranate martinis",
+        "pomegranate martinis cost",
+        "pomegranate martinis near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+      "primaryKeyword": "armenian brandy cocktails",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is armenian brandy cocktails",
+        "armenian brandy cocktails cost",
+        "armenian brandy cocktails near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/cocktail-bar-drinks/georgian-kvevri-wines",
+      "primaryKeyword": "georgian wine sacramento",
+      "supportingKeywords": [
+        "kvevri wine selection",
+        "amber wine list",
+        "armenian brandy cocktails"
+      ],
+      "faqKeywords": [
+        "what is kvevri wine",
+        "georgian wine pairings"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 90,
+      "rationale": "Educational content that justifies premium pricing and supports the high-end dining atmosphere."
+    },
+    {
+      "pageSlug": "/services/cocktail-bar-drinks/apricot-infused-spirits",
+      "primaryKeyword": "apricot infused spirits",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is apricot infused spirits",
+        "apricot infused spirits cost",
+        "apricot infused spirits near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1360,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/cocktail-bar-drinks/craft-beers",
+      "primaryKeyword": "craft beers",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is craft beers",
+        "craft beers cost",
+        "craft beers near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1250,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/group-dining-events/private-celebrations",
+      "primaryKeyword": "private dining room carmichael",
+      "supportingKeywords": [
+        "group dining restaurant sacramento",
+        "event venue for parties",
+        "family style mediterranean dinner"
+      ],
+      "faqKeywords": [
+        "private party room capacity",
+        "group dining menu options"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 260,
+      "rationale": "Targets the evening/weekend demographic in Arden-Arcade and Carmichael looking for full-service experiences."
+    },
+    {
+      "pageSlug": "/services/group-dining-events/corporate-dinner-packages",
+      "primaryKeyword": "corporate dinner packages",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is corporate dinner packages",
+        "corporate dinner packages cost",
+        "corporate dinner packages near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/group-dining-events/birthday-party-hosting",
+      "primaryKeyword": "birthday party hosting",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is birthday party hosting",
+        "birthday party hosting cost",
+        "birthday party hosting near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/group-dining-events/anniversary-dining",
+      "primaryKeyword": "anniversary dining",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is anniversary dining",
+        "anniversary dining cost",
+        "anniversary dining near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/group-dining-events/chef-tasting-menu",
+      "primaryKeyword": "chef tasting menu",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is chef tasting menu",
+        "chef tasting menu cost",
+        "chef tasting menu near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/catering-services/wedding-catering",
+      "primaryKeyword": "wedding catering",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is wedding catering",
+        "wedding catering cost",
+        "wedding catering near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1690,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/catering-services/office-lunch-catering",
+      "primaryKeyword": "office lunch catering",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is office lunch catering",
+        "office lunch catering cost",
+        "office lunch catering near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1580,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/catering-services/live-mangal-grill-catering",
+      "primaryKeyword": "mangal grill catering sacramento",
+      "supportingKeywords": [
+        "live fire catering",
+        "armenian BBQ catering",
+        "outdoor grill catering service"
+      ],
+      "faqKeywords": [
+        "how much does live catering cost",
+        "on-site kebab grilling"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Unique service offering (live grilling) that competitors like Sami's Kitchen don't emphasize."
+    },
+    {
+      "pageSlug": "/services/catering-services/mediterranean-party-platters",
+      "primaryKeyword": "mediterranean party platters",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is mediterranean party platters",
+        "mediterranean party platters cost",
+        "mediterranean party platters near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/catering-services/holiday-event-catering",
+      "primaryKeyword": "holiday event catering",
+      "supportingKeywords": [],
+      "faqKeywords": [
+        "what is holiday event catering",
+        "holiday event catering cost",
+        "holiday event catering near me"
+      ],
+      "intent": "informational",
+      "competitionLevel": "medium",
+      "volume": 1470,
+      "rationale": "Fallback entry point generated deterministically from filtered B3 keywords and page slug to guarantee full page coverage."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/lahmajoun",
+      "primaryKeyword": "lahmajoun sacramento",
+      "supportingKeywords": [
+        "armenian pizza",
+        "lahmajun carmichael",
+        "armenian flatbread sacramento"
+      ],
+      "faqKeywords": [
+        "what is lahmajoun",
+        "lahmajoun vs pizza"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 320,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/kubdari",
+      "primaryKeyword": "kubdari sacramento",
+      "supportingKeywords": [
+        "svanetian meat bread",
+        "georgian meat bread",
+        "kubdari carmichael"
+      ],
+      "faqKeywords": [
+        "what is kubdari",
+        "where to find kubdari"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "very-low",
+      "volume": 90,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/fire-grilled-khachapuri",
+      "primaryKeyword": "fire grilled khachapuri sacramento",
+      "supportingKeywords": [
+        "grilled khachapuri carmichael",
+        "georgian cheese bread"
+      ],
+      "faqKeywords": [
+        "what is fire grilled khachapuri",
+        "khachapuri vs adjaruli"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 210,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/beef-dolma",
+      "primaryKeyword": "armenian dolma sacramento",
+      "supportingKeywords": [
+        "beef dolma carmichael",
+        "stuffed grape leaves sacramento",
+        "armenian appetizers"
+      ],
+      "faqKeywords": [
+        "what is dolma",
+        "armenian vs greek dolma"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 590,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/pkhali-combo",
+      "primaryKeyword": "pkhali sacramento",
+      "supportingKeywords": [
+        "georgian vegetable appetizers",
+        "pkhali combo carmichael",
+        "georgian vegan appetizers"
+      ],
+      "faqKeywords": [
+        "what is pkhali",
+        "is pkhali vegan"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "very-low",
+      "volume": 140,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/chicken-tabaka",
+      "primaryKeyword": "chicken tabaka sacramento",
+      "supportingKeywords": [
+        "georgian flattened chicken",
+        "tabaka carmichael",
+        "armenian chicken dish"
+      ],
+      "faqKeywords": [
+        "what is chicken tabaka",
+        "how is tabaka cooked"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 170,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/tjvjik-liver-heart",
+      "primaryKeyword": "tjvjik sacramento",
+      "supportingKeywords": [
+        "armenian liver and heart",
+        "tjvjik carmichael",
+        "armenian offal dish"
+      ],
+      "faqKeywords": [
+        "what is tjvjik",
+        "armenian liver dish"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "very-low",
+      "volume": 50,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/tan-yogurt-drink",
+      "primaryKeyword": "tan yogurt drink sacramento",
+      "supportingKeywords": [
+        "caucasian yogurt drink",
+        "armenian tan",
+        "tahn carmichael"
+      ],
+      "faqKeywords": [
+        "what is tan drink",
+        "tan vs ayran"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 60,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/armenian-georgian-cuisine/napoleon-pastry",
+      "primaryKeyword": "napoleon pastry sacramento",
+      "supportingKeywords": [
+        "russian napoleon",
+        "napoleon cake carmichael",
+        "eastern european pastry"
+      ],
+      "faqKeywords": [
+        "what is napoleon pastry",
+        "russian napoleon vs french"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 320,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/chakapuli-lamb-tarragon",
+      "primaryKeyword": "chakapuli sacramento",
+      "supportingKeywords": [
+        "georgian lamb stew",
+        "chakapuli carmichael",
+        "lamb tarragon stew"
+      ],
+      "faqKeywords": [
+        "what is chakapuli",
+        "georgian lamb stew sacramento"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "very-low",
+      "volume": 110,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/lamb-khashlama",
+      "primaryKeyword": "lamb khashlama sacramento",
+      "supportingKeywords": [
+        "armenian lamb stew",
+        "khashlama carmichael",
+        "slow cooked lamb sacramento"
+      ],
+      "faqKeywords": [
+        "what is khashlama",
+        "armenian slow cooked lamb"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 130,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/chikhirtma-chicken-soup",
+      "primaryKeyword": "chikhirtma sacramento",
+      "supportingKeywords": [
+        "georgian chicken soup",
+        "soup in bread bowl sacramento",
+        "chikhirtma carmichael"
+      ],
+      "faqKeywords": [
+        "what is chikhirtma",
+        "georgian chicken soup recipe"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "very-low",
+      "volume": 80,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/kharcho-soup",
+      "primaryKeyword": "kharcho soup sacramento",
+      "supportingKeywords": [
+        "georgian beef soup",
+        "kharcho carmichael",
+        "spicy beef soup sacramento"
+      ],
+      "faqKeywords": [
+        "what is kharcho",
+        "kharcho ingredients"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/lobio-clay-pot",
+      "primaryKeyword": "lobio sacramento",
+      "supportingKeywords": [
+        "georgian beans",
+        "vegan georgian food sacramento",
+        "clay pot beans carmichael"
+      ],
+      "faqKeywords": [
+        "what is lobio",
+        "is lobio vegan",
+        "georgian vegetarian"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 170,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/soups-and-stews/borscht-beet-soup",
+      "primaryKeyword": "borscht sacramento",
+      "supportingKeywords": [
+        "beet soup carmichael",
+        "russian borscht sacramento",
+        "eastern european soup"
+      ],
+      "faqKeywords": [
+        "what is borscht",
+        "how is borscht served"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 1300,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/handmade-khinkali-dumplings/fried-khinkali",
+      "primaryKeyword": "fried khinkali sacramento",
+      "supportingKeywords": [
+        "pan fried khinkali",
+        "fried georgian dumplings",
+        "khinkali variants carmichael"
+      ],
+      "faqKeywords": [
+        "what is fried khinkali",
+        "boiled vs fried khinkali"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 170,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    },
+    {
+      "pageSlug": "/services/kebabs-grilled-meats/quail-pomegranate",
+      "primaryKeyword": "quail sacramento",
+      "supportingKeywords": [
+        "grilled quail",
+        "armenian quail dish",
+        "date night dinner sacramento"
+      ],
+      "faqKeywords": [
+        "how is quail prepared",
+        "pomegranate sauce quail"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 290,
+      "rationale": "Caucasian specialty dish present on the live yerevansac.com menu but absent from the original 2026-05-12 blueprint run. Added 2026-05-13 from menu audit."
+    }
+  ],
+  "cannibalizationCheck": {
+    "conflicts": [],
+    "resolved": true
+  },
+  "internalLinks": [
+    {
+      "from": "/index",
+      "to": [
+        "/menu",
+        "/reservations",
+        "/about"
+      ]
+    },
+    {
+      "from": "/about",
+      "to": [
+        "/menu",
+        "/contact-us"
+      ]
+    },
+    {
+      "from": "/contact-us",
+      "to": [
+        "/index",
+        "/about",
+        "/menu"
+      ]
+    },
+    {
+      "from": "/menu",
+      "to": [
+        "/reservations",
+        "/gallery"
+      ]
+    },
+    {
+      "from": "/reservations",
+      "to": [
+        "/index",
+        "/about",
+        "/contact-us"
+      ]
+    },
+    {
+      "from": "/gallery",
+      "to": [
+        "/index",
+        "/about",
+        "/contact-us"
+      ]
+    },
+    {
+      "from": "/guides/what-is-georgian-food",
+      "to": [
+        "/guides/how-khachapuri-is-made",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/khinkali-vs-manti-dumplings",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/how-to-eat-khinkali-guide",
+        "/guides/event-catering-cost-guide-sacramento"
+      ]
+    },
+    {
+      "from": "/guides/how-to-eat-khinkali-guide",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/event-catering-cost-guide-sacramento"
+      ]
+    },
+    {
+      "from": "/guides/mediterranean-vs-caucasian-cuisine",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/best-georgian-wines-pairing-guide",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/armenian-kebab-marination-secrets",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/event-catering-cost-guide-sacramento",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/how-khachapuri-is-made",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/history-of-the-mangal-grill",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/is-georgian-food-healthy",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/top-10-mediterranean-dishes-to-try",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/guides/guide-to-armenian-coffee-culture",
+      "to": [
+        "/guides/what-is-georgian-food",
+        "/guides/khinkali-vs-manti-dumplings",
+        "/guides/how-to-eat-khinkali-guide"
+      ]
+    },
+    {
+      "from": "/services/mediterranean-restaurant/hummus-mezza-spreads",
+      "to": [
+        "/services/mediterranean-restaurant/falafel-platters",
+        "/services/mediterranean-restaurant/tabbouleh-salads",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/mediterranean-restaurant/falafel-platters",
+      "to": [
+        "/services/mediterranean-restaurant/hummus-mezza-spreads",
+        "/services/mediterranean-restaurant/tabbouleh-salads",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/mediterranean-restaurant/tabbouleh-salads",
+      "to": [
+        "/services/mediterranean-restaurant/hummus-mezza-spreads",
+        "/services/mediterranean-restaurant/falafel-platters",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/mediterranean-restaurant/baba-ganoush",
+      "to": [
+        "/services/mediterranean-restaurant/hummus-mezza-spreads",
+        "/services/mediterranean-restaurant/falafel-platters",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/mediterranean-restaurant/mediterranean-lunch-bowls",
+      "to": [
+        "/services/mediterranean-restaurant/hummus-mezza-spreads",
+        "/services/mediterranean-restaurant/falafel-platters",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+      "to": [
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+        "/services/cocktail-bar-drinks/georgian-kvevri-wines"
+      ]
+    },
+    {
+      "from": "/services/armenian-georgian-cuisine/armenian-manti",
+      "to": [
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+        "/services/armenian-georgian-cuisine/imeruli-khachapuri",
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali"
+      ]
+    },
+    {
+      "from": "/services/armenian-georgian-cuisine/imeruli-khachapuri",
+      "to": [
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+        "/services/armenian-georgian-cuisine/armenian-manti",
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali"
+      ]
+    },
+    {
+      "from": "/services/armenian-georgian-cuisine/basturma-sujuk",
+      "to": [
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+        "/services/armenian-georgian-cuisine/armenian-manti",
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali"
+      ]
+    },
+    {
+      "from": "/services/armenian-georgian-cuisine/armenian-coffee-gata",
+      "to": [
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri",
+        "/services/armenian-georgian-cuisine/armenian-manti",
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali"
+      ]
+    },
+    {
+      "from": "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+      "to": [
+        "/services/catering-services/live-mangal-grill-catering",
+        "/services/group-dining-events/private-celebrations"
+      ]
+    },
+    {
+      "from": "/services/kebabs-grilled-meats/shish-kebab-chicken",
+      "to": [
+        "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+        "/services/kebabs-grilled-meats/lamb-chops-mangal",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/kebabs-grilled-meats/lamb-chops-mangal",
+      "to": [
+        "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+        "/services/kebabs-grilled-meats/shish-kebab-chicken",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/kebabs-grilled-meats/pork-shashlik",
+      "to": [
+        "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+        "/services/kebabs-grilled-meats/shish-kebab-chicken",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/kebabs-grilled-meats/grilled-vegetable-skewers",
+      "to": [
+        "/services/kebabs-grilled-meats/lula-kebab-beef-lamb",
+        "/services/kebabs-grilled-meats/shish-kebab-chicken",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+      "to": [
+        "/services/handmade-khinkali-dumplings/lamb-khinkali",
+        "/services/handmade-khinkali-dumplings/cheese-khinkali",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/handmade-khinkali-dumplings/lamb-khinkali",
+      "to": [
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+        "/services/handmade-khinkali-dumplings/cheese-khinkali",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/handmade-khinkali-dumplings/cheese-khinkali",
+      "to": [
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+        "/services/handmade-khinkali-dumplings/lamb-khinkali",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/handmade-khinkali-dumplings/mushroom-khinkali",
+      "to": [
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+        "/services/handmade-khinkali-dumplings/lamb-khinkali",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/handmade-khinkali-dumplings/khinkali-frozen-to-go",
+      "to": [
+        "/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali",
+        "/services/handmade-khinkali-dumplings/lamb-khinkali",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/cocktail-bar-drinks/pomegranate-martinis",
+      "to": [
+        "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+        "/services/cocktail-bar-drinks/georgian-kvevri-wines",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+      "to": [
+        "/services/cocktail-bar-drinks/pomegranate-martinis",
+        "/services/cocktail-bar-drinks/georgian-kvevri-wines",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/cocktail-bar-drinks/georgian-kvevri-wines",
+      "to": [
+        "/services/cocktail-bar-drinks/pomegranate-martinis",
+        "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/cocktail-bar-drinks/apricot-infused-spirits",
+      "to": [
+        "/services/cocktail-bar-drinks/pomegranate-martinis",
+        "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/cocktail-bar-drinks/craft-beers",
+      "to": [
+        "/services/cocktail-bar-drinks/pomegranate-martinis",
+        "/services/cocktail-bar-drinks/armenian-brandy-cocktails",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/group-dining-events/private-celebrations",
+      "to": [
+        "/services/group-dining-events/corporate-dinner-packages",
+        "/services/group-dining-events/birthday-party-hosting",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/group-dining-events/corporate-dinner-packages",
+      "to": [
+        "/services/group-dining-events/private-celebrations",
+        "/services/group-dining-events/birthday-party-hosting",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/group-dining-events/birthday-party-hosting",
+      "to": [
+        "/services/group-dining-events/private-celebrations",
+        "/services/group-dining-events/corporate-dinner-packages",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/group-dining-events/anniversary-dining",
+      "to": [
+        "/services/group-dining-events/private-celebrations",
+        "/services/group-dining-events/corporate-dinner-packages",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/group-dining-events/chef-tasting-menu",
+      "to": [
+        "/services/group-dining-events/private-celebrations",
+        "/services/group-dining-events/corporate-dinner-packages",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/catering-services/wedding-catering",
+      "to": [
+        "/services/catering-services/office-lunch-catering",
+        "/services/catering-services/live-mangal-grill-catering",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/catering-services/office-lunch-catering",
+      "to": [
+        "/services/catering-services/wedding-catering",
+        "/services/catering-services/live-mangal-grill-catering",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/catering-services/live-mangal-grill-catering",
+      "to": [
+        "/services/catering-services/wedding-catering",
+        "/services/catering-services/office-lunch-catering",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/catering-services/mediterranean-party-platters",
+      "to": [
+        "/services/catering-services/wedding-catering",
+        "/services/catering-services/office-lunch-catering",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/services/catering-services/holiday-event-catering",
+      "to": [
+        "/services/catering-services/wedding-catering",
+        "/services/catering-services/office-lunch-catering",
+        "/services/armenian-georgian-cuisine/adjaruli-khachapuri"
+      ]
+    },
+    {
+      "from": "/locations/carmichael",
+      "to": [
+        "/locations/sacramento",
+        "/locations/fair-oaks",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/sacramento",
+      "to": [
+        "/locations/carmichael",
+        "/locations/fair-oaks",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/fair-oaks",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/arden-arcade",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    },
+    {
+      "from": "/locations/citrus-heights",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    },
+    {
+      "from": "/locations/roseville",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    },
+    {
+      "from": "/areas-served/carmichael-mediterranean-restaurant",
+      "to": [
+        "/areas-served/carmichael-catering",
+        "/areas-served/carmichael-group-dining"
+      ]
+    },
+    {
+      "from": "/areas-served/carmichael-catering",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-group-dining",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/carmichael-group-dining",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/sacramento-armenian-georgian-food",
+      "to": [
+        "/areas-served/sacramento-catering",
+        "/areas-served/sacramento-kebabs"
+      ]
+    },
+    {
+      "from": "/areas-served/sacramento-catering",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/sacramento-kebabs",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/fair-oaks-mediterranean-dining",
+      "to": [
+        "/areas-served/fair-oaks-catering"
+      ]
+    },
+    {
+      "from": "/areas-served/fair-oaks-catering",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/arden-arcade-restaurant",
+      "to": [
+        "/areas-served/arden-arcade-catering"
+      ]
+    },
+    {
+      "from": "/areas-served/arden-arcade-catering",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/citrus-heights-mediterranean-food",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    },
+    {
+      "from": "/areas-served/roseville-catering-services",
+      "to": [
+        "/areas-served/carmichael-mediterranean-restaurant",
+        "/areas-served/carmichael-catering",
+        "/areas-served/sacramento-armenian-georgian-food"
+      ]
+    }
+  ],
+  "strategy": {
+    "description": "Hyper-local niche dominance strategy focusing on 'Armenian-Georgian' specialty keywords to differentiate from generic Mediterranean competitors while capturing high-intent traffic for unique culinary offerings like Khinkali and Khachapuri.",
+    "competitivePosition": "stronger",
+    "focusAreas": [
+      "Niche Culinary Keyword Optimization (Khinkali, Khachapuri, Mangal)",
+      "Local SEO & Geo-Targeted Landing Pages (Carmichael, Arden-Arcade, Sacramento)",
+      "Visual Content & Schema Markup for High-End Menu Items",
+      "Conversion-Driven Service Pages for Bar and Catering Programs"
+    ],
+    "rationale": "Yerevan Sac occupies a unique market gap; while competitors focus on generic Mediterranean staples, Yerevan Sac can dominate search results for specific Caucasian dishes that have high curiosity and low keyword difficulty, effectively siphoning traffic from broader competitors through specialized authenticity."
+  }
+}

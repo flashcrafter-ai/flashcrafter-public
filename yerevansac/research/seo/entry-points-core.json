@@ -1,0 +1,161 @@
+{
+  "entryPoints": [
+    {
+      "pageSlug": "/index",
+      "primaryKeyword": "Mediterranean restaurant Carmichael",
+      "supportingKeywords": [
+        "Armenian Georgian cuisine Sacramento",
+        "best kebabs in Carmichael",
+        "Yerevan restaurant Sacramento",
+        "authentic Caucasian food"
+      ],
+      "faqKeywords": [
+        "what is Armenian Georgian food",
+        "best Mediterranean food Carmichael"
+      ],
+      "intent": "navigational",
+      "competitionLevel": "medium",
+      "volume": 880,
+      "rationale": "The homepage targets the core brand identity and primary location. By combining Mediterranean and Caucasian terms, we capture broad local intent while establishing the niche."
+    },
+    {
+      "pageSlug": "/about",
+      "primaryKeyword": "authentic Armenian restaurant Sacramento",
+      "supportingKeywords": [
+        "history of Georgian cuisine",
+        "traditional Caucasian hospitality",
+        "handmade Mediterranean food",
+        "Yerevan Sac story"
+      ],
+      "faqKeywords": [
+        "who owns Yerevan Sac",
+        "traditional Armenian cooking methods"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Builds brand authority and trust by focusing on the 'handmade' and 'authentic' aspects highlighted in the UVP."
+    },
+    {
+      "pageSlug": "/contact-us",
+      "primaryKeyword": "Yerevan Sac location",
+      "supportingKeywords": [
+        "Mediterranean restaurant phone number",
+        "Carmichael restaurant directions",
+        "contact Armenian grill Sacramento"
+      ],
+      "faqKeywords": [
+        "restaurant hours Carmichael",
+        "parking at Yerevan Sac"
+      ],
+      "intent": "navigational",
+      "competitionLevel": "low",
+      "volume": 90,
+      "rationale": "Essential for local SEO and capturing users looking for direct contact information or physical location details."
+    },
+    {
+      "pageSlug": "/menu",
+      "primaryKeyword": "Armenian Georgian menu Sacramento",
+      "supportingKeywords": [
+        "Adjaruli Khachapuri Carmichael",
+        "Khinkali soup dumplings menu",
+        "lula kebab price",
+        "Mediterranean grill menu"
+      ],
+      "faqKeywords": [
+        "what is on a Georgian menu",
+        "gluten free Mediterranean options"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 450,
+      "rationale": "High transactional intent page targeting users looking for specific dishes like Khachapuri and Khinkali which are the restaurant's unique value propositions."
+    },
+    {
+      "pageSlug": "/reservations",
+      "primaryKeyword": "book a table Carmichael restaurant",
+      "supportingKeywords": [
+        "group dining Sacramento",
+        "private celebration venue Carmichael",
+        "restaurant table booking Sacramento",
+        "dinner reservations Carmichael"
+      ],
+      "faqKeywords": [
+        "how to book large groups",
+        "restaurant reservation policy"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 210,
+      "rationale": "Focuses on conversion for high-intent users looking to visit. Targets group dining keywords to increase average ticket price as per business research."
+    },
+    {
+      "pageSlug": "/gallery",
+      "primaryKeyword": "Georgian food photos Sacramento",
+      "supportingKeywords": [
+        "Mediterranean restaurant interior Carmichael",
+        "Khinkali pictures",
+        "cocktail bar photos Sacramento"
+      ],
+      "faqKeywords": [
+        "what does Adjaruli Khachapuri look like"
+      ],
+      "intent": "informational",
+      "competitionLevel": "low",
+      "volume": 110,
+      "rationale": "Visual confirmation of the 'premium' atmosphere and unique dishes to entice users in the consideration phase."
+    }
+  ],
+  "cannibalizationCheck": {
+    "conflicts": [],
+    "resolved": true
+  },
+  "internalLinks": [
+    {
+      "from": "/index",
+      "to": [
+        "/menu",
+        "/reservations",
+        "/about"
+      ]
+    },
+    {
+      "from": "/about",
+      "to": [
+        "/menu",
+        "/contact-us"
+      ]
+    },
+    {
+      "from": "/contact-us",
+      "to": [
+        "/index",
+        "/about",
+        "/menu"
+      ]
+    },
+    {
+      "from": "/menu",
+      "to": [
+        "/reservations",
+        "/gallery"
+      ]
+    },
+    {
+      "from": "/reservations",
+      "to": [
+        "/index",
+        "/about",
+        "/contact-us"
+      ]
+    },
+    {
+      "from": "/gallery",
+      "to": [
+        "/index",
+        "/about",
+        "/contact-us"
+      ]
+    }
+  ]
+}

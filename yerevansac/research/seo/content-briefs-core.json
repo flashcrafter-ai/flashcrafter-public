@@ -1,0 +1,1139 @@
+{
+  "pages": [
+    {
+      "pageSlug": "/index",
+      "proposedH1": "Mediterranean Restaurant in Carmichael: Authentic Armenian & Georgian Cuisine",
+      "metaDescription": "Experience the best Mediterranean restaurant in Carmichael. Yerevan Sac offers authentic Armenian-Georgian cuisine, handmade Khinkali, and wood-fired kebabs in Sacramento.",
+      "h2Sections": [
+        {
+          "heading": "Authentic Caucasian & Mediterranean Dining in Carmichael",
+          "canonicalKeywords": [
+            "Mediterranean restaurant Carmichael",
+            "Armenian Georgian cuisine Sacramento",
+            "authentic Caucasian food"
+          ],
+          "contentBullets": [
+            "Discover the unique intersection of Armenian and Georgian culinary traditions in the heart of Sacramento County.",
+            "Specializing in wood-fired Mangal grills and traditional handmade dough specialties.",
+            "A refined sit-down atmosphere perfect for family dinners or a sophisticated night out."
+          ],
+          "internalLinks": [
+            "/about",
+            "/menu"
+          ]
+        },
+        {
+          "heading": "Signature Dishes: From Khinkali to Lula Kebabs",
+          "canonicalKeywords": [
+            "best kebabs in Carmichael",
+            "Yerevan restaurant Sacramento",
+            "handmade specialties"
+          ],
+          "contentBullets": [
+            "Hand-rolled Georgian soup dumplings (Khinkali) prepared fresh daily.",
+            "Traditional Adjaruli Khachapuri featuring molten cheese and a fresh egg yolk.",
+            "Premium cuts of lamb, beef, and chicken grilled over open flames for that authentic smoky flavor."
+          ],
+          "internalLinks": [
+            "/menu",
+            "/reservations"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What is Armenian Georgian food?",
+          "canonicalKeywords": [
+            "what is Armenian Georgian food"
+          ],
+          "answerThemes": [
+            "Intersection of Silk Road flavors",
+            "Emphasis on fresh herbs, walnuts, and pomegranates",
+            "Traditional dough and grilled meats"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the best Mediterranean food in Carmichael?",
+          "canonicalKeywords": [
+            "best Mediterranean food Carmichael"
+          ],
+          "answerThemes": [
+            "Yerevan Sac's unique Caucasian twist",
+            "Handmade authenticity",
+            "Full-service bar and dining"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you offer vegetarian options?",
+          "canonicalKeywords": [
+            "vegetarian Mediterranean dishes"
+          ],
+          "answerThemes": [
+            "Cheese-filled breads",
+            "Fresh mezza spreads",
+            "Salads and vegetable skewers"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Where is Yerevan Sac located?",
+          "canonicalKeywords": [
+            "Yerevan Sac location"
+          ],
+          "answerThemes": [
+            "Fair Oaks Blvd",
+            "Carmichael, CA",
+            "Near Arden-Arcade"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Are your meats Halal or Kosher?",
+          "canonicalKeywords": [
+            "meat sourcing"
+          ],
+          "answerThemes": [
+            "High-quality protein sourcing",
+            "Inquire with staff for specific certifications"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you have a full bar?",
+          "canonicalKeywords": [
+            "cocktails Carmichael"
+          ],
+          "answerThemes": [
+            "Signature cocktails",
+            "Imported Armenian and Georgian wines",
+            "Full bar service"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Is there live music?",
+          "canonicalKeywords": [
+            "live entertainment Sacramento"
+          ],
+          "answerThemes": [
+            "Jazz and singers",
+            "Weekend entertainment",
+            "Atmospheric dining"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do I need a reservation for dinner?",
+          "canonicalKeywords": [
+            "restaurant reservation policy"
+          ],
+          "answerThemes": [
+            "Walk-ins welcome",
+            "Recommended for Friday and Saturday",
+            "Large group bookings"
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Chefs trained in traditional Caucasian Mangal techniques",
+          "Handmade dough preparation daily"
+        ],
+        "authority": [
+          "Top-rated Armenian restaurant in Sacramento region",
+          "Featured for authentic Georgian specialties"
+        ],
+        "trustworthiness": [
+          "5-star average customer rating",
+          "Transparent ingredient sourcing"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Reserve Your Table",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "View Dinner Menu",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Located on Fair Oaks Blvd",
+        "Down the street from Carmichael Park",
+        "Serving Arden-Arcade and Fair Oaks neighborhoods"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Entrees ranging from $22 to $48",
+          "Cocktails starting at $12"
+        ],
+        "warrantyTerms": [
+          "Freshness guarantee on all handmade dough items"
+        ]
+      },
+      "uniqueSignals": [
+        "Live entertainment including jazz and singers",
+        "Handmade Khinkali specialty",
+        "Full bar with regional pomegranate and apricot cocktails",
+        "Russian-speaking staff available",
+        "Wood-fired Mangal grill process",
+        "Near Fair Oaks Blvd and Manzanita Ave",
+        "5 min from Carmichael Park",
+        "Large party hall for celebrations",
+        "Serving the Sacramento area since opening"
+      ]
+    },
+    {
+      "pageSlug": "/about",
+      "proposedH1": "Authentic Armenian Restaurant in Sacramento: Our Culinary Tradition",
+      "metaDescription": "Learn the story of Yerevan Sac, Sacramento's premier authentic Armenian restaurant. Discover the history of Georgian cuisine and our commitment to Caucasian hospitality.",
+      "h2Sections": [
+        {
+          "heading": "The Tradition of Caucasian Hospitality in Carmichael",
+          "canonicalKeywords": [
+            "authentic Armenian restaurant Sacramento",
+            "traditional Caucasian hospitality"
+          ],
+          "contentBullets": [
+            "Rooted in the flavors of Yerevan and Tbilisi, our kitchen honors centuries-old recipes.",
+            "We prioritize 'Supra' style dining where guests are treated like family.",
+            "Our mission is to bring the 'Cradle of Wine' and the 'Mangal' grill to Northern California."
+          ],
+          "internalLinks": [
+            "/menu",
+            "/contact-us"
+          ]
+        },
+        {
+          "heading": "Handmade Craftsmanship & Traditional Methods",
+          "canonicalKeywords": [
+            "traditional Armenian cooking methods",
+            "handmade Mediterranean food"
+          ],
+          "contentBullets": [
+            "Every Khinkali is hand-pleated by dough masters to ensure the perfect soup-to-meat ratio.",
+            "We use traditional marination techniques for our Lula and Shish kebabs.",
+            "Our Adjaruli Khachapuri is baked in high-heat ovens to achieve the signature crust and molten center."
+          ],
+          "internalLinks": [
+            "/menu"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "Who owns Yerevan Sac?",
+          "canonicalKeywords": [
+            "who owns Yerevan Sac"
+          ],
+          "answerThemes": [
+            "Local family-owned establishment",
+            "Dedicated to Armenian-Georgian culture",
+            "Community-focused ownership"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What makes Armenian food authentic?",
+          "canonicalKeywords": [
+            "traditional Armenian cooking methods"
+          ],
+          "answerThemes": [
+            "Fresh herb usage",
+            "Ancient marination techniques",
+            "Sourcing regional spices like Sumac and Aleppo pepper"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the history of Georgian cuisine?",
+          "canonicalKeywords": [
+            "history of Georgian cuisine"
+          ],
+          "answerThemes": [
+            "Ancient wine culture",
+            "Influence of Silk Road trade",
+            "Unique dough-based staples"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Is Yerevan Sac a family-friendly restaurant?",
+          "canonicalKeywords": [
+            "family-friendly Armenian restaurant"
+          ],
+          "answerThemes": [
+            "Welcoming atmosphere for all ages",
+            "Large tables for families",
+            "Kid-friendly options like hummus and kebabs"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you source local ingredients?",
+          "canonicalKeywords": [
+            "locally sourced ingredients"
+          ],
+          "answerThemes": [
+            "California-grown produce",
+            "High-quality local meat suppliers",
+            "Seasonal menu adjustments"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "How do you make Khinkali?",
+          "canonicalKeywords": [
+            "hand-rolled dumplings"
+          ],
+          "answerThemes": [
+            "Hand-pleated dough",
+            "Spiced meat filling",
+            "Steamed to create internal broth"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the difference between Armenian and Georgian food?",
+          "canonicalKeywords": [
+            "Armenian vs Georgian cuisine"
+          ],
+          "answerThemes": [
+            "Armenian focus on grilled meats and herbs",
+            "Georgian focus on cheese breads and soup dumplings",
+            "Shared Caucasian roots"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer cooking classes?",
+          "canonicalKeywords": [
+            "Armenian cooking classes Sacramento"
+          ],
+          "answerThemes": [
+            "Occasional cultural workshops",
+            "Inquire for private group sessions"
+          ],
+          "searchIntent": "commercial"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Over 15 years of culinary experience in Caucasian cuisine",
+          "Specialized knowledge of Georgian Kvevri wines"
+        ],
+        "authority": [
+          "Recognized as a cultural hub for the Armenian community in Sacramento",
+          "Authentic recipe preservation"
+        ],
+        "trustworthiness": [
+          "Transparent kitchen practices",
+          "Consistent high-quality reviews from regional food critics"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Explore Our Menu",
+          "placement": "mid-content"
+        },
+        {
+          "type": "secondary",
+          "text": "Contact Us for Events",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": false,
+        "reviews": true,
+        "team": true,
+        "map": false
+      },
+      "localReferences": [
+        "Located in the Carmichael dining corridor",
+        "Serving the Greater Sacramento metro area",
+        "Near the American River Parkway"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Average ticket price $35-$65 per person"
+        ],
+        "warrantyTerms": [
+          "Commitment to authentic regional preparation standards"
+        ]
+      },
+      "uniqueSignals": [
+        "Authentic Armenian-Georgian fusion menu",
+        "Handmade dough-based specialties",
+        "Staff fluent in English, Armenian, and Russian",
+        "Traditional marination secrets",
+        "Community involvement with local cultural groups",
+        "Elegant interior contrasting with modest exterior",
+        "Imported regional wines from Georgia and Armenia"
+      ]
+    },
+    {
+      "pageSlug": "/contact-us",
+      "proposedH1": "Contact Yerevan Sac: Location & Directions in Carmichael",
+      "metaDescription": "Find Yerevan Sac in Carmichael, CA. Get directions, restaurant hours, and contact details for the best Armenian grill in the Sacramento area.",
+      "h2Sections": [
+        {
+          "heading": "Visit Our Carmichael Location",
+          "canonicalKeywords": [
+            "Yerevan Sac location",
+            "Carmichael restaurant directions"
+          ],
+          "contentBullets": [
+            "Conveniently located on Fair Oaks Blvd with ample private parking.",
+            "Easily accessible from Hwy 50 and the Arden-Arcade area.",
+            "Detailed navigation instructions from local landmarks like Carmichael Park."
+          ],
+          "internalLinks": [
+            "/index",
+            "/reservations"
+          ]
+        },
+        {
+          "heading": "Get in Touch for Catering and Events",
+          "canonicalKeywords": [
+            "Mediterranean restaurant phone number",
+            "contact Armenian grill Sacramento"
+          ],
+          "contentBullets": [
+            "Call us for immediate reservation assistance or takeout orders.",
+            "Inquire about our full-service off-site catering for weddings and corporate events.",
+            "Dedicated event planning for our private party hall."
+          ],
+          "internalLinks": [
+            "/about",
+            "/menu"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What are your hours of operation in Carmichael?",
+          "canonicalKeywords": [
+            "restaurant hours Carmichael"
+          ],
+          "answerThemes": [
+            "Evening dinner service",
+            "Late night weekend hours",
+            "Closed Monday/Tuesday"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Is there parking at Yerevan Sac?",
+          "canonicalKeywords": [
+            "parking at Yerevan Sac"
+          ],
+          "answerThemes": [
+            "Dedicated private parking lot",
+            "Free street parking nearby",
+            "Well-lit area"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "How do I get to Yerevan Sac from Hwy 50?",
+          "canonicalKeywords": [
+            "directions to Yerevan Sac"
+          ],
+          "answerThemes": [
+            "Exit Watt Ave North",
+            "Right on Fair Oaks Blvd",
+            "Past Manzanita Ave"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Can I book the venue for a private party?",
+          "canonicalKeywords": [
+            "private celebration venue Carmichael"
+          ],
+          "answerThemes": [
+            "Dedicated party hall",
+            "Birthday and anniversary packages",
+            "Capacity for large groups"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Do you offer takeout or delivery?",
+          "canonicalKeywords": [
+            "takeout Carmichael"
+          ],
+          "answerThemes": [
+            "Direct phone orders",
+            "Online delivery platforms",
+            "Professional packaging for grilled meats"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "What is the best way to contact the manager for catering?",
+          "canonicalKeywords": [
+            "catering contact"
+          ],
+          "answerThemes": [
+            "Direct phone line",
+            "In-person consultation",
+            "Website contact form"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Are you near any public transit?",
+          "canonicalKeywords": [
+            "Sacramento bus routes"
+          ],
+          "answerThemes": [
+            "Accessible via SacRT Route 23",
+            "Fair Oaks & Manzanita stop",
+            "Uber/Lyft friendly location"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you accept large party reservations over the phone?",
+          "canonicalKeywords": [
+            "group dining Sacramento"
+          ],
+          "answerThemes": [
+            "Phone reservations encouraged for 6+",
+            "Deposit may be required for hall rentals"
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Professional event coordination staff",
+          "Knowledgeable front-of-house team"
+        ],
+        "authority": [
+          "Established brick-and-mortar presence in Carmichael",
+          "Verified Google Business Profile"
+        ],
+        "trustworthiness": [
+          "Clear contact information provided",
+          "Responsive customer service policy"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Call to Reserve Now",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "Get Directions",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": false,
+        "reviews": false,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Route from Hwy 50: Take Watt Ave North to Fair Oaks Blvd",
+        "Route from I-80: Take Madison Ave to Manzanita Ave South",
+        "Landmark: Located near the Milagro Centre and Carmichael Park"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "No fee for standard table reservations",
+          "Custom quotes for hall rentals"
+        ],
+        "warrantyTerms": [
+          "Reservation hold policy: 15-minute grace period"
+        ]
+      },
+      "uniqueSignals": [
+        "Ample private parking lot",
+        "Near Fair Oaks Blvd & Manzanita Ave intersection",
+        "5 minutes from Carmichael Park",
+        "Accessible via SacRT Route 23",
+        "Staff fluent in multiple languages",
+        "Accepts all major credit cards",
+        "Handicap accessible facility"
+      ]
+    },
+    {
+      "pageSlug": "/menu",
+      "proposedH1": "Authentic Armenian & Georgian Menu in Sacramento",
+      "metaDescription": "Explore our Armenian-Georgian menu in Carmichael! From handmade Khinkali soup dumplings to Adjaruli Khachapuri and wood-fired Lula kebabs. View prices now.",
+      "h2Sections": [
+        {
+          "heading": "Handmade Khinkali & Georgian Dough Specialties",
+          "canonicalKeywords": [
+            "Khinkali soup dumplings menu",
+            "Adjaruli Khachapuri Carmichael",
+            "Georgian cheese bread"
+          ],
+          "contentBullets": [
+            "Traditional Georgian Khinkali: Spiced beef and pork or vegetarian mushroom fillings.",
+            "Adjaruli Khachapuri: The iconic 'cheese boat' with a runny egg and butter finish.",
+            "Armenian Manti: Small, open-faced dumplings served with garlic yogurt.",
+            "Freshly baked Puri bread from our traditional oven."
+          ],
+          "internalLinks": [
+            "/gallery"
+          ]
+        },
+        {
+          "heading": "Mangal Grill: Lula Kebabs & Prime Meats",
+          "canonicalKeywords": [
+            "lula kebab price",
+            "Mediterranean grill menu",
+            "lamb kebabs Sacramento"
+          ],
+          "contentBullets": [
+            "Lula Kebabs: Ground beef or lamb seasoned with Caucasian spices and grilled over open flame.",
+            "Shish Kebabs: Tender chunks of marinated pork, chicken, or lamb.",
+            "Grilled Vegetables: Fire-roasted tomatoes, peppers, and eggplants.",
+            "Traditional sides including saffron rice and sumac-dusted onions."
+          ],
+          "internalLinks": [
+            "/reservations"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What is on a traditional Georgian menu?",
+          "canonicalKeywords": [
+            "Georgian menu items"
+          ],
+          "answerThemes": [
+            "Focus on dough-based items like Khachapuri",
+            "Soup dumplings like Khinkali",
+            "Walnut-based sauces and pomegranate accents"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer gluten-free Mediterranean options?",
+          "canonicalKeywords": [
+            "gluten free Mediterranean Sacramento"
+          ],
+          "answerThemes": [
+            "Grilled meats are naturally gluten-free",
+            "Fresh salads like Tabbouleh (without bulgur) or garden salads",
+            "Modifiable options available upon request"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "How much does a Lula Kebab cost?",
+          "canonicalKeywords": [
+            "Lula kebab price"
+          ],
+          "answerThemes": [
+            "Pricing ranges from $22 to $28 per plate",
+            "Includes traditional sides and garnish"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "What is Adjaruli Khachapuri?",
+          "canonicalKeywords": [
+            "Adjaruli Khachapuri description"
+          ],
+          "answerThemes": [
+            "Boat-shaped bread filled with Sulguni cheese",
+            "Topped with a soft-boiled egg and butter",
+            "Must be mixed at the table before eating"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Are there vegetarian options on the menu?",
+          "canonicalKeywords": [
+            "Armenian vegetarian food"
+          ],
+          "answerThemes": [
+            "Mushroom Khinkali",
+            "Vegetable kebabs",
+            "Mezza like Hummus and Mutabal"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "What kind of meats are used in your kebabs?",
+          "canonicalKeywords": [
+            "kebab meat types"
+          ],
+          "answerThemes": [
+            "Halal-certified sources",
+            "Prime beef, lamb, and chicken",
+            "Daily fresh marination"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you serve traditional Armenian coffee?",
+          "canonicalKeywords": [
+            "Armenian coffee Sacramento"
+          ],
+          "answerThemes": [
+            "Finely ground beans brewed in a Jezve",
+            "Served with Gata or Baklava"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Is the menu suitable for kids?",
+          "canonicalKeywords": [
+            "kid friendly Mediterranean menu"
+          ],
+          "answerThemes": [
+            "Mild chicken kebabs",
+            "Cheese-filled breads",
+            "Generous portion sizes for sharing"
+          ],
+          "searchIntent": "informational"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Chefs trained in traditional Caucasian dough-making techniques",
+          "Specialized Mangal grill masters"
+        ],
+        "authority": [
+          "Voted best ethnic cuisine in Carmichael area",
+          "Sourcing authentic spices directly from the Caucasus"
+        ],
+        "trustworthiness": [
+          "Transparent pricing listed for all items",
+          "Ingredient sourcing transparency for all meats"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "View Full Menu PDF",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "Book Your Table",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": false,
+        "reviews": true,
+        "team": false,
+        "map": false
+      },
+      "localReferences": [
+        "Located near Fair Oaks Blvd",
+        "Serving the Arden-Arcade community",
+        "Popular lunch spot for Carmichael professionals"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Entrees: $22 - $48",
+          "Appetizers: $12 - $18",
+          "Desserts: $10+"
+        ],
+        "warrantyTerms": [
+          "Freshness guarantee: All dough made daily on-site"
+        ]
+      },
+      "uniqueSignals": [
+        "Pricing transparency",
+        "Process explanation for Khinkali",
+        "Ingredient quality indicators",
+        "Eco-friendly packaging for takeout",
+        "Wait times for handmade items"
+      ]
+    },
+    {
+      "pageSlug": "/reservations",
+      "proposedH1": "Book Your Table at Yerevan Sac in Carmichael",
+      "metaDescription": "Secure your table for group dining or a private celebration in Carmichael. Offering Armenian-Georgian cuisine, full bar service, and elegant event spaces.",
+      "h2Sections": [
+        {
+          "heading": "Group Dining & Private Celebrations",
+          "canonicalKeywords": [
+            "group dining Sacramento",
+            "private celebration venue Carmichael"
+          ],
+          "contentBullets": [
+            "Specialized party hall for birthdays, anniversaries, and corporate events.",
+            "Customizable set menus for groups of 10 or more.",
+            "Live entertainment options including jazz and traditional singers available for private bookings.",
+            "Elegant interior design perfect for upscale family gatherings."
+          ],
+          "internalLinks": [
+            "/contact-us"
+          ]
+        },
+        {
+          "heading": "Reservation Policies & Large Parties",
+          "canonicalKeywords": [
+            "restaurant reservation policy",
+            "how to book large groups"
+          ],
+          "contentBullets": [
+            "Online booking for parties up to 6 people.",
+            "Direct phone line for venue buyouts and events over 20 guests.",
+            "Grace period and cancellation policy details.",
+            "Russian-speaking staff available for personalized event planning."
+          ],
+          "internalLinks": [
+            "/index"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "How do I book a table for a large group?",
+          "canonicalKeywords": [
+            "large group booking Sacramento"
+          ],
+          "answerThemes": [
+            "Use our online portal for up to 6 people",
+            "Call directly for parties over 10",
+            "Inquire about our private party hall"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "What is your reservation cancellation policy?",
+          "canonicalKeywords": [
+            "restaurant cancellation policy"
+          ],
+          "answerThemes": [
+            "24-hour notice requested",
+            "No-show fees may apply for peak holiday times"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you host private birthday parties?",
+          "canonicalKeywords": [
+            "birthday party venue Carmichael"
+          ],
+          "answerThemes": [
+            "Dedicated party hall available",
+            "Custom set menus for celebrations",
+            "Live music and entertainment support"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Can I reserve the bar area for cocktails?",
+          "canonicalKeywords": [
+            "cocktail bar reservations"
+          ],
+          "answerThemes": [
+            "Walk-ins welcome for the bar",
+            "Reservations recommended for bar-side dining tables"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Is there a dress code for dinner?",
+          "canonicalKeywords": [
+            "Yerevan Sac dress code"
+          ],
+          "answerThemes": [
+            "Smart casual recommended",
+            "Elegant attire preferred for Friday/Saturday evening service"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you provide catering for off-site events?",
+          "canonicalKeywords": [
+            "Armenian catering Sacramento"
+          ],
+          "answerThemes": [
+            "Full-service off-site catering available",
+            "Live grill setups for outdoor parties"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "How far in advance should I book for a weekend?",
+          "canonicalKeywords": [
+            "weekend restaurant reservations"
+          ],
+          "answerThemes": [
+            "3-5 days in advance for Friday/Saturday nights",
+            "Same-day bookings often available for lunch"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Is there parking available for large groups?",
+          "canonicalKeywords": [
+            "Yerevan Sac parking"
+          ],
+          "answerThemes": [
+            "Dedicated on-site parking lot",
+            "Easy access from Fair Oaks Blvd"
+          ],
+          "searchIntent": "informational"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Professional event coordinators on staff",
+          "Experienced floor managers for high-volume service"
+        ],
+        "authority": [
+          "Top-rated event venue in Carmichael",
+          "Preferred partner for local community celebrations"
+        ],
+        "trustworthiness": [
+          "Secure online booking system",
+          "Clearly defined group dining contracts"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Reserve Your Table Online",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "Inquire About Private Events",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": false,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Located at 6241 Fair Oaks Blvd",
+        "5 minutes from the American River Parkway",
+        "Easily accessible via Watt Ave"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Large group set menus starting at $55/person"
+        ],
+        "warrantyTerms": [
+          "Reservation guarantee: Tables held for 15 minutes"
+        ]
+      },
+      "uniqueSignals": [
+        "Availability hours",
+        "Payment options",
+        "Process explanation for events",
+        "Local landmarks for navigation",
+        "Language support (Russian/Armenian speaking staff)"
+      ]
+    },
+    {
+      "pageSlug": "/gallery",
+      "proposedH1": "Visual Tour of Yerevan Sac: Food, Cocktails & Atmosphere",
+      "metaDescription": "See what makes Yerevan Sac Carmichael's premier dining destination. Browse photos of our Khinkali, Adjaruli Khachapuri, and elegant Mediterranean interior.",
+      "h2Sections": [
+        {
+          "heading": "A Taste of the Caucasus: Our Signature Dishes",
+          "canonicalKeywords": [
+            "Georgian food photos Sacramento",
+            "Khinkali pictures"
+          ],
+          "contentBullets": [
+            "High-resolution shots of our steaming Khinkali soup dumplings.",
+            "The perfect 'cheese pull' of our Adjaruli Khachapuri.",
+            "Artfully plated Lula kebabs and Mediterranean mezza spreads.",
+            "Behind-the-scenes glimpses of our wood-fired oven in action."
+          ],
+          "internalLinks": [
+            "/menu"
+          ]
+        },
+        {
+          "heading": "Elegant Dining & Sophisticated Bar Atmosphere",
+          "canonicalKeywords": [
+            "Mediterranean restaurant interior Carmichael",
+            "cocktail bar photos Sacramento"
+          ],
+          "contentBullets": [
+            "Photos of our refined dining room and party hall.",
+            "Signature cocktails featuring pomegranate, apricot, and walnut flavors.",
+            "Nightlife atmosphere with live singers and jazz performances.",
+            "Outdoor exterior and welcoming entrance details."
+          ],
+          "internalLinks": [
+            "/index"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What does Adjaruli Khachapuri look like?",
+          "canonicalKeywords": [
+            "Khachapuri appearance"
+          ],
+          "answerThemes": [
+            "Boat-shaped bread",
+            "Golden crust with melted cheese",
+            "Central egg yolk and butter"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you have photos of the private party hall?",
+          "canonicalKeywords": [
+            "private event space photos"
+          ],
+          "answerThemes": [
+            "Spacious hall with elegant lighting",
+            "Configurable seating for large groups",
+            "Stage area for live music"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Can I see the cocktail menu visually?",
+          "canonicalKeywords": [
+            "cocktail presentation"
+          ],
+          "answerThemes": [
+            "Handcrafted garnishes",
+            "Traditional Caucasian glassware",
+            "Vibrant colors from natural juices"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Are the photos on the website of actual dishes served?",
+          "canonicalKeywords": [
+            "authentic food photography"
+          ],
+          "answerThemes": [
+            "100% authentic photos of our kitchen's output",
+            "No stock photography used for main menu items"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the atmosphere like for a date night?",
+          "canonicalKeywords": [
+            "date night atmosphere Carmichael"
+          ],
+          "answerThemes": [
+            "Dimmed lighting in evenings",
+            "Live soft music",
+            "Upscale Mediterranean decor"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you show the kebab grilling process?",
+          "canonicalKeywords": [
+            "Mangal grill photos"
+          ],
+          "answerThemes": [
+            "Photos of the open-flame Mangal",
+            "Traditional skewering techniques shown"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Is the restaurant family-friendly during the day?",
+          "canonicalKeywords": [
+            "family dining atmosphere"
+          ],
+          "answerThemes": [
+            "Bright and welcoming for lunch",
+            "Spacious booths for families with children"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Can I see photos of the Armenian coffee service?",
+          "canonicalKeywords": [
+            "Armenian coffee presentation"
+          ],
+          "answerThemes": [
+            "Traditional brass Jezve",
+            "Served with authentic sweets"
+          ],
+          "searchIntent": "informational"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Professional food photography showcasing culinary skill",
+          "Visual evidence of traditional cooking methods"
+        ],
+        "authority": [
+          "Authentic decor reflecting Armenian and Georgian heritage",
+          "Consistent branding across all visual assets"
+        ],
+        "trustworthiness": [
+          "Real-time social media feed integration",
+          "Photos of staff and management team"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "View Our Menu",
+          "placement": "below-content"
+        },
+        {
+          "type": "secondary",
+          "text": "Follow Us on Instagram",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": false,
+        "team": true,
+        "map": false
+      },
+      "localReferences": [
+        "Landmark: Near the Carmichael Library",
+        "Directions: Access via Fair Oaks Blvd and Marconi Ave",
+        "Climate: Cool indoor dining during Sacramento heatwaves"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Cocktails from $12",
+          "Shared platters from $45"
+        ],
+        "warrantyTerms": [
+          "Visual Accuracy: Dishes served as pictured"
+        ]
+      },
+      "uniqueSignals": [
+        "Visual process explanation",
+        "Staff expertise shown in photos",
+        "Interior design highlights",
+        "Live entertainment evidence",
+        "Traditional equipment (Mangal/Puri oven)"
+      ]
+    }
+  ]
+}

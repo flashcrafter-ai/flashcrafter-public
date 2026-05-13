@@ -1,0 +1,478 @@
+{
+  "source": "dataforseo",
+  "totalReviewsAnalyzed": 50,
+  "averageRating": 5,
+  "signals": {
+    "serviceThemes": [
+      {
+        "service": "Armenian Restaurant",
+        "sentiment": "positive",
+        "frequency": 22,
+        "sampleQuotes": [
+          "The best Armenian place in the whole California!",
+          "A piece of Armenia in the bottom of California's hart!"
+        ]
+      },
+      {
+        "service": "Event Venue",
+        "sentiment": "positive",
+        "frequency": 8,
+        "sampleQuotes": [
+          "I recently celebrated my 34th birthday at Yerevan in the party hall, and everything was absolutely top-notch!",
+          "I would definitely recommend this place to have a dinner or any other party."
+        ]
+      },
+      {
+        "service": "Georgian Restaurant",
+        "sentiment": "positive",
+        "frequency": 6,
+        "sampleQuotes": [
+          "We were hungry for some Armenian food and found a Georgian- Armenian blend.",
+          "The food and service at this Armenian-Georgian restaurant were excellent."
+        ]
+      },
+      {
+        "service": "Mediterranean Restaurant",
+        "sentiment": "positive",
+        "frequency": 5,
+        "sampleQuotes": [
+          "The menu is fantastic with a great variety of Armenian and Mediterranean dishes.",
+          "I tried hummus in many places, MANY, and this one has the best."
+        ]
+      }
+    ],
+    "trustPhrases": [
+      {
+        "phrase": "highly recommended",
+        "frequency": 5,
+        "context": "Highly recommended if you’re in the mood for authentic, flavorful food!"
+      },
+      {
+        "phrase": "definitely be back",
+        "frequency": 6,
+        "context": "We will definitely be back, as always — it’s our tradition!"
+      },
+      {
+        "phrase": "worth every penny",
+        "frequency": 2,
+        "context": "I recommend coming here even if its a bit pricey for some but WORTH EVERY PENNY."
+      }
+    ],
+    "differentiators": [
+      "Authentic Armenian-Georgian fusion menu featuring Khinkali and Hachipuri",
+      "Live entertainment including jazz and singers",
+      "Russian-speaking staff providing high-end hospitality",
+      "Elegant interior design that contrasts with a modest exterior",
+      "Large-scale party hall specifically designed for birthdays and private events"
+    ],
+    "painPointsSolved": [
+      {
+        "problem": "Lack of reservation clarity",
+        "solution": "Accommodated a party of six on a busy Friday night without attitude despite being fully booked.",
+        "frequency": 1
+      },
+      {
+        "problem": "Finding authentic ethnic food in Sacramento",
+        "solution": "Provides food that tastes 'same tasty like in Capital of Armenia - Yerevan'.",
+        "frequency": 4
+      },
+      {
+        "problem": "Small portion sizes at high-end restaurants",
+        "solution": "Serves generous portions of meat where customers feel they 'get your money's worth'.",
+        "frequency": 3
+      }
+    ]
+  },
+  "featuredReviews": [
+    {
+      "author": "Yousuf Shihabi",
+      "content": "The food and service at this Armenian-Georgian restaurant were excellent. Every dish was flavorful and authentic, and the overall dining experience was wonderful. A special thanks to our server, Lisa, who went above and beyond to make sure we had everything we needed—she truly made the evening even better. Highly recommend!",
+      "rating": 5,
+      "date": "2025-08-17 23:50:37 +00:00",
+      "selectionReason": "service_diversity",
+      "highlightedServices": [
+        "Georgian Restaurant"
+      ]
+    },
+    {
+      "author": "Molly Bouch",
+      "content": "From the moment we stepped inside, the charm of this Armenian restaurant was evident. The service was exceptional—staff were prompt and eager to share their knowledge of the dishes, ensuring we made the best choices. The food was authentic and flavorful, especially the grilled trout and the various appetizers like hummus and baba ghanoush. The atmosphere was charming, with wooden tables, soft lighting, and cozy corners that made for a perfect setting to enjoy a leisurely dinner. I can’t wait to come back again!",
+      "rating": 5,
+      "date": "2025-01-25 05:56:59 +00:00",
+      "selectionReason": "service_diversity",
+      "highlightedServices": [
+        "Armenian Restaurant"
+      ]
+    },
+    {
+      "author": "Milana",
+      "content": "Most perfect place in Sacramento! A piece of Armenia 🇦🇲 in the bottom of California's hart! There is a delicious authentic food and friendly Russian speaking stuff in restaurant Yerevan! Wishing you a lot of nice guests and long successful work to your business! 🫶",
+      "rating": 5,
+      "date": "2025-08-09 19:11:30 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": [],
+      "locationMentioned": "Sacramento, CA"
+    },
+    {
+      "author": "Monica Bellamine",
+      "content": "Yerevan Restaurant and Bar in Carmichael is the best restaurant in Carmichael. Not only was the restaurant absolutely beautiful, the server, Oksana, was amazing and the food was to die for. The place is great for groups- the food arrived in a timely manner and was piping hot. I will return again and again!",
+      "rating": 5,
+      "date": "2023-08-06 00:30:49 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": [],
+      "locationMentioned": "Carmichael, CA"
+    },
+    {
+      "author": "Russ Buzhikov",
+      "content": "Yerevan Restaurant is an absolute gem in Sacramento!\n\nFrom the moment we stepped inside, the calming and elegant atmosphere set the perfect tone for an unforgettable dining experience. The attention to detail and cleanliness was impeccable, giving off a high-end vibe without feeling pretentious.\n\nOur server, Oksana, was fantastic—friendly, knowledgeable, and attentive. She made thoughtful menu suggestions that truly enhanced our meal. I highly recommend trying the Khinkali and Beef Lula Kebab, which were incredibly flavorful and cooked to perfection. The portions were generous, leaving us satisfied but wanting to return for more.\n\nThe food itself is of the highest quality—authentic Armenian flavors prepared with care and finesse. Each dish felt like a masterpiece of a high-end chef. Whether you're craving comfort food or looking for something special, you won't be disappointed - we highly recommend!\n\nOur experience was excellent and even more memorable and delightful with such exceptional customer service!",
+      "rating": 5,
+      "date": "2024-10-09 02:17:37 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": [],
+      "locationMentioned": "Sacramento, CA"
+    },
+    {
+      "author": "Jessica Priymasyuk",
+      "content": "ABSOLUTELY. Come here ASAP the food is just finger licking good we got kninhali, hachipuri, and an eggplant appetizer, boy and hummus with bread let me tell u…delicious, the hummus. I tried hummus in many places, MANY, and this one has the best, believe me on this. and cannot forget the dessert the wine pear yummy yummy in my tummy. The service, we had from Natalie (sorry if misspelled) she did amazing service , the atmosphere almost felt like i was at home everything is clean to perfection even the smallest things like spoons, forks, table, floor all clean. I recommend coming here even if its a bit pricey for some but WORTH EVERY PENNY.",
+      "rating": 5,
+      "date": "2025-09-05 00:36:41 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": []
+    },
+    {
+      "author": "Tim Matthews",
+      "content": "Despite my 5 star rating, I do have one recommendation.  There is no reference to needing/taking reservations on their website.  I had assumed that they did not take reservations and it was first come first seated.  With that said, we had a party of six show up on a very busy Friday night and we received NO attitude about not making reservations and they found us a table.  The staff was wonderful.  I could tell they were stressed due to a large party of ~25 people plus a full house of other guests, yet they did their best to take care of us and were very friendly amongst the chaos.  Our party of 6 proceeded to order enough food for a party of 12.  There were so many options that we didn't want to leave anything untried.  I had the lamb chops which were fantastic with a very mild flavor.  My wife isn't a fan of lamb and even she liked it.  Their cheese bread was more cheese than bread which was awesome...  I won't go into details about all the dishes we tried, but will summarize our entire meal as delicious and amazing.  This has become one of my favorite restaurants in the Sac area and I look forward to returning soon.  I want to thank the owners for putting together such a great restaurant and to the staff who made our experience so pleasant.",
+      "rating": 5,
+      "date": "2025-10-19 17:33:12 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": []
+    },
+    {
+      "author": "Anthony Ibarra",
+      "content": "Yerevan in Sacramento/ Carmichael offers an exquisite Armenian cuisine experience. The dishes are top tier. Paired with an elegant and inviting ambiance, great service, occasional live music, and a solid bar selection.\n\nAnthonyxibarrax",
+      "rating": 5,
+      "date": "2024-10-22 17:10:59 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": [],
+      "locationMentioned": "Carmichael, CA"
+    },
+    {
+      "author": "Doug S",
+      "content": "Really a special place for a family celebration!  The service was great and the food was really delicious.  We had a family of 12 and ordered almost everything on the menu.  We left stuffed and still had 4 boxes of leftovers!  After all that, when the bill came I was thinking we could be in for some sticker shock but instead I was pleasantly surprised at a very reasonable price.  Highly recommended.",
+      "rating": 5,
+      "date": "2023-06-17 21:53:16 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": []
+    },
+    {
+      "author": "Ayaz Nefedov",
+      "content": "The best Armenian place in the whole California! Highly recommended! Food and atmosphere were amazing.\n\nBig thank you to server Anastasia and Lisa. Very friendly and professional! Definitely will come next time",
+      "rating": 5,
+      "date": "2026-03-01 23:35:19 +00:00",
+      "selectionReason": "high_quality",
+      "highlightedServices": []
+    }
+  ],
+  "rawReviews": [
+    {
+      "author": "MOE JARADAT",
+      "content": "Easy to find with plenty of parking, very clean facilities, and a warm, friendly staff that makes you feel welcome. The menu is fantastic with a great variety of Armenian and Mediterranean dishes, plus a full bar. Highly recommended if you’re in the mood for authentic, flavorful food!",
+      "rating": 5,
+      "date": "2025-11-10 02:54:56 +00:00"
+    },
+    {
+      "author": "deniss demidovits",
+      "content": "We come here all the time after skiing to enjoy delicious food, great vibes, and most importantly, an unforgettable experience from the chef. Thank you so much!\n\nMira, Masha, Nastya, Liza — and especially a huge thank you to the chef for the amazing food.\n\nWe will definitely be back, as always — it’s our tradition! Thank you!",
+      "rating": 5,
+      "date": "2026-03-01 23:36:14 +00:00"
+    },
+    {
+      "author": "JenyaG",
+      "content": "This is a very nice place to eat. Delicious food, good service and excellent experience...I would definitely recommend this place to have a dinner or any other party...",
+      "rating": 5,
+      "date": "2026-01-12 13:44:09 +00:00"
+    },
+    {
+      "author": "Jessica Priymasyuk",
+      "content": "ABSOLUTELY. Come here ASAP the food is just finger licking good we got kninhali, hachipuri, and an eggplant appetizer, boy and hummus with bread let me tell u…delicious, the hummus. I tried hummus in many places, MANY, and this one has the best, believe me on this. and cannot forget the dessert the wine pear yummy yummy in my tummy. The service, we had from Natalie (sorry if misspelled) she did amazing service , the atmosphere almost felt like i was at home everything is clean to perfection even the smallest things like spoons, forks, table, floor all clean. I recommend coming here even if its a bit pricey for some but WORTH EVERY PENNY.",
+      "rating": 5,
+      "date": "2025-09-05 00:36:41 +00:00"
+    },
+    {
+      "author": "Yekaterina Kutsyy",
+      "content": "I recently celebrated my 34th birthday at Yerevan in the party hall, and everything was absolutely top-notch! The food was delicious, and the hall and restaurant were beautifully designed—truly stunning. The atmosphere was warm and welcoming, and the waitresses were exceptionally professional.\nThe owner’s son even came by to check on us and make sure we were happy and had everything we needed. That level of hospitality meant so much.\nMy guests and I were extremely pleased with the service, the food, and the friendliness of everyone there. Thank you for making my birthday so special. We will definitely be back! 🎉❤️",
+      "rating": 5,
+      "date": "2025-12-08 17:26:21 +00:00"
+    },
+    {
+      "author": "Ayaz Nefedov",
+      "content": "The best Armenian place in the whole California! Highly recommended! Food and atmosphere were amazing.\n\nBig thank you to server Anastasia and Lisa. Very friendly and professional! Definitely will come next time",
+      "rating": 5,
+      "date": "2026-03-01 23:35:19 +00:00"
+    },
+    {
+      "author": "Arghya Kannadaguli",
+      "content": "Good food, lovely decor, clean bathrooms. We tried the greek salad and bbq chicken and both were yummy. Our server Lisa was very attentive and kind.",
+      "rating": 5,
+      "date": "2025-06-30 07:17:22 +00:00"
+    },
+    {
+      "author": "Tim Matthews",
+      "content": "Despite my 5 star rating, I do have one recommendation.  There is no reference to needing/taking reservations on their website.  I had assumed that they did not take reservations and it was first come first seated.  With that said, we had a party of six show up on a very busy Friday night and we received NO attitude about not making reservations and they found us a table.  The staff was wonderful.  I could tell they were stressed due to a large party of ~25 people plus a full house of other guests, yet they did their best to take care of us and were very friendly amongst the chaos.  Our party of 6 proceeded to order enough food for a party of 12.  There were so many options that we didn't want to leave anything untried.  I had the lamb chops which were fantastic with a very mild flavor.  My wife isn't a fan of lamb and even she liked it.  Their cheese bread was more cheese than bread which was awesome...  I won't go into details about all the dishes we tried, but will summarize our entire meal as delicious and amazing.  This has become one of my favorite restaurants in the Sac area and I look forward to returning soon.  I want to thank the owners for putting together such a great restaurant and to the staff who made our experience so pleasant.",
+      "rating": 5,
+      "date": "2025-10-19 17:33:12 +00:00"
+    },
+    {
+      "author": "Lisa Eddington",
+      "content": "This restaurant has a beautiful ambience and a very attentive server. We dined on delicious meats here. We especially enjoyed  the lamb and the veal filet mignon. They serve generous portions of meat here. You get your money's worth. We will be coming back often.",
+      "rating": 5,
+      "date": "2024-10-09 04:07:09 +00:00"
+    },
+    {
+      "author": "Milana",
+      "content": "Most perfect place in Sacramento! A piece of Armenia 🇦🇲 in the bottom of California's hart! There is a delicious authentic food and friendly Russian speaking stuff in restaurant Yerevan! Wishing you a lot of nice guests and long successful work to your business! 🫶",
+      "rating": 5,
+      "date": "2025-08-09 19:11:30 +00:00"
+    },
+    {
+      "author": "Dayana Churavina",
+      "content": "Excellent restaurant!  Cozy atmosphere, excellent wine and snacks.  The impression is wonderful, there is a desire to come again!  Be sure to visit, you will be pleasantly surprised!  thanks to the owner, for the treat I wish you prosperity and success🌶️😍😍😍😍😍😍😍😍😍😍😍😍🫶💸",
+      "rating": 5,
+      "date": "2023-03-12 20:54:26 +00:00"
+    },
+    {
+      "author": "Anthony Ibarra",
+      "content": "Yerevan in Sacramento/ Carmichael offers an exquisite Armenian cuisine experience. The dishes are top tier. Paired with an elegant and inviting ambiance, great service, occasional live music, and a solid bar selection.\n\nAnthonyxibarrax",
+      "rating": 5,
+      "date": "2024-10-22 17:10:59 +00:00"
+    },
+    {
+      "author": "Jeff Wheaton",
+      "content": "We were hungry for some Armenian food and found a Georgian- Armenian blend.",
+      "rating": 5,
+      "date": "2025-11-16 01:41:41 +00:00"
+    },
+    {
+      "author": "Mariana Tiznado-Bryant",
+      "content": "We came in to celebrate my son’s birthday. Food was amazing! Adelina was an absolute joy to have as a server. She was very friendly and very cordial. We will definitely will be returning.",
+      "rating": 5,
+      "date": "2024-04-01 01:54:54 +00:00"
+    },
+    {
+      "author": "Nikolay Molchanov",
+      "content": "That was a special event: our friend 's birthday.\nEverything was great: food, service and atmosphere! Thank you!",
+      "rating": 5,
+      "date": "2026-03-06 23:50:09 +00:00"
+    },
+    {
+      "author": "Anna Greenwood",
+      "content": "Yerevan is absolutely incredible. This was our first time and we were blown away by the exceptional service of Adele, live music, and the food was out of this world. Definitely get the beef grape wrapped dolmas and the khinkali.",
+      "rating": 5,
+      "date": "2024-07-13 02:35:21 +00:00"
+    },
+    {
+      "author": "Yousuf Shihabi",
+      "content": "The food and service at this Armenian-Georgian restaurant were excellent. Every dish was flavorful and authentic, and the overall dining experience was wonderful. A special thanks to our server, Lisa, who went above and beyond to make sure we had everything we needed—she truly made the evening even better. Highly recommend!",
+      "rating": 5,
+      "date": "2025-08-17 23:50:37 +00:00"
+    },
+    {
+      "author": "Vera Vera",
+      "content": "The best place to try authentic Armenian food. Adelina did an amazing job to make our dinner enjoyable. Thank you",
+      "rating": 5,
+      "date": "2024-03-16 23:33:55 +00:00"
+    },
+    {
+      "author": "Garage 911",
+      "content": "Amazing food, same tasty like in Capital of Armenia - Yerevan!!!  Great top notch service, beautiful interior, very polite servers, live music (singer). 110% recommended to visit this place!",
+      "rating": 5,
+      "date": "2025-10-19 05:21:53 +00:00"
+    },
+    {
+      "author": "Ruslan Bizhko",
+      "content": "It was my first time as of restaurant, its was my wife birthday.  Great food ,great people live music. Really love it and enjoy.",
+      "rating": 5,
+      "date": "2025-11-09 19:13:46 +00:00"
+    },
+    {
+      "author": "Natasha Lemos",
+      "content": "Delicious food. Very fresh, made to order. My favorites are Khinkali, hummus and Napoleon cake. Waitress Mira is very professional, friendly and efficient. Looking forward to go back!",
+      "rating": 5,
+      "date": "2024-03-11 19:54:29 +00:00"
+    },
+    {
+      "author": "Daria Negodiuk",
+      "content": "Great service and very tasty food. The borscht was excellent. The khinkali were much bigger than in the menu’s photo and very tasty and juicy.",
+      "rating": 5,
+      "date": "2024-06-02 20:13:10 +00:00"
+    },
+    {
+      "author": "paul dobrovolsky",
+      "content": "We went as a group and had catered food. Everything was great and athe staff was friendly and helpful",
+      "rating": 5,
+      "date": "2026-02-02 23:51:12 +00:00"
+    },
+    {
+      "author": "Elena Lapatskaya",
+      "content": "I had such a wonderful experience at Yerevan Restaurant! From the moment I walked in, I felt the warm, welcoming atmosphere that makes you want to settle in and enjoy your time. The interior is cozy yet elegant, with a touch of Armenian charm that sets the mood perfectly.\n\nThe food was absolutely outstanding — every dish was fresh, beautifully presented, and full of authentic flavor. The khorovats (Armenian barbecue) was cooked to perfection, juicy and tender with just the right amount of seasoning. I also loved the dolma and freshly baked lavash bread, which paired so well with the spreads. Portions were generous, and everything tasted homemade with a lot of care.",
+      "rating": 5,
+      "date": "2025-09-10 04:47:02 +00:00"
+    },
+    {
+      "author": "Cristian Dediu",
+      "content": "Worth checking it out , decent place, good food and great atmosphere",
+      "rating": 5,
+      "date": "2024-04-27 02:52:55 +00:00"
+    },
+    {
+      "author": "Paul Fetz (Fetz Pablo)",
+      "content": "Well, the outside isn’t very inviting, the inside is a different story.\nWhat is the main factor was the food. Their food was on point and did not take a lifetime to come.\n\nThe price was a bit high for the amount of food you get. The meat was amazing especially the lamb chops.\n\nRecommend the sample player with all the meats.",
+      "rating": 5,
+      "date": "2023-03-22 19:29:15 +00:00"
+    },
+    {
+      "author": "Kirill Dushkov",
+      "content": "We enjoy coming out here with the family. Amazing chicken kebab, and the borscht is fire.",
+      "rating": 5,
+      "date": "2026-02-16 00:33:49 +00:00"
+    },
+    {
+      "author": "Art S",
+      "content": "Had a really good time here for a family party! Everybody was very gracious and hospitable. Enjoyed everything very much other than the DJ (he was ok) but that was not the venues decision. Definitely considering a private event there myself.",
+      "rating": 5,
+      "date": "2023-02-20 00:17:38 +00:00"
+    },
+    {
+      "author": "Monica Bellamine",
+      "content": "Yerevan Restaurant and Bar in Carmichael is the best restaurant in Carmichael. Not only was the restaurant absolutely beautiful, the server, Oksana, was amazing and the food was to die for. The place is great for groups- the food arrived in a timely manner and was piping hot. I will return again and again!",
+      "rating": 5,
+      "date": "2023-08-06 00:30:49 +00:00"
+    },
+    {
+      "author": "Vera Z",
+      "content": "The best dining experience. Love ❤️ the jazz. Atmosphere 💯",
+      "rating": 5,
+      "date": "2024-04-02 17:04:49 +00:00"
+    },
+    {
+      "author": "Ժաննա Չաբան",
+      "content": "Very delicious food and amazing service",
+      "rating": 5,
+      "date": "2025-09-23 06:44:52 +00:00"
+    },
+    {
+      "author": "Vlada Belan",
+      "content": "The cocktails are a must!!! The are very good. The cesar salad was so good!! There lamb is delicious. Everything about the restaurant is amazing and it is very clean.",
+      "rating": 5,
+      "date": "2025-07-21 03:04:15 +00:00"
+    },
+    {
+      "author": "Yelena Karkhu",
+      "content": "Thank you Mira outstanding service, good explanation on menu, we had very delicious “Assorty BBQ” . Very delicious!!!!",
+      "rating": 5,
+      "date": "2024-10-07 00:59:59 +00:00"
+    },
+    {
+      "author": "Molly Bouch",
+      "content": "From the moment we stepped inside, the charm of this Armenian restaurant was evident. The service was exceptional—staff were prompt and eager to share their knowledge of the dishes, ensuring we made the best choices. The food was authentic and flavorful, especially the grilled trout and the various appetizers like hummus and baba ghanoush. The atmosphere was charming, with wooden tables, soft lighting, and cozy corners that made for a perfect setting to enjoy a leisurely dinner. I can’t wait to come back again!",
+      "rating": 5,
+      "date": "2025-01-25 05:56:59 +00:00"
+    },
+    {
+      "author": "Yurii Raziuk",
+      "content": "My favourite place to celebrate an occasion or grab a tasty cocktail! Very pleasant staff and excellent food.",
+      "rating": 5,
+      "date": "2024-03-24 03:59:43 +00:00"
+    },
+    {
+      "author": "Liliya Ryzak",
+      "content": "Nice place!  The food is very tasty, especially the meat.",
+      "rating": 5,
+      "date": "2023-02-27 07:09:45 +00:00"
+    },
+    {
+      "author": "Tanya Gorodova",
+      "content": "beautiful interior.  friendly staff.  barbecue is very tasty.  we were satisfied",
+      "rating": 5,
+      "date": "2023-03-27 04:32:22 +00:00"
+    },
+    {
+      "author": "Vitaly Tarasenko",
+      "content": "it was very tasty also live music, service at the highest level",
+      "rating": 5,
+      "date": "2023-03-06 04:45:49 +00:00"
+    },
+    {
+      "author": "Russ Buzhikov",
+      "content": "Yerevan Restaurant is an absolute gem in Sacramento!\n\nFrom the moment we stepped inside, the calming and elegant atmosphere set the perfect tone for an unforgettable dining experience. The attention to detail and cleanliness was impeccable, giving off a high-end vibe without feeling pretentious.\n\nOur server, Oksana, was fantastic—friendly, knowledgeable, and attentive. She made thoughtful menu suggestions that truly enhanced our meal. I highly recommend trying the Khinkali and Beef Lula Kebab, which were incredibly flavorful and cooked to perfection. The portions were generous, leaving us satisfied but wanting to return for more.\n\nThe food itself is of the highest quality—authentic Armenian flavors prepared with care and finesse. Each dish felt like a masterpiece of a high-end chef. Whether you're craving comfort food or looking for something special, you won't be disappointed - we highly recommend!\n\nOur experience was excellent and even more memorable and delightful with such exceptional customer service!",
+      "rating": 5,
+      "date": "2024-10-09 02:17:37 +00:00"
+    },
+    {
+      "author": "Matthew Davenport",
+      "content": "The service at this Armenian gem was impeccable! The staff's knowledge of the menu and their genuine enthusiasm made the dining experience truly special. As for the food, it was a delightful journey of flavors. The lamb shish kebab was tender, and the lavash bread was a revelation. The ambiance was cozy and charming, with soft lighting and Armenian music setting the perfect mood. Whether you're a fan of Armenian cuisine or trying it for the first time, this place is a definite winner.",
+      "rating": 5,
+      "date": "2024-12-31 00:45:10 +00:00"
+    },
+    {
+      "author": "Lana Demko Світлана Демко",
+      "content": "Lamb chops were the best! Miroslava was really friendly.",
+      "rating": 5,
+      "date": "2024-03-03 22:53:00 +00:00"
+    },
+    {
+      "author": "Alina Vasquez",
+      "content": "Awesome vibe and great food!",
+      "rating": 5,
+      "date": "2025-07-14 08:46:17 +00:00"
+    },
+    {
+      "author": "Mariya mary",
+      "content": "Food was awesome 👍 My kids enjoyed kinhali and lava cake 🧁 Beautiful and nice waitress. My husband felt like home in Georgia.",
+      "rating": 5,
+      "date": "2024-03-03 22:23:33 +00:00"
+    },
+    {
+      "author": "Karush Barseghyan",
+      "content": "Great customer service, highly recommend definitely check them out….",
+      "rating": 5,
+      "date": "2024-02-14 05:36:56 +00:00"
+    },
+    {
+      "author": "Mikki Aglaganov",
+      "content": "Very tasty armenian and georgian dishes!",
+      "rating": 5,
+      "date": "2024-02-22 23:33:47 +00:00"
+    },
+    {
+      "author": "Doug S",
+      "content": "Really a special place for a family celebration!  The service was great and the food was really delicious.  We had a family of 12 and ordered almost everything on the menu.  We left stuffed and still had 4 boxes of leftovers!  After all that, when the bill came I was thinking we could be in for some sticker shock but instead I was pleasantly surprised at a very reasonable price.  Highly recommended.",
+      "rating": 5,
+      "date": "2023-06-17 21:53:16 +00:00"
+    },
+    {
+      "author": "Stephen Healy",
+      "content": "First time guests:\nFood: We ordered the grape leaves, bbq lamb, khinkali, and a lava cake for dessert.  Everything tasted great. Very fresh, good clean environment, and friendly staff. They had a nice bar as well. There was also a live singer (it was Friday), not sure if this is normal or not. They had a larger room across from the dining room for large parties that was very inviting.\n\nPrice: The bill was a cool C note with tip, which is pretty reasonable for what we ordered.\n\nNegative: They are only open on the weekends. Singer could have been a few decibels lower so we could hear eachother easier, but sounded great.",
+      "rating": 5,
+      "date": "2024-08-25 18:25:22 +00:00"
+    },
+    {
+      "author": "Vlad Honchar",
+      "content": "One of tastiest place I visited in United State!",
+      "rating": 5,
+      "date": "2026-01-13 17:32:33 +00:00"
+    },
+    {
+      "author": "T. J. Bryant",
+      "content": "Came here for my birthday dinner! ☺️ The food was amazing all across the board! The BBQ lamb chops was my absolute favorite, best i’ve ever had :) Our server Adelina, was super friendly and funny so u will have the best experience possible. 👍🏼👍🏼",
+      "rating": 5,
+      "date": "2024-04-01 01:55:23 +00:00"
+    },
+    {
+      "author": "Alexei Smoliuc",
+      "content": "All I can say about this place is the great service and delicious food.\nPrices are really affordable and for those who decided to spend night with the live music and perfect food would be the great place. Of course, I will come back there later.",
+      "rating": 5,
+      "date": "2024-07-14 22:03:58 +00:00"
+    }
+  ]
+}

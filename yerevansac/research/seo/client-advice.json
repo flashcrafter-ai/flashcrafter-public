@@ -1,0 +1,76 @@
+{
+  "businessName": "Yerevan Sac",
+  "primaryService": "Armenian Restaurant",
+  "primaryLocation": "Carmichael, CA",
+  "photoBestPractices": {
+    "generalTips": [
+      "Capture the 'Steam and Sizzle': Take close-up photos of kebabs and grilled meats while they are still steaming to convey freshness.",
+      "The 'Cheese Pull' Shot: For Adjaruli Khachapuri, take a short video or photo of the cheese and egg being mixed to drive high engagement.",
+      "Show the Craft: Photograph the 'work in progress' of chefs hand-folding Khinkali dumplings to emphasize the handmade nature of the food.",
+      "Atmosphere and Lighting: Use natural daylight for food shots near windows and warm, dim lighting for evening cocktail and group dining shots.",
+      "Team in Action: Take photos of your staff interacting warmly with guests or preparing cocktails to build trust with the Carmichael community.",
+      "Plating Perfection: Ensure the background is clean and use vibrant garnishes to make the Mediterranean colors pop against the plate."
+    ],
+    "namingGuidelines": [
+      {
+        "service": "Kebab and Grilled Meats",
+        "filenameFormat": "kebab-grilled-meats-in-carmichael-ca-lula-kebab-platter.jpg",
+        "example": "kebab-grilled-meats-in-carmichael-ca-lula-kebab-platter.jpg"
+      },
+      {
+        "service": "Handmade Khinkali",
+        "filenameFormat": "handmade-khinkali-dumplings-in-carmichael-ca-authentic-armenian.jpg",
+        "example": "handmade-khinkali-dumplings-in-carmichael-ca-authentic-armenian.jpg"
+      },
+      {
+        "service": "Adjaruli Khachapuri",
+        "filenameFormat": "adjaruli-khachapuri-cheese-bread-in-carmichael-ca-georgian-cuisine.jpg",
+        "example": "adjaruli-khachapuri-cheese-bread-in-carmichael-ca-georgian-cuisine.jpg"
+      },
+      {
+        "service": "Catering and Group Dining",
+        "filenameFormat": "catering-group-dining-in-carmichael-ca-private-celebration-hall.jpg",
+        "example": "catering-group-dining-in-carmichael-ca-private-celebration-hall.jpg"
+      }
+    ],
+    "captionTemplates": [
+      "Craving authentic Mediterranean flavors? Our signature Lula Kebabs are grilled to perfection right here in Carmichael, CA. Join us at Yerevan Sac for the best Armenian-Georgian cuisine in town!",
+      "Experience the art of handmade Khinkali! Our chefs in Carmichael, CA prepare these traditional dumplings daily. Perfect for group dining or a cozy night out with cocktails.",
+      "Planning a private celebration? Yerevan Sac offers premium catering and group dining services in Carmichael, CA. From Adjaruli Khachapuri to lamb chops, we bring the feast to you.",
+      "Golden, cheesy, and delicious! Our Adjaruli Khachapuri is a must-try for anyone looking for authentic Georgian food in the Carmichael area. Come grab a seat at the bar!"
+    ]
+  },
+  "reviewTemplates": [
+    {
+      "name": "Post-Dinner Text",
+      "useCase": "Sent to customers shortly after their meal",
+      "template": "Hi [Name]! Thanks for dining at Yerevan Sac. Could you leave us a quick Google review? Mentioning our [Service/Dish] and our Carmichael location helps us a lot! [Link]",
+      "example": "Hi Sarah! Thanks for dining at Yerevan Sac. Could you leave us a quick Google review? Mentioning our Lula Kebabs and our Carmichael location helps us a lot! g.page/yerevansac/review"
+    },
+    {
+      "name": "Catering Follow-up",
+      "useCase": "Sent after a private event or catering order",
+      "template": "Hi [Name], it was an honor to cater your event! If you enjoyed our [Service] in Carmichael, please share your experience and mention our Armenian-Georgian specialties. [Link]",
+      "example": "Hi John, it was an honor to cater your event! If you enjoyed our group dining service in Carmichael, please share your experience and mention our Armenian-Georgian specialties. g.page/yerevansac/review"
+    },
+    {
+      "name": "Khinkali/Specialty Fans",
+      "useCase": "For regulars who order specific handmade items",
+      "template": "Glad you enjoyed the Khinkali today! Would you mind posting a review about our handmade dumplings in Carmichael, CA? It helps other foodies find us! [Link]",
+      "example": "Glad you enjoyed the Khinkali today! Would you mind posting a review about our handmade dumplings in Carmichael, CA? It helps other foodies find us! g.page/yerevansac/review"
+    }
+  ],
+  "goodReviewCriteria": [
+    "Mentions specific menu items like 'Lula Kebab', 'Khinkali', or 'Adjaruli Khachapuri'.",
+    "Includes the location 'Carmichael' or 'Sacramento area' within the text.",
+    "Contains high-quality photos of the food or the restaurant interior.",
+    "Describes the service quality and the 'authentic' atmosphere of the Armenian-Georgian kitchen.",
+    "Highlights specific use cases like 'group dining', 'date night', or 'catering'.",
+    "Uses keywords related to the cuisine type such as 'Mediterranean' or 'Middle Eastern grill'.",
+    "The reviewer has a 'Local Guide' badge or a history of credible reviews."
+  ],
+  "markdownContent": "# SEO Best Practices for Yerevan Sac\n\n*Personalized advice for Armenian Restaurant in Carmichael, CA*\n\n## Photo Best Practices\n\n### Tips for Taking Great Work Photos\n\n- Capture the 'Steam and Sizzle': Take close-up photos of kebabs and grilled meats while they are still steaming to convey freshness.\n- The 'Cheese Pull' Shot: For Adjaruli Khachapuri, take a short video or photo of the cheese and egg being mixed to drive high engagement.\n- Show the Craft: Photograph the 'work in progress' of chefs hand-folding Khinkali dumplings to emphasize the handmade nature of the food.\n- Atmosphere and Lighting: Use natural daylight for food shots near windows and warm, dim lighting for evening cocktail and group dining shots.\n- Team in Action: Take photos of your staff interacting warmly with guests or preparing cocktails to build trust with the Carmichael community.\n- Plating Perfection: Ensure the background is clean and use vibrant garnishes to make the Mediterranean colors pop against the plate.\n\n### Photo Naming Guidelines\n\nName your photos with service + location for better SEO:\n\n| Service | Filename Format | Example |\n|---------|-----------------|---------|\n| Kebab and Grilled Meats | `kebab-grilled-meats-in-carmichael-ca-lula-kebab-platter.jpg` | `kebab-grilled-meats-in-carmichael-ca-lula-kebab-platter.jpg` |\n| Handmade Khinkali | `handmade-khinkali-dumplings-in-carmichael-ca-authentic-armenian.jpg` | `handmade-khinkali-dumplings-in-carmichael-ca-authentic-armenian.jpg` |\n| Adjaruli Khachapuri | `adjaruli-khachapuri-cheese-bread-in-carmichael-ca-georgian-cuisine.jpg` | `adjaruli-khachapuri-cheese-bread-in-carmichael-ca-georgian-cuisine.jpg` |\n| Catering and Group Dining | `catering-group-dining-in-carmichael-ca-private-celebration-hall.jpg` | `catering-group-dining-in-carmichael-ca-private-celebration-hall.jpg` |\n\n### GBP Caption Templates\n\nUse these when uploading photos to Google Business Profile:\n\n> Craving authentic Mediterranean flavors? Our signature Lula Kebabs are grilled to perfection right here in Carmichael, CA. Join us at Yerevan Sac for the best Armenian-Georgian cuisine in town!\n\n> Experience the art of handmade Khinkali! Our chefs in Carmichael, CA prepare these traditional dumplings daily. Perfect for group dining or a cozy night out with cocktails.\n\n> Planning a private celebration? Yerevan Sac offers premium catering and group dining services in Carmichael, CA. From Adjaruli Khachapuri to lamb chops, we bring the feast to you.\n\n> Golden, cheesy, and delicious! Our Adjaruli Khachapuri is a must-try for anyone looking for authentic Georgian food in the Carmichael area. Come grab a seat at the bar!\n\n## Review Request Templates\n\nSend these texts/emails to customers after completing a job:\n\n### Post-Dinner Text\n\n*Use when: Sent to customers shortly after their meal*\n\n**Template:**\n\n```\nHi [Name]! Thanks for dining at Yerevan Sac. Could you leave us a quick Google review? Mentioning our [Service/Dish] and our Carmichael location helps us a lot! [Link]\n```\n\n**Example:**\n\n```\nHi Sarah! Thanks for dining at Yerevan Sac. Could you leave us a quick Google review? Mentioning our Lula Kebabs and our Carmichael location helps us a lot! g.page/yerevansac/review\n```\n\n### Catering Follow-up\n\n*Use when: Sent after a private event or catering order*\n\n**Template:**\n\n```\nHi [Name], it was an honor to cater your event! If you enjoyed our [Service] in Carmichael, please share your experience and mention our Armenian-Georgian specialties. [Link]\n```\n\n**Example:**\n\n```\nHi John, it was an honor to cater your event! If you enjoyed our group dining service in Carmichael, please share your experience and mention our Armenian-Georgian specialties. g.page/yerevansac/review\n```\n\n### Khinkali/Specialty Fans\n\n*Use when: For regulars who order specific handmade items*\n\n**Template:**\n\n```\nGlad you enjoyed the Khinkali today! Would you mind posting a review about our handmade dumplings in Carmichael, CA? It helps other foodies find us! [Link]\n```\n\n**Example:**\n\n```\nGlad you enjoyed the Khinkali today! Would you mind posting a review about our handmade dumplings in Carmichael, CA? It helps other foodies find us! g.page/yerevansac/review\n```\n\n## What Makes a Great Review\n\nFeature reviews on your website that include:\n\n- Mentions specific menu items like 'Lula Kebab', 'Khinkali', or 'Adjaruli Khachapuri'.\n- Includes the location 'Carmichael' or 'Sacramento area' within the text.\n- Contains high-quality photos of the food or the restaurant interior.\n- Describes the service quality and the 'authentic' atmosphere of the Armenian-Georgian kitchen.\n- Highlights specific use cases like 'group dining', 'date night', or 'catering'.\n- Uses keywords related to the cuisine type such as 'Mediterranean' or 'Middle Eastern grill'.\n- The reviewer has a 'Local Guide' badge or a history of credible reviews.\n\n---\n\n*Generated for Yerevan Sac | 5/12/2026*",
+  "meta": {
+    "generatedAt": "2026-05-12T23:06:33.444Z"
+  }
+}

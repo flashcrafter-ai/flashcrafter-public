@@ -1,0 +1,154 @@
+{
+  "business": {
+    "name": "Yerevan Sac",
+    "services": [
+      "Armenian-Georgian cuisine",
+      "Mediterranean restaurant",
+      "Kebabs and grilled meats (Mangal)",
+      "Khinkali and handmade dumplings",
+      "Khachapuri and traditional breads",
+      "Caucasian soups and stews",
+      "Cocktail bar and signature drinks",
+      "Group dining and private celebrations",
+      "Live mangal grill catering"
+    ],
+    "serviceCategories": [
+      "Armenian Restaurant",
+      "Georgian Restaurant",
+      "Mediterranean Restaurant",
+      "Cocktail Bar",
+      "Catering Service",
+      "Event Venue",
+      "Restaurant Website",
+      "Local SEO"
+    ],
+    "specializedServices": [
+      "Adjaruli Khachapuri",
+      "Imeruli Khachapuri",
+      "Fire-Grilled Khachapuri",
+      "Kubdari (Svanetian meat bread)",
+      "Lahmajoun (Armenian flatbread)",
+      "Handmade Khinkali (beef-pork, lamb, cheese, mushroom)",
+      "Fried Khinkali",
+      "Lula Kebab (beef/lamb, chicken)",
+      "Lamb Rack Mangal",
+      "Pork Shashlik",
+      "BBQ Pork Ribs",
+      "Quail with pomegranate sauce",
+      "Chakapuli (Georgian lamb tarragon stew)",
+      "Lamb Khashlama",
+      "Chicken Tabaka",
+      "Tjvjik (Armenian liver and heart)",
+      "Beef Dolma (stuffed grape leaves)",
+      "Chikhirtma (Georgian chicken soup in bread bowl)",
+      "Kharcho soup",
+      "Lobio (Georgian clay-pot beans)",
+      "Borscht",
+      "Pkhali combo (Georgian vegetable spreads)",
+      "Basturma and Sujuk (cured meats)",
+      "Hummus and mezza",
+      "Tan (Caucasian yogurt drink)",
+      "Napoleon pastry",
+      "Armenian coffee and Gata",
+      "Yerevan Manhattan",
+      "Yerevan Old Fashion",
+      "Bari Lur signature cocktail",
+      "Live Mangal Grill catering",
+      "Group dining",
+      "Private celebrations",
+      "Wedding catering"
+    ],
+    "website": "https://yerevansac.com/",
+    "phone": "(916) 620-9999",
+    "phoneSecondary": "(916) 671-9999"
+  },
+  "locations": {
+    "primaryLocation": "Carmichael, CA",
+    "address": "7600 Fair Oaks Blvd, Carmichael, CA 95608",
+    "keyLocations": [
+      "Carmichael, CA",
+      "Sacramento, CA",
+      "Fair Oaks, CA",
+      "Arden-Arcade, CA",
+      "Citrus Heights, CA",
+      "Roseville, CA"
+    ],
+    "serviceAreas": [
+      "Carmichael",
+      "Sacramento",
+      "Fair Oaks",
+      "Arden-Arcade",
+      "Citrus Heights",
+      "Roseville"
+    ]
+  },
+  "constraints": {
+    "strictAllowedEntities": [
+      "Armenian restaurant",
+      "Georgian restaurant",
+      "Mediterranean restaurant",
+      "Caucasian cuisine",
+      "kebab/grilled meats",
+      "mangal grill",
+      "lamb",
+      "handmade dumplings/khinkali",
+      "khachapuri",
+      "Caucasian soups and stews",
+      "cocktails",
+      "Armenian cocktails",
+      "group dining",
+      "private celebrations",
+      "catering"
+    ],
+    "requiredEntities": [
+      "Armenian restaurant",
+      "Georgian restaurant",
+      "khinkali",
+      "khachapuri",
+      "mangal/kebabs",
+      "Caucasian cuisine",
+      "catering"
+    ],
+    "entitiesToAvoid": [
+      "fast food",
+      "Greek-only positioning",
+      "generic Middle Eastern positioning"
+    ],
+    "evidenceLines": [
+      "Adjaruli Khachapuri (the Georgian cheese-boat) is the most visually distinctive dish in the Sacramento region and largely uncontested in local search.",
+      "Yerevan Sac is the only restaurant in Sacramento metro known to serve Kubdari (Svanetian Georgian meat bread).",
+      "Handmade khinkali pleated daily on-site differentiates from competitors using frozen dumplings.",
+      "Two phone numbers active: primary (916) 620-9999 and secondary (916) 671-9999.",
+      "Open hours: Wed-Fri 4PM-10PM, Sat 2PM-11PM, Sun 12PM-10PM, closed Monday and Tuesday."
+    ],
+    "hasStrictAllowlist": true
+  },
+  "context": {
+    "summary": "Yerevan Sac is a Carmichael, CA restaurant serving authentic Armenian and Georgian (Caucasian) cuisine. The SEO strategy targets the general American dining audience by capturing 'Mediterranean restaurant' adjacent intent and converting via unique specialty pages for dishes competitors do not credibly serve: Khachapuri (Adjaruli, Imeruli, Fire-Grilled, Kubdari, Lahmajoun), handmade Khinkali (multiple variants), Mangal grill meats (Lula, lamb rack, quail), Caucasian soups and stews (Chakapuli, Chikhirtma, Kharcho, Lobio, Borscht, Khashlama, Tjvjik), Armenian classics (Beef Dolma, Tabaka, Basturma & Sujuk, Pkhali), and signature cocktails (Yerevan Manhattan, Bari Lur). Local SEO covers Carmichael, Sacramento, Fair Oaks, Arden-Arcade, Citrus Heights, and Roseville.",
+    "notes": [
+      "The Armenian/Georgian identity is the differentiator, not the entry barrier.",
+      "Generic dishes on the menu (Caesar salad, generic seafood, Korean-style beef, Rustic pork stew, fusion items) are listed on the /menu page only and do NOT earn dedicated SEO pages — this prevents topical-authority dilution.",
+      "About-us page is elevated to a Tier-1 E-E-A-T anchor: founder story, chef bios with names + photos, provenance of recipes, explanation of the Yerevan Sac name, cross-cultural Caucasian story.",
+      "Cocktail strategy is reframed around branded signatures (Yerevan Manhattan, Yerevan Old Fashion, Bari Lur) plus general bar program. Pomegranate/brandy/kvevri/apricot category pages should be confirmed against live bar inventory before build.",
+      "Menu page (/menu) is rebuilt with full Schema.org Menu + MenuItem markup, sectioned by BBQ / Hot Plates / Khinkali / Khachapuri / Soups & Dolma / Seafood / Salads / Appetizers / Desserts / Cocktails, with prices for rich-result eligibility.",
+      "URL canonical: /menu/ is the canonical menu page; /food/ redirects to /menu/ (preserves link equity from current public URL)."
+    ]
+  },
+  "dropped": {
+    "keyServices": [],
+    "serviceCategories": [],
+    "specializedServices": [],
+    "keyLocations": [],
+    "serviceAreas": [],
+    "dishesIntentionallyNotBuiltAsPages": [
+      "Generic salads (Caesar, Greek, Summer, Beef, Chicken, Tuna, Vegetarian)",
+      "Generic seafood (Marinated Salmon, Baked Trout, Mixed Seafood Rice, Shrimps in Tomato Sauce, Tuna Pasta)",
+      "Generic chicken (Chicken Strips, Wings, Tabaka Creamy variant)",
+      "Off-brand fusion (Korean-Style Beef, Rustic Pork Stew)",
+      "Generic appetizers (Cheese Plate, Fresh Vegetables, Assorted Olives)",
+      "Generic desserts (Cheesecake, Lava Cake, Mulled Wine Pear)",
+      "Steaks (Rib Eye)"
+    ],
+    "rationaleForExclusions": "Per topical-authority SEO principles (post-HCS): these items have unwinnable rankings vs. local-pack aggregators (DoorDash, Yelp) and dilute the Caucasian-specialty signal that the entire strategy depends on. They remain on the rebuilt /menu page with descriptions and Schema.org markup, but do not earn dedicated URLs."
+  }
+}

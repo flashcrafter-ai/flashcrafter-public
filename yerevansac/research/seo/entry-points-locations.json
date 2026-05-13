@@ -1,0 +1,172 @@
+{
+  "entryPoints": [
+    {
+      "pageSlug": "/locations/carmichael",
+      "primaryKeyword": "mediterranean restaurant carmichael",
+      "supportingKeywords": [
+        "carmichael armenian food",
+        "georgian cuisine carmichael ca",
+        "best kebabs in carmichael",
+        "carmichael dining and cocktails"
+      ],
+      "faqKeywords": [
+        "where to eat in carmichael",
+        "best dinner spots carmichael",
+        "carmichael mediterranean grill alternative"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 480,
+      "rationale": "As the primary physical location, this page targets high-intent local diners looking for Mediterranean options while differentiating with Armenian/Georgian modifiers to beat generic local grills."
+    },
+    {
+      "pageSlug": "/locations/sacramento",
+      "primaryKeyword": "armenian georgian restaurant sacramento",
+      "supportingKeywords": [
+        "sacramento mediterranean dining",
+        "best khinkali sacramento",
+        "sacramento lula kebab",
+        "georgian wine sacramento"
+      ],
+      "faqKeywords": [
+        "authentic georgian food sacramento",
+        "where to find khachapuri in sacramento",
+        "sacramento mediterranean restaurant with bar"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "high",
+      "volume": 720,
+      "rationale": "Sacramento is the broader market. We use the unique niche (Armenian/Georgian) as the primary hook to capture high-value destination diners from the city center."
+    },
+    {
+      "pageSlug": "/locations/fair-oaks",
+      "primaryKeyword": "mediterranean food fair oaks",
+      "supportingKeywords": [
+        "fair oaks catering services",
+        "kebabs fair oaks ca",
+        "fair oaks group dining",
+        "mediterranean grill fair oaks"
+      ],
+      "faqKeywords": [
+        "restaurants near fair oaks village",
+        "fair oaks mediterranean delivery",
+        "best family restaurants fair oaks"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 210,
+      "rationale": "Fair Oaks is a high-income demographic adjacent to Carmichael. Focus is on quality dining and catering services for residential clusters."
+    },
+    {
+      "pageSlug": "/locations/arden-arcade",
+      "primaryKeyword": "arden-arcade mediterranean restaurant",
+      "supportingKeywords": [
+        "arden-arcade dinner spots",
+        "kebabs near arden mall",
+        "mediterranean catering arden-arcade",
+        "cocktail bar arden-arcade"
+      ],
+      "faqKeywords": [
+        "best restaurants arden-arcade ca",
+        "arden arcade mediterranean lunch",
+        "private dining arden-arcade"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 170,
+      "rationale": "Targets the professional and shopping demographic near Arden-Arcade, emphasizing the cocktail bar and evening atmosphere."
+    },
+    {
+      "pageSlug": "/locations/citrus-heights",
+      "primaryKeyword": "mediterranean catering citrus heights",
+      "supportingKeywords": [
+        "citrus heights armenian food",
+        "citrus heights kebab house",
+        "mediterranean restaurant citrus heights ca",
+        "party platters citrus heights"
+      ],
+      "faqKeywords": [
+        "citrus heights mediterranean delivery",
+        "best kebabs citrus heights",
+        "catering for events citrus heights"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "low",
+      "volume": 140,
+      "rationale": "Focuses on service-area expansion, specifically targeting catering and delivery intent for the Citrus Heights residential market."
+    },
+    {
+      "pageSlug": "/locations/roseville",
+      "primaryKeyword": "mediterranean catering roseville ca",
+      "supportingKeywords": [
+        "roseville armenian cuisine",
+        "roseville event catering",
+        "georgian food roseville",
+        "mediterranean party platters roseville"
+      ],
+      "faqKeywords": [
+        "best mediterranean catering roseville",
+        "roseville wedding catering mediterranean",
+        "where to buy khachapuri roseville"
+      ],
+      "intent": "transactional",
+      "competitionLevel": "medium",
+      "volume": 190,
+      "rationale": "Roseville is a lucrative catering market. Since the physical location is in Carmichael, this page captures the high-value 'event' and 'catering' searches in the North."
+    }
+  ],
+  "cannibalizationCheck": {
+    "conflicts": [],
+    "resolved": true
+  },
+  "internalLinks": [
+    {
+      "from": "/locations/carmichael",
+      "to": [
+        "/locations/sacramento",
+        "/locations/fair-oaks",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/sacramento",
+      "to": [
+        "/locations/carmichael",
+        "/locations/fair-oaks",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/fair-oaks",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/arden-arcade"
+      ]
+    },
+    {
+      "from": "/locations/arden-arcade",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    },
+    {
+      "from": "/locations/citrus-heights",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    },
+    {
+      "from": "/locations/roseville",
+      "to": [
+        "/locations/carmichael",
+        "/locations/sacramento",
+        "/locations/fair-oaks"
+      ]
+    }
+  ]
+}

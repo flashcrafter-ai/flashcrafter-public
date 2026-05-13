@@ -1,0 +1,114 @@
+{
+  "index/": 10,
+  "services/": {
+    "mediterranean-restaurant/": {
+      "hummus-mezza-spreads/": 7,
+      "falafel-platters/": 6,
+      "tabbouleh-salads/": 5,
+      "baba-ganoush/": 5,
+      "mediterranean-lunch-bowls/": 8
+    },
+    "armenian-georgian-cuisine/": {
+      "adjaruli-khachapuri/": 10,
+      "armenian-manti/": 8,
+      "imeruli-khachapuri/": 7,
+      "basturma-sujuk/": 6,
+      "armenian-coffee-gata/": 5,
+      "lahmajoun/": 9,
+      "kubdari/": 9,
+      "fire-grilled-khachapuri/": 8,
+      "beef-dolma/": 8,
+      "pkhali-combo/": 8,
+      "chicken-tabaka/": 8,
+      "tjvjik-liver-heart/": 6,
+      "tan-yogurt-drink/": 5,
+      "napoleon-pastry/": 7
+    },
+    "kebabs-grilled-meats/": {
+      "lula-kebab-beef-lamb/": 9,
+      "shish-kebab-chicken/": 8,
+      "lamb-chops-mangal/": 9,
+      "pork-shashlik/": 7,
+      "grilled-vegetable-skewers/": 6,
+      "quail-pomegranate/": 8
+    },
+    "handmade-khinkali-dumplings/": {
+      "traditional-beef-pork-khinkali/": 10,
+      "lamb-khinkali/": 9,
+      "cheese-khinkali/": 7,
+      "mushroom-khinkali/": 6,
+      "khinkali-frozen-to-go/": 5,
+      "fried-khinkali/": 8
+    },
+    "cocktail-bar-drinks/": {
+      "pomegranate-martinis/": 8,
+      "armenian-brandy-cocktails/": 7,
+      "georgian-kvevri-wines/": 9,
+      "apricot-infused-spirits/": 6,
+      "craft-beers/": 5
+    },
+    "group-dining-events/": {
+      "private-celebrations/": 9,
+      "corporate-dinner-packages/": 8,
+      "birthday-party-hosting/": 7,
+      "anniversary-dining/": 7,
+      "chef-tasting-menu/": 8
+    },
+    "catering-services/": {
+      "wedding-catering/": 9,
+      "office-lunch-catering/": 8,
+      "live-mangal-grill-catering/": 10,
+      "mediterranean-party-platters/": 7,
+      "holiday-event-catering/": 7
+    },
+    "soups-and-stews/": {
+      "chakapuli-lamb-tarragon/": 9,
+      "lamb-khashlama/": 8,
+      "chikhirtma-chicken-soup/": 8,
+      "kharcho-soup/": 8,
+      "lobio-clay-pot/": 8,
+      "borscht-beet-soup/": 7
+    }
+  },
+  "locations/": {
+    "carmichael/": 10,
+    "sacramento/": 10,
+    "fair-oaks/": 9,
+    "arden-arcade/": 9,
+    "citrus-heights/": 8,
+    "roseville/": 8
+  },
+  "areas-served/": {
+    "carmichael-mediterranean-restaurant/": 10,
+    "carmichael-catering/": 9,
+    "carmichael-group-dining/": 8,
+    "sacramento-armenian-georgian-food/": 10,
+    "sacramento-catering/": 9,
+    "sacramento-kebabs/": 8,
+    "fair-oaks-mediterranean-dining/": 8,
+    "fair-oaks-catering/": 7,
+    "arden-arcade-restaurant/": 8,
+    "arden-arcade-catering/": 7,
+    "citrus-heights-mediterranean-food/": 7,
+    "roseville-catering-services/": 7
+  },
+  "guides/": {
+    "what-is-georgian-food/": 9,
+    "khinkali-vs-manti-dumplings/": 8,
+    "how-to-eat-khinkali-guide/": 10,
+    "mediterranean-vs-caucasian-cuisine/": 7,
+    "best-georgian-wines-pairing-guide/": 8,
+    "armenian-kebab-marination-secrets/": 6,
+    "event-catering-cost-guide-sacramento/": 9,
+    "how-khachapuri-is-made/": 7,
+    "history-of-the-mangal-grill/": 5,
+    "is-georgian-food-healthy/": 6,
+    "top-10-mediterranean-dishes-to-try/": 8,
+    "guide-to-armenian-coffee-culture/": 5
+  },
+  "about/": 7,
+  "contact-us/": 10,
+  "menu/": 10,
+  "reservations/": 10,
+  "gallery/": 6
+}

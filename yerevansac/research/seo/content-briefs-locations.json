@@ -1,0 +1,1112 @@
+{
+  "pages": [
+    {
+      "pageSlug": "/locations/carmichael",
+      "proposedH1": "Authentic Mediterranean Restaurant in Carmichael, CA",
+      "metaDescription": "Experience the best Mediterranean restaurant in Carmichael. Serving authentic Armenian-Georgian cuisine, handmade khinkali, and wood-fired kebabs. Book your table today!",
+      "h2Sections": [
+        {
+          "heading": "Authentic Armenian-Georgian Cuisine in Carmichael",
+          "canonicalKeywords": [
+            "carmichael armenian food",
+            "georgian cuisine carmichael ca",
+            "handmade khinkali"
+          ],
+          "contentBullets": [
+            "Expertly crafted Armenian staples prepared by chefs with over 15 years of culinary experience.",
+            "The only destination in Carmichael for authentic Georgian Khinkali soup dumplings and Adjaruli Khachapuri.",
+            "Traditional wood-fired methods for authentic Caucasian flavor profiles.",
+            "Elegant interior dining space contrasted with a modest exterior for a true hidden gem experience."
+          ],
+          "internalLinks": [
+            "/locations/sacramento",
+            "/locations/fair-oaks"
+          ]
+        },
+        {
+          "heading": "The Best Kebabs and Grilled Meats in Carmichael",
+          "canonicalKeywords": [
+            "best kebabs in carmichael",
+            "mangal grill",
+            "lula kebab"
+          ],
+          "contentBullets": [
+            "Signature Lula Kebabs and marinated lamb grilled over open flames.",
+            "Family-sized platters perfect for group dining and local celebrations.",
+            "Premium protein sourcing with traditional marination techniques.",
+            "Fresh Mediterranean mezza spreads including the region's best rated hummus and mutabal."
+          ],
+          "internalLinks": [
+            "/locations/arden-arcade"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "Where is the best place to eat in Carmichael for authentic Mediterranean?",
+          "canonicalKeywords": [
+            "where to eat in carmichael"
+          ],
+          "answerThemes": [
+            "Yerevan Sac offers a unique blend of Armenian and Georgian Mediterranean flavors.",
+            "Located conveniently on Fair Oaks Blvd."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer vegetarian options on your Carmichael menu?",
+          "canonicalKeywords": [
+            "vegetarian mediterranean carmichael"
+          ],
+          "answerThemes": [
+            "Wide variety of vegetarian mezza, salads, and cheese-based Georgian breads like Khachapuri."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Is Yerevan Sac a good dinner spot for large groups in Carmichael?",
+          "canonicalKeywords": [
+            "best dinner spots carmichael"
+          ],
+          "answerThemes": [
+            "Specialized group dining packages and a large party hall for birthdays and anniversaries."
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "How does Yerevan Sac compare to a standard mediterranean grill?",
+          "canonicalKeywords": [
+            "carmichael mediterranean grill alternative"
+          ],
+          "answerThemes": [
+            "Focus on handmade dough-based specialties like Khinkali and premium bar program versus fast-casual grills."
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you have a full bar at your Carmichael location?",
+          "canonicalKeywords": [
+            "carmichael dining and cocktails"
+          ],
+          "answerThemes": [
+            "Full-service bar featuring signature cocktails with pomegranate and apricot infusions."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Are your Khinkali handmade daily?",
+          "canonicalKeywords": [
+            "handmade khinkali"
+          ],
+          "answerThemes": [
+            "Traditional handmade preparation by specialized dough chefs."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What are your hours of operation in Carmichael?",
+          "canonicalKeywords": [
+            "yerevan sac hours"
+          ],
+          "answerThemes": [
+            "Open Wed-Fri 4pm-10pm, Sat 2pm-11pm, and Sun 12pm-10pm."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer takeout for local Carmichael residents?",
+          "canonicalKeywords": [
+            "mediterranean takeout carmichael"
+          ],
+          "answerThemes": [
+            "Professional packaging for all grilled meats and specialties available for pickup."
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Chefs with 15+ years of experience in Caucasian cuisine",
+          "Specialized training in traditional Georgian dough techniques"
+        ],
+        "authority": [
+          "Highest-rated Armenian-Georgian restaurant in the Sacramento region",
+          "Featured in local culinary reviews for authenticity"
+        ],
+        "trustworthiness": [
+          "Five-star average rating from 50+ analyzed customer reviews",
+          "Transparent pricing on all a la carte and group menus"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Reserve Your Table in Carmichael",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "View Dinner Menu",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Fair Oaks Boulevard",
+        "Marconi Avenue",
+        "Carmichael Park",
+        "Ancil Hoffman Park"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Appetizers: $12 - $18",
+          "Entrees: $22 - $48",
+          "Cocktails: $12 - $18"
+        ]
+      },
+      "uniqueSignals": [
+        "Pricing transparency: Entrees starting at $22",
+        "Process explanation: Wood-fired Mangal grilling",
+        "Team expertise: Russian-speaking staff and specialized dough chefs",
+        "Local landmarks: Near the corner of Fair Oaks Blvd and Marconi Ave",
+        "Availability: Open late on weekends until 11 PM",
+        "Transit logic: 5 minutes from Highway 50 via Watt Ave"
+      ]
+    },
+    {
+      "pageSlug": "/locations/sacramento",
+      "proposedH1": "Armenian-Georgian Restaurant in Sacramento: Authentic Caucasian Cuisine",
+      "metaDescription": "Discover Sacramento's premier destination for Armenian and Georgian dining. Enjoy authentic Khinkali, Lula kebabs, and rare Georgian wines in an elegant setting.",
+      "h2Sections": [
+        {
+          "heading": "Traditional Georgian Food in Sacramento",
+          "canonicalKeywords": [
+            "best khinkali sacramento",
+            "authentic georgian food sacramento",
+            "khachapuri"
+          ],
+          "contentBullets": [
+            "Serving Sacramento's most authentic Khinkali (soup dumplings) with traditional meat or cheese fillings.",
+            "Signature Adjaruli Khachapuri—the iconic Georgian cheese boat—baked fresh in our wood-fired oven.",
+            "Extensive selection of Kvevri wines from Georgia, the cradle of wine.",
+            "A destination dining experience worth the short drive from downtown Sacramento."
+          ],
+          "internalLinks": [
+            "/locations/carmichael",
+            "/locations/fair-oaks"
+          ]
+        },
+        {
+          "heading": "Armenian Culinary Traditions & Premium Bar",
+          "canonicalKeywords": [
+            "sacramento lula kebab",
+            "georgian wine sacramento",
+            "sacramento mediterranean restaurant with bar"
+          ],
+          "contentBullets": [
+            "Authentic Armenian flavors including Basturma, Gata, and traditional Armenian coffee.",
+            "Premium Lula kebabs made with high-quality beef and lamb, seasoned with imported spices.",
+            "Sophisticated cocktail bar featuring regional ingredients like walnut and pomegranate.",
+            "Live entertainment including jazz and singers on select nights for a complete cultural experience."
+          ],
+          "internalLinks": [
+            "/locations/arden-arcade"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "Where can I find authentic Armenian-Georgian food in Sacramento?",
+          "canonicalKeywords": [
+            "authentic georgian food sacramento"
+          ],
+          "answerThemes": [
+            "Yerevan Sac in Carmichael serves the entire Greater Sacramento area with authentic regional dishes."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the best place for Khachapuri in Sacramento?",
+          "canonicalKeywords": [
+            "where to find khachapuri in sacramento"
+          ],
+          "answerThemes": [
+            "Yerevan Sac is renowned for its wood-fired Adjaruli Khachapuri."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Do you serve Georgian wine in Sacramento?",
+          "canonicalKeywords": [
+            "georgian wine sacramento"
+          ],
+          "answerThemes": [
+            "Yes, we offer a curated selection of Georgian and Armenian wines."
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Is there a Mediterranean restaurant with a full bar in Sacramento?",
+          "canonicalKeywords": [
+            "sacramento mediterranean restaurant with bar"
+          ],
+          "answerThemes": [
+            "We offer a full-service bar with craft cocktails and premium spirits."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What are Khinkali and do you have them?",
+          "canonicalKeywords": [
+            "best khinkali sacramento"
+          ],
+          "answerThemes": [
+            "Khinkali are Georgian soup dumplings; we serve them handmade daily."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Can I book a private party for a Sacramento group?",
+          "canonicalKeywords": [
+            "private dining sacramento"
+          ],
+          "answerThemes": [
+            "Yes, we have a large party hall specifically designed for celebrations."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Does the menu include Armenian Lula kebabs?",
+          "canonicalKeywords": [
+            "sacramento lula kebab"
+          ],
+          "answerThemes": [
+            "Our Lula kebabs are a house specialty, grilled over an open flame."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Is the restaurant family-friendly for Sacramento residents?",
+          "canonicalKeywords": [
+            "family restaurants sacramento"
+          ],
+          "answerThemes": [
+            "Yes, we offer a welcoming atmosphere and large portions suitable for families."
+          ],
+          "searchIntent": "informational"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Authentic recipes passed down through generations",
+          "Chef expertise in both Armenian and Georgian regional cuisines"
+        ],
+        "authority": [
+          "Top-rated destination for ethnic cuisine in Northern California",
+          "Recognized for cultural authenticity by the local community"
+        ],
+        "trustworthiness": [
+          "Secure online booking system",
+          "Consistent 5-star feedback for service and food quality"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Book Your Sacramento Dining Experience",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "Explore Our Wine List",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "State Capitol",
+        "Midtown Sacramento",
+        "American River",
+        "Highway 80"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Tasting Menu: $120+ per person",
+          "Standard Dinner: $35 - $65 per person"
+        ]
+      },
+      "uniqueSignals": [
+        "Language: Russian and Armenian speaking staff",
+        "Entertainment: Live music and jazz on weekends",
+        "Product quality: Handmade dough specialties",
+        "Cultural anchor: One of the only Georgian kitchens in the region",
+        "Transit logic: Accessible via Bus Route 23 or 15 mins from Downtown Sacramento",
+        "Local landmark: 10 minutes from American River College"
+      ]
+    },
+    {
+      "pageSlug": "/locations/fair-oaks",
+      "proposedH1": "Mediterranean Food & Catering in Fair Oaks, CA",
+      "metaDescription": "Looking for the best Mediterranean food in Fair Oaks? Yerevan Sac offers authentic Armenian kebabs, Georgian specialties, and professional catering for any occasion.",
+      "h2Sections": [
+        {
+          "heading": "Premium Mediterranean Catering for Fair Oaks Events",
+          "canonicalKeywords": [
+            "fair oaks catering services",
+            "mediterranean party platters fair oaks"
+          ],
+          "contentBullets": [
+            "Full-service catering for weddings, corporate events, and private parties in Fair Oaks.",
+            "Customizable Mediterranean party platters featuring kebabs, mezza, and handmade breads.",
+            "Off-site live grilling options for an interactive guest experience.",
+            "Professional setup and service tailored to Fair Oaks' high-end residential events."
+          ],
+          "internalLinks": [
+            "/locations/carmichael",
+            "/locations/sacramento"
+          ]
+        },
+        {
+          "heading": "Group Dining and Family Favorites",
+          "canonicalKeywords": [
+            "fair oaks group dining",
+            "best family restaurants fair oaks",
+            "kebabs fair oaks ca"
+          ],
+          "contentBullets": [
+            "Spacious dining areas perfect for Fair Oaks families and large groups.",
+            "A diverse menu that bridges familiar Mediterranean grills with unique Caucasian specialties.",
+            "Generous portion sizes that ensure value for every guest.",
+            "Relaxed yet elegant atmosphere suitable for both casual dinners and special celebrations."
+          ],
+          "internalLinks": [
+            "/locations/arden-arcade"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "Do you provide Mediterranean catering in Fair Oaks?",
+          "canonicalKeywords": [
+            "fair oaks catering services"
+          ],
+          "answerThemes": [
+            "Yes, we offer full-service catering and party platters for all Fair Oaks zip codes."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Where is a good place for group dining near Fair Oaks Village?",
+          "canonicalKeywords": [
+            "restaurants near fair oaks village"
+          ],
+          "answerThemes": [
+            "Yerevan Sac is just a short drive away, offering excellent facilities for large groups."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Can I order Mediterranean delivery in Fair Oaks?",
+          "canonicalKeywords": [
+            "fair oaks mediterranean delivery"
+          ],
+          "answerThemes": [
+            "We offer delivery through major platforms and direct pickup for Fair Oaks residents."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "What makes your kebabs the best in Fair Oaks?",
+          "canonicalKeywords": [
+            "kebabs fair oaks ca"
+          ],
+          "answerThemes": [
+            "Our use of traditional Mangal grills and high-quality meat sourcing sets us apart."
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you have options for children?",
+          "canonicalKeywords": [
+            "best family restaurants fair oaks"
+          ],
+          "answerThemes": [
+            "Yes, our menu includes kid-friendly options and approachable Mediterranean staples."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer private dining rooms?",
+          "canonicalKeywords": [
+            "private dining fair oaks"
+          ],
+          "answerThemes": [
+            "We have a dedicated party hall that can be reserved for private functions."
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Are your ingredients locally sourced?",
+          "canonicalKeywords": [
+            "locally sourced mediterranean"
+          ],
+          "answerThemes": [
+            "We prioritize local sourcing for fresh produce to complement our authentic imported spices."
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the price range for catering?",
+          "canonicalKeywords": [
+            "catering price fair oaks"
+          ],
+          "answerThemes": [
+            "Catering packages vary; please contact us for a custom quote based on guest count."
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Professional event catering management",
+          "Precision in high-volume food preparation without quality loss"
+        ],
+        "authority": [
+          "Preferred catering partner for local Sacramento area events",
+          "Recognized for excellence in Mediterranean hospitality"
+        ],
+        "trustworthiness": [
+          "Licensed and insured catering services",
+          "Clear terms for event bookings and cancellations"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Request a Catering Quote",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "View Group Dining Menu",
+          "placement": "mid-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Fair Oaks Village",
+        "Sunrise Boulevard",
+        "Phoenix Park",
+        "American River Parkway"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Small Party Platters: from $150",
+          "Full Event Catering: Quote on request"
+        ]
+      },
+      "uniqueSignals": [
+        "Service area: Full coverage for Fair Oaks and Orangevale",
+        "Event capacity: Party hall for up to 100+ guests",
+        "Pricing: Catering platters starting at competitive per-head rates",
+        "Transit logic: Located just off Fair Oaks Blvd, 8 mins from Fair Oaks Village",
+        "Local reference: Near the Sunrise Mall shopping district",
+        "Process: Authentic Mangal (charcoal) grilling process"
+      ]
+    },
+    {
+      "pageSlug": "/locations/arden-arcade",
+      "proposedH1": "Arden-Arcade Mediterranean Restaurant & Cocktail Bar",
+      "metaDescription": "Searching for the best Arden-Arcade mediterranean restaurant? Experience authentic Armenian kebabs, Georgian khinkali, and craft cocktails near Arden Fair Mall.",
+      "h2Sections": [
+        {
+          "heading": "Upscale Mediterranean Dining Near Arden Fair Mall",
+          "canonicalKeywords": [
+            "arden-arcade dinner spots",
+            "kebabs near arden mall",
+            "mediterranean restaurant arden-arcade"
+          ],
+          "contentBullets": [
+            "Experience a sophisticated alternative to standard grill houses with our authentic Armenian-Georgian menu.",
+            "Perfect for post-shopping dinners or professional meetings just minutes from the Arden-Arcade business district.",
+            "Signature dishes include our flame-grilled Lula kebabs and wood-fired Adjaruli Khachapuri.",
+            "Full-service bar featuring regional pomegranate and apricot-infused cocktails."
+          ],
+          "internalLinks": [
+            "/locations/carmichael",
+            "/locations/sacramento"
+          ]
+        },
+        {
+          "heading": "Private Dining & Corporate Events in Arden-Arcade",
+          "canonicalKeywords": [
+            "private dining arden-arcade",
+            "mediterranean catering arden-arcade",
+            "cocktail bar arden-arcade"
+          ],
+          "contentBullets": [
+            "Host your next corporate luncheon or celebratory dinner in our elegant dining space.",
+            "Customizable catering menus featuring mezza spreads, premium grilled meats, and handmade dumplings.",
+            "Dedicated event staff to manage group dining logistics for parties of 10 to 50+.",
+            "Available for off-site catering delivery to Arden-Arcade offices and residential complexes."
+          ],
+          "internalLinks": [
+            "/locations/fair-oaks"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What are the best restaurants in Arden-Arcade CA for authentic food?",
+          "canonicalKeywords": [
+            "best restaurants arden-arcade ca"
+          ],
+          "answerThemes": [
+            "Yerevan Sac offers a unique Armenian-Georgian niche that stands out from standard Mediterranean grills",
+            "Focus on handmade khinkali and authentic wood-fired breads"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you offer Mediterranean lunch in Arden-Arcade?",
+          "canonicalKeywords": [
+            "arden arcade mediterranean lunch"
+          ],
+          "answerThemes": [
+            "Open for lunch and dinner with a menu optimized for both quick bites and leisurely business meals",
+            "Close proximity to Arden Way for easy access"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Where can I find kebabs near Arden Mall?",
+          "canonicalKeywords": [
+            "kebabs near arden mall"
+          ],
+          "answerThemes": [
+            "Located just a short drive from Arden Fair Mall",
+            "Specializing in Lula kebabs and marinated lamb cooked over open flames"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Does this Arden-Arcade restaurant have a full bar?",
+          "canonicalKeywords": [
+            "cocktail bar arden-arcade"
+          ],
+          "answerThemes": [
+            "Full-service craft cocktail bar",
+            "Specialty drinks using regional Armenian and Georgian flavors like walnut and pomegranate"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Is private dining available for business meetings in Arden-Arcade?",
+          "canonicalKeywords": [
+            "private dining arden-arcade"
+          ],
+          "answerThemes": [
+            "Semi-private and private dining options available",
+            "Ideal for pharmaceutical reps, donor meetings, or corporate celebrations"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "How much does Mediterranean catering cost in Arden-Arcade?",
+          "canonicalKeywords": [
+            "mediterranean catering arden-arcade"
+          ],
+          "answerThemes": [
+            "Tiered pricing based on guest count and menu selection",
+            "Options for drop-off or full-service live grilling"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Are there vegetarian options on the Arden-Arcade menu?",
+          "canonicalKeywords": [
+            "vegetarian mediterranean food"
+          ],
+          "answerThemes": [
+            "Extensive mezza selection including hummus and mutabal",
+            "Cheese-filled Khachapuri and fresh salads"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "How far is the restaurant from the Arden-Arcade business district?",
+          "canonicalKeywords": [
+            "restaurants near arden way"
+          ],
+          "answerThemes": [
+            "Conveniently located within a 10-minute drive of major Arden-Arcade landmarks",
+            "Easy access via Fair Oaks Blvd"
+          ],
+          "searchIntent": "informational"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Chefs specialize in traditional Caucasian Mangal grilling techniques",
+          "Handmade dough preparation for Georgian specialties"
+        ],
+        "authority": [
+          "Featured in Sacramento regional dining guides",
+          "Top-rated Armenian-Georgian fusion in Northern California"
+        ],
+        "trustworthiness": [
+          "Transparent pricing on all catering and event packages",
+          "Consistent 5-star reviews for service and authenticity"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Book a Table in Arden-Arcade",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "View Private Dining Menu",
+          "placement": "mid-content"
+        },
+        {
+          "type": "tertiary",
+          "text": "Order Catering Delivery",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Arden Fair Mall",
+        "Cal Expo",
+        "Fair Oaks Boulevard",
+        "Arden Way",
+        "Sacramento RT Route 23"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Entrees starting at $22",
+          "Cocktails from $12",
+          "Catering packages starting at $25/person"
+        ]
+      },
+      "uniqueSignals": [
+        "Near Arden Fair Mall",
+        "Full-service cocktail bar",
+        "Private dining room availability",
+        "Handmade Georgian Khinkali",
+        "Russian-speaking staff",
+        "Live jazz entertainment",
+        "10-minute drive from Cal Expo",
+        "Authentic Kvevri wine selection"
+      ]
+    },
+    {
+      "pageSlug": "/locations/citrus-heights",
+      "proposedH1": "Mediterranean Catering & Armenian Food in Citrus Heights",
+      "metaDescription": "Authentic Mediterranean catering and Armenian food in Citrus Heights. From Lula kebabs to party platters, we bring the flavors of Yerevan to your next event.",
+      "h2Sections": [
+        {
+          "heading": "Premium Mediterranean Catering for Citrus Heights Events",
+          "canonicalKeywords": [
+            "mediterranean catering citrus heights",
+            "party platters citrus heights",
+            "catering for events citrus heights"
+          ],
+          "contentBullets": [
+            "Specializing in large-scale event catering for Citrus Heights weddings, birthdays, and corporate gatherings.",
+            "Signature party platters featuring assorted kebabs, hummus, basturma, and fresh Mediterranean salads.",
+            "Live on-site grilling options (Mangal) available for an interactive culinary experience.",
+            "Flexible delivery and setup services across all Citrus Heights residential neighborhoods."
+          ],
+          "internalLinks": [
+            "/locations/carmichael",
+            "/locations/fair-oaks"
+          ]
+        },
+        {
+          "heading": "Authentic Armenian Kebab House Flavors",
+          "canonicalKeywords": [
+            "citrus heights armenian food",
+            "citrus heights kebab house",
+            "best kebabs citrus heights"
+          ],
+          "contentBullets": [
+            "The region's most authentic source for Armenian Lula kebabs and marinated lamb chops.",
+            "Handmade specialties including Khinkali soup dumplings and cheese-filled Khachapuri.",
+            "Traditional recipes that bring the 'Capital of Armenia' taste to Citrus Heights.",
+            "Dedicated to high-quality protein sourcing and traditional marination techniques."
+          ],
+          "internalLinks": [
+            "/locations/sacramento"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "Where can I get Mediterranean catering in Citrus Heights?",
+          "canonicalKeywords": [
+            "mediterranean catering citrus heights"
+          ],
+          "answerThemes": [
+            "Yerevan Sac provides full-service catering for Citrus Heights",
+            "Specializing in Armenian and Georgian fusion platters"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Is there Armenian food delivery in Citrus Heights?",
+          "canonicalKeywords": [
+            "citrus heights armenian food"
+          ],
+          "answerThemes": [
+            "Delivery available via major platforms and direct catering orders",
+            "Authentic flavors delivered to your door"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Who has the best kebabs in Citrus Heights?",
+          "canonicalKeywords": [
+            "best kebabs citrus heights"
+          ],
+          "answerThemes": [
+            "Our Carmichael location serves the Citrus Heights community with premium Mangal-style kebabs",
+            "Focus on high-quality lamb, beef, and chicken"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you offer party platters for Citrus Heights residents?",
+          "canonicalKeywords": [
+            "party platters citrus heights"
+          ],
+          "answerThemes": [
+            "Customizable mezza and grill platters for any group size",
+            "Perfect for family gatherings and home parties"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Can I book a Mediterranean restaurant for events near Citrus Heights?",
+          "canonicalKeywords": [
+            "catering for events citrus heights"
+          ],
+          "answerThemes": [
+            "Our nearby party hall is available for Citrus Heights residents",
+            "Full event management and catering services provided"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Are there Georgian food options in Citrus Heights?",
+          "canonicalKeywords": [
+            "georgian food citrus heights"
+          ],
+          "answerThemes": [
+            "We are one of the few providers of Georgian Khinkali and Khachapuri in the area",
+            "Authentic recipes and traditional preparation"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "What is the average price for catering in Citrus Heights?",
+          "canonicalKeywords": [
+            "catering prices citrus heights"
+          ],
+          "answerThemes": [
+            "Competitive pricing with high-value portions",
+            "Request a custom quote for specific event needs"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Do you offer Mediterranean food delivery in Citrus Heights?",
+          "canonicalKeywords": [
+            "citrus heights mediterranean delivery"
+          ],
+          "answerThemes": [
+            "Yes, we serve the Citrus Heights area with fresh delivery options",
+            "Packaging designed to maintain heat and freshness"
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Specialized in high-volume event catering logistics",
+          "Mastery of traditional Mangal open-flame cooking"
+        ],
+        "authority": [
+          "Preferred catering partner for local community events",
+          "Recognized for authentic Armenian-Georgian culinary standards"
+        ],
+        "trustworthiness": [
+          "Licensed and insured catering services",
+          "Health-department certified kitchen and transport"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Request Catering Quote",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "View Kebab Menu",
+          "placement": "mid-content"
+        },
+        {
+          "type": "tertiary",
+          "text": "Order Party Platters",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Sunrise Mall",
+        "Ruskin Drive",
+        "Greenback Lane",
+        "Antelope Road",
+        "Stockton Blvd"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Kebab platters starting at $45",
+          "Full event catering from $25 per head",
+          "Delivery fees based on distance"
+        ]
+      },
+      "uniqueSignals": [
+        "Live on-site Mangal grilling",
+        "Customizable party platters",
+        "Armenian-Georgian fusion menu",
+        "Serving all Citrus Heights zip codes",
+        "Handmade dough specialties",
+        "Generous meat portions",
+        "Traditional Russian hospitality",
+        "Eco-friendly catering packaging"
+      ]
+    },
+    {
+      "pageSlug": "/locations/roseville",
+      "proposedH1": "Mediterranean & Armenian Catering in Roseville, CA",
+      "metaDescription": "Elevate your Roseville event with authentic Mediterranean catering. Yerevan Sac specializes in Armenian kebabs, Georgian khachapuri, and full-service wedding catering.",
+      "h2Sections": [
+        {
+          "heading": "Exquisite Roseville Event & Wedding Catering",
+          "canonicalKeywords": [
+            "roseville event catering",
+            "roseville wedding catering mediterranean",
+            "mediterranean catering roseville ca"
+          ],
+          "contentBullets": [
+            "Transform your Roseville wedding or gala with a unique Caucasian-Mediterranean culinary experience.",
+            "Full-service catering including professional waitstaff, table-side service, and live grilling.",
+            "Custom menus featuring premium Kvevri wines and authentic Georgian specialties.",
+            "Dedicated event planning support to ensure seamless delivery and execution in Roseville."
+          ],
+          "internalLinks": [
+            "/locations/carmichael",
+            "/locations/sacramento"
+          ]
+        },
+        {
+          "heading": "Authentic Georgian & Armenian Cuisine for Roseville Foodies",
+          "canonicalKeywords": [
+            "georgian food roseville",
+            "roseville armenian cuisine",
+            "where to buy khachapuri roseville"
+          ],
+          "contentBullets": [
+            "Roseville's premier destination for authentic Georgian Khachapuri (cheese boats) and Khinkali.",
+            "Hand-marinated Armenian kebabs and premium lamb cuts grilled to perfection.",
+            "A sophisticated alternative for those seeking authentic ethnic flavors beyond standard Roseville dining.",
+            "Available for private home catering and boutique gatherings."
+          ],
+          "internalLinks": [
+            "/locations/fair-oaks"
+          ]
+        }
+      ],
+      "faqGroups": [
+        {
+          "question": "What is the best Mediterranean catering in Roseville?",
+          "canonicalKeywords": [
+            "best mediterranean catering roseville"
+          ],
+          "answerThemes": [
+            "Yerevan Sac offers a high-end Armenian-Georgian fusion catering service",
+            "Focus on authenticity and handmade quality"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Do you offer wedding catering in Roseville, CA?",
+          "canonicalKeywords": [
+            "roseville wedding catering mediterranean"
+          ],
+          "answerThemes": [
+            "Specialized wedding packages including live grilling and traditional mezza spreads",
+            "Elegant presentation suitable for high-end Roseville venues"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Where can I buy Adjaruli Khachapuri in Roseville?",
+          "canonicalKeywords": [
+            "where to buy khachapuri roseville"
+          ],
+          "answerThemes": [
+            "Freshly baked and available for delivery to Roseville",
+            "Authentic Georgian recipe with premium cheese blend"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Is Georgian food available for delivery in Roseville?",
+          "canonicalKeywords": [
+            "georgian food roseville"
+          ],
+          "answerThemes": [
+            "Full menu of Georgian specialties available for Roseville residents",
+            "Includes Khinkali, Khachapuri, and regional wines"
+          ],
+          "searchIntent": "informational"
+        },
+        {
+          "question": "Do you provide party platters for corporate events in Roseville?",
+          "canonicalKeywords": [
+            "mediterranean party platters roseville"
+          ],
+          "answerThemes": [
+            "Professional lunch and evening platters for Roseville office parks",
+            "Easy-to-serve Mediterranean favorites"
+          ],
+          "searchIntent": "transactional"
+        },
+        {
+          "question": "Are there Armenian restaurants that cater to Roseville?",
+          "canonicalKeywords": [
+            "roseville armenian cuisine"
+          ],
+          "answerThemes": [
+            "Yerevan Sac serves the Roseville community from our nearby Carmichael location",
+            "Specializing in authentic Armenian BBQ and traditional sides"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "Can you provide live grilling for events in Roseville?",
+          "canonicalKeywords": [
+            "live catering roseville"
+          ],
+          "answerThemes": [
+            "On-site Mangal (charcoal grill) service available",
+            "Adds a visual and aromatic element to Roseville parties"
+          ],
+          "searchIntent": "commercial"
+        },
+        {
+          "question": "What is the delivery time for catering to Roseville?",
+          "canonicalKeywords": [
+            "mediterranean delivery roseville"
+          ],
+          "answerThemes": [
+            "Timed deliveries to ensure food arrives hot and fresh",
+            "Serving Roseville, Rocklin, and Granite Bay"
+          ],
+          "searchIntent": "transactional"
+        }
+      ],
+      "eeatSignals": {
+        "expertise": [
+          "Specialists in large-scale Mediterranean wedding catering",
+          "Advanced knowledge of Georgian Kvevri wine pairings"
+        ],
+        "authority": [
+          "Highly recommended by Sacramento wedding planners",
+          "Exclusive provider of several traditional Armenian-Georgian dishes in the region"
+        ],
+        "trustworthiness": [
+          "Detailed catering contracts with transparent terms",
+          "History of successful high-end events in the Roseville area"
+        ]
+      },
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Book Wedding Catering",
+          "placement": "above-fold"
+        },
+        {
+          "type": "secondary",
+          "text": "Explore Catering Menu",
+          "placement": "mid-content"
+        },
+        {
+          "type": "tertiary",
+          "text": "Get a Custom Quote",
+          "placement": "below-content"
+        }
+      ],
+      "widgets": {
+        "portfolio": true,
+        "reviews": true,
+        "team": false,
+        "map": true
+      },
+      "localReferences": [
+        "Westfield Galleria at Roseville",
+        "Fountains at Roseville",
+        "Douglas Blvd",
+        "Roseville Parkway",
+        "I-80 via Douglas Blvd exit"
+      ],
+      "proprietaryData": {
+        "pricing": [
+          "Wedding packages starting at $35/person",
+          "Live grilling add-on: $250 base fee",
+          "Mezza platters from $60"
+        ]
+      },
+      "uniqueSignals": [
+        "Live charcoal grilling on-site",
+        "Authentic Georgian wine pairings",
+        "Wedding catering specialization",
+        "Handmade Armenian pastries",
+        "Serving Roseville & Granite Bay",
+        "Customizable event themes",
+        "Professional waitstaff available",
+        "Premium protein sourcing"
+      ]
+    }
+  ]
+}
