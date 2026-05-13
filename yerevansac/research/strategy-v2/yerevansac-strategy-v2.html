@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yerevan Sac — What We're Thinking | FlashCrafter</title>
+<style>
+:root {
+  --primary: #6366f1;
+  --purple: #a855f7;
+  --bg: #0f172a;
+  --bg-2: #1e293b;
+  --bg-3: #334155;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.deck { position: relative; height: 100vh; width: 100vw; }
+.slide {
+  position: absolute; inset: 0;
+  display: none;
+  padding: 6vh 8vw 8vh;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn .35s ease;
+}
+.slide.active { display: flex; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+.eyebrow .dot { color: var(--primary); }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 1.6rem; }
+h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .4rem; }
+p, li { font-size: clamp(1rem, 1.25vw, 1.18rem); line-height: 1.55; color: var(--text); }
+.lead { font-size: clamp(1.2rem, 1.65vw, 1.5rem); color: var(--muted); max-width: 60ch; margin-top: 1.2rem; line-height: 1.5; }
+.grad { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* HEADER bar */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2rem;
+  z-index: 50;
+  pointer-events: none;
+}
+.brand {
+  display: flex; align-items: center; gap: .55rem;
+  font-weight: 700; font-size: .95rem; letter-spacing: -.01em;
+}
+.brand-mark {
+  width: 22px; height: 22px;
+  background: var(--gradient);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(99,102,241,.4);
+}
+.brand-text .grad { font-weight: 800; }
+.brand-sep { color: var(--bg-3); margin: 0 .55rem; }
+.brand-client { color: var(--muted); font-weight: 500; }
+
+.page-num {
+  font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums;
+}
+
+/* FOOTER nav */
+.nav {
+  position: fixed; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: .5rem;
+  background: rgba(30,41,59,.85);
+  border: 1px solid var(--bg-3);
+  backdrop-filter: blur(12px);
+  padding: .5rem; border-radius: 999px;
+  z-index: 50;
+}
+.nav button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background .15s;
+}
+.nav button:hover { background: var(--bg-3); }
+.nav .toc-toggle {
+  width: auto; padding: 0 .9rem; font-size: .82rem; font-weight: 600;
+  color: var(--muted);
+}
+.nav .counter { font-size: .82rem; color: var(--muted); padding: 0 .6rem; font-variant-numeric: tabular-nums; }
+
+/* TOC */
+.toc {
+  position: fixed; inset: 0;
+  background: rgba(15,23,42,.92);
+  backdrop-filter: blur(16px);
+  display: none;
+  z-index: 100;
+  padding: 6vh 10vw;
+  overflow-y: auto;
+}
+.toc.open { display: block; }
+.toc h2 { margin-bottom: 2rem; }
+.toc ol { list-style: none; counter-reset: tocnum; }
+.toc li {
+  counter-increment: tocnum;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--bg-2);
+  cursor: pointer;
+  display: flex; align-items: baseline; gap: 1.2rem;
+  transition: color .15s;
+}
+.toc li:hover { color: var(--primary); }
+.toc li::before {
+  content: counter(tocnum, decimal-leading-zero);
+  font-size: .85rem; color: var(--muted); font-weight: 700; min-width: 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.toc li .t-title { font-size: 1.15rem; font-weight: 600; }
+.toc li .t-sub { font-size: .9rem; color: var(--muted); margin-left: auto; }
+.toc-close {
+  position: fixed; top: 1.5rem; right: 2rem;
+  background: var(--bg-2);
+  border: 1px solid var(--bg-3);
+  color: var(--text);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  cursor: pointer; font-size: 1.2rem;
+}
+
+/* progress */
+.progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: var(--gradient);
+  z-index: 60;
+  transition: width .3s ease;
+}
+
+/* Layouts */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2rem; }
+
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--bg-3);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: transform .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--primary); }
+.card .icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: rgba(99,102,241,.15);
+  color: var(--primary);
+  font-size: 1.1rem; font-weight: 800;
+  margin-bottom: .85rem;
+}
+.card p { color: var(--muted); font-size: .98rem; }
+
+.pill {
+  display: inline-block;
+  padding: .3rem .75rem;
+  background: rgba(99,102,241,.15);
+  border: 1px solid rgba(99,102,241,.35);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .02em;
+}
+.pill.amber { background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.4); color: var(--amber); }
+.pill.green { background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.4); color: var(--accent); }
+
+.stat { display: flex; flex-direction: column; gap: .25rem; }
+.stat .num { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; line-height: 1; }
+.stat .num.grad { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat .lbl { color: var(--muted); font-size: .92rem; }
+
+.quote {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  border-left: 3px solid var(--primary);
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+.quote .grad { background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+ul.bullets { list-style: none; margin-top: 1.2rem; }
+ul.bullets li {
+  padding: .55rem 0 .55rem 1.6rem;
+  position: relative;
+  color: var(--text);
+}
+ul.bullets li::before {
+  content: "";
+  position: absolute; left: 0; top: 1rem;
+  width: 6px; height: 6px;
+  background: var(--gradient);
+  border-radius: 50%;
+}
+ul.bullets li small { display: block; color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+
+.kw-chip {
+  display: inline-block;
+  margin: .25rem .35rem .25rem 0;
+  padding: .4rem .8rem;
+  background: var(--bg-2);
+  border: 1px solid var(--bg-3);
+  border-radius: 8px;
+  font-size: .9rem;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+.kw-chip strong { color: var(--primary); font-weight: 700; }
+
+/* Funnel slide */
+.funnel { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+.funnel-step {
+  flex: 1; min-width: 140px;
+  background: var(--bg-2);
+  border: 1px solid var(--bg-3);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.funnel-step .step-num {
+  display: inline-block;
+  width: 28px; height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  background: var(--gradient);
+  font-size: .85rem; font-weight: 800;
+  margin-bottom: .7rem;
+}
+.funnel-step h3 { font-size: 1rem; }
+.funnel-step p { font-size: .85rem; color: var(--muted); margin-top: .25rem; }
+.funnel-arrow { color: var(--bg-3); font-size: 1.5rem; }
+
+/* Map slide */
+.geo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.geo-card {
+  background: var(--bg-2); border: 1px solid var(--bg-3);
+  border-radius: 10px; padding: 1rem 1.2rem;
+}
+.geo-card .geo-pin {
+  display: inline-block; width: 8px; height: 8px;
+  background: var(--gradient); border-radius: 50%;
+  margin-right: .5rem; vertical-align: middle;
+}
+.geo-card.primary { border-color: var(--primary); background: rgba(99,102,241,.08); }
+.geo-card h3 { font-size: 1.05rem; }
+.geo-card p { font-size: .85rem; color: var(--muted); margin-top: .2rem; }
+
+/* Roadmap */
+.roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; position: relative; }
+.roadmap::before {
+  content: ""; position: absolute; top: 18px; left: 5%; right: 5%; height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--purple));
+  z-index: 0;
+}
+.phase {
+  position: relative; z-index: 1;
+  background: var(--bg-2); border: 1px solid var(--bg-3);
+  border-radius: 12px; padding: 2.5rem 1.2rem 1.4rem;
+  text-align: left;
+}
+.phase .phase-dot {
+  position: absolute; top: -10px; left: 1.2rem;
+  width: 36px; height: 36px;
+  background: var(--gradient);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: .9rem;
+}
+.phase h3 { font-size: 1rem; margin-top: .5rem; }
+.phase .timing { color: var(--muted); font-size: .8rem; margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .08em; }
+.phase p { color: var(--muted); font-size: .9rem; }
+
+/* close slide */
+.close-card {
+  background: linear-gradient(135deg, rgba(99,102,241,.12), rgba(168,85,247,.06));
+  border: 1px solid rgba(99,102,241,.35);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 1.5rem;
+}
+.signature { margin-top: 2rem; color: var(--muted); font-size: .95rem; }
+.signature strong { color: var(--text); }
+
+/* ============= SAMPLE PAGE MOCKUPS — restaurant brand language ============= */
+.slide.sample { padding: 4vh 5vw 7vh; }
+.slide.sample h2 { font-size: clamp(1.4rem, 2.3vw, 1.9rem); margin-bottom: 1rem; }
+
+.page-mockup {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 2rem;
+  margin-top: .8rem;
+  align-items: start;
+}
+
+/* Restaurant brand tokens (scoped to .mockup-frame) */
+.mockup-frame {
+  --rs-bg: #fdf8f1;
+  --rs-bg-2: #f6ecdb;
+  --rs-card: #ffffff;
+  --rs-ink: #1a1410;
+  --rs-muted: #6b5d4f;
+  --rs-line: #e8dcc8;
+  --rs-accent: #7a1f1f;
+  --rs-accent-2: #c89441;
+  --rs-serif: Georgia, "Playfair Display", "Times New Roman", serif;
+
+  background: var(--rs-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.05);
+  color: var(--rs-ink);
+  max-height: 82vh;
+  overflow-y: auto;
+}
+.mockup-frame::-webkit-scrollbar { width: 6px; }
+.mockup-frame::-webkit-scrollbar-thumb { background: var(--rs-line); border-radius: 3px; }
+
+/* Browser chrome */
+.mockup-browser {
+  background: #ebe0cc;
+  padding: .5rem .85rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.mockup-browser .dot { width: 10px; height: 10px; border-radius: 50%; background: #c9b793; }
+.mockup-browser .dot.r { background: #d97070; }
+.mockup-browser .dot.y { background: #d6a956; }
+.mockup-browser .dot.g { background: #6ba87a; }
+.mockup-browser .url {
+  margin-left: .5rem; font-size: .68rem; color: #5a4d3a;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  background: #fdf8f1; padding: .25rem .65rem; border-radius: 6px; flex: 1;
+}
+
+/* Site navigation strip */
+.rs-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .85rem 1.5rem;
+  background: var(--rs-bg);
+  border-bottom: 1px solid var(--rs-line);
+}
+.rs-logo {
+  font-family: var(--rs-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -.01em;
+  color: var(--rs-accent);
+}
+.rs-logo .amp { color: var(--rs-accent-2); }
+.rs-nav-links {
+  display: flex; gap: 1.2rem; font-size: .72rem; letter-spacing: .04em;
+  color: var(--rs-ink); font-weight: 600;
+}
+.rs-nav-links .active { color: var(--rs-accent); border-bottom: 2px solid var(--rs-accent); padding-bottom: 2px; }
+.rs-reserve-btn {
+  background: var(--rs-accent);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  padding: .4rem .85rem;
+  border-radius: 4px;
+  letter-spacing: .04em;
+}
+
+/* Hero */
+.rs-hero {
+  position: relative;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+.rs-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.85) 100%);
+}
+.rs-hero-text {
+  position: relative; z-index: 1;
+  padding: 1.5rem 1.8rem 1.6rem;
+  width: 100%;
+}
+.rs-hero-text .crumb {
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--rs-accent-2);
+  margin-bottom: .5rem;
+}
+.rs-hero-text .h1 {
+  font-family: var(--rs-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+  max-width: 28ch;
+  text-shadow: 0 3px 18px rgba(0,0,0,.6);
+}
+.rs-hero-text .sub {
+  font-size: .82rem;
+  color: #f3e8d6;
+  max-width: 50ch;
+  margin-top: .55rem;
+  line-height: 1.45;
+}
+.rs-hero-cta { display: flex; gap: .55rem; margin-top: 1rem; }
+.rs-btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--rs-accent);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .65rem 1.1rem;
+  border-radius: 4px;
+  letter-spacing: .02em;
+}
+.rs-btn.ghost {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Stats strip */
+.rs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--rs-bg-2);
+  border-bottom: 1px solid var(--rs-line);
+  padding: .9rem 1.5rem;
+  gap: 1rem;
+}
+.rs-stats .stat-it { display: flex; flex-direction: column; gap: .15rem; }
+.rs-stats .stat-it .v {
+  font-family: var(--rs-serif);
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--rs-accent);
+  letter-spacing: -.01em;
+}
+.rs-stats .stat-it .k {
+  font-size: .62rem; color: var(--rs-muted);
+  letter-spacing: .1em; text-transform: uppercase; font-weight: 600;
+}
+
+/* Content sections */
+.rs-section { padding: 1.4rem 1.8rem; border-bottom: 1px solid var(--rs-line); }
+.rs-section.tight { padding-top: 1rem; padding-bottom: 1.2rem; }
+.rs-eyebrow {
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--rs-accent);
+  margin-bottom: .55rem;
+}
+.rs-h2 {
+  font-family: var(--rs-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin-bottom: .65rem;
+  line-height: 1.2;
+  color: var(--rs-ink);
+}
+.rs-p {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--rs-ink);
+  max-width: 65ch;
+}
+.rs-p + .rs-p { margin-top: .55rem; }
+
+/* Two-col content */
+.rs-two {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; align-items: start;
+}
+.rs-list {
+  list-style: none; padding: 0;
+}
+.rs-list li {
+  font-size: .82rem;
+  padding: .45rem 0;
+  border-bottom: 1px dotted var(--rs-line);
+  display: flex; align-items: baseline; gap: .6rem;
+}
+.rs-list li:last-child { border: none; }
+.rs-list li::before {
+  content: "✦"; color: var(--rs-accent-2); font-size: .7rem;
+}
+.rs-list li strong { color: var(--rs-ink); font-weight: 700; }
+.rs-list li span { color: var(--rs-muted); margin-left: auto; font-size: .75rem; }
+
+/* Step row (e.g. how to eat khinkali) */
+.rs-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.rs-step {
+  background: var(--rs-card);
+  border: 1px solid var(--rs-line);
+  border-radius: 8px;
+  padding: .9rem;
+  position: relative;
+}
+.rs-step .num {
+  font-family: var(--rs-serif);
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--rs-accent-2);
+  line-height: 1;
+}
+.rs-step .t { font-weight: 700; font-size: .85rem; margin-top: .4rem; color: var(--rs-ink); }
+.rs-step .d { font-size: .72rem; color: var(--rs-muted); margin-top: .2rem; line-height: 1.45; }
+
+/* Feature cards (catering "what you get") */
+.rs-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.rs-feature {
+  background: var(--rs-card);
+  border: 1px solid var(--rs-line);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.rs-feature .ic {
+  width: 32px; height: 32px;
+  background: var(--rs-bg-2);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  margin-bottom: .55rem;
+}
+.rs-feature .t { font-weight: 700; font-size: .85rem; color: var(--rs-ink); }
+.rs-feature .d { font-size: .72rem; color: var(--rs-muted); margin-top: .25rem; line-height: 1.45; }
+
+/* Review */
+.rs-review {
+  background: var(--rs-bg-2);
+  padding: 1.4rem 1.8rem;
+  border-bottom: 1px solid var(--rs-line);
+  position: relative;
+}
+.rs-review::before {
+  content: "“";
+  position: absolute; top: -.5rem; left: 1rem;
+  font-family: var(--rs-serif);
+  font-size: 4rem; color: var(--rs-accent-2);
+  line-height: 1; opacity: .35;
+}
+.rs-review .stars {
+  color: var(--rs-accent-2); font-size: .85rem; letter-spacing: .1em;
+  margin-bottom: .35rem;
+}
+.rs-review .qt {
+  font-family: var(--rs-serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--rs-ink);
+  margin-bottom: .55rem;
+  max-width: 60ch;
+}
+.rs-review .att { font-size: .72rem; color: var(--rs-muted); font-weight: 600; letter-spacing: .04em; }
+.rs-review .att strong { color: var(--rs-ink); }
+
+/* Bottom CTA banner */
+.rs-cta-banner {
+  background: var(--rs-accent);
+  color: #fff;
+  padding: 1.2rem 1.8rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+}
+.rs-cta-banner .ct {
+  font-family: var(--rs-serif);
+  font-size: 1.05rem; font-weight: 700;
+  line-height: 1.25;
+}
+.rs-cta-banner .cs {
+  font-size: .75rem; color: #f3d8d0; margin-top: .15rem;
+}
+.rs-cta-banner .rs-btn { background: #fff; color: var(--rs-accent); white-space: nowrap; }
+
+/* Footer hint */
+.rs-meta-strip {
+  background: #2a201a;
+  color: #c9b793;
+  padding: .55rem 1.8rem;
+  font-size: .65rem;
+  letter-spacing: .08em;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+
+/* Right-side notes column */
+.page-notes h3 { font-size: 1.02rem; margin-bottom: .6rem; }
+.page-notes ul.bullets li { padding: .4rem 0 .4rem 1.6rem; font-size: .95rem; }
+.page-notes ul.bullets li small { font-size: .82rem; }
+.page-notes .why-row {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4, .geo-grid, .roadmap, .page-mockup { grid-template-columns: 1fr; }
+  .funnel { flex-direction: column; }
+  .funnel-arrow { transform: rotate(90deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span class="brand-text"><span class="grad">FlashCrafter</span></span>
+    <span class="brand-sep">·</span>
+    <span class="brand-client">Yerevan Sac</span>
+  </div>
+  <div class="page-num" id="pageNum">01 / 15</div>
+</div>
+
+<div class="deck" id="deck">
+
+  <!-- 1: TITLE -->
+  <section class="slide active">
+    <div class="eyebrow"><span class="dot">●</span> A walk-through · May 2026</div>
+    <h1>What we're thinking<br>for <span class="grad">Yerevan Sac</span>.</h1>
+    <p class="lead">A plain explanation of the plan — how we'll bring more of the right people through your doors, and why this approach fits what you've already built.</p>
+    <div class="signature">
+      From the <strong style="color: var(--text);">FlashCrafter</strong> team · Carmichael, CA
+    </div>
+  </section>
+
+  <!-- 2: WHERE YOU STAND -->
+  <section class="slide">
+    <div class="eyebrow">01 — The Starting Line</div>
+    <h2>You've already built something rare.</h2>
+    <div class="grid-2">
+      <div>
+        <p style="color: var(--muted); margin-bottom: 1rem;">A premier Armenian-Georgian kitchen in Carmichael, with the kind of reputation most restaurants spend years chasing.</p>
+        <ul class="bullets">
+          <li>4.5+ stars on Google <small>"Hidden gem" · "Unlike anything else in Sac"</small></li>
+          <li>Full sit-down + cocktail program <small>Not just another counter-service kebab shop</small></li>
+          <li>Handmade Khinkali &amp; Adjaruli Khachapuri <small>Effectively unique in the Sacramento region</small></li>
+        </ul>
+      </div>
+      <div class="grid-4" style="grid-template-columns: 1fr 1fr; margin-top: 0;">
+        <div class="stat"><span class="num grad">71</span><span class="lbl">Pages we can build</span></div>
+        <div class="stat"><span class="num grad">6</span><span class="lbl">Cities we can rank in</span></div>
+        <div class="stat"><span class="num grad">$45+</span><span class="lbl">Avg. dinner check target</span></div>
+        <div class="stat"><span class="num grad">4.5★</span><span class="lbl">Reputation foundation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3: THE MARKET TRUTH -->
+  <section class="slide">
+    <div class="eyebrow">02 — The Market Truth</div>
+    <h2>Most diners aren't searching for "Armenian." They're searching for <span class="grad">"Mediterranean."</span></h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div>
+        <h3 style="margin-bottom: 1rem;">The crowded shelf</h3>
+        <ul class="bullets">
+          <li>Mediterranean Grill — across the street, 1,000+ reviews</li>
+          <li>Sami's Kitchen — established Mediterranean catering</li>
+          <li>Kasbah — Midtown destination dining</li>
+        </ul>
+        <p style="color: var(--muted); margin-top: 1rem; font-size: .95rem;">Competing head-on for "Mediterranean restaurant" means fighting on volume. That's not the move.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 1rem;">The empty shelf</h3>
+        <div>
+          <span class="kw-chip"><strong>khinkali</strong> sacramento</span>
+          <span class="kw-chip"><strong>adjaruli khachapuri</strong> sacramento</span>
+          <span class="kw-chip"><strong>georgian food</strong> carmichael</span>
+          <span class="kw-chip"><strong>mangal grill</strong> catering</span>
+          <span class="kw-chip"><strong>armenian brandy</strong> cocktails</span>
+        </div>
+        <p style="color: var(--muted); margin-top: 1rem; font-size: .95rem;">No one is competing for these. They have buyers. And they have you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4: THE ANGLE -->
+  <section class="slide">
+    <div class="eyebrow">03 — The Angle (Why this works)</div>
+    <h2 style="margin-bottom: .5rem;">Beyond the Kebab.</h2>
+    <div class="quote">Don't fight for <span class="grad">"Mediterranean"</span> — siphon it.<br>Capture the curious diner with words only <span class="grad">you</span> can own.</div>
+    <p class="lead" style="margin-top: 1.5rem;">We pull traffic from broad Mediterranean searches into rich, visual pages about Khinkali, Khachapuri, and Mangal grill — dishes nobody else in Sacramento is positioned to serve or describe authentically. <strong style="color: var(--text);">The result: low-difficulty rankings, high-intent visitors, and a brand that feels like a discovery, not a commodity.</strong></p>
+  </section>
+
+  <!-- 5: WHO WE WIN FIRST -->
+  <section class="slide">
+    <div class="eyebrow">04 — Who We Win First</div>
+    <h2>Three audiences, each with high willingness to pay.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">①</div>
+        <h3>The Curious Foodie</h3>
+        <p>Searches "best Mediterranean" or "what is khachapuri." Converts on the visual story. Becomes the regular and the reviewer.</p>
+      </div>
+      <div class="card">
+        <div class="icon">②</div>
+        <h3>The Group Host</h3>
+        <p>Birthdays, anniversaries, corporate dinners. Wants a venue that <em>feels</em> like an event. Pays $45–$85/person.</p>
+      </div>
+      <div class="card">
+        <div class="icon">③</div>
+        <h3>The Catering Buyer</h3>
+        <p>Weddings, offices, family reunions. High-ticket, repeatable, scalable. The most under-served lane in the area.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6: HOW IT WORKS -->
+  <section class="slide">
+    <div class="eyebrow">05 — How It Works</div>
+    <h2>One mechanic. Repeated across 30+ pages.</h2>
+    <div class="funnel">
+      <div class="funnel-step">
+        <span class="step-num">1</span>
+        <h3>Diner searches</h3>
+        <p>"georgian khinkali sacramento"</p>
+      </div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step">
+        <span class="step-num">2</span>
+        <h3>Lands on the page</h3>
+        <p>Built for that exact intent</p>
+      </div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step">
+        <span class="step-num">3</span>
+        <h3>Sees the story</h3>
+        <p>Handmade. Authentic. Photo-rich.</p>
+      </div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step">
+        <span class="step-num">4</span>
+        <h3>Books / calls</h3>
+        <p>Reservation · Catering · Visit</p>
+      </div>
+    </div>
+    <p style="color: var(--muted); margin-top: 2rem; max-width: 60ch;">Every page solves one search. Every page leads somewhere. Nothing is built without a job.</p>
+  </section>
+
+  <!-- 7: FOUR PILLARS -->
+  <section class="slide">
+    <div class="eyebrow">06 — What We Build</div>
+    <h2>Four pillars. <span class="grad">One coordinated build.</span></h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="icon">🍽</div>
+        <h3>Specialty Pages</h3>
+        <p>Khinkali, Khachapuri, Mangal — words competitors can't credibly use.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Local Geo Pages</h3>
+        <p>Carmichael, Sacramento, Fair Oaks, Arden-Arcade, Citrus Heights, Roseville.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📸</div>
+        <h3>Visual + Schema</h3>
+        <p>Cheese-pull, dumpling pleating, sizzling skewers — paired with structured data Google reads.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>Conversion Pages</h3>
+        <p>Catering quotes, group dining inquiries, reservations — the pages that turn search into revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8: WHERE WE DEPLOY -->
+  <section class="slide">
+    <div class="eyebrow">07 — Where We Deploy</div>
+    <h2>The Greater Sacramento footprint.</h2>
+    <p style="color: var(--muted); max-width: 60ch;">One restaurant. Six cities of search demand. We give each one its own page so Google understands you serve all of them.</p>
+    <div class="geo-grid">
+      <div class="geo-card primary"><h3><span class="geo-pin"></span>Carmichael</h3><p>HQ · primary location · dine-in &amp; catering</p></div>
+      <div class="geo-card"><h3><span class="geo-pin"></span>Sacramento</h3><p>Largest search market · catering hub</p></div>
+      <div class="geo-card"><h3><span class="geo-pin"></span>Fair Oaks</h3><p>Adjacent · group dining demand</p></div>
+      <div class="geo-card"><h3><span class="geo-pin"></span>Arden-Arcade</h3><p>Evening cocktails &amp; corporate</p></div>
+      <div class="geo-card"><h3><span class="geo-pin"></span>Citrus Heights</h3><p>Catering &amp; family celebrations</p></div>
+      <div class="geo-card"><h3><span class="geo-pin"></span>Roseville</h3><p>Catering expansion · weddings</p></div>
+    </div>
+  </section>
+
+  <!-- 9: TACTIC 1 -->
+  <section class="slide">
+    <div class="eyebrow">08 — Tactic 1 of 4</div>
+    <h2>Own the specialty words.</h2>
+    <div class="grid-2">
+      <div>
+        <p style="color: var(--muted);">12 priority pages, each targeting a high-intent niche keyword competitors have left wide open.</p>
+        <ul class="bullets">
+          <li>Adjaruli Khachapuri Sacramento <small>The cheese-boat dish only you serve</small></li>
+          <li>Georgian Khinkali Sacramento <small>Handmade soup dumplings</small></li>
+          <li>Live Mangal Grill Catering <small>Authentic Armenian BBQ on-site</small></li>
+          <li>Armenian Brandy Cocktails <small>Owns the bar program search</small></li>
+        </ul>
+      </div>
+      <div>
+        <span class="pill green">Low difficulty</span>
+        <span class="pill">High intent</span>
+        <span class="pill amber">Unique to you</span>
+        <div style="margin-top: 1.5rem;">
+          <h3 style="font-size: 1.05rem; margin-bottom: .8rem;">Why this works</h3>
+          <p style="color: var(--muted); font-size: 1rem;">Generic "Mediterranean" keywords are saturated. Niche cuisine keywords have buyers — and almost no supply. We become the only credible answer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10: TACTIC 2 -->
+  <section class="slide">
+    <div class="eyebrow">09 — Tactic 2 of 4</div>
+    <h2>Show up in every nearby city.</h2>
+    <div class="grid-2">
+      <div>
+        <p style="color: var(--muted);">A Google Business Profile alone shows you in <em>one</em> city's map. Geo-targeted pages let you compete in <em>every</em> nearby city's organic results.</p>
+        <ul class="bullets">
+          <li>6 location pages + 8 service-area pages</li>
+          <li>GBP optimized for "Armenian Restaurant" as primary <small>Not the generic "Mediterranean" everyone else owns</small></li>
+          <li>Khinkali, Lula Kebab, Khachapuri added as menu highlights with photos</li>
+          <li>Geo-tagged photo uploads + local citations</li>
+        </ul>
+      </div>
+      <div class="card" style="background: rgba(99,102,241,.08); border-color: var(--primary);">
+        <h3 style="font-size: 1.1rem;">The compound effect</h3>
+        <p style="color: var(--muted); margin-top: .8rem;">A diner in Fair Oaks searching "Mediterranean restaurant near me" sees your Fair Oaks page. A diner in Roseville searching "wedding catering" sees your Roseville catering page. <strong style="color: var(--text);">Same business, six relevant front doors.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11: TACTIC 3 -->
+  <section class="slide">
+    <div class="eyebrow">10 — Tactic 3 of 4</div>
+    <h2>Visual storytelling that ranks <span class="grad">and converts.</span></h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🧀</div>
+        <h3>The Cheese Pull</h3>
+        <p>Adjaruli Khachapuri served bubbling, with egg and cheese stirred tableside. The single most shareable image in your kitchen.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🥟</div>
+        <h3>Handmade Pleats</h3>
+        <p>Chefs folding Khinkali. The craft sells the price. The video sells the visit.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>The Mangal Flame</h3>
+        <p>Steaming kebabs over open fire. The hero shot for every "best kebabs Sacramento" search.</p>
+      </div>
+    </div>
+    <p style="color: var(--muted); margin-top: 1.5rem; max-width: 70ch;">Every photo is named, captioned, and tagged for the search query it should win. Schema markup makes Google understand what's on the plate, not just what's on the page.</p>
+  </section>
+
+  <!-- 12: TACTIC 4 -->
+  <section class="slide">
+    <div class="eyebrow">11 — Tactic 4 of 4</div>
+    <h2>Reviews that rank, not just reassure.</h2>
+    <div class="grid-2">
+      <div>
+        <p style="color: var(--muted);">Most restaurants ask for reviews. Few teach guests what to write. We do the second — automatically, after every meal.</p>
+        <div class="quote" style="font-size: 1.1rem; margin-top: 1.5rem;">"Glad you enjoyed the <span class="grad">Khinkali</span> today! Mind sharing a quick review about our handmade dumplings in <span class="grad">Carmichael</span>?"</div>
+      </div>
+      <div>
+        <ul class="bullets">
+          <li>Templated post-meal SMS via GBP review link</li>
+          <li>Guests mention specific dishes + city <small>The exact signals Google uses to rank you</small></li>
+          <li>Catering follow-up templates for events</li>
+          <li>Owner responses reinforce "family-owned" + "handmade"</li>
+        </ul>
+        <p style="color: var(--muted); font-size: .95rem; margin-top: 1rem;">Compounds quietly. Six months in, your GBP is unmistakably the authoritative Armenian-Georgian listing in Sacramento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12.5: SAMPLES INTRO -->
+  <section class="slide">
+    <div class="eyebrow">12 — A look at what we'll build</div>
+    <h2>Three sample pages — so you can see, not just read.</h2>
+    <p class="lead">Below we'll walk through three of the real pages we'd build first. Each one is designed for a specific search someone in Sacramento is making <em>right now</em>, with no good answer waiting for them.</p>
+    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <span class="pill">Adjaruli Khachapuri page</span>
+      <span class="pill">Handmade Khinkali page</span>
+      <span class="pill">Live Mangal Catering page</span>
+    </div>
+  </section>
+
+  <!-- 13: SAMPLE 1 — KHACHAPURI -->
+  <section class="slide sample">
+    <div class="eyebrow">13 — Sample page · 1 of 3</div>
+    <h2>The Khachapuri page — for the search "Adjaruli Khachapuri Sacramento."</h2>
+    <div class="page-mockup">
+      <div class="mockup-frame">
+        <div class="mockup-browser">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="url">yerevansac.com/services/armenian-georgian-cuisine/adjaruli-khachapuri</span>
+        </div>
+        <nav class="rs-nav">
+          <div class="rs-logo">Yerevan <span class="amp">&amp;</span> Sac</div>
+          <div class="rs-nav-links">
+            <span>Menu</span><span class="active">Specialties</span><span>Catering</span><span>Visit</span>
+          </div>
+          <div class="rs-reserve-btn">Reserve</div>
+        </nav>
+        <div class="rs-hero" style="background-image: url('images/khachapuri-hero.png');">
+          <div class="rs-hero-text">
+            <div class="crumb">Specialties · Carmichael, CA</div>
+            <div class="h1">The Cheese Boat from Batumi,<br>baked in Carmichael.</div>
+            <div class="sub">Adjaruli Khachapuri — golden bread, bubbling sulguni, a runny egg stirred at the table. Effectively the only place in the Sacramento area making it the way it's made on the Black Sea.</div>
+            <div class="rs-hero-cta">
+              <span class="rs-btn">Reserve a Table →</span>
+              <span class="rs-btn ghost">See the Full Menu</span>
+            </div>
+          </div>
+        </div>
+        <div class="rs-stats">
+          <div class="stat-it"><div class="v">Daily</div><div class="k">Baked fresh</div></div>
+          <div class="stat-it"><div class="v">2007</div><div class="k">Family recipe</div></div>
+          <div class="stat-it"><div class="v">$18</div><div class="k">A boat for two</div></div>
+          <div class="stat-it"><div class="v">4.8★</div><div class="k">Google reviews</div></div>
+        </div>
+        <div class="rs-section">
+          <div class="rs-eyebrow">What it is</div>
+          <div class="rs-h2">A bread boat. Bubbling cheese. A runny egg.</div>
+          <div class="rs-two">
+            <div>
+              <p class="rs-p">Adjaruli Khachapuri comes from the Adjara region of Georgia, on the coast of the Black Sea — where it's shaped like a small boat to honor the fishermen. Inside: salty sulguni and imeruli cheese, baked until it bubbles. A pat of butter and a fresh egg are stirred in tableside the moment it arrives.</p>
+              <p class="rs-p">You tear pieces of the crust, dip them in the molten center, and try not to make eye contact with the table next to you — because they're going to want one too.</p>
+            </div>
+            <ul class="rs-list">
+              <li><strong>Sulguni cheese</strong><span>Salty · brined</span></li>
+              <li><strong>Imeruli cheese</strong><span>Fresh · mild</span></li>
+              <li><strong>Farm egg</strong><span>Stirred tableside</span></li>
+              <li><strong>European butter</strong><span>Finishing pat</span></li>
+              <li><strong>Hand-shaped dough</strong><span>24-hour rise</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rs-review">
+          <div class="stars">★★★★★</div>
+          <div class="qt">"Watching them stir the egg into the bubbling cheese at the table is half the experience — and the bread is somehow better than the show. Nothing else like it in Sacramento."</div>
+          <div class="att"><strong>Sara M.</strong> · Sacramento · Google review</div>
+        </div>
+        <div class="rs-cta-banner">
+          <div>
+            <div class="ct">Hungry yet?</div>
+            <div class="cs">Tables fill on weekends — we recommend reserving 2–3 days ahead.</div>
+          </div>
+          <span class="rs-btn">Reserve a Table →</span>
+        </div>
+        <div class="rs-meta-strip">
+          <span>6240 Fair Oaks Blvd, Carmichael CA</span>
+          <span>(916) 620-9999</span>
+          <span>Mon–Thu 11–9 · Fri–Sat 11–10</span>
+        </div>
+      </div>
+      <div class="page-notes">
+        <h3>What this page does for you</h3>
+        <ul class="bullets">
+          <li>Captures the curious diner <small>Who saw a cheese-boat on Instagram and is now Googling "where to try khachapuri"</small></li>
+          <li>Educates without pressure <small>Tells them what the dish is — so they walk in confident, not nervous</small></li>
+          <li>Ranks where it matters <small>Low-difficulty keyword, near-zero competition in Sacramento</small></li>
+          <li>Pushes one action <small>Reserve a table — the only job this page has</small></li>
+        </ul>
+        <div class="why-row">
+          <span class="pill green">Low difficulty</span>
+          <span class="pill">High intent</span>
+          <span class="pill amber">Visual draw</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14: SAMPLE 2 — KHINKALI -->
+  <section class="slide sample">
+    <div class="eyebrow">14 — Sample page · 2 of 3</div>
+    <h2>The Khinkali page — for the search "Georgian Khinkali Sacramento."</h2>
+    <div class="page-mockup">
+      <div class="mockup-frame">
+        <div class="mockup-browser">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="url">yerevansac.com/services/handmade-khinkali-dumplings/traditional-beef-pork-khinkali</span>
+        </div>
+        <nav class="rs-nav">
+          <div class="rs-logo">Yerevan <span class="amp">&amp;</span> Sac</div>
+          <div class="rs-nav-links">
+            <span>Menu</span><span class="active">Specialties</span><span>Catering</span><span>Visit</span>
+          </div>
+          <div class="rs-reserve-btn">Reserve</div>
+        </nav>
+        <div class="rs-hero" style="background-image: url('images/khinkali-hero.png');">
+          <div class="rs-hero-text">
+            <div class="crumb">Handmade Daily · Carmichael</div>
+            <div class="h1">Georgian Khinkali —<br>pleated by hand every morning.</div>
+            <div class="sub">Twenty pleats minimum, a hot broth sealed inside, and a tradition older than the country it comes from. We make them fresh every day, before the doors open.</div>
+            <div class="rs-hero-cta">
+              <span class="rs-btn">Order Online →</span>
+              <span class="rs-btn ghost">Reserve a Table</span>
+            </div>
+          </div>
+        </div>
+        <div class="rs-stats">
+          <div class="stat-it"><div class="v">20+</div><div class="k">Pleats per dumpling</div></div>
+          <div class="stat-it"><div class="v">4</div><div class="k">Fillings to choose</div></div>
+          <div class="stat-it"><div class="v">Daily</div><div class="k">Made fresh</div></div>
+          <div class="stat-it"><div class="v">$3.50</div><div class="k">Each · order in 5s</div></div>
+        </div>
+        <div class="rs-section">
+          <div class="rs-eyebrow">How to eat one (without losing the broth)</div>
+          <div class="rs-h2">Three steps. One delicious mistake to avoid.</div>
+          <div class="rs-steps">
+            <div class="rs-step">
+              <div class="num">1</div>
+              <div class="t">Lift by the knot</div>
+              <div class="d">The pleated top is your handle. Fork only. Never stab the body, ever — that's where the broth lives.</div>
+            </div>
+            <div class="rs-step">
+              <div class="num">2</div>
+              <div class="t">Bite the side, sip the broth</div>
+              <div class="d">A small bite near the bottom. Slurp the hot, peppery broth before it spills.</div>
+            </div>
+            <div class="rs-step">
+              <div class="num">3</div>
+              <div class="t">Eat the rest, leave the knot</div>
+              <div class="d">Tradition says you count the knots on your plate at the end. We won't judge if you eat them too.</div>
+            </div>
+          </div>
+        </div>
+        <div class="rs-section tight">
+          <div class="rs-eyebrow">Choose your filling</div>
+          <div class="rs-two">
+            <ul class="rs-list">
+              <li><strong>Beef &amp; Pork</strong><span>The classic</span></li>
+              <li><strong>Lamb</strong><span>Bolder · spiced</span></li>
+              <li><strong>Cheese</strong><span>Sulguni · vegetarian</span></li>
+              <li><strong>Mushroom</strong><span>Vegan · earthy</span></li>
+            </ul>
+            <p class="rs-p">Traditionally ordered by the half-dozen and shared. Pairs beautifully with our pomegranate cocktails or an amber Georgian wine — we'll happily recommend.</p>
+          </div>
+        </div>
+        <div class="rs-review">
+          <div class="stars">★★★★★</div>
+          <div class="qt">"Stumbled in on accident — now we drive forty minutes for these. The lamb khinkali genuinely changed my mind about what a dumpling can be."</div>
+          <div class="att"><strong>Daniel R.</strong> · Roseville · Google review</div>
+        </div>
+        <div class="rs-cta-banner">
+          <div>
+            <div class="ct">Want them waiting for you?</div>
+            <div class="cs">Order ahead — we'll have them hot and pleated when you arrive.</div>
+          </div>
+          <span class="rs-btn">Order Online →</span>
+        </div>
+        <div class="rs-meta-strip">
+          <span>6240 Fair Oaks Blvd, Carmichael CA</span>
+          <span>Made fresh · never frozen</span>
+          <span>Serving Sacramento · Fair Oaks · Roseville</span>
+        </div>
+      </div>
+      <div class="page-notes">
+        <h3>What this page does for you</h3>
+        <ul class="bullets">
+          <li>Tells the story <small>The 20 pleats, the broth inside — the kind of detail Yelp reviewers quote back at you</small></li>
+          <li>Doubles as content marketing <small>"How to eat khinkali" is the kind of guide other sites link to — free SEO authority</small></li>
+          <li>Brings the food-enthusiast crowd <small>People willing to drive 30 minutes for something authentic</small></li>
+          <li>Pulls upsells <small>Khinkali rarely orders alone — it brings cocktails and shared plates with it</small></li>
+        </ul>
+        <div class="why-row">
+          <span class="pill green">Repeat visitor magnet</span>
+          <span class="pill">Linkable content</span>
+          <span class="pill amber">Story-rich</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15: SAMPLE 3 — MANGAL/CATERING -->
+  <section class="slide sample">
+    <div class="eyebrow">15 — Sample page · 3 of 3</div>
+    <h2>The Catering page — for the search "Mangal Grill Catering Sacramento."</h2>
+    <div class="page-mockup">
+      <div class="mockup-frame">
+        <div class="mockup-browser">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="url">yerevansac.com/services/catering-services/live-mangal-grill-catering</span>
+        </div>
+        <nav class="rs-nav">
+          <div class="rs-logo">Yerevan <span class="amp">&amp;</span> Sac</div>
+          <div class="rs-nav-links">
+            <span>Menu</span><span>Specialties</span><span class="active">Catering</span><span>Visit</span>
+          </div>
+          <div class="rs-reserve-btn">Get a Quote</div>
+        </nav>
+        <div class="rs-hero" style="background-image: url('images/mangal-hero.png');">
+          <div class="rs-hero-text">
+            <div class="crumb">Catering · Greater Sacramento</div>
+            <div class="h1">Live Mangal Grill Catering —<br>Armenian BBQ, at your event.</div>
+            <div class="sub">We bring the grill, the chef, and the flame. Lula kebab, lamb chops, and marinated skewers cooked in front of your guests, served straight off the fire.</div>
+            <div class="rs-hero-cta">
+              <span class="rs-btn">Request a Quote →</span>
+              <span class="rs-btn ghost">See Sample Menus</span>
+            </div>
+          </div>
+        </div>
+        <div class="rs-stats">
+          <div class="stat-it"><div class="v">25–250+</div><div class="k">Guest count</div></div>
+          <div class="stat-it"><div class="v">Live</div><div class="k">On-site grill</div></div>
+          <div class="stat-it"><div class="v">6 cities</div><div class="k">Sacramento area</div></div>
+          <div class="stat-it"><div class="v">24h</div><div class="k">Quote turnaround</div></div>
+        </div>
+        <div class="rs-section">
+          <div class="rs-eyebrow">What you get</div>
+          <div class="rs-h2">The kitchen comes to you. The smoke comes with it.</div>
+          <div class="rs-features">
+            <div class="rs-feature">
+              <div class="ic">🔥</div>
+              <div class="t">The mangal, on-site</div>
+              <div class="d">A traditional Armenian charcoal grill, set up at your venue. Guests watch the cook.</div>
+            </div>
+            <div class="rs-feature">
+              <div class="ic">👨‍🍳</div>
+              <div class="t">Trained pit chef</div>
+              <div class="d">Skewered, seasoned, and turned by someone who has done this thousands of times.</div>
+            </div>
+            <div class="rs-feature">
+              <div class="ic">🍽</div>
+              <div class="t">Custom menu</div>
+              <div class="d">Lula, lamb chops, chicken kebab, vegetable skewers — built around your event and your guests.</div>
+            </div>
+          </div>
+        </div>
+        <div class="rs-section tight">
+          <div class="rs-eyebrow">Built for</div>
+          <div class="rs-two">
+            <ul class="rs-list">
+              <li><strong>Weddings</strong><span>50–250 guests</span></li>
+              <li><strong>Corporate dinners</strong><span>30–120 guests</span></li>
+              <li><strong>Backyard parties</strong><span>25–80 guests</span></li>
+              <li><strong>Family celebrations</strong><span>Any size</span></li>
+            </ul>
+            <p class="rs-p">Serving Carmichael, Sacramento, Fair Oaks, Arden-Arcade, Citrus Heights, and Roseville. We'll travel further for the right event — ask us.</p>
+          </div>
+        </div>
+        <div class="rs-review">
+          <div class="stars">★★★★★</div>
+          <div class="qt">"They set up the mangal grill at our wedding rehearsal and it was the most talked-about part of the night. Months later, guests still text us about the lula kebabs."</div>
+          <div class="att"><strong>Anna &amp; David</strong> · Roseville wedding · Google review</div>
+        </div>
+        <div class="rs-cta-banner">
+          <div>
+            <div class="ct">Tell us about your event.</div>
+            <div class="cs">A short form, four questions, and a quote within 24 hours.</div>
+          </div>
+          <span class="rs-btn">Request a Quote →</span>
+        </div>
+        <div class="rs-meta-strip">
+          <span>Catering inquiries · (916) 620-9999</span>
+          <span>yerevansac@gmail.com</span>
+          <span>6 cities · Greater Sacramento</span>
+        </div>
+      </div>
+      <div class="page-notes">
+        <h3>What this page does for you</h3>
+        <ul class="bullets">
+          <li>The highest-ticket lane <small>One catering job equals the revenue of dozens of dinners</small></li>
+          <li>Almost no competition <small>"Live mangal grill catering" is a phrase no one else can credibly claim</small></li>
+          <li>Inquiries come to you <small>A short form, not a long chase. Quotes go out in 24 hours.</small></li>
+          <li>Serves all six cities at once <small>One page, geo-targeted variants, one inbox</small></li>
+        </ul>
+        <div class="why-row">
+          <span class="pill green">Highest revenue per visit</span>
+          <span class="pill">Zero competition</span>
+          <span class="pill amber">Scales by season</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16: ROADMAP -->
+  <section class="slide">
+    <div class="eyebrow">16 — How we'll move</div>
+    <h2>Roughly how the work flows.</h2>
+    <p style="color: var(--muted); max-width: 60ch;">We start with the pages that pay the rent (homepage, menu, reservations), then layer the rest. You'll see real pages going live every couple of weeks — not a six-month "we'll show you eventually."</p>
+    <div class="roadmap">
+      <div class="phase">
+        <span class="phase-dot">1</span>
+        <div class="timing">Weeks 1–3</div>
+        <h3>Start with the essentials</h3>
+        <p>Homepage, menu, reservations, contact. The pages every guest needs first.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-dot">2</span>
+        <div class="timing">Weeks 4–7</div>
+        <h3>Open the nearby cities</h3>
+        <p>Six location pages + your Google profile refresh + the review-request flow.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-dot">3</span>
+        <div class="timing">Weeks 8–11</div>
+        <h3>The specialty pages</h3>
+        <p>Khinkali, Khachapuri, Mangal — the dishes that make you, you.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-dot">4</span>
+        <div class="timing">Ongoing</div>
+        <h3>Tune as we learn</h3>
+        <p>Keep what's working, fix what isn't, add new pages by season.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14: SUCCESS -->
+  <section class="slide">
+    <div class="eyebrow">17 — What Success Looks Like</div>
+    <h2>How we'll know it's working.</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>GBP Discovery</h3>
+        <p>Searches where Yerevan Sac appears in the map pack — tracked monthly.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Niche Rankings</h3>
+        <p>Top-3 positions for "khachapuri / khinkali / mangal" + Sacramento.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🪑</div>
+        <h3>Reservations</h3>
+        <p>Organic-attributed bookings via the new reservation flow.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>Catering Inquiries</h3>
+        <p>Inbound quote requests — the highest-ticket lane we're opening.</p>
+      </div>
+    </div>
+    <p style="color: var(--muted); margin-top: 1.5rem; max-width: 60ch;">We report monthly, plainly, with the numbers and the next move. No dashboards you'll never open.</p>
+  </section>
+
+  <!-- 15: CLOSE -->
+  <section class="slide">
+    <div class="eyebrow">18 — What's next</div>
+    <h2 style="margin-bottom: .5rem;">A simple division of labor.</h2>
+    <div class="close-card">
+      <p style="font-size: 1.2rem; line-height: 1.5;">You keep doing what you're great at — the food, the room, the hospitality. We take care of everything that makes more of the right people find you.</p>
+      <p style="font-size: 1.2rem; line-height: 1.5; margin-top: 1rem;">No big agency dance. <strong>Just us, showing you what we've built, every couple of weeks.</strong></p>
+    </div>
+    <div class="signature">
+      <strong>Next time we sit down:</strong> we'll walk through the first three pages we're starting with — and you tell us if it feels like you.<br><br>
+      <span style="color: var(--primary);">FlashCrafter</span> · we're here whenever you have questions.
+    </div>
+  </section>
+
+</div>
+
+<!-- TOC overlay -->
+<div class="toc" id="toc">
+  <button class="toc-close" id="tocClose">×</button>
+  <h2>Contents</h2>
+  <ol id="tocList"></ol>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <button id="prev" title="Previous (←)">‹</button>
+  <button class="toc-toggle" id="tocOpen">Contents</button>
+  <span class="counter" id="counter">1 / 15</span>
+  <button id="next" title="Next (→)">›</button>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  const titles = [
+    ['Cover', 'A walk-through'],
+    ['Starting Line', 'Where you stand today'],
+    ['Market Truth', 'What diners actually search for'],
+    ['The Angle', 'Beyond the Kebab'],
+    ['Audiences', 'Who we win first'],
+    ['Mechanic', 'How it works — one funnel'],
+    ['Four Pillars', 'What we build'],
+    ['Footprint', 'Where we deploy'],
+    ['Tactic 1', 'Own the specialty words'],
+    ['Tactic 2', 'Local geo coverage'],
+    ['Tactic 3', 'Visual storytelling'],
+    ['Tactic 4', 'Reviews that rank'],
+    ['Sample Pages', 'Three previews'],
+    ['Sample · Khachapuri', 'Adjaruli Khachapuri page'],
+    ['Sample · Khinkali', 'Handmade Khinkali page'],
+    ['Sample · Catering', 'Live Mangal Grill catering'],
+    ['Roadmap', 'How we\'ll move'],
+    ['Success', 'How we measure'],
+    ['Close', 'What\'s next']
+  ];
+
+  const tocList = document.getElementById('tocList');
+  titles.forEach((t, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="t-title">${t[0]}</span><span class="t-sub">${t[1]}</span>`;
+    li.addEventListener('click', () => { go(i); closeToc(); });
+    tocList.appendChild(li);
+  });
+
+  function go(i) {
+    if (i < 0) i = 0;
+    if (i >= total) i = total - 1;
+    slides[current].classList.remove('active');
+    slides[i].classList.add('active');
+    current = i;
+    update();
+  }
+  function update() {
+    document.getElementById('counter').textContent = `${current + 1} / ${total}`;
+    document.getElementById('pageNum').textContent = `${String(current+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+    document.getElementById('progress').style.width = `${((current+1)/total)*100}%`;
+  }
+
+  document.getElementById('next').addEventListener('click', () => go(current + 1));
+  document.getElementById('prev').addEventListener('click', () => go(current - 1));
+
+  const toc = document.getElementById('toc');
+  function openToc() { toc.classList.add('open'); }
+  function closeToc() { toc.classList.remove('open'); }
+  document.getElementById('tocOpen').addEventListener('click', openToc);
+  document.getElementById('tocClose').addEventListener('click', closeToc);
+
+  document.addEventListener('keydown', (e) => {
+    if (toc.classList.contains('open')) {
+      if (e.key === 'Escape') closeToc();
+      return;
+    }
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
+    if (e.key === 'Home') go(0);
+    if (e.key === 'End') go(total - 1);
+    if (e.key === 't' || e.key === 'T') openToc();
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
