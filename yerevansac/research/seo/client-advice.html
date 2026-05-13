@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>client-advice · FlashCrafter</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <script>
   tailwind.config = { darkMode: 'media', theme: { extend: {} } };
 </script>
@@ -124,13 +124,5 @@
   <footer class="max-w-3xl mx-auto px-6 py-10 text-xs text-slate-500 dark:text-slate-400">
     Published by FlashCrafter · <a class="underline" href="https://flashcrafter.ai">flashcrafter.ai</a>
   </footer>
-  <script>
-    // Tailwind CDN typography plugin loader
-    (function(){
-      var s = document.createElement('script');
-      s.src = 'https://cdn.tailwindcss.com?plugins=typography';
-      document.head.appendChild(s);
-    })();
-  </script>
 </body>
 </html>
