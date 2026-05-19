@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Need Construction — Invoice Filing Flowchart (AS-IS · human process)</title>
+<style>
+  :root{
+    --bg:#0e1014; --ink:#e6e9ef; --mute:#8a93a6;
+    --node:#1c2129; --node-b:#2a3445;
+    --start:#2f5a82; --start-bg:#16334a;
+    --branch:#4a3478; --branch-bg:#251b3b;
+    --crit:#7a2a2a; --crit-bg:#3a1a1a; --crit-ink:#ffc6c6;
+    --end:#2c6a51; --end-bg:#15342a;
+    --line:#475063;
+  }
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.4 -apple-system,system-ui,sans-serif}
+  header{padding:14px 22px;border-bottom:1px solid #262d38;display:flex;justify-content:space-between;align-items:center;background:#0b0d12;position:sticky;top:0;z-index:10}
+  header h1{font-size:14px;margin:0;font-weight:600}
+  header .sub{color:var(--mute);font-size:12px}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:#2a3445;color:#cdd3dc;margin-right:8px;vertical-align:1px}
+  .legend{display:flex;gap:14px;font-size:11.5px;color:var(--mute);align-items:center;flex-wrap:wrap}
+  .legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:5px;border:1px solid #333}
+  .sw.start{background:var(--start-bg);border-color:var(--start)}
+  .sw.branch{background:var(--branch-bg);border-color:var(--branch);border-radius:50%}
+  .sw.crit{background:var(--crit-bg);border-color:var(--crit)}
+  .sw.end{background:var(--end-bg);border-color:var(--end)}
+  .wrap{padding:20px;overflow:auto}
+  svg{display:block;margin:0 auto;font-family:-apple-system,system-ui,sans-serif}
+  .node-rect{stroke-width:1.5}
+  .node-rect.start{fill:var(--start-bg);stroke:var(--start)}
+  .node-rect.step{fill:var(--node);stroke:var(--node-b)}
+  .node-rect.crit{fill:var(--crit-bg);stroke:var(--crit)}
+  .node-rect.end{fill:var(--end-bg);stroke:var(--end)}
+  .node-diamond{fill:var(--branch-bg);stroke:var(--branch);stroke-width:1.5}
+  .label{fill:var(--ink);font-size:12px;font-weight:600}
+  .label.crit{fill:var(--crit-ink)}
+  .sub{fill:var(--mute);font-size:10.5px}
+  .id{fill:var(--mute);font-size:9.5px;font-family:ui-monospace,Menlo,monospace}
+  .who{fill:#8aa9d6;font-size:9.5px;font-family:ui-monospace,Menlo,monospace}
+  .edge{stroke:var(--line);stroke-width:1.6;fill:none;marker-end:url(#arr)}
+  .edge.alt{stroke-dasharray:4 3}
+  .edge-label{fill:var(--mute);font-size:10px;font-weight:600}
+  .lane-bg{fill:rgba(255,255,255,0.015);stroke:#1f2632;stroke-dasharray:3 3}
+  .lane-title{fill:#a8b1c2;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1><span class="pill">AS-IS</span>Need Construction · Invoice / Receipt / Payments — Current Human Process</h1>
+    <div class="sub">Baseline of today's workflow · every step performed by an admin (Spencer / future secretary) · red = critical/compliance · no automation overlay</div>
+  </div>
+  <div class="legend">
+    <span><span class="sw start"></span>start</span>
+    <span><span class="sw branch"></span>decision</span>
+    <span><span class="sw crit"></span>critical</span>
+    <span><span class="sw end"></span>end</span>
+  </div>
+</header>
+
+<div class="wrap">
+<svg viewBox="0 0 1480 2380" width="1480" height="2380">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/>
+    </marker>
+  </defs>
+
+  <!-- ============ LANES (background panels) ============ -->
+  <rect class="lane-bg" x="20"   y="40"   width="1440" height="220" rx="10"/>
+  <text class="lane-title" x="36" y="62">1 · Intake &amp; classify</text>
+
+  <rect class="lane-bg" x="20"   y="290"  width="1440" height="260" rx="10"/>
+  <text class="lane-title" x="36" y="312">2 · Acquire artifact (PDF)</text>
+
+  <rect class="lane-bg" x="20"   y="580"  width="1440" height="200" rx="10"/>
+  <text class="lane-title" x="36" y="602">3 · Standardize (rename)</text>
+
+  <rect class="lane-bg" x="20"   y="810"  width="1440" height="220" rx="10"/>
+  <text class="lane-title" x="36" y="832">4 · Physical &amp; Drive filing</text>
+
+  <rect class="lane-bg" x="20"   y="1060" width="700"  height="460" rx="10"/>
+  <text class="lane-title" x="36" y="1082">5a · Subcontractor branch</text>
+
+  <rect class="lane-bg" x="740"  y="1060" width="720"  height="460" rx="10"/>
+  <text class="lane-title" x="756" y="1082">5b · Supplier + GAF/DECKO branch</text>
+
+  <rect class="lane-bg" x="20"   y="1550" width="1440" height="160" rx="10"/>
+  <text class="lane-title" x="36" y="1572">6 · JobNimbus upload</text>
+
+  <rect class="lane-bg" x="20"   y="1740" width="1440" height="500" rx="10"/>
+  <text class="lane-title" x="36" y="1762">7 · Subcontractor payment branch (Zelle / Check)</text>
+
+  <rect class="lane-bg" x="20"   y="2270" width="1440" height="90"  rx="10"/>
+  <text class="lane-title" x="36" y="2292">8 · End-of-day cleanup</text>
+
+
+  <!-- ============ LANE 1: INTAKE ============ -->
+  <g transform="translate(620,90)">
+    <rect class="node-rect start" width="240" height="80" rx="10"/>
+    <text class="id" x="12" y="18">S1 · start</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="50">Check inboxes (daily)</text>
+    <text class="sub" x="12" y="65">office@ &amp; coppola@needconstruction.com</text>
+    <text class="sub" x="12" y="78">open each email, look for attachments</text>
+  </g>
+
+  <path class="edge" d="M740,170 L740,200"/>
+
+  <g transform="translate(640,200)">
+    <polygon class="node-diamond" points="100,0 200,55 100,110 0,55"/>
+    <text class="id" x="100" y="42" text-anchor="middle">S2 · decision</text>
+    <text class="label" x="100" y="60" text-anchor="middle">Document type?</text>
+    <text class="sub" x="100" y="76" text-anchor="middle">quote / unpaid / PAID</text>
+  </g>
+
+  <path class="edge alt" d="M640,255 L380,255 L380,255"/>
+  <text class="edge-label" x="500" y="248">quote / unpaid</text>
+  <g transform="translate(280,225)">
+    <rect class="node-rect step" width="200" height="60" rx="10"/>
+    <text class="id" x="12" y="18">drop</text>
+    <text class="label" x="12" y="38">Do not file</text>
+    <text class="sub" x="12" y="52">only PAID receipts proceed</text>
+  </g>
+
+  <path class="edge" d="M840,255 L1100,255"/>
+  <text class="edge-label" x="940" y="248">PAID ✓</text>
+
+
+  <!-- ============ LANE 2: ACQUIRE ============ -->
+  <g transform="translate(1100,225)">
+    <rect class="node-rect step" width="240" height="80" rx="10"/>
+    <text class="id" x="12" y="18">S3 · step</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="50">Get file</text>
+    <text class="sub" x="12" y="65">attachment → download to Desktop</text>
+    <text class="sub" x="12" y="78">no attachment → ⌘⇧4 → Quick Actions → PDF</text>
+  </g>
+
+  <path class="edge" d="M1220,305 L1220,340 L740,340 L740,365"/>
+  <text class="edge-label" x="980" y="333">if physical receipt</text>
+
+  <g transform="translate(620,365)">
+    <rect class="node-rect crit" width="240" height="80" rx="10"/>
+    <text class="id" x="12" y="18">P3A · critical</text>
+    <text class="who" x="12" y="32">human · admin → manager</text>
+    <text class="label crit" x="12" y="50">Identify Job / PO #</text>
+    <text class="sub" x="12" y="65">read receipt for PO# or job name</text>
+    <text class="sub" x="12" y="78">if missing → ASK MANAGEMENT</text>
+  </g>
+
+  <path class="edge" d="M680,445 L420,470"/>
+  <path class="edge" d="M800,445 L1060,470"/>
+
+  <g transform="translate(300,470)">
+    <rect class="node-rect step" width="240" height="65" rx="10"/>
+    <text class="id" x="12" y="18">P3B · step</text>
+    <text class="who" x="12" y="32">human · admin (phone)</text>
+    <text class="label" x="12" y="50">Scan via phone (Drive app)</text>
+    <text class="sub" x="12" y="63">Drive → Job → Paperwork → Receipts</text>
+  </g>
+
+  <g transform="translate(940,470)">
+    <rect class="node-rect step" width="240" height="65" rx="10"/>
+    <text class="id" x="12" y="18">P3C · step</text>
+    <text class="who" x="12" y="32">human · admin (office)</text>
+    <text class="label" x="12" y="50">Scan via Epson</text>
+    <text class="sub" x="12" y="63">always double-sided → Downloads</text>
+  </g>
+
+  <path class="edge" d="M420,535 L740,610"/>
+  <path class="edge" d="M1060,535 L740,610"/>
+  <path class="edge" d="M1220,305 L1220,610 L860,610"/>
+  <text class="edge-label" x="1260" y="475">if digital</text>
+
+
+  <!-- ============ LANE 3: STANDARDIZE ============ -->
+  <g transform="translate(620,610)">
+    <rect class="node-rect crit" width="240" height="90" rx="10"/>
+    <text class="id" x="12" y="18">S4 · CRITICAL</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label crit" x="12" y="50">Rename file (by hand)</text>
+    <text class="sub" x="12" y="65">[Vendor] [MM.DD.YY] [$Amt]</text>
+    <text class="sub" x="12" y="78"> – [Client Address]</text>
+  </g>
+
+  <path class="edge" d="M740,700 L740,720"/>
+
+  <g transform="translate(640,720)">
+    <polygon class="node-diamond" points="100,0 200,40 100,80 0,40"/>
+    <text class="id" x="100" y="32" text-anchor="middle">S4A · decision</text>
+    <text class="label" x="100" y="50" text-anchor="middle">Multi-job @ address?</text>
+    <text class="sub" x="100" y="66" text-anchor="middle">append job type (must match JN)</text>
+  </g>
+
+  <path class="edge" d="M740,800 L740,830"/>
+
+
+  <!-- ============ LANE 4: PHYSICAL + DRIVE ============ -->
+  <g transform="translate(380,830)">
+    <rect class="node-rect step" width="240" height="70" rx="10"/>
+    <text class="id" x="12" y="18">S5 · step</text>
+    <text class="who" x="12" y="32">human · admin (printer)</text>
+    <text class="label" x="12" y="50">Print &amp; file physical copy</text>
+    <text class="sub" x="12" y="63">place in office job/sub folder</text>
+  </g>
+
+  <g transform="translate(860,830)">
+    <rect class="node-rect step" width="240" height="70" rx="10"/>
+    <text class="id" x="12" y="18">S6 · step</text>
+    <text class="who" x="12" y="32">human · admin (Drive web)</text>
+    <text class="label" x="12" y="50">Upload to Job → Receipts (Drive)</text>
+    <text class="sub" x="12" y="63">drag &amp; drop the PDF</text>
+  </g>
+
+  <path class="edge" d="M740,800 L500,830"/>
+  <path class="edge" d="M740,800 L980,830"/>
+
+  <g transform="translate(640,940)">
+    <polygon class="node-diamond" points="100,0 200,40 100,80 0,40"/>
+    <text class="id" x="100" y="32" text-anchor="middle">decision</text>
+    <text class="label" x="100" y="50" text-anchor="middle">Vendor type?</text>
+    <text class="sub" x="100" y="66" text-anchor="middle">recognized by admin's memory</text>
+  </g>
+
+  <path class="edge" d="M500,900 L740,940"/>
+  <path class="edge" d="M980,900 L740,940"/>
+
+
+  <!-- ============ LANE 5a: SUB ============ -->
+  <path class="edge" d="M640,980 L260,1130"/>
+  <text class="edge-label" x="380" y="1010">subcontractor</text>
+
+  <g transform="translate(140,1130)">
+    <rect class="node-rect step" width="240" height="80" rx="10"/>
+    <text class="id" x="12" y="18">S7 · step</text>
+    <text class="who" x="12" y="32">human · admin (Drive web)</text>
+    <text class="label" x="12" y="50">File in sub folder</text>
+    <text class="sub" x="12" y="65">Need Subcontractors → [Legal Name]</text>
+    <text class="sub" x="12" y="78">→ [Company – Year]</text>
+  </g>
+
+  <path class="edge" d="M260,1210 L260,1240"/>
+
+  <g transform="translate(140,1240)">
+    <rect class="node-rect crit" width="240" height="100" rx="10"/>
+    <text class="id" x="12" y="18">S7A · CRITICAL</text>
+    <text class="who" x="12" y="32">human · admin → manager</text>
+    <text class="label crit" x="12" y="50">COI verification</text>
+    <text class="sub" x="12" y="65">open folder, read expiry off filename</text>
+    <text class="sub" x="12" y="78">active Workers Comp required</text>
+    <text class="sub" x="12" y="91">missing/expired → notify mgmt</text>
+  </g>
+
+  <path class="edge" d="M260,1340 L260,1380"/>
+
+  <g transform="translate(140,1380)">
+    <rect class="node-rect step" width="240" height="60" rx="10"/>
+    <text class="id" x="12" y="18">→</text>
+    <text class="label" x="12" y="38">Sub branch complete</text>
+    <text class="sub" x="12" y="52">join → JobNimbus</text>
+  </g>
+
+
+  <!-- ============ LANE 5b: SUPPLIER + GAF ============ -->
+  <path class="edge" d="M840,980 L1100,1130"/>
+  <text class="edge-label" x="980" y="1010">supplier</text>
+
+  <g transform="translate(980,1130)">
+    <rect class="node-rect step" width="240" height="65" rx="10"/>
+    <text class="id" x="12" y="18">S7B · step</text>
+    <text class="who" x="12" y="32">human · admin (Drive web)</text>
+    <text class="label" x="12" y="50">File in supplier folder</text>
+    <text class="sub" x="12" y="63">Need Suppliers → [Supplier]</text>
+  </g>
+
+  <path class="edge" d="M1100,1195 L1100,1220"/>
+
+  <g transform="translate(1000,1220)">
+    <polygon class="node-diamond" points="100,0 200,40 100,80 0,40"/>
+    <text class="id" x="100" y="30" text-anchor="middle">S7C · decision</text>
+    <text class="label" x="100" y="48" text-anchor="middle">Deckorators / GAF?</text>
+    <text class="sub" x="100" y="64" text-anchor="middle">admin reads line items</text>
+  </g>
+
+  <path class="edge alt" d="M1000,1260 L820,1260 L820,1410"/>
+  <text class="edge-label" x="850" y="1252">no</text>
+
+  <path class="edge" d="M1200,1260 L1340,1260 L1340,1300"/>
+  <text class="edge-label" x="1245" y="1252">yes</text>
+
+  <g transform="translate(1220,1300)">
+    <rect class="node-rect crit" width="220" height="65" rx="10"/>
+    <text class="id" x="12" y="18">S7D · CRITICAL</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label crit" x="12" y="50">Rename + DECKO/GAF tag</text>
+    <text class="sub" x="12" y="63">enables warranty / rebate</text>
+  </g>
+
+  <path class="edge" d="M1340,1365 L1340,1395"/>
+
+  <g transform="translate(1220,1395)">
+    <rect class="node-rect step" width="220" height="55" rx="10"/>
+    <text class="id" x="12" y="18">S7E · step</text>
+    <text class="who" x="12" y="32">human · admin (Drive web)</text>
+    <text class="label" x="12" y="50">Save to GAF/DECKO folder</text>
+  </g>
+
+  <g transform="translate(820,1410)">
+    <rect class="node-rect step" width="240" height="60" rx="10"/>
+    <text class="id" x="12" y="18">→</text>
+    <text class="label" x="12" y="38">Supplier branch complete</text>
+    <text class="sub" x="12" y="52">join → JobNimbus</text>
+  </g>
+
+  <path class="edge" d="M1330,1450 L940,1470"/>
+
+
+  <!-- ============ LANE 6: JOBNIMBUS ============ -->
+  <path class="edge" d="M260,1440 L740,1590"/>
+  <path class="edge" d="M940,1470 L740,1590"/>
+
+  <g transform="translate(620,1590)">
+    <rect class="node-rect step" width="240" height="80" rx="10"/>
+    <text class="id" x="12" y="18">S8 · step</text>
+    <text class="who" x="12" y="32">human · admin (JN web)</text>
+    <text class="label" x="12" y="50">Upload to JobNimbus</text>
+    <text class="sub" x="12" y="65">find job → Documents → drag PDF</text>
+    <text class="sub" x="12" y="78">set Category: Receipt</text>
+  </g>
+
+
+  <!-- ============ LANE 7: PAYMENT ============ -->
+  <path class="edge" d="M740,1670 L740,1790"/>
+  <text class="edge-label" x="755" y="1730">if subcontractor payment</text>
+
+  <g transform="translate(640,1790)">
+    <polygon class="node-diamond" points="100,0 200,40 100,80 0,40"/>
+    <text class="id" x="100" y="30" text-anchor="middle">S9 · decision</text>
+    <text class="label" x="100" y="48" text-anchor="middle">Payment type?</text>
+    <text class="sub" x="100" y="64" text-anchor="middle">Zelle / Check</text>
+  </g>
+
+  <path class="edge" d="M640,1830 L420,1880"/>
+  <text class="edge-label" x="475" y="1856">Zelle</text>
+
+  <g transform="translate(300,1880)">
+    <rect class="node-rect step" width="240" height="70" rx="10"/>
+    <text class="id" x="12" y="18">S9A-Z · step</text>
+    <text class="who" x="12" y="32">human · admin (WF email)</text>
+    <text class="label" x="12" y="50">Wells Fargo email → PDF</text>
+    <text class="sub" x="12" y="63">⌘⇧4 screenshot → Quick Actions → PDF</text>
+  </g>
+
+  <path class="edge" d="M840,1830 L1060,1880"/>
+  <text class="edge-label" x="940" y="1856">Check</text>
+
+  <g transform="translate(940,1880)">
+    <rect class="node-rect step" width="240" height="70" rx="10"/>
+    <text class="id" x="12" y="18">S9A-C · step</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="50">Scan check (phone/Epson)</text>
+    <text class="sub" x="12" y="63">same as physical receipt path</text>
+  </g>
+
+  <path class="edge" d="M420,1950 L740,2000"/>
+  <path class="edge" d="M1060,1950 L740,2000"/>
+
+  <g transform="translate(620,2000)">
+    <rect class="node-rect step" width="240" height="60" rx="10"/>
+    <text class="id" x="12" y="18">S9B · step</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="50">Rename payment PDF</text>
+    <text class="sub" x="12" y="63">[Sub] [Date] [$Amt] – [Address]</text>
+  </g>
+
+  <path class="edge" d="M740,2060 L740,2090"/>
+
+  <g transform="translate(620,2090)">
+    <rect class="node-rect step" width="240" height="60" rx="10"/>
+    <text class="id" x="12" y="18">S9C · step</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="50">File: Job · Sub · JobNimbus</text>
+    <text class="sub" x="12" y="63">repeat upload to 3 destinations</text>
+  </g>
+
+  <path class="edge" d="M740,2150 L740,2180"/>
+
+  <g transform="translate(620,2180)">
+    <rect class="node-rect crit" width="240" height="70" rx="10"/>
+    <text class="id" x="12" y="18">S9D · CRITICAL</text>
+    <text class="who" x="12" y="32">human · admin (Sheets web)</text>
+    <text class="label crit" x="12" y="50">Log to SUB CHECK – [Year]</text>
+    <text class="sub" x="12" y="63">type rows A–G by hand</text>
+  </g>
+
+
+  <!-- ============ LANE 8: CLEANUP ============ -->
+  <path class="edge" d="M740,2250 L740,2300"/>
+
+  <g transform="translate(620,2300)">
+    <rect class="node-rect end" width="240" height="50" rx="10"/>
+    <text class="id" x="12" y="18">S10 · end</text>
+    <text class="who" x="12" y="32">human · admin</text>
+    <text class="label" x="12" y="46">End-of-day desktop cleanup</text>
+  </g>
+
+</svg>
+</div>
+</body>
+</html>
