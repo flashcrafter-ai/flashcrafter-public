@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FlashCrafter Growth Brief V3 - services, locations, competitors</title>
+<style>
+  :root{
+    --bg:#f6f3ed;
+    --paper:#fffdf8;
+    --ink:#18201d;
+    --muted:#66716a;
+    --soft:#e7e0d4;
+    --line:#d6ccbd;
+    --green:#146b52;
+    --green2:#dbeee5;
+    --teal:#167887;
+    --amber:#a96b08;
+    --amber2:#fff1cf;
+    --red:#aa3d2f;
+    --red2:#ffe4dd;
+    --blue:#245a8f;
+    --blue2:#e2edf8;
+    --violet:#76568a;
+    --violet2:#efe3f2;
+    --shadow:0 18px 48px rgba(35,28,18,.11);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      linear-gradient(180deg,#f9f7f2 0,#f4eee5 360px,#f6f3ed 100%);
+    color:var(--ink);
+    font:14px/1.5 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  button,input,select{font:inherit}
+  button{cursor:pointer}
+  .app{max-width:1480px;margin:0 auto;padding:20px 20px 64px}
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    margin:-20px -20px 18px;padding:13px 20px;
+    background:rgba(249,247,242,.92);backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(214,204,189,.75);
+    display:flex;align-items:center;gap:16px;min-width:0;
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .mark{width:30px;height:30px;border-radius:8px;background:var(--green);color:#fff;
+    display:grid;place-items:center;font-weight:900;font-size:13px;letter-spacing:.4px}
+  .brand b{font-size:14px;white-space:nowrap}
+  .brand span{display:block;color:var(--muted);font-size:11px;margin-top:-2px;white-space:nowrap}
+  .topnav{margin-left:auto;display:flex;gap:6px;overflow:auto;padding-bottom:1px}
+  .topnav a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:7px;
+    padding:6px 10px;font-size:12px;background:rgba(255,253,248,.7);white-space:nowrap}
+  .topnav a:hover{border-color:var(--green);color:var(--green)}
+  .grid{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:16px;align-items:start}
+  .rail{
+    position:sticky;top:78px;display:flex;flex-direction:column;gap:12px;min-width:0;
+    max-height:calc(100vh - 96px);overflow:auto;padding-right:4px;scrollbar-gutter:stable;
+  }
+  .panel{
+    background:var(--paper);border:1px solid var(--line);border-radius:8px;
+    box-shadow:var(--shadow);min-width:0;
+  }
+  .panel.tight{box-shadow:none}
+  .phead{padding:13px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+  .phead h2,.phead h3{margin:0;font-size:13px;letter-spacing:.2px}
+  .phead .meta{margin-left:auto;color:var(--muted);font-size:11px;white-space:nowrap}
+  .pbody{padding:14px}
+  .client{display:grid;gap:8px}
+  .client h1{font-size:20px;line-height:1.15;margin:0}
+  .client .sub{color:var(--muted);font-size:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;
+    padding:4px 8px;background:#fff;color:var(--muted);font-size:11px;font-weight:700}
+  .chip.green{background:var(--green2);color:var(--green);border-color:#b8dac9}
+  .chip.amber{background:var(--amber2);color:var(--amber);border-color:#ead18f}
+  .chip.blue{background:var(--blue2);color:var(--blue);border-color:#b7cde4}
+  .chip.red{background:var(--red2);color:var(--red);border-color:#efb8ae}
+  .chip.editable{cursor:pointer}
+  .chip button{border:0;background:transparent;color:inherit;padding:0;margin-left:2px;font-weight:900;line-height:1}
+  .chip-add{display:flex;gap:6px;margin-top:7px}
+  .chip-add input{min-width:0;flex:1;border:1px solid var(--line);border-radius:7px;padding:6px 7px;background:#fff;color:var(--ink)}
+  .chip-add button{border:1px solid var(--line);border-radius:7px;background:#fff;padding:6px 8px;font-size:11px;font-weight:900}
+  .mini-list{display:grid;gap:8px;border-top:1px solid var(--soft);padding-top:9px;margin-top:2px}
+  .mini-list h4{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+  .mini-list p{margin:0;color:var(--ink);font-size:12px;line-height:1.35}
+  .location-mode{display:grid;gap:7px}
+  .checkline{display:flex;gap:8px;align-items:flex-start;font-size:12px;font-weight:800}
+  .checkline input{margin-top:2px}
+  .address-field{display:grid;gap:5px}
+  .address-field input{width:100%;border:1px solid var(--line);border-radius:7px;padding:7px 8px;background:#fff;color:var(--ink)}
+  .address-field small{color:var(--muted);font-size:10px;line-height:1.35}
+  .is-hidden{display:none!important}
+  .objective-list{display:grid;gap:6px}
+  .obj{
+    width:100%;text-align:left;border:1px solid var(--line);background:#fff;color:var(--ink);
+    border-radius:7px;padding:9px 10px;display:flex;gap:8px;align-items:center;min-height:38px;
+  }
+  .obj:hover{border-color:var(--teal)}
+  .obj.on{border-color:var(--green);background:var(--green2);box-shadow:inset 3px 0 0 var(--green)}
+  .obj i{font-style:normal;color:var(--muted);font-size:12px;width:20px;flex:none}
+  .obj span{font-size:12px;font-weight:800;line-height:1.25}
+  .custom-objective{display:grid;gap:6px;border-top:1px solid var(--soft);margin-top:4px;padding-top:10px}
+  .custom-objective label{font-size:12px;font-weight:900}
+  .custom-objective-action{display:grid;gap:7px}
+  .custom-objective textarea{width:100%;min-height:88px;resize:vertical;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);padding:8px;line-height:1.35}
+  .custom-objective textarea:focus{outline:2px solid rgba(20,107,82,.18);border-color:var(--green)}
+  .custom-objective button{border:1px solid var(--green);border-radius:7px;background:var(--green);color:#fff;padding:8px 10px;font-size:12px;font-weight:900;white-space:nowrap;width:100%}
+  .custom-objective small{color:var(--muted);font-size:10px;line-height:1.35}
+  .main{display:grid;gap:16px;min-width:0}
+  .hero{
+    padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);gap:18px;align-items:stretch;
+  }
+  .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--green);font-weight:900;margin-bottom:8px}
+  h1,h2,h3,p{overflow-wrap:anywhere}
+  .hero h1{font-size:28px;line-height:1.08;margin:0 0 10px;max-width:920px}
+  .hero p{margin:0;color:var(--muted);max-width:820px}
+  .strategy-card{
+    background:#f9f4e9;border:1px solid #ead9b2;border-radius:8px;padding:14px;
+    display:grid;gap:10px;min-width:0;
+  }
+  .strategy-card label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);font-weight:900}
+  .strategy-card h2{font-size:17px;line-height:1.2;margin:0}
+  .strategy-card p{font-size:12px;color:#66553b;margin:0}
+  .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .mini{background:#fff;border:1px solid var(--line);border-radius:7px;padding:9px;min-width:0}
+  .mini span{display:block;color:var(--muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+  .mini b{display:block;font-size:17px;margin-top:2px;white-space:nowrap}
+  .section{display:grid;gap:12px}
+  .section-title{display:flex;align-items:flex-end;gap:12px;margin:8px 0 0}
+  .section-title h2{margin:0;font-size:18px}
+  .section-title p{margin:0 0 2px;color:var(--muted);font-size:12px}
+  .horizon-tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .horizon-tabs button{border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--muted);padding:7px 10px;font-size:12px;font-weight:900}
+  .horizon-tabs button.on{background:var(--green);border-color:var(--green);color:#fff}
+  .calc{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+  .table-wrap{overflow:visible;border-radius:0 0 8px 8px}
+  table{width:100%;border-collapse:collapse;table-layout:fixed}
+  th,td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:right;vertical-align:middle;white-space:normal;overflow-wrap:anywhere}
+  th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--paper);z-index:1}
+  th{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:#fbf7ef}
+  td.metric{font-weight:900;color:var(--ink)}
+  .subrow td{font-size:12px;color:var(--muted);background:#fffaf2}
+  .delta{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:2px 6px;margin-left:6px;
+    font-size:10px;font-weight:900;background:var(--green2);color:var(--green)}
+  .delta.down{background:var(--red2);color:var(--red)}
+  .scenario-toggle{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff}
+  .scenario-toggle button{border:0;border-right:1px solid var(--line);background:transparent;padding:6px 9px;font-size:11px;font-weight:900;color:var(--muted)}
+  .scenario-toggle button:last-child{border-right:0}
+  .scenario-toggle button.on{background:var(--ink);color:#fff}
+  .progress-matrix{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow)}
+  .progress-matrix table{min-width:0;font-size:12px}
+  .progress-matrix th,.progress-matrix td{position:static;text-align:right;background:var(--paper)}
+  .progress-matrix th:first-child,.progress-matrix td:first-child{text-align:left;position:sticky;left:0;z-index:2}
+  .progress-matrix th:first-child{background:#fbf7ef}
+  .progress-matrix td:first-child{background:#fffaf2}
+  .progress-matrix .path b{display:block;font-size:12px;color:var(--ink)}
+  .progress-matrix .path span{display:block;font-size:10px;color:var(--muted);margin-top:2px}
+  .progress-matrix th,.progress-matrix td{padding:8px 6px}
+  .progress-matrix .today td{box-shadow:inset 0 3px 0 var(--blue)}
+  .progress-matrix .target td{box-shadow:inset 0 3px 0 var(--green)}
+  .progress-matrix .group{background:#fbf7ef;color:var(--green);font-size:10px;text-transform:uppercase;letter-spacing:.1em;text-align:center}
+  .trend-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
+  .trend-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .trend-head h3{margin:0;font-size:14px}
+  .trend-head p{margin:2px 0 0;color:var(--muted);font-size:12px}
+  .legend{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:11px;font-weight:800}
+  .legend i{width:22px;height:3px;border-radius:999px;display:inline-block;margin-right:4px;vertical-align:middle}
+  .legend .decline{background:var(--red)}.legend .status{background:var(--amber)}.legend .selected{background:var(--green)}
+  .trend-body{display:grid;grid-template-columns:minmax(0,1fr) 360px;min-width:0}
+  .trend-main{min-width:0;display:grid;align-content:start}
+  .plan-builder{border-left:1px solid var(--line);padding:14px;background:#fffdf8;display:grid;gap:12px;align-content:start}
+  .plan-builder h3{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .plan-builder p{margin:3px 0 0;color:var(--muted);font-size:12px;line-height:1.35}
+  .plan-channel{display:grid;grid-template-columns:42px minmax(0,1fr);gap:10px;align-items:start;border-top:1px solid var(--soft);padding-top:12px}
+  .plan-channel.disabled{opacity:.48}
+  .switch{width:36px;height:20px;border-radius:999px;border:0;background:#dbe2ea;position:relative;padding:0}
+  .switch::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;left:2px;top:2px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+  .switch.on{background:#346cf0}
+  .switch.on::after{left:18px}
+  .switch:disabled{cursor:not-allowed}
+  .plan-channel b{display:block;font-size:13px}
+  .plan-channel small{display:block;color:var(--muted);font-size:11px;line-height:1.35;margin-top:2px}
+  .plan-channel em{display:block;color:var(--green);font-style:normal;font-size:11px;font-weight:900;margin-top:5px}
+  .plan-capacity{border-top:1px solid var(--soft);padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .plan-capacity label{font-size:12px;color:var(--muted)}
+  .plan-capacity input{width:76px;border:1px solid var(--line);border-radius:7px;background:#fff;padding:7px 8px;text-align:right;color:var(--ink)}
+  .trend-chart{width:100%;height:auto;display:block;background:#fffdf8}
+  .trend-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:10px 14px;border-top:1px solid var(--line);background:#fbf7ef}
+  .trend-summary .stat{background:#fff}
+  .trend-definitions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:10px 14px;border-top:1px solid var(--line);background:#fffdf8}
+  .trend-definitions div{border:1px solid var(--soft);border-radius:7px;padding:9px;background:#fff}
+  .trend-definitions b{display:block;font-size:11px;margin-bottom:3px}
+  .trend-definitions p{margin:0;color:var(--muted);font-size:11px;line-height:1.35}
+  .visibility-strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;scrollbar-gutter:stable}
+  .visibility-map-card{flex:0 0 228px;border:1px solid var(--line);border-radius:8px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
+  .visibility-map-head{padding:9px 10px;border-bottom:1px solid var(--line)}
+  .visibility-map-head h3{margin:0;font-size:12px;line-height:1.25}
+  .visibility-map-head p{margin:2px 0 0;color:var(--muted);font-size:10px;line-height:1.25}
+  .map-frame{position:relative;height:150px;background:#e9ded0;overflow:hidden}
+  .map-tile{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.82) contrast(.92)}
+  .map-attribution{position:absolute;left:6px;bottom:4px;background:rgba(255,253,248,.86);border-radius:4px;padding:1px 4px;color:var(--muted);font-size:9px}
+  .rank-overlay{position:absolute;inset:12px;display:grid;grid-template-columns:repeat(5,1fr);gap:3px;place-items:center}
+  .rank-overlay span{width:13px;height:13px;border-radius:50%;border:2px solid rgba(255,255,255,.78);box-shadow:0 1px 4px rgba(0,0,0,.22)}
+  .rank-overlay .good{background:rgba(20,107,82,.62)}.rank-overlay .mid{background:rgba(169,107,8,.50)}.rank-overlay .bad{background:rgba(170,61,47,.55)}
+  .map-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:8px 9px;background:#fbf7ef;border-top:1px solid var(--line)}
+  .map-metrics span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:900}
+  .map-metrics b{display:block;font-size:12px}
+  .assumptions{display:grid;gap:10px}
+  .field{display:grid;grid-template-columns:1fr 96px;gap:8px;align-items:center;border-bottom:1px solid var(--soft);padding-bottom:8px}
+  .field label{font-size:12px;font-weight:800;line-height:1.2}
+  .field small{display:block;font-size:10px;color:var(--muted);font-weight:600;margin-top:2px}
+  .field input{width:100%;border:1px solid var(--line);border-radius:7px;padding:7px 8px;text-align:right;background:#fff;color:var(--ink)}
+  .field input:focus{outline:2px solid rgba(20,107,82,.18);border-color:var(--green)}
+  .assumption-group{display:grid;gap:8px;border-bottom:1px solid var(--soft);padding-bottom:9px}
+  .assumption-group h4{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+  .assumption-note{margin:0;color:var(--muted);font-size:10px;line-height:1.35}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{border:1px solid var(--line);border-radius:7px;background:#fff;padding:7px 10px;font-weight:900;font-size:12px;color:var(--ink)}
+  .btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+  .btn.warn{background:var(--amber2);border-color:#e5c167;color:var(--amber)}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px;min-width:0}
+  .card h3{font-size:14px;margin:0 0 6px}
+  .card p{margin:0;color:var(--muted);font-size:12px}
+  .benchmark-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:12px}
+  .benchmark-table{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper)}
+  .benchmark-table table{table-layout:auto}
+  .benchmark-table th,.benchmark-table td{position:static;text-align:left;font-size:12px}
+  .benchmark-table th{text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+  .benchmark-table .average-row td{background:#fffaf2;font-weight:900}
+  .benchmark-table .you-row td{background:#f4fbf7;font-weight:900;border-top:2px solid var(--green)}
+  .service-location{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .service-card{border:1px solid var(--line);background:#fff;border-radius:8px;padding:12px}
+  .service-card h3{margin:0 0 5px;font-size:13px}
+  .service-card p{margin:0;color:var(--muted);font-size:12px}
+  .service-card .chips{margin-top:9px}
+  .matrix-table{margin-top:12px}
+  .channel-panel{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow)}
+  .channel-panel table{table-layout:auto}
+  .channel-panel th,.channel-panel td{position:static;text-align:left;font-size:12px}
+  .channel-panel th{text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+  .channel-panel input{
+    width:86px;border:1px solid var(--line);border-radius:7px;background:#fff;padding:6px 7px;text-align:right;color:var(--ink)
+  }
+  .channel-panel input[type="text"]{width:150px;text-align:left}
+  .channel-source{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+  .channel-confirm{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px 7px;font-size:10px;font-weight:900;background:#fff;color:var(--amber)}
+  .channel-total{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;background:#fbf7ef;border-top:1px solid var(--line)}
+  .channel-total b{font-size:17px}
+  .layer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .layer-card{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:14px;box-shadow:var(--shadow)}
+  .layer-card h3{margin:0 0 7px;font-size:15px}
+  .layer-card p{margin:0 0 10px;color:var(--muted);font-size:12px}
+  .layer-list{display:grid;gap:7px}
+  .layer-item{display:grid;grid-template-columns:42px minmax(0,1fr) 64px;gap:10px;align-items:start;border:1px solid var(--soft);border-radius:7px;padding:9px;background:#fff}
+  .layer-item b{width:42px;min-height:22px;border-radius:6px;display:grid;place-items:center;background:var(--green2);color:var(--green);font-size:9px;font-weight:900;line-height:1;letter-spacing:0;text-align:center;overflow:hidden}
+  .layer-item strong{display:block;font-size:12px}
+  .layer-item span{display:block;color:var(--muted);font-size:11px;margin-top:1px}
+  .layer-score{text-align:right}
+  .layer-score strong{font-size:15px}
+  .layer-score span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:900}
+  .layer-score .weak{color:var(--red)}.layer-score .fair{color:var(--amber)}.layer-score .strong{color:var(--green)}
+  .score-bar{height:5px;border-radius:999px;background:#ede3d6;margin-top:6px;overflow:hidden}
+  .score-bar i{display:block;height:100%;border-radius:999px;background:var(--amber)}
+  .score-bar i.weak{background:var(--red)}.score-bar i.fair{background:var(--amber)}.score-bar i.strong{background:var(--green)}
+  .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .formula{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#1f2824;color:#eff8f1;
+    border-radius:8px;padding:13px;overflow:auto;font-size:12px;line-height:1.55}
+  .route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .route-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:12px;min-width:0}
+  .route-card span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
+  .route-card b{display:block;font-size:20px;margin-top:3px}
+  .route-card p{font-size:11px;margin:3px 0 0;color:var(--muted)}
+  .score-table{overflow:visible}
+  .score-table table{min-width:0;font-size:11px}
+  .score-table td{font-size:11px}
+  .score-table .component-row td{background:#fffaf2;font-weight:900}
+  .score-table .signal-row td:first-child{padding-left:30px;color:var(--muted)}
+  .score-table .role{font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+  .score-tip{padding:10px 14px;border-bottom:1px solid var(--line);background:#f7fbf7;color:#41534a;font-size:12px}
+  .score-tip b{color:var(--green)}
+  .statline{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+  .stat{border:1px solid var(--line);border-radius:7px;padding:8px;background:#fff;min-width:0}
+  .stat span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
+  .stat b{display:block;font-size:18px;margin-top:2px}
+  .drill{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .drill .card{min-height:190px}
+  .bar{height:9px;border-radius:999px;background:#eee1d2;overflow:hidden;margin-top:11px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--teal));border-radius:999px}
+  .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .module{border:1px solid var(--line);border-radius:8px;background:#fff;padding:12px;min-width:0}
+  .module h3{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:13px}
+  .module h3 span{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;background:var(--blue2);color:var(--blue);font-weight:900;font-size:11px}
+  .commitments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .commit{border-left:4px solid var(--green);background:#fff;border-radius:7px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px}
+  .commit.client{border-left-color:var(--amber)}
+  .commit.kpi{border-left-color:var(--teal)}
+  .commit h3{font-size:13px;margin:0 0 8px}
+  ul{margin:0;padding-left:18px;color:var(--muted);font-size:12px}
+  li{margin:5px 0}
+  .handoff{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+  .agreement{background:#18201d;color:#fff;border-radius:8px;padding:16px;display:grid;gap:12px}
+  .agreement h2{font-size:18px;margin:0}
+  .agreement p{color:#d8dfd9;margin:0;font-size:12px}
+  .agreement .signgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .agreement .sign{border:1px solid rgba(255,255,255,.2);border-radius:7px;padding:10px}
+  .agreement .sign span{display:block;color:#aebbb2;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:900}
+  .agreement .sign b{display:block;margin-top:3px}
+  .status-steps{display:grid;gap:8px}
+  .step{display:grid;grid-template-columns:28px 1fr;gap:9px;align-items:start;border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px}
+  .step b{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--green2);color:var(--green);font-size:12px}
+  .step h3{margin:0;font-size:13px}
+  .step p{margin:2px 0 0;color:var(--muted);font-size:12px}
+  .provenance{overflow:hidden}
+  .prov-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .prov-tools input,.prov-tools select{border:1px solid var(--line);border-radius:7px;background:#fff;padding:7px 9px;color:var(--ink)}
+  .prov-table{max-height:560px;overflow:auto;border-top:1px solid var(--line)}
+  .prov-table table{min-width:0}
+  .prov-table td{font-size:11px;text-align:left;white-space:normal;vertical-align:top}
+  .prov-table th{text-align:left;position:sticky;top:0;z-index:3}
+  .prov-key{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;color:var(--blue);font-weight:900}
+  .badge{display:inline-flex;border-radius:999px;padding:2px 7px;font-size:10px;font-weight:900;border:1px solid var(--line);background:#fff;white-space:nowrap}
+  .badge.high{background:var(--green2);color:var(--green);border-color:#b8dac9}
+  .badge.medium{background:var(--amber2);color:var(--amber);border-color:#ead18f}
+  .badge.low{background:var(--red2);color:var(--red);border-color:#efb8ae}
+  .badge.mock{background:var(--violet2);color:var(--violet);border-color:#d9bddf}
+  .footnote{color:var(--muted);font-size:11px;margin-top:8px}
+  @media (max-width:1180px){
+    .grid{grid-template-columns:1fr}
+    .rail{position:static;display:grid;grid-template-columns:1fr 1fr;max-height:none;overflow:visible;padding-right:0}
+    .calc,.hero,.handoff{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    .app{padding:14px 12px 48px}
+    .topbar{margin:-14px -12px 14px;padding:10px 12px;align-items:flex-start}
+    .brand span{display:none}
+    .hero h1{font-size:23px}
+    .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route{grid-template-columns:1fr}
+    .trend-body{grid-template-columns:1fr}
+    .plan-builder{border-left:0;border-top:1px solid var(--line)}
+    .benchmark-grid,.service-location,.layer-grid{grid-template-columns:1fr}
+    .mini-grid,.statline{grid-template-columns:1fr}
+    .field{grid-template-columns:1fr}
+    .field input{text-align:left}
+    .agreement .signgrid{grid-template-columns:1fr}
+    .topnav{display:none}
+    .progress-matrix table,.progress-matrix thead,.progress-matrix tbody,.progress-matrix tr,.progress-matrix th,.progress-matrix td{display:block;width:100%}
+    .progress-matrix thead{display:none}
+    .progress-matrix tr{border-bottom:1px solid var(--line);padding:8px 0}
+    .progress-matrix tr:last-child{border-bottom:0}
+    .progress-matrix th:first-child,.progress-matrix td:first-child{position:static}
+    .progress-matrix td{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px;text-align:left;border-bottom:0;padding:5px 10px}
+    .progress-matrix td::before{content:attr(data-label);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
+    .progress-matrix td.path{display:block;background:#fffaf2;padding:10px}
+    .progress-matrix td.path::before{content:none}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">FC</div>
+      <div><b>ClearBooks Growth Brief</b><span>Real-data draft for services, locations, competitors, and scored components</span></div>
+    </div>
+    <nav class="topnav" aria-label="Report sections">
+      <a href="#outcome">Outcome</a>
+      <a href="#layers">Layers</a>
+      <a href="#benchmarks">Benchmarks</a>
+      <a href="#channels">Channels</a>
+      <a href="#objective">Objective</a>
+      <a href="#scoring">Scoring</a>
+      <a href="#calculator">Forecast</a>
+      <a href="#drilldown">Drilldown</a>
+      <a href="#assumptions">Assumptions</a>
+      <a href="#provenance">Provenance</a>
+      <a href="#execution">Execution</a>
+      <a href="#agreement">Handoff</a>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <aside class="rail">
+      <section class="panel tight">
+        <div class="phead"><h3>Brief subject</h3><span class="meta">ClearBooks draft</span></div>
+        <div class="pbody client">
+          <h1 data-key="business.name"></h1>
+          <div class="sub">Primary category: <span data-key="business.primaryCategory"></span></div>
+          <div class="chips">
+            <span class="chip green" data-key="business.rating"></span>
+            <span class="chip blue" data-key="business.reviews"></span>
+          </div>
+          <div class="mini-list">
+            <div>
+              <h4>Key services</h4>
+              <div class="chips" id="briefServices"></div>
+              <div class="chip-add"><input id="serviceInput" placeholder="Add service" /><button type="button" data-add-chip="services">Add</button></div>
+            </div>
+            <div>
+              <h4>Physical locations</h4>
+              <div class="location-mode">
+                <label class="checkline"><input id="serviceAreaOnly" type="checkbox" /> Service-area business only</label>
+                <div class="address-field" id="physicalAddressBlock">
+                  <input id="physicalAddressInput" placeholder="Street address for storefront lookup" />
+                  <small>Physical address enables stronger local/map-pack assumptions. Service-area-only shifts impact toward organic/local organic.</small>
+                </div>
+              </div>
+              <div id="physicalLocationControls">
+                <div class="chips" id="briefLocations"></div>
+                <div class="chip-add"><input id="locationInput" placeholder="Add storefront/location" /><button type="button" data-add-chip="physicalLocations">Add</button></div>
+              </div>
+            </div>
+            <div>
+              <h4>Service areas</h4>
+              <div class="chips" id="briefServiceAreas"></div>
+              <div class="chip-add"><input id="serviceAreaInput" placeholder="Add service area" /><button type="button" data-add-chip="serviceAreas">Add</button></div>
+            </div>
+          </div>
+          <p class="footnote">Static prototype. No provider calls, no sends, no production data writes.</p>
+        </div>
+      </section>
+      <section class="panel" id="objective">
+        <div class="phead"><h2>Objective selector</h2><span class="meta">client-visible</span></div>
+        <div class="pbody objective-list" id="objectiveList"></div>
+        <div class="pbody custom-objective" style="padding-top:0">
+          <label for="customObjective">Describe your own objective</label>
+          <div class="custom-objective-action">
+            <textarea id="customObjective" placeholder="Example: I want to grow recurring bookkeeping clients without taking on low-margin one-off tax work."></textarea>
+            <button type="button" id="submitCustomObjective">Submit</button>
+          </div>
+          <small id="customObjectiveStatus">AI plan input. Submit runs AI classification and plan generation in the production flow.</small>
+        </div>
+      </section>
+      <section class="panel" id="assumptions">
+        <div class="phead"><h2>Editable assumptions</h2><span class="meta">owner scenario</span></div>
+        <div class="pbody assumptions" id="assumptionFields"></div>
+        <div class="pbody btnrow" style="padding-top:0">
+          <button class="btn primary" id="applyOwner">Apply scenario</button>
+          <button class="btn warn" id="resetOwner">Reset to FC Baseline</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="section" id="outcome">
+        <div class="section-title">
+          <h2 id="heroTitle"></h2>
+          <p id="heroCopy"></p>
+        </div>
+        <div class="trend-card" id="outcomeTrend"></div>
+        <div class="progress-matrix" id="progressMatrix"></div>
+      </section>
+
+      <section class="section" id="layers">
+        <div class="section-title">
+          <h2 id="business360Title">Your business today</h2>
+          <p id="business360Copy">Some inputs describe the whole business; others must be calculated per service and location.</p>
+        </div>
+        <div class="horizon-tabs" id="horizonTabs" aria-label="Business horizon"></div>
+        <div class="layer-grid">
+          <article class="layer-card">
+            <h3>Business-level signals</h3>
+            <p>These affect trust and conversion across every service and location.</p>
+            <div class="layer-list" id="businessLayerItems"></div>
+          </article>
+          <article class="layer-card">
+            <h3>Service-location signals</h3>
+            <p>These scores reflect our current assessment for the selected services and locations. Google Ads assumes the account can be evaluated through the FlashCrafter master account.</p>
+            <div class="layer-list" id="serviceLocationLayerItems"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="visibility-maps">
+        <div class="section-title">
+          <h2>Service-area visibility</h2>
+          <p>Rank-grid overlays by service and market, shown on real map context.</p>
+        </div>
+        <div class="visibility-strip" id="visibilityMapStrip" aria-label="Service and area local visibility maps"></div>
+      </section>
+
+      <section class="section" id="benchmarks">
+        <div class="section-title">
+          <h2>Your competition</h2>
+          <p>Competitors used for reputation, proof, review velocity, response velocity, proximity, and premium-service context. Future tabs assume they keep improving too.</p>
+        </div>
+        <div>
+          <section class="benchmark-table">
+            <table>
+              <thead>
+                <tr><th>Competitor used</th><th>Why included</th><th>Reviews</th><th>Rating</th><th>Review velocity</th><th>Response velocity</th><th>Avg score</th><th>Benchmark role</th></tr>
+              </thead>
+              <tbody id="competitorRows"></tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="channels">
+        <div class="section-title">
+          <h2>Revenue channels today</h2>
+          <p>Google channels are modeled from the forecast; invisible channels need owner confirmation.</p>
+        </div>
+        <section class="channel-panel">
+          <table>
+            <thead>
+              <tr><th>Channel</th><th>Status</th><th>Jobs / mo</th><th>Avg job $</th><th>Cost / mo</th><th>Monthly</th></tr>
+            </thead>
+            <tbody id="channelRows"></tbody>
+          </table>
+          <div class="channel-total">
+            <button class="btn" id="addChannel" type="button">Add channel</button>
+            <span>Visible channel revenue <b id="channelTotal"></b></span>
+          </div>
+        </section>
+        <section class="benchmark-table matrix-table">
+          <div class="phead"><h2>Google Ads detail: service + location economics</h2><span class="meta">revenue channel detail</span></div>
+          <table>
+            <thead>
+              <tr><th>Service + location</th><th>Location type</th><th>Search volume</th><th>Modeled CPC</th><th>SEO/rank basis</th><th>Forecast impact</th></tr>
+            </thead>
+            <tbody id="googleAdsServiceLocationRows"></tbody>
+          </table>
+        </section>
+      </section>
+
+      <section class="section" id="scoring">
+        <div class="section-title">
+          <h2>Scored readiness + economic volume model</h2>
+          <p>Assessment: scores explain readiness and conversion quality; new-customer volume comes from demand, reach, eligibility, conversion, and cost math.</p>
+        </div>
+        <div class="score-grid">
+          <section class="panel">
+            <div class="phead"><h2>One object shape for every section</h2><span class="meta">implementation model</span></div>
+            <div class="pbody">
+              <div class="formula">Conversion signal = measure -> subScore(0..100) x weightShare = readiness
+Conversion component -> score/band -> trust or website multiplier
+Volume channel = service-location demand x reachable share x eligibility x close rate x ticket - cost
+Volume score = readiness/opportunity explanation, not direct jobs</div>
+              <p class="footnote">Scores are useful for trust, quality, readiness, and gap explanation. Volume forecasts stay grounded in market math, so a low SEO/Maps score can mean large untapped opportunity instead of low value.</p>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="phead"><h2>Top-level revenue roll-up</h2><span class="meta">two sockets</span></div>
+            <div class="pbody">
+              <div class="route">
+                <div class="route-card"><span>Conversion route</span><b id="conversionStrength"></b><p>Reputation x Website scales every close.</p></div>
+                <div class="route-card"><span>Volume model</span><b id="addedVolume"></b><p>Searches x reachable share x eligibility x close rate creates jobs.</p></div>
+                <div class="route-card"><span>Revenue route</span><b id="scoreRevenue"></b><p>Economic channel revenue scaled by conversion route.</p></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="panel">
+          <div class="phead"><h2>Component and signal scorecard</h2><span class="meta">generic ScoreCard(spec)</span></div>
+          <div class="score-tip"><b>Forecasting engine:</b> this is an explanatory version of our assessment logic, not the full proprietary model. We expose enough to show how many data points become a forecast, while protecting the details competitors could copy. The real model is grounded by vertical benchmark data from similar businesses plus the client-specific signals shown in this report.</div>
+          <div class="score-table" id="componentScoreTable"></div>
+        </section>
+        <div class="cards">
+          <article class="card">
+            <h3>Alignment verdict</h3>
+            <p>This is strongly aligned with the Growth Brief direction. It preserves owner-facing simplicity while giving admins and agents a reusable scoring contract for every section.</p>
+          </article>
+          <article class="card">
+            <h3>What changes in V2</h3>
+            <p>Reviews and Website use score-to-multiplier logic. SEO/Maps and Ads use service-location economic math, with scores explaining readiness, gaps, and opportunity. Directories / LSA stay blocked until verified.</p>
+          </article>
+          <article class="card">
+            <h3>Boundary to keep</h3>
+            <p>Never turn a low visibility score directly into low jobs. Low visibility can mean high upside when search demand, economics, and eligibility support it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="calculator">
+        <div class="section-title">
+          <h2>Forecast calculator spine</h2>
+          <p>FC Baseline is preserved. Owner edits create a separate Owner Scenario.</p>
+        </div>
+        <div class="calc">
+          <section class="panel">
+            <div class="phead">
+              <h2>Current, 2-month, 6-month, and 12-month forecast</h2>
+              <div class="scenario-toggle" aria-label="Forecast display">
+                <button class="on" data-view="both">Both</button>
+                <button data-view="baseline">Baseline</button>
+                <button data-view="owner">Owner</button>
+              </div>
+            </div>
+            <div class="table-wrap" id="forecastTable"></div>
+          </section>
+
+        </div>
+      </section>
+
+      <section class="section" id="drilldown">
+        <div class="section-title">
+          <h2>Supporting evidence drilldown</h2>
+          <p>These sections explain why the top-level current and to-be rows move.</p>
+        </div>
+
+        <div class="drill">
+          <article class="card">
+            <h3>Website/conversion strength</h3>
+            <p id="websiteText"></p>
+            <div class="bar" aria-label="Website conversion strength"><i id="websiteBar"></i></div>
+            <div class="statline">
+              <div class="stat"><span>Multiplier</span><b id="websiteMultiplier"></b></div>
+              <div class="stat"><span>Quote friction</span><b data-key="website.quoteFriction"></b></div>
+              <div class="stat"><span>Proof depth</span><b data-key="website.proofDepth"></b></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Paid traffic opportunity</h3>
+            <p id="paidText"></p>
+            <div class="statline">
+              <div class="stat"><span>Monthly searches</span><b data-key="search.monthlyDemand"></b></div>
+              <div class="stat"><span>Modeled CPC</span><b data-key="search.modeledCpc"></b></div>
+              <div class="stat"><span>Open ad slot</span><b data-key="ads.openSlot"></b></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Organic/SEO</h3>
+            <p id="organicText"></p>
+            <div class="statline">
+              <div class="stat"><span>Service pages</span><b data-key="seo.servicePages"></b></div>
+              <div class="stat"><span>City pages</span><b data-key="seo.cityPages"></b></div>
+              <div class="stat"><span>Map top 3</span><b data-key="visibility.top3"></b></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Directories / LSA eligibility</h3>
+            <p id="lsaText"></p>
+            <div class="statline">
+              <div class="stat"><span>Status</span><b data-key="lsa.status"></b></div>
+              <div class="stat"><span>Gap</span><b data-key="lsa.gap"></b></div>
+              <div class="stat"><span>Use case</span><b data-key="lsa.useCase"></b></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Owner-provided missing data</h3>
+            <p id="missingText"></p>
+            <ul id="missingList"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="execution">
+        <div class="section-title">
+          <h2>Execution and service mapping</h2>
+          <p>Recommendation turns into service modules, ownership, and KPI boundaries.</p>
+        </div>
+        <div class="module-grid" id="moduleGrid"></div>
+        <div class="commitments">
+          <article class="commit">
+            <h3>FC commitments</h3>
+            <ul id="fcCommitments"></ul>
+          </article>
+          <article class="commit client">
+            <h3>Client commitments</h3>
+            <ul id="clientCommitments"></ul>
+          </article>
+          <article class="commit kpi">
+            <h3>KPI boundaries</h3>
+            <ul id="kpiBoundaries"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="agreement">
+        <div class="section-title">
+          <h2>Agreement/status handoff</h2>
+          <p>Accepted objective and strategy convert the brief into operating commitments.</p>
+        </div>
+        <div class="handoff">
+          <section class="agreement">
+            <h2>Draft agreement handoff</h2>
+            <p id="agreementText"></p>
+            <div class="signgrid">
+              <div class="sign"><span>Accepted objective</span><b id="acceptedObjective"></b></div>
+              <div class="sign"><span>Accepted strategy</span><b id="acceptedStrategy"></b></div>
+              <div class="sign"><span>Included modules</span><b id="includedModules"></b></div>
+              <div class="sign"><span>Price basis</span><b data-key="agreement.priceBasis"></b></div>
+              <div class="sign"><span>Reporting cadence</span><b data-key="agreement.reportingCadence"></b></div>
+              <div class="sign"><span>Status</span><b data-key="agreement.status"></b></div>
+            </div>
+          </section>
+          <section class="status-steps">
+            <div class="step"><b>1</b><div><h3>Brief accepted</h3><p>Owner confirms the objective, scenario assumptions, and missing data list.</p></div></div>
+            <div class="step"><b>2</b><div><h3>Scope converted</h3><p>Selected modules become FC obligations, client obligations, KPI boundaries, and reporting cadence.</p></div></div>
+            <div class="step"><b>3</b><div><h3>Agreement issued</h3><p>Commercial terms attach to the accepted strategy, not a generic service menu.</p></div></div>
+            <div class="step"><b>4</b><div><h3>Operating rhythm starts</h3><p>Monthly review compares actuals against this baseline and the Owner Scenario.</p></div></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel provenance" id="provenance">
+        <div class="phead">
+          <h2>Data and provenance footer</h2>
+          <span class="meta" id="provCount"></span>
+        </div>
+        <div class="pbody prov-tools">
+          <input id="provSearch" placeholder="Filter by key, location, source, impact" aria-label="Filter provenance" />
+          <select id="provConfidence" aria-label="Filter confidence">
+            <option value="">All confidence</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+            <option value="mock">Mock/calibrated</option>
+          </select>
+          <select id="provEditable" aria-label="Filter editability">
+            <option value="">All editability</option>
+            <option value="owner editable">Owner editable</option>
+            <option value="fc editable">FC editable</option>
+            <option value="derived">Derived</option>
+            <option value="read only">Read only</option>
+          </select>
+          <span class="footnote">Every business-specific value visible above is represented here as source-backed, mock, FC calibrated, owner editable, or derived.</span>
+        </div>
+        <div class="prov-table" id="provTable"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script>
+const OBJECTIVES = [
+  ['revenue','Grow monthly recurring revenue','Capture more qualified California founders and operators, then convert them into recurring accounting clients.','Demand capture plus conversion lift','If service proof, local authority, and high-intent search are tightened together, recurring monthly revenue can grow without relying only on referrals.','medium','30 days','New recurring gross profit'],
+  ['margin','Improve profit margin','Shift demand toward higher-retainer advisory, tax planning, and fractional CFO work.','Margin protection plan','If pricing floors and source tracking are explicit, profit can rise faster than raw lead volume.','medium','45 days','Profit after CAC'],
+  ['capacity','Fill near-term capacity','Add controllable demand for open bookkeeping, tax, and advisory onboarding capacity.','Near-term pipeline fill','If paid search and conversion proof focus on ready-to-hire clients, unused monthly capacity can be filled before organic gains compound.','medium','14 days','Utilization impact'],
+  ['cac','Reduce cost per acquired client','Reduce blended CAC by tracking source, service line, and first-retainer value.','Attribution and CAC reset','If every new client is tied back to a source and service type, weak spend can be capped while qualified pipeline stays stable.','high','30 days','CAC'],
+  ['stability','Stabilize lead flow','Balance organic, GBP, paid, partner, and referral demand so pipeline does not swing month to month.','Lead-flow stabilizer','If demand is diversified across owned, paid, and partner channels, monthly client acquisition becomes less referral-dependent.','medium','60 days','Pipeline variance'],
+  ['top3','Become top 3 locally','Win more map-pack and organic visibility for priority CPA and bookkeeping searches near office markets.','Local top-3 climb','If GBP relevance, review velocity, and location proof improve together, local visibility can expand across Irvine, San Francisco, Los Angeles, and San Diego markets.','low','90 days','Local visibility'],
+  ['service','Grow a specific service line','Prioritize startup accounting, bookkeeping, tax planning, or fractional CFO demand.','Service-line expansion','If ads and landing pages isolate service intent, average client value can rise without broadening the market indiscriminately.','medium','45 days','Service mix'],
+  ['diversify','Diversify lead sources','Reduce dependence on referrals by adding paid search, organic, partner, and direct website demand.','Source diversification','If paid search, organic, partners, and GBP each carry a measurable role, no single source can stall client growth.','medium','60 days','Source mix'],
+  ['reviews','Improve reviews/reputation','Increase review velocity and make client proof more visible before consultation requests.','Trust compounding loop','If review generation and proof placement run monthly, close rate improves and paid traffic becomes easier to convert.','high','30 days','Review velocity'],
+  ['scale','Scale aggressively','Push qualified demand while protecting service delivery capacity and onboarding quality.','Scale with guardrails','If capacity, close rate, CAC, and first-retainer value are measured weekly, spend can scale only when the next acquired client is profitable.','medium','21 days','Spend-to-profit ratio']
+]
+
+const BASELINE = {
+  gbpSeoSpend: 1800,
+  gbpSeoLeads: 9,
+  lsaSpend: 0,
+  lsaCpl: 180,
+  referralLeads: 8,
+  reviewVelocity: 1,
+  websiteMultiplier: 1.00
+}
+
+const DATA = {
+  'business.name':'ClearBooks CPA',
+  'business.primaryCategory':'CPA / accounting firm',
+  'business.market':'California offices: Irvine, San Francisco, Culver City, San Diego',
+  'business.rating':'4.9 stars',
+  'business.reviews':'72 Google reviews',
+  'channel.paidCpl':'$240',
+  'website.quoteFriction':'Medium-high',
+  'website.proofDepth':'Thin',
+  'search.monthlyDemand':'2,900',
+  'search.modeledCpc':'$18.50',
+  'ads.openSlot':'Competitive',
+  'seo.servicePages':'8+',
+  'seo.cityPages':'4 office markets',
+  'visibility.top3':'10%',
+  'visibility.notFound':'64%',
+  'reviews.competitorAverage':'86',
+  'lsa.status':'Category unclear',
+  'lsa.gap':'Eligibility and screening not verified',
+  'lsa.useCase':'Do not model until eligible',
+  'agreement.priceBasis':'Managed modules + media at cost',
+  'agreement.reportingCadence':'Monthly KPI review',
+  'agreement.status':'Draft from accepted brief'
+}
+
+const BUSINESS_CONTEXT = {
+  serviceAreaOnly:false,
+  physicalAddress:'200 Spectrum Center Drive, STE 300, Irvine, CA 92618',
+  services:[
+    {key:'bookkeeping-accounting', label:'Bookkeeping & accounting', share:32, avgTicket:900, closeRate:30, grossMargin:58, capacity:16, adSpend:900, cpc:16.50, cpl:210, seoDifficulty:'high', benchmark:'core recurring service'},
+    {key:'startup-accounting-advisory', label:'Startup accounting & advisory', share:28, avgTicket:1800, closeRate:22, grossMargin:62, capacity:10, adSpend:950, cpc:22.00, cpl:310, seoDifficulty:'high', benchmark:'high-intent founder service'},
+    {key:'tax-planning-strategy', label:'Tax planning & strategy', share:22, avgTicket:1500, closeRate:26, grossMargin:65, capacity:12, adSpend:700, cpc:19.00, cpl:260, seoDifficulty:'medium-high', benchmark:'seasonal and advisory expansion'},
+    {key:'payroll-fractional-cfo', label:'Payroll & fractional CFO', share:18, avgTicket:2500, closeRate:18, grossMargin:60, capacity:6, adSpend:450, cpc:24.00, cpl:420, seoDifficulty:'high', benchmark:'premium retainer expansion'}
+  ],
+  physicalLocations:[
+    {name:'Irvine Spectrum office', city:'Irvine', state:'CA', type:'physical office', weight:35},
+    {name:'San Francisco office', city:'San Francisco', state:'CA', type:'physical office', weight:25},
+    {name:'Culver City office', city:'Culver City', state:'CA', type:'physical office', weight:20},
+    {name:'San Diego office', city:'San Diego', state:'CA', type:'physical office', weight:20}
+  ],
+  serviceAreas:[
+    {name:'California remote', type:'service area', weight:35},
+    {name:'Palo Alto / startup corridor', type:'service area', weight:25},
+    {name:'Los Angeles creators', type:'service area', weight:20},
+    {name:'Orange County operators', type:'service area', weight:20}
+  ]
+}
+
+const COMPETITORS = [
+  {name:'Kruze Consulting', why:'startup accounting and founder advisory competitor', distance:'SF / remote', reviews:96, rating:4.8, reviewVelocity:4, responseVelocity:70, role:'startup accounting authority benchmark'},
+  {name:'Dimov Tax Specialists', why:'California tax and CPA search competitor', distance:'multi-market CA', reviews:132, rating:4.7, reviewVelocity:6, responseVelocity:68, role:'tax planning and local SEO benchmark'},
+  {name:'Safe Harbor CPAs', why:'San Francisco CPA competitor with local-market overlap', distance:'San Francisco', reviews:74, rating:4.6, reviewVelocity:3, responseVelocity:58, role:'local CPA proof benchmark'},
+  {name:'Pilot', why:'startup bookkeeping competitor for SaaS and venture-backed companies', distance:'remote / SF', reviews:42, rating:4.3, reviewVelocity:2, responseVelocity:52, role:'premium recurring bookkeeping benchmark'}
+]
+
+const MODEL_LAYERS = {
+  business:[
+    ['GBP','GBP reputation','Rating, review count, review velocity, owner responses, posts, and profile completeness.',66,'fair','Google Search shows 4.9 stars and 72 reviews; velocity and owner-response coverage still require a review-date/response pull.'],
+    ['WEB','Website','Quote path, proof depth, speed, service-page clarity, and conversion tracking.',42,'weak','Squirrelscan scored the site 47/100 with H1, duplicate metadata, image alt, accessibility, and page-weight issues.'],
+    ['COMP','Competitors','Named competitor set used for reputation, service mix, pricing pressure, and proof gap.',55,'fair','Competitive set is directionally useful, but live GBP review and paid-search auction data still need verification.'],
+    ['GBP','GBP Profile Accuracy','Primary category, services, images, profile fields, and office details.',58,'fair','Office locations and category are public, but GBP categories, photos, services, and profile completeness need confirmation.']
+  ],
+  serviceLocation:[
+    ['ADS','Google Ads','Search volume, CPC, intent, and conversion economics vary by selected service plus office or service area.',52,'fair','Modeled until Google Ads account or Keyword Planner access confirms service-location CPC, volume, and conversion history.'],
+    ['DIR','Directories / LSA','CPA directory, Google screening, and Local Services eligibility vary by category and market.',28,'weak','Treat as unresolved: CPA eligibility and screening are not verified, so this is not included as an active channel.'],
+    ['SEO','SEO / Maps rank','Rank, map-pack coverage, landing pages, and difficulty must be evaluated per service-location pair.',40,'weak','Four offices help proximity, but audit issues and service/location page gaps limit current organic/local opportunity capture.'],
+    ['AREA','Service areas','Remote statewide markets behave differently from office-based map-pack proximity.',46,'fair','Remote California/startup/creator positioning creates opportunity, but requires organic authority rather than only local pack coverage.']
+  ]
+}
+
+let revenueChannels = [
+  {id:'google_ads', name:'Google Ads', source:'Modeled: CPA, bookkeeping, startup accounting, tax planning, and CFO keywords vary by service plus office or service area.', status:'modeled', jobs:2.7, avgJob:1400, cost:3000, locked:true, planEnabled:true},
+  {id:'lsa', name:'Directories / LSA', source:'Hard gate: keep off until CPA category eligibility, screening, directory economics, and account verification are confirmed.', status:'blocked', jobs:0, avgJob:1300, cost:0, locked:true, planEnabled:false},
+  {id:'seo_maps', name:'SEO / Maps / content', source:'Modeled: office pages, service pages, creator/startup content, and GBP improvements convert over time.', status:'modeled', jobs:2.6, avgJob:1550, cost:1800, locked:true, planEnabled:true},
+  {id:'website_inbound', name:'Website / inbound', source:'Owner input — current monthly consultation requests and average first-retainer value are not API-visible.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false},
+  {id:'referrals_repeat', name:'Referrals & repeat', source:'We cannot see this from public data — set it to reality before using the agreement version.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false},
+  {id:'partners', name:'Partner / founder community', source:'Owner input — accelerator, Gusto, QuickBooks, creator, and referral-partner pipeline needs confirmation.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false}
+]
+
+const COMPONENTS = [
+  {
+    id:'reviews',
+    label:'Business: Reviews/GBP',
+    role:'conversion',
+    effectLabel:'trust multiplier',
+    signals:[
+      ['component.reviews.count','Review count','72 / 86 modeled avg','count ratio',84,14,'Google Search shows 72 Google reviews; benchmark average remains modeled until competitor GBP pulls are verified'],
+      ['component.reviews.rating','Rating','4.9 / 4.5 target','star scale',94,18,'Google Search shows a 4.9-star public rating'],
+      ['component.reviews.velocity','Review velocity','1 / 4 rival pace','velocity ratio',28,18,'New-review pace is modeled low until verified by GBP review dates'],
+      ['component.reviews.response','Owner response speed','unknown / 62% rival','rate ratio',42,16,'Response behavior is a trust signal and service-delivery lever, but current response rate is unresolved'],
+      ['component.reviews.recency','Recent proof depth','thin','quality state',44,14,'Recent client proof is present in positioning, but not yet strong enough as conversion proof across key service pages'],
+      ['component.reviews.sentiment','Review sentiment','positive claim','quality state',74,20,'Partner and directory copy supports a positive trust claim, pending source-specific review verification']
+    ]
+  },
+  {
+    id:'website',
+    label:'Business: Website',
+    role:'conversion',
+    effectLabel:'conversion multiplier',
+    signals:[
+      ['component.website.quotePath','Consult path clarity','medium-high friction','quality state',50,28,'Contact path exists, but service-specific consultation conversion and proof can be clearer'],
+      ['component.website.proof','Proof placement','thin','quality state',42,22,'Audit found broad content and metadata issues; client proof needs stronger service-page placement'],
+      ['component.website.speed','Performance','75/100 audit category','quality state',62,14,'Performance is not the worst issue, but page weight and render-blocking resources remain cleanup opportunities'],
+      ['component.website.serviceFit','Service-page fit','4 services x 4 offices','coverage ratio',60,20,'Services are visible, but service plus office/market intent needs tighter landing-page coverage'],
+      ['component.website.tracking','Tracking readiness','analytics present','quality state',68,16,'Audit scored analytics 100/100; booked-client source feedback still needs CRM/accounting intake wiring']
+    ]
+  },
+  {
+    id:'visibility',
+    label:'Service-location: SEO/Maps visibility',
+    role:'volume',
+    effectLabel:'organic readiness',
+    signals:[
+      ['component.visibility.top3','Local top 3 coverage','10% modeled','coverage rate',30,28,'Rank-grid evidence still needs API pull; offices create potential, but current local coverage is modeled weak'],
+      ['component.visibility.notFound','Not-found coverage','64% modeled','inverse coverage',30,20,'Large part of the service-location grid is assumed not visible until rank data is pulled'],
+      ['component.visibility.keywordDemand','Search demand','service x office/area','demand index',76,18,'Demand combines accounting, bookkeeping, tax, startup advisory, and CFO terms across California markets'],
+      ['component.visibility.content','Service/location coverage','4 services / 8 markets','coverage ratio',54,18,'Coverage should be evaluated as service-location pairs, not only broad service pages'],
+      ['component.visibility.competition','Competitor gap','4 modeled competitors','quality state',56,16,'Competitor gap uses the named competition set shown in the Your competition today section']
+    ]
+  },
+  {
+    id:'ads',
+    label:'Service-location: Google Ads',
+    role:'volume',
+    effectLabel:'paid-search readiness',
+    signals:[
+      ['component.ads.intent','Keyword intent','high','quality state',78,24,'CPA and bookkeeping searches can be close to purchase intent, especially tax planning and ongoing bookkeeping terms'],
+      ['component.ads.cpl','Modeled CPL','service/location blend','efficiency ratio',50,24,'CPL is modeled from service CPC and close rate until Keyword Planner and account data are available'],
+      ['component.ads.slot','Auction pressure','competitive','quality state',42,16,'CPA, bookkeeping, and tax keywords are expected to be competitive in California markets'],
+      ['component.ads.tracking','Conversion tracking','partial','quality state',52,20,'Consultation-to-client feedback must be wired before scaling spend'],
+      ['component.ads.offer','Offer clarity','fair','quality state',56,16,'The ad angle needs clear service, price floor, and ideal-client fit by service line']
+    ]
+  },
+  {
+    id:'lsa',
+    label:'Service-location: Directories / LSA',
+    role:'volume',
+    effectLabel:'directory readiness',
+    signals:[
+      ['component.lsa.eligibility','Eligibility','unclear','quality state',20,30,'CPA Local Services eligibility and screening must be verified before any forecast includes this channel'],
+      ['component.lsa.screening','Screening status','not complete','quality state',18,24,'Account verification blocks launch'],
+      ['component.lsa.cpl','Modeled CPL','$180+','efficiency ratio',38,20,'CPA lead costs are likely materially higher than local trades and need live validation'],
+      ['component.lsa.response','Call handling','unknown','quality state',45,14,'Owner-side intake and consultation booking behavior is not measured'],
+      ['component.lsa.fit','Channel fit','unresolved','quality state',32,12,'Treat as a research item, not an active engine yet']
+    ]
+  }
+]
+
+const ASSUMPTION_META = [
+  ['gbpSeoSpend','GBP/Web/SEO/content spend','$',1,'Monthly service investment assumption'],
+  ['gbpSeoLeads','GBP/Web/SEO/content leads','leads',1,'Monthly organic, profile, and content-sourced leads'],
+  ['lsaSpend','Directory/LSA spend','$',1,'Monthly directory or LSA media assumption after verification'],
+  ['lsaCpl','Directory/LSA CPL','$',1,'Modeled directory or verified LSA cost per lead'],
+  ['referralLeads','Referral/base leads','leads',1,'Existing non-FC referral and partner lead flow'],
+  ['reviewVelocity','Review velocity','/mo',1,'New Google reviews per month'],
+  ['websiteMultiplier','Website conversion multiplier','x',.01,'Conversion lift applied to generated leads']
+]
+
+let selectedObjective = OBJECTIVES[0]
+let owner = {...BASELINE}
+let viewMode = 'both'
+let customObjective = ''
+let selectedHorizonIndex = 0
+
+const HORIZONS = [
+  {label:'Today', short:'Current', days:0, sub:'Current model'},
+  {label:'30 days', short:'30 days', days:30, sub:'First signal'},
+  {label:'60 days', short:'60 days', days:60, sub:'Near-term to-be'},
+  {label:'180 days', short:'180 days', days:180, sub:'Mid-term to-be'},
+  {label:'360 days', short:'360 days', days:360, sub:'Compounded to-be'}
+]
+
+function money(n){return '$' + Math.round(n).toLocaleString()}
+function one(n){return Number(n).toFixed(1)}
+function pct(n){return Math.round(n) + '%'}
+function val(key){return DATA[key]}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+function componentScore(component){
+  const totalWeight = component.signals.reduce((sum,s)=>sum+s[5],0)
+  return component.signals.reduce((sum,s)=>sum+(s[4]*(s[5]/totalWeight)),0)
+}
+
+function componentBand(score){
+  if (score < 45) return 'weak'
+  if (score < 72) return 'fair'
+  return 'strong'
+}
+
+function conversionMultiplier(score){
+  return .8 + (Math.max(0,Math.min(100,score)) / 100) * .4
+}
+
+function volumeEconomics(){
+  return revenueChannels
+    .filter(channel => ['google_ads','seo_maps','lsa'].includes(channel.id))
+    .reduce((sum,channel) => {
+      const monthly = channel.jobs * channel.avgJob
+      return {
+        jobs: sum.jobs + channel.jobs,
+        revenue: sum.revenue + monthly,
+        cost: sum.cost + channel.cost
+      }
+    }, {jobs:0,revenue:0,cost:0})
+}
+
+function serviceMixAverage(field){
+  return BUSINESS_CONTEXT.services.reduce((sum,s)=>sum+(s[field] * s.share / 100),0)
+}
+
+function blendedGoogleAdsCpl(){
+  return serviceMixAverage('cpl')
+}
+
+function totalServiceValue(field){
+  return BUSINESS_CONTEXT.services.reduce((sum,s)=>sum+(Number(s[field]) || 0),0)
+}
+
+function blendedCloseRate(){ return serviceMixAverage('closeRate') }
+function blendedGrossMargin(){ return serviceMixAverage('grossMargin') }
+function blendedAvgTicket(){ return serviceMixAverage('avgTicket') }
+function totalMonthlyCapacity(){ return totalServiceValue('capacity') }
+function totalGoogleAdsSpend(){ return totalServiceValue('adSpend') }
+
+function locationMarketFactor(){
+  if (BUSINESS_CONTEXT.serviceAreaOnly) return 1.24
+  const physicalWeight = BUSINESS_CONTEXT.physicalLocations.reduce((sum,l)=>sum+l.weight,0)
+  const serviceAreaWeight = BUSINESS_CONTEXT.serviceAreas.reduce((sum,a)=>sum+a.weight,0)
+  return 1 + (serviceAreaWeight / Math.max(1, physicalWeight + serviceAreaWeight)) * .18
+}
+
+function serviceLocationPairs(){
+  const markets = [
+    ...(!BUSINESS_CONTEXT.serviceAreaOnly ? BUSINESS_CONTEXT.physicalLocations.map(l=>({label:l.city, type:'physical storefront', factor:1, rank:'GBP proximity anchor'})) : []),
+    ...BUSINESS_CONTEXT.serviceAreas.map((a,i)=>({label:a.name, type:'service area', factor:(BUSINESS_CONTEXT.serviceAreaOnly ? 1.22 : 1.12) + (i*.04), rank:BUSINESS_CONTEXT.serviceAreaOnly ? 'organic/local organic only' : 'service-area SEO page required'}))
+  ]
+  return BUSINESS_CONTEXT.services.flatMap(service => markets.map(market => ({
+    service,
+    market,
+    volume: Math.round((service.share / 100) * 2900 * (market.type === 'physical storefront' ? .22 : .10)),
+    cpc: service.cpc * market.factor,
+    rankBasis: market.type === 'physical storefront' ? 'Maps + organic' : BUSINESS_CONTEXT.serviceAreaOnly ? 'Organic/local organic only' : 'Organic/service-area only',
+    impact: market.type === 'physical storefront' ? 'Higher map-pack confidence from storefront proximity' : BUSINESS_CONTEXT.serviceAreaOnly ? 'No storefront anchor; lower map-pack confidence and heavier organic/local organic dependency' : 'Higher CPC and lower local-pack confidence'
+  })))
+}
+
+const MARKET_COORDS = {
+  Irvine:{lat:33.6846, lon:-117.8265},
+  'San Francisco':{lat:37.7891, lon:-122.4020},
+  'Culver City':{lat:34.0211, lon:-118.3965},
+  'San Diego':{lat:32.7174, lon:-117.1599},
+  'California remote':{lat:36.7783, lon:-119.4179},
+  'Palo Alto / startup corridor':{lat:37.4419, lon:-122.1430},
+  'Los Angeles creators':{lat:34.0522, lon:-118.2437},
+  'Orange County operators':{lat:33.7175, lon:-117.8311}
+}
+
+function osmTile(coords, zoom=12){
+  const latRad = coords.lat * Math.PI / 180
+  const n = 2 ** zoom
+  const x = Math.floor((coords.lon + 180) / 360 * n)
+  const y = Math.floor((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n)
+  return `https://tile.openstreetmap.org/${zoom}/${x}/${y}.png`
+}
+
+function rankCells(seed){
+  const patterns = [
+    ['bad','bad','mid','bad','good','bad','mid','bad','bad','mid','mid','bad','good','bad','bad','bad','mid','bad','good','bad','bad','bad','mid','bad','good'],
+    ['bad','mid','bad','bad','mid','bad','bad','bad','good','bad','mid','bad','bad','mid','bad','bad','good','bad','bad','mid','bad','bad','mid','bad','bad'],
+    ['mid','bad','bad','good','bad','bad','mid','bad','bad','bad','bad','bad','mid','bad','good','bad','mid','bad','bad','bad','good','bad','bad','mid','bad']
+  ]
+  return patterns[seed % patterns.length]
+}
+
+function renderVisibilityMaps(){
+  const pairs = serviceLocationPairs()
+  const progress = selectedHorizonIndex
+  document.getElementById('visibilityMapStrip').innerHTML = pairs.map((pair,index) => {
+    const coords = MARKET_COORDS[pair.market.label] || MARKET_COORDS.Irvine
+    const src = osmTile(coords)
+    const isStorefront = pair.market.type === 'physical storefront'
+    const serviceOnly = BUSINESS_CONTEXT.serviceAreaOnly
+    const top3 = Math.min(72, (isStorefront ? 18 : serviceOnly ? 4 : 7) + progress * (isStorefront ? 7 : serviceOnly ? 3 : 5))
+    const notFound = Math.max(14, (isStorefront ? 48 : serviceOnly ? 78 : 68) - progress * (isStorefront ? 7 : serviceOnly ? 5 : 8))
+    return `<article class="visibility-map-card">
+      <div class="visibility-map-head">
+        <h3>${esc(pair.service.label)}</h3>
+        <p>${esc(pair.market.label)} · ${esc(pair.market.type)}</p>
+      </div>
+      <div class="map-frame">
+        <div class="map-tile" role="img" aria-label="${esc(pair.service.label)} map for ${esc(pair.market.label)}" style="background-image:url('${esc(src)}')"></div>
+        <div class="rank-overlay" aria-label="Rank grid overlay">${rankCells(index).map(c=>`<span class="${c}"></span>`).join('')}</div>
+        <div class="map-attribution">© OpenStreetMap</div>
+      </div>
+      <div class="map-metrics">
+        <div><span>Top 3</span><b>${top3}%</b></div>
+        <div><span>Not found</span><b>${notFound}%</b></div>
+        <div><span>Ad click $</span><b>$${one(pair.cpc)}</b></div>
+      </div>
+    </article>`
+  }).join('')
+}
+
+function renderScoringModel(){
+  const scored = COMPONENTS.map(component => {
+    const score = componentScore(component)
+    return {...component, score, band: componentBand(score)}
+  })
+  const conversion = scored.filter(c=>c.role==='conversion')
+  const conversionStrength = conversion.reduce((product,c)=>product*conversionMultiplier(c.score),1)
+  const volumeModel = volumeEconomics()
+  const addedJobs = volumeModel.jobs
+  const grossRevenue = volumeModel.revenue * conversionStrength
+  document.getElementById('conversionStrength').textContent = one(conversionStrength) + 'x'
+  document.getElementById('addedVolume').textContent = one(addedJobs) + ' jobs/mo'
+  document.getElementById('scoreRevenue').textContent = money(grossRevenue) + '/mo'
+  document.getElementById('componentScoreTable').innerHTML = `<table>
+    <thead><tr><th>Component / signal</th><th>Role</th><th>Measure</th><th>Sub-score</th><th>Weight</th><th>Contribution</th><th>Score / forecast use</th></tr></thead>
+    <tbody>${scored.map(component => {
+      const totalWeight = component.signals.reduce((sum,s)=>sum+s[5],0)
+      const effect = component.role === 'conversion'
+        ? `${one(conversionMultiplier(component.score))}x ${component.effectLabel}`
+        : component.id === 'lsa'
+          ? `${one(component.score)} readiness; hard gate off until verified`
+          : `${one(component.score)} readiness; jobs from demand x reach x close rate`
+      const signalRows = component.signals.map(s => {
+        const contribution = (s[5]/totalWeight) * (s[4]-50)
+        return `<tr class="signal-row">
+          <td>${esc(s[1])}</td>
+          <td><span class="role">${esc(s[3])}</span></td>
+          <td>${esc(s[2])}</td>
+          <td>${one(s[4])}</td>
+          <td>${s[5]}%</td>
+          <td>${contribution >= 0 ? '+' : ''}${one(contribution)}</td>
+          <td>${esc(s[6])}</td>
+        </tr>`
+      }).join('')
+      return `<tr class="component-row">
+        <td>${esc(component.label)}</td>
+        <td><span class="role">${esc(component.role)}</span></td>
+        <td>${component.signals.length} signals</td>
+        <td>${one(component.score)}</td>
+        <td>100%</td>
+        <td>${component.score >= 50 ? '+' : ''}${one(component.score-50)}</td>
+        <td>${esc(component.band)} · ${esc(effect)}</td>
+      </tr>${signalRows}`
+    }).join('')}</tbody>
+  </table>`
+}
+
+function multipliers(objectiveKey){
+  const map = {
+    do_nothing:[1,.99,.97,.90,.82],
+    statusquo:[1,1.015,1.03,1.08,1.14],
+    revenue:[1,1.05,1.10,1.34,1.62],
+    margin:[1,1.03,1.06,1.19,1.30],
+    capacity:[1,1.08,1.16,1.30,1.36],
+    cac:[1,1.02,1.04,1.18,1.28],
+    stability:[1,1.03,1.06,1.25,1.42],
+    top3:[1,1.02,1.03,1.18,1.44],
+    service:[1,1.04,1.08,1.30,1.55],
+    diversify:[1,1.04,1.07,1.28,1.47],
+    reviews:[1,1.03,1.05,1.22,1.40],
+    scale:[1,1.10,1.20,1.55,1.95]
+  }
+  return map[objectiveKey] || map.revenue
+}
+
+function calc(a, periodIndex, objectiveKey){
+  const m = multipliers(objectiveKey)[periodIndex]
+  const serviceAdjustedCpl = Math.max(1, (blendedGoogleAdsCpl() * .65) + (serviceMixAverage('cpc') * locationMarketFactor() * 2.1))
+  const monthlyCapacity = totalMonthlyCapacity()
+  const googleAdsSpend = totalGoogleAdsSpend()
+  const paidLeads = googleAdsSpend / serviceAdjustedCpl
+  const lsaLeads = a.lsaSpend / Math.max(1,a.lsaCpl)
+  const reviewLift = 1 + Math.min(.18,(a.reviewVelocity - BASELINE.reviewVelocity) * .008)
+  const leads = (paidLeads + lsaLeads + a.gbpSeoLeads + a.referralLeads) * m * a.websiteMultiplier * reviewLift
+  const jobs = Math.min(monthlyCapacity, leads * (blendedCloseRate() / 100))
+  const serviceAdjustedTicket = blendedAvgTicket()
+  const revenue = jobs * serviceAdjustedTicket
+  const acquisitionCost = googleAdsSpend + a.gbpSeoSpend + a.lsaSpend
+  const grossProfit = revenue * (blendedGrossMargin() / 100)
+  const profit = grossProfit - acquisitionCost
+  const cac = jobs > 0 ? acquisitionCost / jobs : 0
+  const roas = acquisitionCost > 0 ? revenue / acquisitionCost : 0
+  const capacity = jobs / Math.max(1,monthlyCapacity) * 100
+  return {leads,jobs,revenue,acquisitionCost,profit,cac,roas,capacity}
+}
+
+function blendScenario(base, target, coverage){
+  const blend = key => base[key] + ((target[key] - base[key]) * coverage)
+  return {
+    leads: blend('leads'),
+    jobs: blend('jobs'),
+    revenue: blend('revenue'),
+    acquisitionCost: blend('acquisitionCost'),
+    profit: blend('profit'),
+    cac: blend('cac'),
+    roas: blend('roas'),
+    capacity: blend('capacity')
+  }
+}
+
+function planCoverage(){
+  const channels = revenueChannels.filter(channel => channel.status !== 'blocked')
+  const total = channels.reduce((sum,channel)=>sum + Math.max(0, channel.jobs * channel.avgJob),0)
+  if (!total) return 0
+  const active = channels.reduce((sum,channel)=>sum + (channel.planEnabled ? Math.max(0, channel.jobs * channel.avgJob) : 0),0)
+  return Math.max(0, Math.min(1, active / total))
+}
+
+function planChannelRows(fullGap){
+  const availableTotal = revenueChannels
+    .filter(channel => channel.status !== 'blocked')
+    .reduce((sum,channel)=>sum + Math.max(0, channel.jobs * channel.avgJob),0)
+  return revenueChannels.map(channel => {
+    const disabled = channel.status === 'blocked'
+    const monthly = Math.max(0, channel.jobs * channel.avgJob)
+    const share = availableTotal ? monthly / availableTotal : 0
+    const impact = disabled ? 'locked until eligible' : monthly ? `~${money(fullGap * share)}/mo at maturity` : 'enter jobs/value to model impact'
+    return `<div class="plan-channel ${disabled ? 'disabled' : ''}">
+      <button type="button" class="switch ${channel.planEnabled && !disabled ? 'on' : ''}" data-plan-channel="${esc(channel.id)}" aria-pressed="${channel.planEnabled && !disabled}" ${disabled ? 'disabled' : ''}></button>
+      <div>
+        <b>${esc(channel.name)}</b>
+        <small>${esc(channel.source)}</small>
+        <em>${esc(impact)}</em>
+      </div>
+    </div>`
+  }).join('')
+}
+
+function renderOutcomeTrend(){
+  syncModeledRevenueChannels()
+  const periods = HORIZONS.map((h,i)=>[h.label,i])
+  const doNothing = periods.map(([,idx])=>calc(owner,idx,'do_nothing'))
+  const status = periods.map(([,idx])=>calc(owner,idx,'statusquo'))
+  const fullSelected = periods.map(([,idx])=>calc(owner,idx,selectedObjective[0]))
+  const coverage = planCoverage()
+  const selected = periods.map((_,idx)=>blendScenario(status[idx], fullSelected[idx], coverage))
+  const values = [...doNothing.map(x=>x.revenue), ...status.map(x=>x.revenue), ...selected.map(x=>x.revenue)]
+  const max = Math.max(...values) * 1.12
+  const width = 760
+  const height = 280
+  const left = 64
+  const right = 34
+  const top = 28
+  const bottom = 54
+  const chartW = width - left - right
+  const chartH = height - top - bottom
+  const x = i => left + (chartW / (periods.length - 1)) * i
+  const y = value => top + chartH - (value / max * chartH)
+  const points = series => series.map((d,i)=>`${x(i)},${y(d.revenue)}`).join(' ')
+  const grid = [0,.25,.5,.75,1].map(t => {
+    const gy = top + chartH - (chartH * t)
+    return `<line x1="${left}" y1="${gy}" x2="${width-right}" y2="${gy}" stroke="#eadfce" stroke-width="1"/><text x="10" y="${gy+4}" font-size="11" fill="#66716a">${money(max*t)}</text>`
+  }).join('')
+  const axisLabels = periods.map(([label],i)=>`<text x="${x(i)}" y="${height-22}" text-anchor="middle" font-size="11" font-weight="800" fill="#66716a">${esc(label)}</text>`).join('')
+  const dots = (series,cls,color) => series.map((d,i)=>`<circle cx="${x(i)}" cy="${y(d.revenue)}" r="4" fill="${color}"><title>${cls}: ${money(d.revenue)}</title></circle>`).join('')
+  const endStatus = status[status.length-1]
+  const endSelected = selected[selected.length-1]
+  const gap = endSelected.revenue - endStatus.revenue
+  const fullGap = fullSelected[fullSelected.length-1].revenue - status[status.length-1].revenue
+  document.getElementById('outcomeTrend').innerHTML = `
+    <div class="trend-head">
+      <div>
+        <h3>Today vs where the business could be</h3>
+        <p>Three paths are separated so the owner can see the cost of doing nothing, the likely path if they keep operating as-is, and the upside from the selected objective plan.</p>
+      </div>
+      <div class="legend"><span><i class="decline"></i>If nothing changes</span><span><i class="status"></i>Status quo trend</span><span><i class="selected"></i>Selected to-be</span></div>
+    </div>
+    <div class="trend-body">
+      <div class="trend-main">
+        <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Revenue trend line chart comparing status quo and selected to-be state">
+          ${grid}
+          <line x1="${left}" y1="${top+chartH}" x2="${width-right}" y2="${top+chartH}" stroke="#d6ccbd" stroke-width="1.5"/>
+          <polyline points="${points(doNothing)}" fill="none" stroke="#aa3d2f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+          <polyline points="${points(status)}" fill="none" stroke="#a96b08" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="${points(selected)}" fill="none" stroke="#146b52" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          ${dots(doNothing,'If nothing changes','#aa3d2f')}
+          ${dots(status,'Status quo','#a96b08')}
+          ${dots(selected,'Selected to-be','#146b52')}
+          ${axisLabels}
+        </svg>
+        <div class="trend-summary">
+          <div class="stat"><span>360-day do nothing</span><b>${money(doNothing[doNothing.length-1].revenue)}</b></div>
+          <div class="stat"><span>360-day selected to-be</span><b>${money(endSelected.revenue)}</b></div>
+          <div class="stat"><span>Modeled revenue gap</span><b>${money(gap)}</b></div>
+        </div>
+        <div class="trend-definitions">
+          <div><b>If nothing changes</b><p>Passive path: no meaningful fixes, while competitors keep gaining reviews, visibility, and response quality. Revenue can drift down even if the business itself is not worse.</p></div>
+          <div><b>Status quo trend</b><p>Business-as-usual path: current channels and habits continue, with normal small improvements, but without the selected FlashCrafter growth plan.</p></div>
+          <div><b>Selected to-be</b><p>Objective-led path: assumes the chosen strategy, editable inputs, service/location targeting, and FC-controlled execution levers are applied.</p></div>
+        </div>
+      </div>
+      <aside class="plan-builder" aria-label="Build the plan from revenue channels">
+        <div><h3>Build the plan: revenue channels</h3><p>These controls mirror the Revenue channels section below. Toggle active channels to model the selected to-be curve.</p></div>
+        ${planChannelRows(fullGap)}
+        <div class="plan-capacity">
+          <label for="planCapacity">Jobs you can handle / mo</label>
+          <input id="planCapacity" type="number" data-plan-capacity value="${totalMonthlyCapacity()}" />
+        </div>
+      </aside>
+    </div>`
+}
+
+function renderObjectiveList(){
+  document.getElementById('objectiveList').innerHTML = OBJECTIVES.map((o,i)=>
+    `<button class="obj ${o[0]===selectedObjective[0]?'on':''}" data-key="${o[0]}"><i>${String(i+1).padStart(2,'0')}</i><span>${esc(o[1])}</span></button>`
+  ).join('')
+  document.getElementById('customObjective').value = customObjective
+  document.querySelectorAll('.obj').forEach(btn => btn.onclick = () => {
+    selectedObjective = OBJECTIVES.find(o => o[0] === btn.dataset.key)
+    renderAll()
+  })
+}
+
+function renderHorizonTabs(){
+  document.getElementById('horizonTabs').innerHTML = HORIZONS.map((h,i)=>
+    `<button type="button" class="${i===selectedHorizonIndex?'on':''}" data-horizon="${i}">${esc(h.label)}</button>`
+  ).join('')
+}
+
+function renderStaticFacts(){
+  document.querySelectorAll('[data-key]').forEach(node => {
+    const key = node.dataset.key
+    if (DATA[key]) node.textContent = DATA[key]
+  })
+  renderEditableChips()
+}
+
+function editableChip(label, group, index, cls='blue'){
+  return `<span class="chip ${cls} editable">${esc(label)} <button type="button" data-remove-chip="${group}" data-chip-index="${index}" aria-label="Remove ${esc(label)}">x</button></span>`
+}
+
+function renderEditableChips(){
+  document.getElementById('serviceAreaOnly').checked = BUSINESS_CONTEXT.serviceAreaOnly
+  document.getElementById('physicalAddressInput').value = BUSINESS_CONTEXT.physicalAddress
+  document.getElementById('physicalAddressBlock').classList.toggle('is-hidden', BUSINESS_CONTEXT.serviceAreaOnly)
+  document.getElementById('physicalLocationControls').classList.toggle('is-hidden', BUSINESS_CONTEXT.serviceAreaOnly)
+  document.getElementById('briefServices').innerHTML = BUSINESS_CONTEXT.services
+    .map((s,i)=>editableChip(s.label,'services',i,'blue')).join('')
+  document.getElementById('briefLocations').innerHTML = BUSINESS_CONTEXT.physicalLocations
+    .map((l,i)=>editableChip(`${l.name} (${l.city}, ${l.state})`,'physicalLocations',i,'green')).join('')
+  document.getElementById('briefServiceAreas').innerHTML = BUSINESS_CONTEXT.serviceAreas
+    .map((a,i)=>editableChip(a.name,'serviceAreas',i,'amber')).join('')
+}
+
+function renderHero(){
+  const [key,label,copy,strategy] = selectedObjective
+  const stated = customObjective.trim()
+  const objectiveLabel = stated ? `Custom objective: ${stated}` : label
+  document.getElementById('heroTitle').textContent = `${stated ? stated : label} for ${val('business.name')}`
+  document.getElementById('heroCopy').textContent = stated
+    ? `AI plan input captured from the owner. The selected ${label.toLowerCase()} path anchors the forecast until the custom objective is classified into measurable KPIs.`
+    : copy
+  document.getElementById('acceptedObjective').textContent = label
+  document.getElementById('acceptedStrategy').textContent = stated ? `AI-generated plan basis: ${stated}` : strategy
+  document.getElementById('agreementText').textContent =
+    `Agreement converts this brief into commitments around ${objectiveLabel.toLowerCase()}, the accepted assumptions, selected service modules, KPI boundaries, price basis, and reporting cadence.`
+  void key
+}
+
+function renderAssumptions(){
+  const general = ASSUMPTION_META.map(([key,label,suffix,step,help]) => {
+    const display = owner[key]
+    return `<div class="field">
+      <label for="a-${key}">${esc(label)}<small>${esc(help)}</small></label>
+      <input id="a-${key}" data-assumption="${key}" type="number" step="${step}" value="${display}" aria-label="${esc(label)}" />
+    </div>`
+  }).join('')
+  const serviceFields = [
+    ['avgTicket','Avg job $','$',1],
+    ['closeRate','Close rate','%',1],
+    ['grossMargin','Gross margin','%',1],
+    ['capacity','Capacity','jobs/mo',1],
+    ['adSpend','Ads spend','$',1],
+    ['cpl','Google Ads CPL','$',1]
+  ]
+  const serviceAssumptions = BUSINESS_CONTEXT.services.map((service,index) => `
+    <div class="assumption-group">
+      <h4>${esc(service.label)}</h4>
+      ${serviceFields.map(([field,label,suffix,step]) => `<div class="field">
+        <label for="svc-${field}-${index}">${esc(label)}<small>${esc(suffix)} · service-specific</small></label>
+        <input id="svc-${field}-${index}" data-service-field="${esc(field)}" data-service-index="${index}" type="number" step="${step}" value="${service[field]}" aria-label="${esc(service.label)} ${esc(label)}" />
+      </div>`).join('')}
+    </div>`).join('')
+  document.getElementById('assumptionFields').innerHTML = `
+    <div class="assumption-group"><h4>Business-level assumptions</h4>${general}</div>
+    <div><h4 style="margin:0 0 6px;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Service/channel assumptions</h4><p class="assumption-note">These inputs vary by service because bookkeeping, startup advisory, tax planning, payroll, and fractional CFO work have different retainer values, close rates, margins, capacity, spend, and CPL.</p>${serviceAssumptions}</div>
+  `
+}
+
+function readOwnerInputs(){
+  document.querySelectorAll('[data-assumption]').forEach(input => {
+    owner[input.dataset.assumption] = Number(input.value)
+  })
+  document.querySelectorAll('[data-service-field]').forEach(input => {
+    const service = BUSINESS_CONTEXT.services[Number(input.dataset.serviceIndex)]
+    if (service) service[input.dataset.serviceField] = Number(input.value)
+  })
+  readRevenueChannelInputs()
+}
+
+function row(metric, getter, formatter, lowerIsBetter=false){
+  const periods = HORIZONS.map(h=>h.short)
+  const objectiveKey = selectedObjective[0]
+  const base = periods.map((_,i)=>calc(BASELINE,i,objectiveKey))
+  const own = periods.map((_,i)=>calc(owner,i,objectiveKey))
+  const renderCells = (series, compare) => periods.map((_,i)=>{
+    const v = getter(series[i])
+    const c = getter(compare[i])
+    const delta = c ? ((v-c)/Math.abs(c))*100 : 0
+    const good = lowerIsBetter ? delta <= 0 : delta >= 0
+    return `<td>${formatter(v)}${Math.abs(delta) > .1 ? `<span class="delta ${good?'':'down'}">${delta>0?'+':''}${pct(delta)}</span>` : ''}</td>`
+  }).join('')
+  const baseRow = `<tr class="subrow baseline"><td>FC Baseline - ${metric}</td>${periods.map((_,i)=>`<td>${formatter(getter(base[i]))}</td>`).join('')}</tr>`
+  const ownerRow = `<tr class="owner"><td class="metric">Owner Scenario - ${metric}</td>${renderCells(own,base)}</tr>`
+  if (viewMode === 'baseline') return baseRow
+  if (viewMode === 'owner') return ownerRow
+  return baseRow + ownerRow
+}
+
+function renderForecast(){
+  const html = `<table>
+    <thead><tr><th>Metric</th>${HORIZONS.map(h=>`<th>${esc(h.label)}</th>`).join('')}</tr></thead>
+    <tbody>
+      ${row('Revenue',x=>x.revenue,money)}
+      ${row('Acquisition cost',x=>x.acquisitionCost,money,true)}
+      ${row('Profit after CAC',x=>x.profit,money)}
+      ${row('Leads',x=>x.leads,x=>Math.round(x).toLocaleString())}
+      ${row('Jobs',x=>x.jobs,x=>one(x))}
+      ${row('CAC',x=>x.cac,money,true)}
+      ${row('ROAS',x=>x.roas,x=>one(x)+'x')}
+      ${row('Capacity impact',x=>x.capacity,pct)}
+    </tbody>
+  </table>`
+  document.getElementById('forecastTable').innerHTML = html
+}
+
+function renderProgressMatrix(){
+  renderOutcomeTrend()
+  const rows = HORIZONS.map((h,idx)=>[h.label,h.sub,idx,idx === 0 ? 'today' : 'target'])
+  document.getElementById('progressMatrix').innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">Path</th>
+          <th colspan="4" class="group">Business model</th>
+          <th colspan="4" class="group">Channel economics</th>
+          <th colspan="4" class="group">Trust and conversion</th>
+        </tr>
+        <tr>
+          <th>Leads</th><th>Jobs</th><th>Revenue</th><th>Profit after CAC</th>
+          <th>Spend</th><th>CAC</th><th>ROAS</th><th>Capacity</th>
+          <th>Reviews</th><th>Review pace</th><th>Conversion</th><th>Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+      ${rows.map(([label,sub,idx,cls]) => {
+      const model = calc(owner,idx,selectedObjective[0])
+      const reviewPace = idx === 0 ? owner.reviewVelocity : Math.round(owner.reviewVelocity * (1 + idx * .12))
+      const conversion = idx === 0 ? owner.websiteMultiplier : owner.websiteMultiplier * (1 + idx * .03)
+      return `<tr class="${cls}">
+        <td class="path" data-label="Path"><b>${esc(label)}</b><span>${esc(sub)}</span></td>
+        <td data-label="Leads">${Math.round(model.leads)}</td>
+        <td data-label="Jobs">${one(model.jobs)}</td>
+        <td data-label="Revenue">${money(model.revenue)}</td>
+        <td data-label="Profit after CAC">${money(model.profit)}</td>
+        <td data-label="Spend">${money(model.acquisitionCost)}</td>
+        <td data-label="CAC">${money(model.cac)}</td>
+        <td data-label="ROAS">${one(model.roas)}x</td>
+        <td data-label="Capacity">${pct(model.capacity)}</td>
+        <td data-label="Reviews">${Math.round(72 + (reviewPace * idx))}</td>
+        <td data-label="Review pace">${reviewPace}/mo</td>
+        <td data-label="Conversion">${one(conversion)}x</td>
+        <td data-label="Focus">${esc(selectedObjective[7])}</td>
+      </tr>`
+    }).join('')}
+      </tbody>
+    </table>
+  `
+}
+
+function renderBenchmarks(){
+  const progress = selectedHorizonIndex
+  const competitorDrift = progress
+  const you = {
+    name: val('business.name'),
+    why: 'you, modeled under the selected objective path',
+    distance: BUSINESS_CONTEXT.physicalLocations[0]?.city || 'core market',
+    reviews: Math.round(72 + owner.reviewVelocity * progress * 1.4),
+    rating: 4.9,
+    reviewVelocity: Math.round(owner.reviewVelocity * (1 + progress * .12)),
+    responseVelocity: Math.min(86, Math.round(30 + progress * 10)),
+    role: `${HORIZONS[progress].label} selected path`
+  }
+  const competitors = COMPETITORS.map(c => ({
+    ...c,
+    reviews: Math.round(c.reviews + c.reviewVelocity * competitorDrift),
+    reviewVelocity: c.reviewVelocity + 1,
+    responseVelocity: Math.min(95, c.responseVelocity + competitorDrift)
+  }))
+  const allForScale = [...competitors, you]
+  const maxReviews = Math.max(...allForScale.map(c => c.reviews))
+  const maxVelocity = Math.max(...allForScale.map(c => c.reviewVelocity))
+  const competitorScore = c => Math.round((
+    (c.reviews / maxReviews * 100) +
+    (c.rating / 5 * 100) +
+    (c.reviewVelocity / maxVelocity * 100) +
+    c.responseVelocity
+  ) / 4)
+  const averages = competitors.reduce((sum,c) => ({
+    reviews: sum.reviews + c.reviews,
+    rating: sum.rating + c.rating,
+    reviewVelocity: sum.reviewVelocity + c.reviewVelocity,
+    responseVelocity: sum.responseVelocity + c.responseVelocity,
+    score: sum.score + competitorScore(c)
+  }), {reviews:0,rating:0,reviewVelocity:0,responseVelocity:0,score:0})
+  const count = competitors.length
+  document.getElementById('competitorRows').innerHTML = competitors.map(c => `<tr>
+    <td><b>${esc(c.name)}</b><span class="channel-source">${esc(c.distance)} from storefront</span></td>
+    <td>${esc(c.why)}</td>
+    <td>${c.reviews}</td>
+    <td>${one(c.rating)}</td>
+    <td>${c.reviewVelocity}/mo</td>
+    <td>${c.responseVelocity}%</td>
+    <td><b>${competitorScore(c)}</b></td>
+    <td>${esc(c.role)}</td>
+  </tr>`).join('') + `<tr class="average-row">
+    <td><b>Competitor average</b></td>
+    <td>Market baseline for reputation and response expectations</td>
+    <td>${Math.round(averages.reviews / count)}</td>
+    <td>${one(averages.rating / count)}</td>
+    <td>${one(averages.reviewVelocity / count)}/mo</td>
+    <td>${Math.round(averages.responseVelocity / count)}%</td>
+    <td><b>${Math.round(averages.score / count)}</b></td>
+    <td>used as benchmark target</td>
+  </tr><tr class="you-row">
+    <td><b>You: ${esc(you.name)}</b><span class="channel-source">${esc(HORIZONS[progress].label)} modeled path</span></td>
+    <td>${esc(you.why)}</td>
+    <td>${you.reviews}</td>
+    <td>${one(you.rating)}</td>
+    <td>${you.reviewVelocity}/mo</td>
+    <td>${you.responseVelocity}%</td>
+    <td><b>${competitorScore(you)}</b></td>
+    <td>${esc(you.role)}</td>
+  </tr>`
+  document.getElementById('googleAdsServiceLocationRows').innerHTML = serviceLocationPairs().map(pair => `<tr>
+    <td><b>${esc(pair.service.label)}</b><span class="channel-source">${esc(pair.market.label)}</span></td>
+    <td>${esc(pair.market.type)}</td>
+    <td>${pair.volume}/mo</td>
+    <td>${money(pair.cpc)}</td>
+    <td>${esc(pair.rankBasis)}</td>
+    <td>${esc(pair.impact)}</td>
+  </tr>`).join('')
+}
+
+function renderModelLayers(){
+  const render = item => {
+    const [abbr,label,description,score,band,reason] = item
+    const adjustedScore = Math.max(0, Math.min(100, Math.round(score + selectedHorizonIndex * (abbr === 'COMP' ? 3 : abbr === 'LSA' ? 1 : 4))))
+    const adjustedBand = componentBand(adjustedScore)
+    return `<div class="layer-item">
+      <b>${esc(abbr)}</b>
+      <div><strong>${esc(label)}</strong><span>${esc(description)}</span><span>${esc(reason)}</span></div>
+      <div class="layer-score"><strong>${adjustedScore}</strong><span class="${esc(adjustedBand)}">${esc(adjustedBand)}</span><div class="score-bar"><i class="${esc(adjustedBand)}" style="width:${adjustedScore}%"></i></div></div>
+    </div>`
+  }
+  const horizon = HORIZONS[selectedHorizonIndex]
+  document.getElementById('business360Title').textContent = selectedHorizonIndex === 0 ? 'Your business today' : `Your business in ${horizon.label}`
+  document.getElementById('business360Copy').textContent = selectedHorizonIndex === 0
+    ? 'Current status across business-level and service-location signals.'
+    : 'Projected status if the selected objective path is executed while competitors keep improving.'
+  document.getElementById('businessLayerItems').innerHTML = MODEL_LAYERS.business.map(render).join('')
+  document.getElementById('serviceLocationLayerItems').innerHTML = MODEL_LAYERS.serviceLocation.map(render).join('')
+}
+
+function syncModeledRevenueChannels(){
+  const model = calc(owner,0,selectedObjective[0])
+  const serviceTicket = blendedAvgTicket()
+  const ads = revenueChannels.find(c=>c.id==='google_ads')
+  const lsa = revenueChannels.find(c=>c.id==='lsa')
+  const seo = revenueChannels.find(c=>c.id==='seo_maps')
+  if (ads) {
+    ads.jobs = (totalGoogleAdsSpend() / Math.max(1, blendedGoogleAdsCpl())) * (blendedCloseRate() / 100)
+    ads.avgJob = Math.round(serviceTicket)
+    ads.cost = totalGoogleAdsSpend()
+  }
+  if (lsa) {
+    lsa.jobs = 0
+    lsa.avgJob = Math.round(serviceTicket * .92)
+    lsa.cost = 0
+    lsa.status = 'blocked'
+  }
+  if (seo) {
+    seo.jobs = owner.gbpSeoLeads * (blendedCloseRate() / 100)
+    seo.avgJob = Math.round(serviceTicket * 1.05)
+    seo.cost = owner.gbpSeoSpend
+  }
+  void model
+}
+
+function renderRevenueChannels(){
+  syncModeledRevenueChannels()
+  const rows = revenueChannels.map(channel => {
+    const monthly = channel.jobs * channel.avgJob
+    const input = (field, value, type='number') => channel.locked
+      ? esc(type === 'text' ? value : (field === 'jobs' ? one(value) : Math.round(value)))
+      : `<input data-channel="${esc(channel.id)}" data-field="${esc(field)}" type="${type}" value="${esc(type === 'text' ? value : String(value))}" />`
+    return `<tr>
+      <td>
+        ${input('name', channel.name, 'text')}
+        <span class="channel-source">${esc(channel.source)}</span>
+      </td>
+      <td><span class="channel-confirm">${esc(channel.status)}</span></td>
+      <td>${input('jobs', channel.jobs)}</td>
+      <td>${input('avgJob', channel.avgJob)}</td>
+      <td>${input('cost', channel.cost)}</td>
+      <td><b>${money(monthly)}</b>${channel.cost === 0 ? '<span class="channel-source">no ad cost</span>' : ''}</td>
+    </tr>`
+  })
+  const total = revenueChannels.reduce((sum,c)=>sum+(c.jobs*c.avgJob),0)
+  document.getElementById('channelRows').innerHTML = rows.join('')
+  document.getElementById('channelTotal').textContent = money(total) + '/mo'
+}
+
+function readRevenueChannelInputs(){
+  document.querySelectorAll('[data-channel]').forEach(input => {
+    const channel = revenueChannels.find(c=>c.id === input.dataset.channel)
+    if (!channel || channel.locked) return
+    const field = input.dataset.field
+    channel[field] = field === 'name' ? input.value : Number(input.value)
+  })
+}
+
+function renderDrilldown(){
+  renderProgressMatrix()
+  document.getElementById('websiteText').textContent =
+    `The owner scenario applies a ${one(owner.websiteMultiplier)}x website conversion multiplier. This is owner editable because actual form, call, and booked-job conversion must be measured.`
+  document.getElementById('websiteMultiplier').textContent = one(owner.websiteMultiplier) + 'x'
+  document.getElementById('websiteBar').style.width = Math.max(18,Math.min(100,owner.websiteMultiplier*58)) + '%'
+  document.getElementById('paidText').textContent =
+    `Modeled search demand is ${val('search.monthlyDemand')} monthly searches at ${val('search.modeledCpc')} CPC. The ad environment is marked ${val('ads.openSlot').toLowerCase()} until Google Ads and Keyword Planner access verify real auction data.`
+  document.getElementById('organicText').textContent =
+    BUSINESS_CONTEXT.serviceAreaOnly
+      ? `Service-area-only mode: organic/local organic pages carry more of the forecast because there is no physical storefront anchor for map-pack proximity.`
+      : `Organic work starts with ${val('seo.servicePages')} service pages, ${val('seo.cityPages')}, and GBP/content work tied to the office-market visibility gaps.`
+  document.getElementById('lsaText').textContent =
+    `Directories / LSA are marked ${val('lsa.status').toLowerCase()}; the current gap is ${val('lsa.gap').toLowerCase()}, so the brief keeps this channel off until verification.`
+  document.getElementById('missingText').textContent =
+    'The calculator can be accepted with FC calibrated assumptions, but these owner-provided fields should replace assumptions before agreement.'
+  document.getElementById('missingList').innerHTML = [
+    'Actual monthly new clients by source',
+    'Average first-retainer value by service line',
+    'Consultation-to-client close rate',
+    'Current ad account spend, keywords, and search terms',
+    'Monthly onboarding capacity by service line'
+  ].map(x=>`<li>${esc(x)}</li>`).join('')
+}
+
+const MODULES = [
+  ['RG','Reviews/GBP','Review request loop, GBP category/content cleanup, proof placement, and monthly review velocity target.'],
+  ['GA','Google Ads','High-intent CPA, bookkeeping, tax, and startup-advisory campaigns with consultation-to-client feedback and CAC guardrails.'],
+  ['DR','Directories / LSA','Eligibility research, screening checklist, directory economics, and incremental consultation tracking if viable.'],
+  ['WS','Web/SEO','Audit cleanup, consult path, proof blocks, service/location pages, and conversion event measurement.'],
+  ['ON','Onboarding','Access collection, source baseline, offer boundaries, reporting setup, and first 30-day operating cadence.'],
+  ['AT','Source/channel attribution','New-client source capture, service-line economics, CAC/ROAS reporting, and assumption replacement.']
+]
+
+function renderExecution(){
+  document.getElementById('moduleGrid').innerHTML = MODULES.map(m=>
+    `<article class="module"><h3><span>${m[0]}</span>${esc(m[1])}</h3><p>${esc(m[2])}</p></article>`
+  ).join('')
+  document.getElementById('includedModules').textContent = MODULES.map(m=>m[1]).join(', ')
+  const fc = [
+    'Maintain FC Baseline and Owner Scenario separately.',
+    'Manage selected modules against accepted KPI boundaries.',
+    'Report revenue, cost, profit, leads, jobs, CAC, ROAS, and capacity monthly.',
+    'Replace mock or calibrated assumptions as verified data arrives.'
+  ]
+  const client = [
+    'Confirm average job value, margin, and capacity assumptions.',
+    'Provide ad account, GBP, website, and call tracking access.',
+    'Mark new clients by source or approve source-capture workflow.',
+    'Review agreement handoff before spend or service commitments start.'
+  ]
+  const kpis = [
+    'Booked jobs and profit after CAC matter more than raw leads.',
+    'Media spend is a pass-through cost and not counted as FC service revenue.',
+    'Forecasts are scenarios, not guaranteed outcomes.',
+    'LSA, SEO, and review gains depend on platform eligibility and owner follow-through.'
+  ]
+  document.getElementById('fcCommitments').innerHTML = fc.map(x=>`<li>${esc(x)}</li>`).join('')
+  document.getElementById('clientCommitments').innerHTML = client.map(x=>`<li>${esc(x)}</li>`).join('')
+  document.getElementById('kpiBoundaries').innerHTML = kpis.map(x=>`<li>${esc(x)}</li>`).join('')
+}
+
+function currentValueFor(key){
+  const current = calc(owner,0,selectedObjective[0])
+  const year = calc(owner,3,selectedObjective[0])
+  const componentSignal = COMPONENTS.flatMap(c=>c.signals).find(s=>s[0] === key)
+  if (componentSignal) return `${componentSignal[2]} -> ${componentSignal[4]}/100 x ${componentSignal[5]}%`
+  const scoredComponents = COMPONENTS.map(c=>({...c,score:componentScore(c)}))
+  const conversionStrength = scoredComponents
+    .filter(c=>c.role==='conversion')
+    .reduce((product,c)=>product*conversionMultiplier(c.score),1)
+  const volumeModel = volumeEconomics()
+  const addedJobs = volumeModel.jobs
+  const dynamic = {
+    'forecast.current.revenue': money(current.revenue),
+    'forecast.current.cost': money(current.acquisitionCost),
+    'forecast.current.profit': money(current.profit),
+    'forecast.current.leads': Math.round(current.leads),
+    'forecast.current.jobs': one(current.jobs),
+    'forecast.current.cac': money(current.cac),
+    'forecast.current.roas': one(current.roas)+'x',
+    'forecast.current.capacity': pct(current.capacity),
+    'forecast.12mo.revenue': money(year.revenue),
+    'forecast.12mo.profit': money(year.profit),
+    'forecast.12mo.roas': one(year.roas)+'x',
+    'component.rollup.conversionStrength': one(conversionStrength)+'x',
+    'component.rollup.addedVolume': one(addedJobs)+' jobs/mo',
+    'component.rollup.revenueEffect': money(volumeModel.revenue * conversionStrength) + '/mo'
+  }
+  if (dynamic[key] !== undefined) return dynamic[key]
+  if (DATA[key] !== undefined) return DATA[key]
+  if (owner[key] !== undefined) return owner[key]
+  return 'See formula'
+}
+
+const PROVENANCE = [
+  ['business.name','Brief subject, hero, agreement','public website','ClearBooks CPA appears as the business name on clearbookscpa.com','high','source-backed','read only','Identifies the sample client throughout the brief'],
+  ['business.primary_category','Brief subject and search framing','public website + LinkedIn','ClearBooks describes itself as a CPA/accounting firm with tax, bookkeeping, payroll, and advisory services','high','source-backed','owner editable','Frames the business-level context without replacing service-location modeling'],
+  ['business.market','Brief subject and search framing','public contact page','ClearBooks lists offices in Irvine, San Francisco, Culver City, and San Diego, with California-wide positioning','high','source-backed','read only','Controls local visibility and demand assumptions'],
+  ['business.rating','Brief chips, reviews/GBP trust','Google Search / GBP result supplied by operator','ClearBooks CPA appears as 4.9 stars in the Google result supplied during review','medium','source-backed; should be API-confirmed','read only','Affects trust narrative and conversion hypothesis'],
+  ['business.reviews','Brief chips, reviews/GBP trust','Google Search / GBP result supplied by operator','ClearBooks CPA appears with 72 Google reviews in the Google result supplied during review','medium','source-backed; should be API-confirmed','read only','Creates review proof gap and reputation module'],
+  ['business.key_services','Brief subject, Revenue channels detail','public website + FC calibrated service mix','Key services are modeled as bookkeeping/accounting, startup advisory, tax planning, and payroll/fractional CFO','medium','needs owner confirmation','owner editable','Rebases average retainer, CPC, SEO difficulty, and service-specific recommendations'],
+  ['business.service_area_only','Brief subject, service-area visibility','owner/client input','Service-area-only mode hides physical address and shifts local forecast from map-pack proximity toward organic/local organic assumptions','medium','needs owner confirmation','owner editable','Controls whether storefront proximity can be used in SEO and Maps modeling'],
+  ['business.physical_address','Brief subject, service-area visibility','public contact page','Primary editable address starts with the Irvine Spectrum office from ClearBooks contact data','high','source-backed','owner editable','Enables stronger map-pack assumptions and physical office location confidence'],
+  ['business.physical_locations','Brief subject, Revenue channels detail','public contact page','Physical offices are modeled as Irvine Spectrum, San Francisco, Culver City, and San Diego','high','source-backed','owner editable','Physical offices anchor map rank, proximity, GBP relevance, and local pack eligibility'],
+  ['business.service_areas','Brief subject, Revenue channels detail','public site positioning + FC model','Service areas include California remote, Palo Alto/startup corridor, Los Angeles creators, and Orange County operators','medium','needs owner confirmation','owner editable','Service areas affect SEO pages, CPC, local relevance, and forecast confidence differently than office locations'],
+  ['objective.custom_text','Objective selector, AI plan','client input','Free-text owner objective used as AI plan context; selected preset still anchors calculator path until classified','medium','needs AI classification','owner editable','Captures owner intent that may not fit the preset objectives'],
+  ['audit.squirrelscan','Website score, Website component, provenance','supplied website audit','Audit scored clearbookscpa.com 47/100 across 90 pages with H1, page weight, alt text, accessibility, duplicate title/description, security, and content issues','high','source-backed','read only','Grounds website readiness and SEO/conversion cleanup priorities'],
+  ['benchmark.competitors','Your competition today, scored components','FC modeled competitor benchmark set','Kruze Consulting, Dimov Tax Specialists, Safe Harbor CPAs, and Pilot represent startup accounting, tax, local CPA, and recurring bookkeeping competition','mock','needs live benchmark pull','fc editable','Explains exactly who the report is benchmarking against'],
+  ['benchmark.service_location_matrix','Revenue channels, Google Ads detail','derived from modeled service and location mix','Service x location pairs determine keyword demand, CPC, SEO difficulty, and local visibility assumptions','medium','resolved_assumed','derived','Prevents one flat category value from driving all service/location projections'],
+  ['model.business_layer','Two-layer model','report architecture assumption','GBP reputation/posts, website, competitors, and GBP profile accuracy describe the business as a whole','medium','resolved_assumed','read only','Keeps business-level trust and conversion signals separate from service-location demand math'],
+  ['model.service_location_layer','Two-layer model, Revenue channels detail','report architecture assumption','Google Ads, Directories/LSA, SEO rank, search volume, and CPC are modeled as service plus location pairs','medium','resolved_assumed','read only','Prevents forecasts from using one flat market/category value for all services and locations'],
+  ['model.business_layer_scores','Two-layer model','FC calibrated score summary','Business-level status scores summarize current GBP reputation, website, competitor context, and GBP profile accuracy before service-location forecasting','medium','resolved_assumed','fc editable','Shows today’s business-level status quo as weak/fair/strong'],
+  ['model.service_location_layer_scores','Two-layer model','FC calibrated score summary','Service-location status scores summarize Ads, Directories/LSA, SEO/Maps, and service-area readiness across service-location pairs','medium','resolved_assumed','fc editable','Shows today’s service-location status quo as weak/fair/strong'],
+  ['benchmark.service_location_search_cpc','Revenue channels, Google Ads detail','FC calibrated assumption','Search volume and CPC are varied by service share, office market, and service-area difficulty','mock','needs Keyword Planner/account data','fc editable','Explains why startup advisory in San Francisco should not inherit bookkeeping economics in Irvine'],
+  ['channels.google_ads','Revenue channels','derived from forecast assumptions','Google Ads jobs, ticket, and spend are modeled from spend, CPL, close rate, and service mix','medium','scenario only','derived','Shows modeled paid-search revenue separate from other revenue channels'],
+  ['channels.lsa','Revenue channels','derived from forecast assumptions','Directories / LSA are hard-blocked until category eligibility, screening, and economics are verified','low','needs verification','derived','Shows unresolved directory/LSA opportunity without adding phantom jobs'],
+  ['channels.seo_maps','Revenue channels','derived from forecast assumptions','SEO/Maps/content jobs and costs come from GBP/Web/SEO lead assumptions and service investment','medium','scenario only','derived','Separates organic/local revenue from paid channels'],
+  ['channels.website_inbound','Revenue channels','owner/client input','Website and inbound consultation requests are not API-visible in this prototype and must be confirmed by the owner','low','needs owner confirmation','owner editable','Captures non-ad inbound revenue that affects baseline and growth opportunity'],
+  ['channels.referrals_repeat','Revenue channels','owner/client input','Referrals and repeat business cannot be inferred reliably from public APIs','low','needs owner confirmation','owner editable','Captures relationship-driven revenue and prevents over-attributing growth to Google channels'],
+  ['channels.custom','Revenue channels','owner/client input','Additional owner-added channels allow partner referrals, Gusto/QuickBooks partner flow, creator communities, accelerators, events, or other sources','low','needs owner confirmation','owner editable','Keeps the model extensible beyond the default channel set'],
+  ['plan.channels','Build the plan: revenue channels, Revenue channels','scenario toggle from revenueChannels','Build-the-plan rows are generated from the same revenue channel list used by the page; Directories / LSA remain locked until verified','medium','scenario only','owner editable','Keeps the chart controls aligned with modeled, owner-added, and confirmed channels'],
+  ['plan.capacity','Build the plan chart panel','owner input','New clients the business can onboard per month, distributed across service-level capacity assumptions','medium','needs owner confirmation','owner editable','Caps the modeled upside so the plan does not exceed operational capacity'],
+  ['avgJobValue','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Average first-retainer value is modeled per key service, then blended by service mix','medium','needs owner confirmation','owner editable','Drives revenue forecast without flattening bookkeeping, tax, advisory, and CFO economics'],
+  ['closeRate','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Lead-to-client close rate is modeled per key service','medium','needs owner confirmation','owner editable','Converts leads into new clients by service mix'],
+  ['grossMargin','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Gross margin is modeled per key service before blending into the forecast','medium','needs owner confirmation','owner editable','Drives profit after CAC by service economics'],
+  ['monthlyCapacity','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Monthly onboarding capacity is modeled per key service because bookkeeping, tax, advisory, and CFO work are not interchangeable','medium','needs owner confirmation','owner editable','Caps forecast and flags overfill risk by service mix'],
+  ['googleAdsSpend','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Google Ads spend is allocated by service instead of treated as one flat media budget','medium','scenario only','owner editable','Determines near-term paid lead volume by service'],
+  ['googleAdsCpl','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Google Ads CPL is modeled per key service, then blended by service mix rather than treated as one flat business-wide value','medium','scenario only','owner editable','Determines Google Ads lead count and CAC by service mix'],
+  ['gbpSeoSpend','Editable assumptions, acquisition cost','FC calibrated assumption','Monthly service investment for GBP, web, SEO, and content work','medium','scenario only','owner editable','Included in acquisition cost and module scope'],
+  ['gbpSeoLeads','Editable assumptions, lead forecast','FC calibrated assumption','Organic/profile lead contribution before compounding gains','medium','scenario only','owner editable','Diversifies source mix'],
+  ['lsaSpend','Editable assumptions, acquisition cost','FC calibrated assumption','Directory or LSA media test after eligibility and economics verification','low','blocked by eligibility','owner editable','Adds parallel high-intent source only if viable'],
+  ['lsaCpl','Editable assumptions, directory/LSA economics','FC calibrated assumption','Expected directory or LSA cost per lead before verification','low','blocked by eligibility','owner editable','Determines lead count only after channel unlock'],
+  ['referralLeads','Editable assumptions, source mix','owner-provided missing data placeholder','Existing referral, partner, and repeat-client lead volume estimate','low','needs owner confirmation','owner editable','Preserves non-FC baseline demand'],
+  ['reviewVelocity','Editable assumptions, reviews/GBP trust','FC calibrated assumption','Current new-review pace before a managed request loop','medium','needs owner confirmation','owner editable','Feeds trust and conversion lift'],
+  ['websiteMultiplier','Editable assumptions, website/conversion strength','FC calibrated assumption','Multiplier for proof, quote path, and landing-page improvements','medium','scenario only','owner editable','Amplifies lead conversion across channels'],
+  ['channel.paidCpl','Source/channel economics card','derived','Blended paid CPL from Google Ads and verified directory/LSA assumptions','medium','scenario only','derived','Explains CAC and spend efficiency'],
+  ['website.quoteFriction','Website/conversion strength card','supplied website audit + FC assessment','Consult path exists but audit issues and proof placement suggest conversion friction','medium','needs conversion tracking','fc editable','Prioritizes web conversion fixes'],
+  ['website.proofDepth','Website/conversion strength card','supplied website audit + FC assessment','Audit and page review suggest service proof should be more visible across consultation paths','medium','needs owner proof library','fc editable','Supports proof placement recommendation'],
+  ['search.monthlyDemand','Paid traffic opportunity card','FC calibrated assumption','Representative monthly search demand for CPA, bookkeeping, tax, startup accounting, and CFO terms across California target markets','mock','needs Keyword Planner/account data','fc editable','Sizes paid-search opportunity'],
+  ['search.modeledCpc','Paid traffic opportunity card','FC calibrated assumption','Representative CPC based on modeled CPA/accounting market assumptions','mock','needs Keyword Planner/account data','fc editable','Feeds paid traffic economics'],
+  ['ads.openSlot','Paid traffic opportunity card','FC calibrated assumption','CPA/accounting ad auction is assumed competitive until account and SERP sampling verify otherwise','mock','needs ad account/SERP verification','fc editable','Supports initial paid-search test'],
+  ['seo.servicePages','Organic/SEO card','supplied website audit + public website','Visible service pages exist, but audit flags structure and content-quality improvements','medium','source-backed plus analysis','fc editable','Guides SEO work scope'],
+  ['seo.cityPages','Organic/SEO card','public contact page + public website','Four office markets are visible and should be evaluated for city/service landing-page fit','medium','source-backed plus analysis','fc editable','Guides local coverage work'],
+  ['visibility.top3','Top service-area map row, organic card','mock rank-grid over OpenStreetMap','Prototype grid assumes limited top-3 map coverage per service-location pair','mock','mock unresolved','fc editable','Sets local visibility objective'],
+  ['visibility.notFound','Top service-area map row','mock rank-grid over OpenStreetMap','Prototype grid assumes weak coverage outside the core area per service-location pair','mock','mock unresolved','fc editable','Prioritizes GBP and content expansion'],
+  ['reviews.competitorAverage','Reviews/GBP trust card','mock competitor review pull','Representative average from modeled competitor set until live GBP data is pulled','mock','needs live benchmark pull','fc editable','Creates review proof gap'],
+  ['lsa.status','Directories / LSA eligibility card','FC calibrated assumption','Draft treats directories / LSA as unclear, not active','low','needs verification','fc editable','Controls whether this channel can be included'],
+  ['lsa.gap','Directories / LSA eligibility card','FC calibrated assumption','Google/category screening, directory economics, and setup are not verified','low','needs verification','client action','Blocks channel launch'],
+  ['lsa.useCase','Directories / LSA eligibility card','FC recommendation','Use only as an incremental source after eligibility and economics are proven','medium','scenario only','fc editable','Diversifies lead sources without inventing jobs'],
+  ['forecast.current.revenue','Forecast calculator, business model today','derived','jobs * average job value','medium','scenario only','derived','Primary revenue outcome'],
+  ['forecast.current.cost','Forecast calculator, source economics','derived','Google Ads spend + GBP/Web/SEO/content spend + verified directory/LSA spend','medium','scenario only','derived','Primary acquisition cost'],
+  ['forecast.current.profit','Forecast calculator, business model today','derived','revenue * gross margin - acquisition cost','medium','scenario only','derived','Primary profit outcome'],
+  ['forecast.current.leads','Forecast calculator, business model today','derived','paid leads + verified directory/LSA leads + GBP/Web/SEO leads + referral leads, adjusted by objective and website multiplier','medium','scenario only','derived','Top-of-funnel volume'],
+  ['forecast.current.jobs','Forecast calculator, business model today','derived','leads * close rate, capped by monthly onboarding capacity','medium','scenario only','derived','New-client workload and capacity'],
+  ['forecast.current.cac','Forecast calculator, channel economics','derived','acquisition cost / new clients','medium','scenario only','derived','Efficiency guardrail'],
+  ['forecast.current.roas','Forecast calculator, channel economics','derived','revenue / acquisition cost','medium','scenario only','derived','Spend return indicator'],
+  ['forecast.current.capacity','Forecast calculator, business model today','derived','jobs / monthly capacity','medium','scenario only','derived','Operational load indicator'],
+  ['forecast.12mo.revenue','Forecast calculator, agreement context','derived','12-month objective multiplier applied to owner assumptions','medium','scenario only','derived','Longer-term upside'],
+  ['forecast.12mo.profit','Forecast calculator, agreement context','derived','12-month revenue * margin - acquisition cost','medium','scenario only','derived','Longer-term profit case'],
+  ['forecast.12mo.roas','Forecast calculator, agreement context','derived','12-month revenue / acquisition cost','medium','scenario only','derived','Scale efficiency indicator'],
+  ['forecast.to_be_row','Top-level progress matrix','derived','Selected objective renders always-visible Today, 60-day, 180-day, and 360-day rows from the forecast model','medium','scenario only','derived','Shows how business model, channel economics, and trust/conversion progress over time'],
+  ...COMPONENTS.flatMap(component => component.signals.map(signal => [
+    signal[0],
+    `Scored readiness + economic volume model: ${component.label}`,
+    'FC calibrated component signal',
+    signal[6],
+    component.role === 'conversion' ? 'medium' : 'mock',
+    component.role === 'conversion' ? 'resolved_assumed' : 'mock unresolved',
+    'fc editable',
+    `${signal[3]} converted to ${signal[4]}/100, weighted at ${signal[5]}% of the ${component.label} component`
+  ])),
+  ['component.rollup.conversionStrength','Scored readiness + economic volume model','derived','Product of conversion component multipliers from Reviews/GBP and Website scores','medium','scenario only','derived','Scales every close in the revenue forecast'],
+  ['component.rollup.addedVolume','Scored readiness + economic volume model','derived','New clients come from service-location channel economics, not score-to-jobs conversion; Directories / LSA are zero until verified','mock','mock unresolved','derived','Shows modeled volume without treating low visibility scores as low opportunity'],
+  ['component.rollup.revenueEffect','Scored readiness + economic volume model','derived','Economic channel revenue multiplied by conversion strength','medium','scenario only','derived','Shows how readiness scoring and transparent channel economics connect back to revenue'],
+  ['agreement.priceBasis','Agreement handoff','FC commercial assumption','Prototype uses managed modules plus media at cost as the basis','medium','draft','fc editable','Turns strategy into commercial terms'],
+  ['agreement.reportingCadence','Agreement handoff','FC operating assumption','Monthly KPI review is the default operating cadence','high','draft','fc editable','Defines accountability rhythm'],
+  ['agreement.status','Agreement handoff','workflow status','Brief is not accepted until owner approves objective, strategy, modules, obligations, and KPIs','high','draft','read only','Prevents mockup from implying a signed agreement']
+]
+
+function renderProvenance(){
+  const q = document.getElementById('provSearch').value.trim().toLowerCase()
+  const conf = document.getElementById('provConfidence').value
+  const edit = document.getElementById('provEditable').value
+  const rows = PROVENANCE.filter(r => {
+    const hay = r.join(' ').toLowerCase()
+    return (!q || hay.includes(q)) && (!conf || r[4] === conf) && (!edit || r[6] === edit)
+  })
+  document.getElementById('provCount').textContent = `${rows.length} of ${PROVENANCE.length} rows`
+  document.getElementById('provTable').innerHTML = `<table>
+    <thead><tr><th>Key</th><th>Current value</th><th>UI location</th><th>Source kind</th><th>Source hypothesis</th><th>Confidence</th><th>Resolution status</th><th>Editability</th><th>Impact</th></tr></thead>
+    <tbody>${rows.map(r=>`<tr>
+      <td><span class="prov-key">${esc(r[0])}</span></td>
+      <td>${esc(currentValueFor(r[0]))}</td>
+      <td>${esc(r[1])}</td>
+      <td>${esc(r[2])}</td>
+      <td>${esc(r[3])}</td>
+      <td><span class="badge ${r[4]}">${esc(r[4])}</span></td>
+      <td>${esc(r[5])}</td>
+      <td>${esc(r[6])}</td>
+      <td>${esc(r[7])}</td>
+    </tr>`).join('')}</tbody>
+  </table>`
+}
+
+function renderAll(){
+  renderObjectiveList()
+  renderHorizonTabs()
+  renderStaticFacts()
+  renderHero()
+  renderAssumptions()
+  renderVisibilityMaps()
+  renderModelLayers()
+  renderBenchmarks()
+  renderRevenueChannels()
+  renderScoringModel()
+  renderForecast()
+  renderDrilldown()
+  renderExecution()
+  renderProvenance()
+}
+
+document.addEventListener('click', e => {
+  const planBtn = e.target.closest('[data-plan-channel]')
+  if (planBtn) {
+    const channel = revenueChannels.find(c=>c.id === planBtn.dataset.planChannel)
+    if (channel && channel.status !== 'blocked') channel.planEnabled = !channel.planEnabled
+    renderOutcomeTrend()
+    return
+  }
+  const horizonBtn = e.target.closest('[data-horizon]')
+  if (horizonBtn) {
+    selectedHorizonIndex = Number(horizonBtn.dataset.horizon)
+    renderHorizonTabs()
+    renderModelLayers()
+    renderVisibilityMaps()
+    renderBenchmarks()
+    return
+  }
+  const btn = e.target.closest('.scenario-toggle button')
+  if (!btn) return
+  viewMode = btn.dataset.view
+  document.querySelectorAll('.scenario-toggle button').forEach(b=>b.classList.toggle('on',b===btn))
+  renderForecast()
+})
+
+document.addEventListener('input', e => {
+  if (e.target.matches('#physicalAddressInput')) {
+    BUSINESS_CONTEXT.physicalAddress = e.target.value
+    return
+  }
+  if (!e.target.matches('[data-plan-capacity]')) return
+  const target = Number(e.target.value)
+  const current = Math.max(1,totalMonthlyCapacity())
+  BUSINESS_CONTEXT.services.forEach(service => {
+    service.capacity = Math.round((service.capacity / current) * target)
+  })
+  renderAssumptions()
+  renderOutcomeTrend()
+  renderProgressMatrix()
+})
+
+document.getElementById('serviceAreaOnly').addEventListener('change', e => {
+  BUSINESS_CONTEXT.serviceAreaOnly = e.target.checked
+  renderEditableChips()
+  renderVisibilityMaps()
+  renderRevenueChannels()
+  renderScoringModel()
+  renderForecast()
+  renderDrilldown()
+  renderProvenance()
+})
+
+document.addEventListener('click', e => {
+  const remove = e.target.closest('[data-remove-chip]')
+  if (remove) {
+    const group = remove.dataset.removeChip
+    const index = Number(remove.dataset.chipIndex)
+    if (BUSINESS_CONTEXT[group] && BUSINESS_CONTEXT[group].length > 1) {
+      BUSINESS_CONTEXT[group].splice(index,1)
+      renderAll()
+    }
+    return
+  }
+  const add = e.target.closest('[data-add-chip]')
+  if (!add) return
+  const group = add.dataset.addChip
+  const inputId = group === 'services' ? 'serviceInput' : group === 'physicalLocations' ? 'locationInput' : 'serviceAreaInput'
+  const input = document.getElementById(inputId)
+  const value = input.value.trim()
+  if (!value) return
+  if (group === 'services') {
+    BUSINESS_CONTEXT.services.push({key:value.toLowerCase().replace(/[^a-z0-9]+/g,'-'), label:value, share:10, avgTicket:520, closeRate:34, grossMargin:58, capacity:8, adSpend:250, cpc:6.50, cpl:52, seoDifficulty:'unknown', benchmark:'owner-added service'})
+  } else if (group === 'physicalLocations') {
+    BUSINESS_CONTEXT.physicalLocations.push({name:value, city:value, state:'CA', type:'physical storefront', weight:40})
+  } else if (group === 'serviceAreas') {
+    BUSINESS_CONTEXT.serviceAreas.push({name:value, type:'service area', weight:8})
+  }
+  input.value = ''
+  renderAll()
+})
+
+document.getElementById('applyOwner').onclick = () => { readOwnerInputs(); renderAll() }
+document.getElementById('resetOwner').onclick = () => { owner = {...BASELINE}; renderAll() }
+document.getElementById('customObjective').addEventListener('input', e => {
+  customObjective = e.target.value
+  renderHero()
+  renderOutcomeTrend()
+})
+document.getElementById('addChannel').onclick = () => {
+  readRevenueChannelInputs()
+  const next = revenueChannels.filter(c=>c.id.startsWith('custom_')).length + 1
+  revenueChannels.push({
+    id:`custom_${next}`,
+    name:`Other channel ${next}`,
+    source:'Owner-added channel — confirm jobs, value, and cost.',
+    status:'confirm',
+    jobs:0,
+    avgJob:0,
+    cost:0,
+    locked:false,
+    planEnabled:false
+  })
+  renderRevenueChannels()
+  renderOutcomeTrend()
+}
+document.getElementById('submitCustomObjective').onclick = () => {
+  const input = document.getElementById('customObjective')
+  customObjective = input.value.trim()
+  document.getElementById('customObjectiveStatus').textContent = customObjective
+    ? 'AI plan generated for this objective. The selected preset still anchors the calculator until classification is confirmed.'
+    : 'Enter an objective first, then submit to run AI classification and plan generation.'
+  renderHero()
+  renderOutcomeTrend()
+  renderProgressMatrix()
+}
+document.getElementById('provSearch').oninput = renderProvenance
+document.getElementById('provConfidence').onchange = renderProvenance
+document.getElementById('provEditable').onchange = renderProvenance
+
+renderAll()
+</script>
+</body>
+</html>
