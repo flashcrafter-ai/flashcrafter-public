@@ -522,6 +522,16 @@
           </div>
         </section>
         <section class="benchmark-table matrix-table">
+          <div class="phead"><h2>Niche forecast: paid-search launch candidates</h2><span class="meta">Keyword Planner · United States · 2026-06-18</span></div>
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Niche</th><th>Demand / mo</th><th>Modeled CPC</th><th>$2k test</th><th>Modeled clients</th><th>Role</th></tr>
+            </thead>
+            <tbody id="nicheForecastRows"></tbody>
+          </table>
+          <div class="score-tip"><b>Recommendation:</b> use fractional CFO / outsourced finance as the first paid-search test. Keep dental CPA, startup finance, e-commerce, sales tax, and creator/accounting themes in organic research until proof and economics justify paid budget.</div>
+        </section>
+        <section class="benchmark-table matrix-table">
           <div class="phead"><h2>Google Ads detail: service + location economics</h2><span class="meta">revenue channel detail</span></div>
           <table>
             <thead>
@@ -733,13 +743,13 @@ Volume score = readiness/opportunity explanation, not direct jobs</div>
 
 <script>
 const OBJECTIVES = [
-  ['revenue','Grow monthly recurring revenue','Capture more qualified California founders and operators, then convert them into recurring accounting clients.','Demand capture plus conversion lift','If service proof, local authority, and high-intent search are tightened together, recurring monthly revenue can grow without relying only on referrals.','medium','30 days','New recurring gross profit'],
-  ['margin','Improve profit margin','Shift demand toward higher-retainer advisory, tax planning, and fractional CFO work.','Margin protection plan','If pricing floors and source tracking are explicit, profit can rise faster than raw lead volume.','medium','45 days','Profit after CAC'],
+  ['revenue','Grow high-margin recurring revenue','Use the fractional CFO / outsourced finance niche to attract better recurring clients instead of more low-value tax and Upwork work.','Fractional CFO paid-search gem','Keyword Planner shows fractional CFO / outsourced finance as the strongest first paid-search test: enough national demand, commercial intent, and direct fit with ClearBooks recurring-retainer goals.','medium','30 days','Qualified booked calls'],
+  ['margin','Improve profit margin','Shift demand toward higher-retainer bookkeeping, financial reporting, tax strategy, and fractional CFO relationships.','Margin protection plan','If pricing floors and source tracking are explicit, profit can rise faster than raw lead volume.','medium','45 days','Profit after CAC'],
   ['capacity','Fill near-term capacity','Add controllable demand for open bookkeeping, tax, and advisory onboarding capacity.','Near-term pipeline fill','If paid search and conversion proof focus on ready-to-hire clients, unused monthly capacity can be filled before organic gains compound.','medium','14 days','Utilization impact'],
   ['cac','Reduce cost per acquired client','Reduce blended CAC by tracking source, service line, and first-retainer value.','Attribution and CAC reset','If every new client is tied back to a source and service type, weak spend can be capped while qualified pipeline stays stable.','high','30 days','CAC'],
   ['stability','Stabilize lead flow','Balance organic, GBP, paid, partner, and referral demand so pipeline does not swing month to month.','Lead-flow stabilizer','If demand is diversified across owned, paid, and partner channels, monthly client acquisition becomes less referral-dependent.','medium','60 days','Pipeline variance'],
   ['top3','Become top 3 locally','Win more map-pack and organic visibility for priority CPA and bookkeeping searches near office markets.','Local top-3 climb','If GBP relevance, review velocity, and location proof improve together, local visibility can expand across Irvine, San Francisco, Los Angeles, and San Diego markets.','low','90 days','Local visibility'],
-  ['service','Grow a specific service line','Prioritize startup accounting, bookkeeping, tax planning, or fractional CFO demand.','Service-line expansion','If ads and landing pages isolate service intent, average client value can rise without broadening the market indiscriminately.','medium','45 days','Service mix'],
+  ['service','Grow a specific service line','Prioritize fractional CFO / outsourced finance for paid search, with dental CPA, startup accounting, e-commerce, and sales tax as organic backup niches.','Service-line expansion','If ads isolate the strongest niche first and organic covers several backup niches, ClearBooks can test demand without spraying paid budget across every audience.','medium','45 days','Service mix'],
   ['diversify','Diversify lead sources','Reduce dependence on referrals by adding paid search, organic, partner, and direct website demand.','Source diversification','If paid search, organic, partners, and GBP each carry a measurable role, no single source can stall client growth.','medium','60 days','Source mix'],
   ['reviews','Improve reviews/reputation','Increase review velocity and make client proof more visible before consultation requests.','Trust compounding loop','If review generation and proof placement run monthly, close rate improves and paid traffic becomes easier to convert.','high','30 days','Review velocity'],
   ['scale','Scale aggressively','Push qualified demand while protecting service delivery capacity and onboarding quality.','Scale with guardrails','If capacity, close rate, CAC, and first-retainer value are measured weekly, spend can scale only when the next acquired client is profitable.','medium','21 days','Spend-to-profit ratio']
@@ -757,18 +767,19 @@ const BASELINE = {
 
 const DATA = {
   'business.name':'ClearBooks CPA',
-  'business.primaryCategory':'CPA / accounting firm',
-  'business.market':'California offices: Irvine, San Francisco, Culver City, San Diego',
+  'business.primaryCategory':'CPA firm for recurring bookkeeping, tax strategy, and fractional CFO support',
+  'business.market':'National niche CPA market; CA offices are proof, not the primary growth constraint',
   'business.rating':'4.9 stars',
   'business.reviews':'72 Google reviews',
-  'channel.paidCpl':'$240',
+  'channel.paidCpl':'$822',
   'website.quoteFriction':'Medium-high',
   'website.proofDepth':'Thin',
-  'search.monthlyDemand':'2,900',
-  'search.modeledCpc':'$18.50',
-  'ads.openSlot':'Competitive',
-  'seo.servicePages':'8+',
-  'seo.cityPages':'4 office markets',
+  'search.monthlyDemand':'19,850',
+  'search.modeledCpc':'$28.76',
+  'ads.openSlot':'Fractional CFO paid-search gem',
+  'forecast.niche_candidates':'Fractional CFO / outsourced finance ranks #1 of 8 tested niche groups',
+  'seo.servicePages':'Fractional CFO + 4 backup niche clusters',
+  'seo.cityPages':'National niche pages + selective CA/NY proof',
   'visibility.top3':'10%',
   'visibility.notFound':'64%',
   'reviews.competitorAverage':'86',
@@ -784,10 +795,11 @@ const BUSINESS_CONTEXT = {
   serviceAreaOnly:false,
   physicalAddress:'200 Spectrum Center Drive, STE 300, Irvine, CA 92618',
   services:[
-    {key:'bookkeeping-accounting', label:'Bookkeeping & accounting', share:32, avgTicket:900, closeRate:30, grossMargin:58, capacity:16, adSpend:900, cpc:16.50, cpl:210, seoDifficulty:'high', benchmark:'core recurring service'},
-    {key:'startup-accounting-advisory', label:'Startup accounting & advisory', share:28, avgTicket:1800, closeRate:22, grossMargin:62, capacity:10, adSpend:950, cpc:22.00, cpl:310, seoDifficulty:'high', benchmark:'high-intent founder service'},
-    {key:'tax-planning-strategy', label:'Tax planning & strategy', share:22, avgTicket:1500, closeRate:26, grossMargin:65, capacity:12, adSpend:700, cpc:19.00, cpl:260, seoDifficulty:'medium-high', benchmark:'seasonal and advisory expansion'},
-    {key:'payroll-fractional-cfo', label:'Payroll & fractional CFO', share:18, avgTicket:2500, closeRate:18, grossMargin:60, capacity:6, adSpend:450, cpc:24.00, cpl:420, seoDifficulty:'high', benchmark:'premium retainer expansion'}
+    {key:'fractional-cfo-outsourced-finance', label:'Fractional CFO / outsourced finance', share:45, avgTicket:4000, closeRate:25, grossMargin:65, capacity:5, adSpend:2000, cpc:28.76, cpl:822, seoDifficulty:'medium-high', benchmark:'first paid-search launch gem'},
+    {key:'outsourced-bookkeeping-accounting', label:'Outsourced bookkeeping & accounting', share:20, avgTicket:1800, closeRate:25, grossMargin:60, capacity:8, adSpend:0, cpc:45.85, cpl:1310, seoDifficulty:'medium', benchmark:'recurring service support theme'},
+    {key:'dental-cpa', label:'Dental CPA', share:15, avgTicket:3000, closeRate:25, grossMargin:62, capacity:4, adSpend:0, cpc:20.05, cpl:573, seoDifficulty:'medium', benchmark:'strong vertical backup niche'},
+    {key:'startup-accounting-safe-equity', label:'Startup accounting / SAFEs / equity', share:12, avgTicket:3000, closeRate:22, grossMargin:63, capacity:4, adSpend:0, cpc:71.06, cpl:2030, seoDifficulty:'high', benchmark:'organic authority and proof theme'},
+    {key:'ecommerce-sales-tax', label:'E-commerce / sales tax advisory', share:8, avgTicket:2500, closeRate:22, grossMargin:60, capacity:4, adSpend:0, cpc:49.10, cpl:1403, seoDifficulty:'high', benchmark:'organic lead-magnet theme'}
   ],
   physicalLocations:[
     {name:'Irvine Spectrum office', city:'Irvine', state:'CA', type:'physical office', weight:35},
@@ -796,18 +808,30 @@ const BUSINESS_CONTEXT = {
     {name:'San Diego office', city:'San Diego', state:'CA', type:'physical office', weight:20}
   ],
   serviceAreas:[
-    {name:'California remote', type:'service area', weight:35},
-    {name:'Palo Alto / startup corridor', type:'service area', weight:25},
-    {name:'Los Angeles creators', type:'service area', weight:20},
-    {name:'Orange County operators', type:'service area', weight:20}
+    {name:'United States remote', type:'service area', weight:40},
+    {name:'New York operators', type:'service area', weight:18},
+    {name:'SF / YC startup corridor', type:'service area', weight:18},
+    {name:'National dental practices', type:'service area', weight:12},
+    {name:'E-commerce and creator operators', type:'service area', weight:12}
   ]
 }
 
 const COMPETITORS = [
   {name:'Kruze Consulting', why:'startup accounting and founder advisory competitor', distance:'SF / remote', reviews:96, rating:4.8, reviewVelocity:4, responseVelocity:70, role:'startup accounting authority benchmark'},
-  {name:'Dimov Tax Specialists', why:'California tax and CPA search competitor', distance:'multi-market CA', reviews:132, rating:4.7, reviewVelocity:6, responseVelocity:68, role:'tax planning and local SEO benchmark'},
-  {name:'Safe Harbor CPAs', why:'San Francisco CPA competitor with local-market overlap', distance:'San Francisco', reviews:74, rating:4.6, reviewVelocity:3, responseVelocity:58, role:'local CPA proof benchmark'},
-  {name:'Pilot', why:'startup bookkeeping competitor for SaaS and venture-backed companies', distance:'remote / SF', reviews:42, rating:4.3, reviewVelocity:2, responseVelocity:52, role:'premium recurring bookkeeping benchmark'}
+  {name:'Pilot', why:'startup bookkeeping and fractional finance competitor', distance:'remote / SF', reviews:42, rating:4.3, reviewVelocity:2, responseVelocity:52, role:'premium recurring bookkeeping benchmark'},
+  {name:'Collective', why:'solopreneur accounting competitor mentioned as adjacent but lower-fit', distance:'remote / national', reviews:118, rating:4.4, reviewVelocity:5, responseVelocity:61, role:'avoid low-value solopreneur positioning'},
+  {name:'Kruze / Pilot / Cruise set', why:'national startup and CFO accounting search competitors', distance:'remote / national', reviews:86, rating:4.6, reviewVelocity:4, responseVelocity:63, role:'national niche authority benchmark'}
+]
+
+const NICHE_FORECASTS = [
+  {rank:1, niche:'Fractional CFO / outsourced finance', demand:19850, cpc:28.76, competition:34, clicks:69.5, calls:2.43, clients:.61, mrr:2434, role:'first paid-search launch', note:'Best balance of volume, paid intent, and recurring-retainer fit.'},
+  {rank:2, niche:'Outsourced accounting/bookkeeping', demand:12100, cpc:45.85, competition:11, clicks:43.6, calls:1.53, clients:.38, mrr:687, role:'organic/supporting paid theme', note:'Large demand, but offer must filter out lower-value bookkeeping buyers.'},
+  {rank:3, niche:'Dental CPA', demand:2050, cpc:20.05, competition:36, clicks:99.7, calls:3.49, clients:.87, mrr:2618, role:'vertical backup', note:'Attractive economics, but needs proof of dental-specific credibility before first paid push.'},
+  {rank:4, niche:'E-commerce CPA/accounting', demand:1290, cpc:49.10, competition:31, clicks:40.7, calls:1.43, clients:.36, mrr:891, role:'organic page candidate', note:'Potential recurring fit, but CPC is high for first test.'},
+  {rank:5, niche:'Startup accounting / founder finance', demand:1040, cpc:71.06, competition:17, clicks:28.1, calls:.99, clients:.25, mrr:739, role:'organic/proof first', note:'Strategic fit is high, but paid CPC is expensive; build authority before bidding broadly.'},
+  {rank:6, niche:'Business valuation / acquisition / SBA', demand:430, cpc:10.37, competition:28, clicks:43.0, calls:1.51, clients:.38, mrr:828, role:'lead magnet', note:'Useful pain-point content if it leads into recurring finance work.'},
+  {rank:7, niche:'Sales tax / nexus', demand:270, cpc:51.54, competition:37, clicks:27.0, calls:.95, clients:.24, mrr:354, role:'diagnostic content', note:'Good qualifier for larger operators, weak standalone paid economics.'},
+  {rank:8, niche:'Creator / influencer CPA', demand:130, cpc:35.09, competition:63, clicks:13.0, calls:.46, clients:.11, mrr:205, role:'organic test only', note:'Too little paid-search demand for the first budget.'}
 ]
 
 const MODEL_LAYERS = {
@@ -818,17 +842,17 @@ const MODEL_LAYERS = {
     ['GBP','GBP Profile Accuracy','Primary category, services, images, profile fields, and office details.',58,'fair','Office locations and category are public, but GBP categories, photos, services, and profile completeness need confirmation.']
   ],
   serviceLocation:[
-    ['ADS','Google Ads','Search volume, CPC, intent, and conversion economics vary by selected service plus office or service area.',52,'fair','Modeled until Google Ads account or Keyword Planner access confirms service-location CPC, volume, and conversion history.'],
+    ['ADS','Google Ads','Search volume, CPC, intent, and conversion economics vary by selected niche plus service area.',68,'fair','Keyword Planner has identified fractional CFO / outsourced finance as the first paid-search candidate; account history and conversion tracking still need access.'],
     ['DIR','Directories / LSA','CPA directory, Google screening, and Local Services eligibility vary by category and market.',28,'weak','Treat as unresolved: CPA eligibility and screening are not verified, so this is not included as an active channel.'],
-    ['SEO','SEO / Maps rank','Rank, map-pack coverage, landing pages, and difficulty must be evaluated per service-location pair.',40,'weak','Four offices help proximity, but audit issues and service/location page gaps limit current organic/local opportunity capture.'],
-    ['AREA','Service areas','Remote statewide markets behave differently from office-based map-pack proximity.',46,'fair','Remote California/startup/creator positioning creates opportunity, but requires organic authority rather than only local pack coverage.']
+    ['SEO','SEO / Maps rank','Rank, landing pages, and difficulty must be evaluated per niche, service, and proof cluster.',44,'weak','National niche pages matter more than map-pack proximity; audit issues and thin proof still limit organic opportunity capture.'],
+    ['AREA','Service areas','National remote markets behave differently from office-based map-pack proximity.',61,'fair','All-50-state CPA reach creates opportunity, but requires niche authority rather than only local pack coverage.']
   ]
 }
 
 let revenueChannels = [
-  {id:'google_ads', name:'Google Ads', source:'Modeled: CPA, bookkeeping, startup accounting, tax planning, and CFO keywords vary by service plus office or service area.', status:'modeled', jobs:2.7, avgJob:1400, cost:3000, locked:true, planEnabled:true},
+  {id:'google_ads', name:'Google Ads', source:'Keyword Planner modeled: fractional CFO / outsourced finance is the first paid-search launch candidate; other niches stay organic until validated.', status:'modeled', jobs:.61, avgJob:4000, cost:2000, locked:true, planEnabled:true},
   {id:'lsa', name:'Directories / LSA', source:'Hard gate: keep off until CPA category eligibility, screening, directory economics, and account verification are confirmed.', status:'blocked', jobs:0, avgJob:1300, cost:0, locked:true, planEnabled:false},
-  {id:'seo_maps', name:'SEO / Maps / content', source:'Modeled: office pages, service pages, creator/startup content, and GBP improvements convert over time.', status:'modeled', jobs:2.6, avgJob:1550, cost:1800, locked:true, planEnabled:true},
+  {id:'seo_maps', name:'SEO / content', source:'Modeled: organic coverage across fractional CFO, dental CPA, startup finance, e-commerce, and sales tax niches compounds over 3-6 months.', status:'modeled', jobs:2.6, avgJob:2600, cost:1800, locked:true, planEnabled:true},
   {id:'website_inbound', name:'Website / inbound', source:'Owner input — current monthly consultation requests and average first-retainer value are not API-visible.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false},
   {id:'referrals_repeat', name:'Referrals & repeat', source:'We cannot see this from public data — set it to reality before using the agreement version.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false},
   {id:'partners', name:'Partner / founder community', source:'Owner input — accelerator, Gusto, QuickBooks, creator, and referral-partner pipeline needs confirmation.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false}
@@ -870,8 +894,8 @@ const COMPONENTS = [
     signals:[
       ['component.visibility.top3','Local top 3 coverage','10% modeled','coverage rate',30,28,'Rank-grid evidence still needs API pull; offices create potential, but current local coverage is modeled weak'],
       ['component.visibility.notFound','Not-found coverage','64% modeled','inverse coverage',30,20,'Large part of the service-location grid is assumed not visible until rank data is pulled'],
-      ['component.visibility.keywordDemand','Search demand','service x office/area','demand index',76,18,'Demand combines accounting, bookkeeping, tax, startup advisory, and CFO terms across California markets'],
-      ['component.visibility.content','Service/location coverage','4 services / 8 markets','coverage ratio',54,18,'Coverage should be evaluated as service-location pairs, not only broad service pages'],
+      ['component.visibility.keywordDemand','Search demand','niche x service area','demand index',82,18,'Keyword Planner shows 19,850 monthly searches for the fractional CFO / outsourced finance group nationally'],
+      ['component.visibility.content','Niche coverage','5 niche clusters','coverage ratio',58,18,'Coverage should be evaluated as niche-service intent, not only broad CPA service pages'],
       ['component.visibility.competition','Competitor gap','4 modeled competitors','quality state',56,16,'Competitor gap uses the named competition set shown in the Your competition today section']
     ]
   },
@@ -881,11 +905,11 @@ const COMPONENTS = [
     role:'volume',
     effectLabel:'paid-search readiness',
     signals:[
-      ['component.ads.intent','Keyword intent','high','quality state',78,24,'CPA and bookkeeping searches can be close to purchase intent, especially tax planning and ongoing bookkeeping terms'],
-      ['component.ads.cpl','Modeled CPL','service/location blend','efficiency ratio',50,24,'CPL is modeled from service CPC and close rate until Keyword Planner and account data are available'],
-      ['component.ads.slot','Auction pressure','competitive','quality state',42,16,'CPA, bookkeeping, and tax keywords are expected to be competitive in California markets'],
+      ['component.ads.intent','Keyword intent','fractional CFO','quality state',86,24,'Fractional CFO searches map directly to the desired higher-retainer recurring work'],
+      ['component.ads.cpl','Modeled CPL','$822 lead placeholder','efficiency ratio',58,24,'CPL is modeled from $28.76 CPC and a 3.5% click-to-booked-call assumption until account data replaces it'],
+      ['component.ads.slot','Auction pressure','medium / 34 index','quality state',62,16,'Keyword Planner returned medium aggregate competition for the first paid-search candidate'],
       ['component.ads.tracking','Conversion tracking','partial','quality state',52,20,'Consultation-to-client feedback must be wired before scaling spend'],
-      ['component.ads.offer','Offer clarity','fair','quality state',56,16,'The ad angle needs clear service, price floor, and ideal-client fit by service line']
+      ['component.ads.offer','Offer clarity','staff alternative','quality state',66,16,'The meeting surfaced a clear offer: full CPA + fractional CFO support as a staff alternative']
     ]
   },
   {
@@ -994,11 +1018,25 @@ function serviceLocationPairs(){
   return BUSINESS_CONTEXT.services.flatMap(service => markets.map(market => ({
     service,
     market,
-    volume: Math.round((service.share / 100) * 2900 * (market.type === 'physical storefront' ? .22 : .10)),
+    volume: Math.round((service.share / 100) * 19850 * (market.type === 'physical storefront' ? .04 : .10)),
     cpc: service.cpc * market.factor,
     rankBasis: market.type === 'physical storefront' ? 'Maps + organic' : BUSINESS_CONTEXT.serviceAreaOnly ? 'Organic/local organic only' : 'Organic/service-area only',
     impact: market.type === 'physical storefront' ? 'Higher map-pack confidence from storefront proximity' : BUSINESS_CONTEXT.serviceAreaOnly ? 'No storefront anchor; lower map-pack confidence and heavier organic/local organic dependency' : 'Higher CPC and lower local-pack confidence'
   })))
+}
+
+function renderNicheForecasts(){
+  document.getElementById('nicheForecastRows').innerHTML = NICHE_FORECASTS.map(row => `
+    <tr>
+      <td><b>${row.rank}</b></td>
+      <td><b>${esc(row.niche)}</b><span class="channel-source">${esc(row.note)}</span></td>
+      <td>${row.demand.toLocaleString()}</td>
+      <td>$${one(row.cpc)}</td>
+      <td>${one(row.clicks)} clicks · ${one(row.calls)} calls</td>
+      <td>${one(row.clients)}<span class="channel-source">${money(row.mrr)} modeled new MRR</span></td>
+      <td><span class="channel-confirm">${esc(row.role)}</span></td>
+    </tr>
+  `).join('')
 }
 
 const MARKET_COORDS = {
@@ -1006,10 +1044,11 @@ const MARKET_COORDS = {
   'San Francisco':{lat:37.7891, lon:-122.4020},
   'Culver City':{lat:34.0211, lon:-118.3965},
   'San Diego':{lat:32.7174, lon:-117.1599},
-  'California remote':{lat:36.7783, lon:-119.4179},
-  'Palo Alto / startup corridor':{lat:37.4419, lon:-122.1430},
-  'Los Angeles creators':{lat:34.0522, lon:-118.2437},
-  'Orange County operators':{lat:33.7175, lon:-117.8311}
+  'United States remote':{lat:39.8283, lon:-98.5795},
+  'New York operators':{lat:40.7128, lon:-74.0060},
+  'SF / YC startup corridor':{lat:37.7749, lon:-122.4194},
+  'National dental practices':{lat:39.9526, lon:-75.1652},
+  'E-commerce and creator operators':{lat:34.0522, lon:-118.2437}
 }
 
 function osmTile(coords, zoom=12){
@@ -1343,7 +1382,7 @@ function renderAssumptions(){
     </div>`).join('')
   document.getElementById('assumptionFields').innerHTML = `
     <div class="assumption-group"><h4>Business-level assumptions</h4>${general}</div>
-    <div><h4 style="margin:0 0 6px;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Service/channel assumptions</h4><p class="assumption-note">These inputs vary by service because bookkeeping, startup advisory, tax planning, payroll, and fractional CFO work have different retainer values, close rates, margins, capacity, spend, and CPL.</p>${serviceAssumptions}</div>
+    <div><h4 style="margin:0 0 6px;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Service/channel assumptions</h4><p class="assumption-note">These inputs vary by service because fractional CFO, outsourced bookkeeping, dental CPA, startup finance, and e-commerce/sales tax work have different retainers, close rates, margins, capacity, spend, and CPL.</p>${serviceAssumptions}</div>
   `
 }
 
@@ -1597,29 +1636,29 @@ function renderDrilldown(){
   document.getElementById('websiteMultiplier').textContent = one(owner.websiteMultiplier) + 'x'
   document.getElementById('websiteBar').style.width = Math.max(18,Math.min(100,owner.websiteMultiplier*58)) + '%'
   document.getElementById('paidText').textContent =
-    `Modeled search demand is ${val('search.monthlyDemand')} monthly searches at ${val('search.modeledCpc')} CPC. The ad environment is marked ${val('ads.openSlot').toLowerCase()} until Google Ads and Keyword Planner access verify real auction data.`
+    `Keyword Planner shows ${val('search.monthlyDemand')} monthly searches for the fractional CFO / outsourced finance cluster at ${val('search.modeledCpc')} modeled CPC. Treat this as the first paid-search test while Google Ads account history and conversion tracking are connected.`
   document.getElementById('organicText').textContent =
     BUSINESS_CONTEXT.serviceAreaOnly
       ? `Service-area-only mode: organic/local organic pages carry more of the forecast because there is no physical storefront anchor for map-pack proximity.`
-      : `Organic work starts with ${val('seo.servicePages')} service pages, ${val('seo.cityPages')}, and GBP/content work tied to the office-market visibility gaps.`
+      : `Organic work starts with ${val('seo.servicePages')}, ${val('seo.cityPages')}, and proof/content work tied to niche-intent gaps rather than only office-market visibility.`
   document.getElementById('lsaText').textContent =
     `Directories / LSA are marked ${val('lsa.status').toLowerCase()}; the current gap is ${val('lsa.gap').toLowerCase()}, so the brief keeps this channel off until verification.`
   document.getElementById('missingText').textContent =
     'The calculator can be accepted with FC calibrated assumptions, but these owner-provided fields should replace assumptions before agreement.'
   document.getElementById('missingList').innerHTML = [
-    'Actual monthly new clients by source',
-    'Average first-retainer value by service line',
-    'Consultation-to-client close rate',
-    'Current ad account spend, keywords, and search terms',
-    'Monthly onboarding capacity by service line'
+    'Actual monthly new clients by source, especially Upwork versus website/referral',
+    'Average recurring retainer by niche and service line',
+    'Consultation-to-client close rate, currently assumed at 25%',
+    'Google Ads access, current spend, search terms, and conversion history',
+    'Monthly onboarding capacity for higher-retainer recurring clients'
   ].map(x=>`<li>${esc(x)}</li>`).join('')
 }
 
 const MODULES = [
   ['RG','Reviews/GBP','Review request loop, GBP category/content cleanup, proof placement, and monthly review velocity target.'],
-  ['GA','Google Ads','High-intent CPA, bookkeeping, tax, and startup-advisory campaigns with consultation-to-client feedback and CAC guardrails.'],
+  ['GA','Google Ads','Focused fractional CFO / outsourced finance test with consultation-to-client feedback and CAC guardrails.'],
   ['DR','Directories / LSA','Eligibility research, screening checklist, directory economics, and incremental consultation tracking if viable.'],
-  ['WS','Web/SEO','Audit cleanup, consult path, proof blocks, service/location pages, and conversion event measurement.'],
+  ['WS','Web/SEO','Audit cleanup, consult path, proof blocks, fractional CFO landing page, organic niche pages, and conversion event measurement.'],
   ['ON','Onboarding','Access collection, source baseline, offer boundaries, reporting setup, and first 30-day operating cadence.'],
   ['AT','Source/channel attribution','New-client source capture, service-line economics, CAC/ROAS reporting, and assumption replacement.']
 ]
@@ -1637,15 +1676,15 @@ function renderExecution(){
   ]
   const client = [
     'Confirm average job value, margin, and capacity assumptions.',
-    'Provide ad account, GBP, website, and call tracking access.',
-    'Mark new clients by source or approve source-capture workflow.',
+    'Provide Google Ads, GBP, website, and call tracking access.',
+    'Mark new clients by source, retainer band, and niche or approve source-capture workflow.',
     'Review agreement handoff before spend or service commitments start.'
   ]
   const kpis = [
-    'Booked jobs and profit after CAC matter more than raw leads.',
+    'Qualified booked calls and profitable recurring clients matter more than raw leads.',
     'Media spend is a pass-through cost and not counted as FC service revenue.',
     'Forecasts are scenarios, not guaranteed outcomes.',
-    'LSA, SEO, and review gains depend on platform eligibility and owner follow-through.'
+    'Directories/LSA, SEO, and review gains depend on platform eligibility and owner follow-through.'
   ]
   document.getElementById('fcCommitments').innerHTML = fc.map(x=>`<li>${esc(x)}</li>`).join('')
   document.getElementById('clientCommitments').innerHTML = client.map(x=>`<li>${esc(x)}</li>`).join('')
@@ -1688,23 +1727,24 @@ function currentValueFor(key){
 const PROVENANCE = [
   ['business.name','Brief subject, hero, agreement','public website','ClearBooks CPA appears as the business name on clearbookscpa.com','high','source-backed','read only','Identifies the sample client throughout the brief'],
   ['business.primary_category','Brief subject and search framing','public website + LinkedIn','ClearBooks describes itself as a CPA/accounting firm with tax, bookkeeping, payroll, and advisory services','high','source-backed','owner editable','Frames the business-level context without replacing service-location modeling'],
-  ['business.market','Brief subject and search framing','public contact page','ClearBooks lists offices in Irvine, San Francisco, Culver City, and San Diego, with California-wide positioning','high','source-backed','read only','Controls local visibility and demand assumptions'],
+  ['business.market','Brief subject and search framing','meeting transcript + public contact page','Sugam confirmed ClearBooks can serve all 50 states; listed offices remain proof points but should not dominate the growth strategy','high','source-backed','read only','Controls national niche versus local-office demand assumptions'],
   ['business.rating','Brief chips, reviews/GBP trust','Google Search / GBP result supplied by operator','ClearBooks CPA appears as 4.9 stars in the Google result supplied during review','medium','source-backed; should be API-confirmed','read only','Affects trust narrative and conversion hypothesis'],
   ['business.reviews','Brief chips, reviews/GBP trust','Google Search / GBP result supplied by operator','ClearBooks CPA appears with 72 Google reviews in the Google result supplied during review','medium','source-backed; should be API-confirmed','read only','Creates review proof gap and reputation module'],
-  ['business.key_services','Brief subject, Revenue channels detail','public website + FC calibrated service mix','Key services are modeled as bookkeeping/accounting, startup advisory, tax planning, and payroll/fractional CFO','medium','needs owner confirmation','owner editable','Rebases average retainer, CPC, SEO difficulty, and service-specific recommendations'],
+  ['business.key_services','Brief subject, Revenue channels detail','meeting transcript + FC calibrated service mix','Key services are modeled as fractional CFO / outsourced finance, outsourced bookkeeping, dental CPA, startup accounting, and e-commerce/sales tax advisory','medium','needs owner confirmation','owner editable','Rebases average retainer, CPC, SEO difficulty, and service-specific recommendations'],
   ['business.service_area_only','Brief subject, service-area visibility','owner/client input','Service-area-only mode hides physical address and shifts local forecast from map-pack proximity toward organic/local organic assumptions','medium','needs owner confirmation','owner editable','Controls whether storefront proximity can be used in SEO and Maps modeling'],
   ['business.physical_address','Brief subject, service-area visibility','public contact page','Primary editable address starts with the Irvine Spectrum office from ClearBooks contact data','high','source-backed','owner editable','Enables stronger map-pack assumptions and physical office location confidence'],
   ['business.physical_locations','Brief subject, Revenue channels detail','public contact page','Physical offices are modeled as Irvine Spectrum, San Francisco, Culver City, and San Diego','high','source-backed','owner editable','Physical offices anchor map rank, proximity, GBP relevance, and local pack eligibility'],
-  ['business.service_areas','Brief subject, Revenue channels detail','public site positioning + FC model','Service areas include California remote, Palo Alto/startup corridor, Los Angeles creators, and Orange County operators','medium','needs owner confirmation','owner editable','Service areas affect SEO pages, CPC, local relevance, and forecast confidence differently than office locations'],
+  ['business.service_areas','Brief subject, Revenue channels detail','meeting transcript + FC model','Service areas now emphasize national remote service, New York operators, SF/YC startup corridor, national dental practices, and e-commerce/creator operators','medium','needs owner confirmation','owner editable','Service areas affect SEO pages, CPC, local relevance, and forecast confidence differently than office locations'],
   ['objective.custom_text','Objective selector, AI plan','client input','Free-text owner objective used as AI plan context; selected preset still anchors calculator path until classified','medium','needs AI classification','owner editable','Captures owner intent that may not fit the preset objectives'],
   ['audit.squirrelscan','Website score, Website component, provenance','supplied website audit','Audit scored clearbookscpa.com 47/100 across 90 pages with H1, page weight, alt text, accessibility, duplicate title/description, security, and content issues','high','source-backed','read only','Grounds website readiness and SEO/conversion cleanup priorities'],
-  ['benchmark.competitors','Your competition today, scored components','FC modeled competitor benchmark set','Kruze Consulting, Dimov Tax Specialists, Safe Harbor CPAs, and Pilot represent startup accounting, tax, local CPA, and recurring bookkeeping competition','mock','needs live benchmark pull','fc editable','Explains exactly who the report is benchmarking against'],
-  ['benchmark.service_location_matrix','Revenue channels, Google Ads detail','derived from modeled service and location mix','Service x location pairs determine keyword demand, CPC, SEO difficulty, and local visibility assumptions','medium','resolved_assumed','derived','Prevents one flat category value from driving all service/location projections'],
+  ['benchmark.competitors','Your competition today, scored components','meeting transcript + FC modeled competitor benchmark set','Kruze Consulting, Pilot, Collective, and Cruise/Kruze/Pilot-style national competitors represent startup, recurring bookkeeping, and fractional finance positioning','mock','needs live benchmark pull','fc editable','Explains exactly who the report is benchmarking against'],
+  ['benchmark.service_location_matrix','Revenue channels, Google Ads detail','derived from modeled niche, service, and market mix','Niche x service-area pairs determine keyword demand, CPC, SEO difficulty, and visibility assumptions','medium','resolved_assumed','derived','Prevents one flat category value from driving all projections'],
   ['model.business_layer','Two-layer model','report architecture assumption','GBP reputation/posts, website, competitors, and GBP profile accuracy describe the business as a whole','medium','resolved_assumed','read only','Keeps business-level trust and conversion signals separate from service-location demand math'],
-  ['model.service_location_layer','Two-layer model, Revenue channels detail','report architecture assumption','Google Ads, Directories/LSA, SEO rank, search volume, and CPC are modeled as service plus location pairs','medium','resolved_assumed','read only','Prevents forecasts from using one flat market/category value for all services and locations'],
+  ['model.service_location_layer','Two-layer model, Revenue channels detail','report architecture assumption','Google Ads, Directories/LSA, SEO rank, search volume, and CPC are modeled as niche plus service-area pairs','medium','resolved_assumed','read only','Prevents forecasts from using one flat market/category value for all niches and services'],
   ['model.business_layer_scores','Two-layer model','FC calibrated score summary','Business-level status scores summarize current GBP reputation, website, competitor context, and GBP profile accuracy before service-location forecasting','medium','resolved_assumed','fc editable','Shows today’s business-level status quo as weak/fair/strong'],
   ['model.service_location_layer_scores','Two-layer model','FC calibrated score summary','Service-location status scores summarize Ads, Directories/LSA, SEO/Maps, and service-area readiness across service-location pairs','medium','resolved_assumed','fc editable','Shows today’s service-location status quo as weak/fair/strong'],
-  ['benchmark.service_location_search_cpc','Revenue channels, Google Ads detail','FC calibrated assumption','Search volume and CPC are varied by service share, office market, and service-area difficulty','mock','needs Keyword Planner/account data','fc editable','Explains why startup advisory in San Francisco should not inherit bookkeeping economics in Irvine'],
+  ['forecast.niche_candidates','Niche forecast table, Revenue channels','Google Ads Keyword Planner via FlashCrafter manager account','A 15-seed national Keyword Planner batch returned 240 rows and ranked fractional CFO / outsourced finance as the first paid-search candidate','high','source-backed; needs client account validation','fc editable','Selects the first paid-search test without spreading budget across every niche'],
+  ['benchmark.service_location_search_cpc','Revenue channels, Google Ads detail','Keyword Planner + FC calibrated assumptions','Search volume and CPC are varied by niche, service share, and service-area difficulty; fractional CFO is modeled at 19,850 monthly searches and $28.76 CPC','high','source-backed; needs client account validation','fc editable','Explains why the first paid test should not inherit generic CPA economics'],
   ['channels.google_ads','Revenue channels','derived from forecast assumptions','Google Ads jobs, ticket, and spend are modeled from spend, CPL, close rate, and service mix','medium','scenario only','derived','Shows modeled paid-search revenue separate from other revenue channels'],
   ['channels.lsa','Revenue channels','derived from forecast assumptions','Directories / LSA are hard-blocked until category eligibility, screening, and economics are verified','low','needs verification','derived','Shows unresolved directory/LSA opportunity without adding phantom jobs'],
   ['channels.seo_maps','Revenue channels','derived from forecast assumptions','SEO/Maps/content jobs and costs come from GBP/Web/SEO lead assumptions and service investment','medium','scenario only','derived','Separates organic/local revenue from paid channels'],
@@ -1729,11 +1769,11 @@ const PROVENANCE = [
   ['channel.paidCpl','Source/channel economics card','derived','Blended paid CPL from Google Ads and verified directory/LSA assumptions','medium','scenario only','derived','Explains CAC and spend efficiency'],
   ['website.quoteFriction','Website/conversion strength card','supplied website audit + FC assessment','Consult path exists but audit issues and proof placement suggest conversion friction','medium','needs conversion tracking','fc editable','Prioritizes web conversion fixes'],
   ['website.proofDepth','Website/conversion strength card','supplied website audit + FC assessment','Audit and page review suggest service proof should be more visible across consultation paths','medium','needs owner proof library','fc editable','Supports proof placement recommendation'],
-  ['search.monthlyDemand','Paid traffic opportunity card','FC calibrated assumption','Representative monthly search demand for CPA, bookkeeping, tax, startup accounting, and CFO terms across California target markets','mock','needs Keyword Planner/account data','fc editable','Sizes paid-search opportunity'],
-  ['search.modeledCpc','Paid traffic opportunity card','FC calibrated assumption','Representative CPC based on modeled CPA/accounting market assumptions','mock','needs Keyword Planner/account data','fc editable','Feeds paid traffic economics'],
-  ['ads.openSlot','Paid traffic opportunity card','FC calibrated assumption','CPA/accounting ad auction is assumed competitive until account and SERP sampling verify otherwise','mock','needs ad account/SERP verification','fc editable','Supports initial paid-search test'],
-  ['seo.servicePages','Organic/SEO card','supplied website audit + public website','Visible service pages exist, but audit flags structure and content-quality improvements','medium','source-backed plus analysis','fc editable','Guides SEO work scope'],
-  ['seo.cityPages','Organic/SEO card','public contact page + public website','Four office markets are visible and should be evaluated for city/service landing-page fit','medium','source-backed plus analysis','fc editable','Guides local coverage work'],
+  ['search.monthlyDemand','Paid traffic opportunity card','Google Ads Keyword Planner','Fractional CFO / outsourced finance keyword cluster returned 19,850 national monthly searches','high','source-backed; needs client account validation','fc editable','Sizes first paid-search opportunity'],
+  ['search.modeledCpc','Paid traffic opportunity card','Google Ads Keyword Planner + FC model','Weighted modeled CPC for the fractional CFO / outsourced finance cluster is $28.76','high','source-backed; needs client account validation','fc editable','Feeds paid traffic economics'],
+  ['ads.openSlot','Paid traffic opportunity card','Google Ads Keyword Planner + meeting notes','Fractional CFO / outsourced finance is selected as the first paid-search slot based on demand, CPC, and recurring-retainer fit','high','source-backed; needs ad account validation','fc editable','Supports initial paid-search test'],
+  ['seo.servicePages','Organic/SEO card','meeting notes + website audit + Keyword Planner','Organic coverage should include fractional CFO plus four backup niche clusters: dental CPA, startup finance, e-commerce/sales tax, and creator/accounting research','medium','source-backed plus analysis','fc editable','Guides SEO work scope'],
+  ['seo.cityPages','Organic/SEO card','meeting notes + public contact page','National niche pages and selective CA/NY proof matter more than city-page volume because Sugam can serve all 50 states','medium','source-backed plus analysis','fc editable','Guides local/national coverage work'],
   ['visibility.top3','Top service-area map row, organic card','mock rank-grid over OpenStreetMap','Prototype grid assumes limited top-3 map coverage per service-location pair','mock','mock unresolved','fc editable','Sets local visibility objective'],
   ['visibility.notFound','Top service-area map row','mock rank-grid over OpenStreetMap','Prototype grid assumes weak coverage outside the core area per service-location pair','mock','mock unresolved','fc editable','Prioritizes GBP and content expansion'],
   ['reviews.competitorAverage','Reviews/GBP trust card','mock competitor review pull','Representative average from modeled competitor set until live GBP data is pulled','mock','needs live benchmark pull','fc editable','Creates review proof gap'],
@@ -1805,6 +1845,7 @@ function renderAll(){
   renderModelLayers()
   renderBenchmarks()
   renderRevenueChannels()
+  renderNicheForecasts()
   renderScoringModel()
   renderForecast()
   renderDrilldown()
