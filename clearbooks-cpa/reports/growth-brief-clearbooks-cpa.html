@@ -236,6 +236,15 @@
   .benchmark-table th{text-transform:uppercase;letter-spacing:.08em;font-size:10px}
   .benchmark-table .average-row td{background:#fffaf2;font-weight:900}
   .benchmark-table .you-row td{background:#f4fbf7;font-weight:900;border-top:2px solid var(--green)}
+  .detail-filters{display:grid;gap:10px;padding:12px 14px;border-top:1px solid var(--soft);border-bottom:1px solid var(--line);background:#fffdf8}
+  .detail-filter-group{display:grid;gap:6px}
+  .detail-filter-group h4{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+  .detail-filter-options{display:flex;flex-wrap:wrap;gap:6px}
+  .detail-filter-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;background:#fff;padding:5px 8px;font-size:11px;font-weight:900;color:var(--muted);cursor:pointer;line-height:1.15}
+  .detail-filter-chip input{margin:0;accent-color:var(--green)}
+  .detail-filter-summary{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:11px}
+  .detail-filter-summary b{color:var(--ink)}
+  .empty-row td{color:var(--muted);font-weight:800;text-align:center;padding:18px}
   .service-location{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .service-card{border:1px solid var(--line);background:#fff;border-radius:8px;padding:12px}
   .service-card h3{margin:0 0 5px;font-size:13px}
@@ -533,6 +542,7 @@
         </section>
         <section class="benchmark-table matrix-table">
           <div class="phead"><h2>Google Ads detail: service + location economics</h2><span class="meta">revenue channel detail</span></div>
+          <div class="detail-filters" id="googleAdsFilters"></div>
           <table>
             <thead>
               <tr><th>Service + location</th><th>Location type</th><th>Search volume</th><th>Modeled CPC</th><th>SEO/rank basis</th><th>Forecast impact</th></tr>
@@ -942,6 +952,11 @@ let owner = {...BASELINE}
 let viewMode = 'both'
 let customObjective = ''
 let selectedHorizonIndex = 0
+let adsDetailExcluded = {
+  services:new Set(BUSINESS_CONTEXT.services.slice(1).map(service => service.key)),
+  markets:new Set(),
+  types:new Set()
+}
 
 const HORIZONS = [
   {label:'Today', short:'Current', days:0, sub:'Current model'},
@@ -1023,6 +1038,48 @@ function serviceLocationPairs(){
     rankBasis: market.type === 'physical storefront' ? 'Maps + organic' : BUSINESS_CONTEXT.serviceAreaOnly ? 'Organic/local organic only' : 'Organic/service-area only',
     impact: market.type === 'physical storefront' ? 'Higher map-pack confidence from storefront proximity' : BUSINESS_CONTEXT.serviceAreaOnly ? 'No storefront anchor; lower map-pack confidence and heavier organic/local organic dependency' : 'Higher CPC and lower local-pack confidence'
   })))
+}
+
+function adsDetailFilterChecked(group,key){
+  return !adsDetailExcluded[group].has(key)
+}
+
+function adsDetailFilterChip(group,key,label){
+  return `<label class="detail-filter-chip"><input type="checkbox" data-ads-detail-filter="${esc(group)}" data-filter-key="${esc(key)}" ${adsDetailFilterChecked(group,key) ? 'checked' : ''}>${esc(label)}</label>`
+}
+
+function filteredServiceLocationPairs(){
+  return serviceLocationPairs().filter(pair =>
+    adsDetailFilterChecked('services',pair.service.key) &&
+    adsDetailFilterChecked('markets',pair.market.label) &&
+    adsDetailFilterChecked('types',pair.market.type)
+  )
+}
+
+function renderGoogleAdsDetail(){
+  const pairs = serviceLocationPairs()
+  const markets = [...new Map(pairs.map(pair => [pair.market.label,pair.market])).values()]
+  const types = [...new Set(pairs.map(pair => pair.market.type))]
+  const filtered = filteredServiceLocationPairs()
+  document.getElementById('googleAdsFilters').innerHTML = `
+    <div class="detail-filter-summary">
+      <span><b>${filtered.length} of ${pairs.length}</b> service-location rows shown. Default view focuses on the first paid-search niche; expand filters to inspect every service and market.</span>
+      <button class="btn" type="button" data-ads-detail-reset>Show all</button>
+    </div>
+    <div class="detail-filter-group"><h4>Services</h4><div class="detail-filter-options">${BUSINESS_CONTEXT.services.map(service => adsDetailFilterChip('services',service.key,service.label)).join('')}</div></div>
+    <div class="detail-filter-group"><h4>Markets / locations</h4><div class="detail-filter-options">${markets.map(market => adsDetailFilterChip('markets',market.label,market.label)).join('')}</div></div>
+    <div class="detail-filter-group"><h4>Location type</h4><div class="detail-filter-options">${types.map(type => adsDetailFilterChip('types',type,type)).join('')}</div></div>
+  `
+  document.getElementById('googleAdsServiceLocationRows').innerHTML = filtered.length
+    ? filtered.map(pair => `<tr>
+      <td><b>${esc(pair.service.label)}</b><span class="channel-source">${esc(pair.market.label)}</span></td>
+      <td>${esc(pair.market.type)}</td>
+      <td>${pair.volume}/mo</td>
+      <td>${money(pair.cpc)}</td>
+      <td>${esc(pair.rankBasis)}</td>
+      <td>${esc(pair.impact)}</td>
+    </tr>`).join('')
+    : `<tr class="empty-row"><td colspan="6">No service-location rows match the selected filters.</td></tr>`
 }
 
 function renderNicheForecasts(){
@@ -1541,14 +1598,7 @@ function renderBenchmarks(){
     <td><b>${competitorScore(you)}</b></td>
     <td>${esc(you.role)}</td>
   </tr>`
-  document.getElementById('googleAdsServiceLocationRows').innerHTML = serviceLocationPairs().map(pair => `<tr>
-    <td><b>${esc(pair.service.label)}</b><span class="channel-source">${esc(pair.market.label)}</span></td>
-    <td>${esc(pair.market.type)}</td>
-    <td>${pair.volume}/mo</td>
-    <td>${money(pair.cpc)}</td>
-    <td>${esc(pair.rankBasis)}</td>
-    <td>${esc(pair.impact)}</td>
-  </tr>`).join('')
+  renderGoogleAdsDetail()
 }
 
 function renderModelLayers(){
@@ -1870,6 +1920,21 @@ document.addEventListener('click', e => {
     renderBenchmarks()
     return
   }
+  const adsFilter = e.target.closest('[data-ads-detail-filter]')
+  if (adsFilter) {
+    const group = adsFilter.dataset.adsDetailFilter
+    const key = adsFilter.dataset.filterKey
+    if (adsFilter.checked) adsDetailExcluded[group].delete(key)
+    else adsDetailExcluded[group].add(key)
+    renderGoogleAdsDetail()
+    return
+  }
+  const adsReset = e.target.closest('[data-ads-detail-reset]')
+  if (adsReset) {
+    adsDetailExcluded = {services:new Set(), markets:new Set(), types:new Set()}
+    renderGoogleAdsDetail()
+    return
+  }
   const btn = e.target.closest('.scenario-toggle button')
   if (!btn) return
   viewMode = btn.dataset.view
@@ -1898,6 +1963,7 @@ document.getElementById('serviceAreaOnly').addEventListener('change', e => {
   renderEditableChips()
   renderVisibilityMaps()
   renderRevenueChannels()
+  renderGoogleAdsDetail()
   renderScoringModel()
   renderForecast()
   renderDrilldown()
