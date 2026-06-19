@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FlashCrafter Growth Brief V3 - services, locations, competitors</title>
+<title>FlashCrafter Growth Brief V4 - paid and organic keyword strategy</title>
 <style>
   :root{
     --bg:#f6f3ed;
@@ -236,6 +236,18 @@
   .benchmark-table th{text-transform:uppercase;letter-spacing:.08em;font-size:10px}
   .benchmark-table .average-row td{background:#fffaf2;font-weight:900}
   .benchmark-table .you-row td{background:#f4fbf7;font-weight:900;border-top:2px solid var(--green)}
+  .strategy-rollup{border:1px solid var(--line);border-radius:8px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden;margin-top:12px}
+  .strategy-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;border-bottom:1px solid var(--line)}
+  .strategy-path{border:1px solid var(--soft);border-radius:8px;background:#fff;padding:12px;display:grid;gap:8px}
+  .strategy-path h3{margin:0;font-size:14px}
+  .strategy-path p{margin:0;color:var(--muted);font-size:12px;line-height:1.4}
+  .strategy-path ul{margin:0;padding-left:18px;color:var(--muted);font-size:12px;line-height:1.45}
+  .strategy-path li+li{margin-top:3px}
+  .strategy-path b{color:var(--ink)}
+  .strategy-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:12px 14px;background:#fbf7ef}
+  .strategy-flow div{border:1px solid var(--soft);border-radius:7px;background:#fff;padding:9px}
+  .strategy-flow span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
+  .strategy-flow strong{display:block;margin-top:3px;font-size:12px}
   .detail-filters{display:grid;gap:10px;padding:12px 14px;border-top:1px solid var(--soft);border-bottom:1px solid var(--line);background:#fffdf8}
   .detail-filter-group{display:grid;gap:6px}
   .detail-filter-group h4{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
@@ -352,7 +364,8 @@
     .topbar{margin:-14px -12px 14px;padding:10px 12px;align-items:flex-start}
     .brand span{display:none}
     .hero h1{font-size:23px}
-    .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route{grid-template-columns:1fr}
+    .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route,.strategy-paths{grid-template-columns:1fr}
+    .strategy-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
     .trend-body{grid-template-columns:1fr}
     .plan-builder{border-left:0;border-top:1px solid var(--line)}
     .benchmark-grid,.service-location,.layer-grid{grid-template-columns:1fr}
@@ -378,13 +391,14 @@
   <header class="topbar">
     <div class="brand">
       <div class="mark">FC</div>
-      <div><b>ClearBooks Growth Brief</b><span>Real-data draft for services, locations, competitors, and scored components</span></div>
+      <div><b>ClearBooks Growth Brief V4</b><span>Paid and organic keyword strategy, services, locations, competitors, and scored components</span></div>
     </div>
     <nav class="topnav" aria-label="Report sections">
       <a href="#outcome">Outcome</a>
       <a href="#layers">Layers</a>
       <a href="#benchmarks">Benchmarks</a>
       <a href="#channels">Channels</a>
+      <a href="#keyword-strategy">Keywords</a>
       <a href="#objective">Objective</a>
       <a href="#scoring">Scoring</a>
       <a href="#calculator">Forecast</a>
@@ -539,6 +553,37 @@
             <tbody id="nicheForecastRows"></tbody>
           </table>
           <div class="score-tip"><b>Recommendation:</b> use fractional CFO / outsourced finance as the first paid-search test. Keep dental CPA, startup finance, e-commerce, sales tax, and creator/accounting themes in organic research until proof and economics justify paid budget.</div>
+        </section>
+        <section class="strategy-rollup" id="keyword-strategy">
+          <div class="phead"><h2>Keyword strategy roll-up: paid launch vs organic moat</h2><span class="meta">connects bottom-up keyword research to the top forecast</span></div>
+          <div class="strategy-paths">
+            <article class="strategy-path">
+              <h3>Google Ads path: high-intent demand capture</h3>
+              <p>Planner-first Ads research should answer one narrow question: which ready-to-buy keyword theme deserves paid budget first?</p>
+              <ul>
+                <li><b>Source of truth:</b> Google Keyword Planner volume, CPC, and competition.</li>
+                <li><b>Selection logic:</b> buyer intent, CPC realism, budget fit, service economics, and negative-keyword risk.</li>
+                <li><b>ClearBooks decision:</b> launch fractional CFO / outsourced finance first; keep other niches out of paid launch until proof improves.</li>
+                <li><b>Calculator socket:</b> adds controllable short-term volume through clicks -> calls -> clients -> recurring revenue.</li>
+              </ul>
+            </article>
+            <article class="strategy-path">
+              <h3>SEO Sniper path: authority and entry points</h3>
+              <p>Organic research should not copy the Ads launch list. It should map the full topical surface and choose rankable entry pages.</p>
+              <ul>
+                <li><b>Source of truth:</b> keyword sets, local/niche SERPs, competitor pages, and service/location coverage.</li>
+                <li><b>Selection logic:</b> parent topics, weak SERPs, page-type fit, SERP overlap, and cannibalization control.</li>
+                <li><b>ClearBooks decision:</b> build organic coverage for dental CPA, startup accounting, e-commerce/sales tax, and supporting fractional CFO proof.</li>
+                <li><b>Calculator socket:</b> compounds medium-term volume and raises website/trust conversion through better proof and landing-page fit.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="strategy-flow">
+            <div><span>Objective</span><strong>Grow high-margin recurring revenue</strong></div>
+            <div><span>Paid test</span><strong>One controllable Ads theme first</strong></div>
+            <div><span>Organic build</span><strong>Topical map plus rankable entry points</strong></div>
+            <div><span>Forecast link</span><strong>Paid volume now, SEO volume later</strong></div>
+          </div>
         </section>
         <section class="benchmark-table matrix-table">
           <div class="phead"><h2>Google Ads detail: service + location economics</h2><span class="meta">revenue channel detail</span></div>
