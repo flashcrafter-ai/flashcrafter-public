@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FlashCrafter Growth Brief V4 - paid and organic keyword strategy</title>
+<title>FlashCrafter Growth Brief V5 - execution pathway gates</title>
 <style>
   :root{
     --bg:#f6f3ed;
@@ -237,6 +237,10 @@
   .benchmark-table .average-row td{background:#fffaf2;font-weight:900}
   .benchmark-table .you-row td{background:#f4fbf7;font-weight:900;border-top:2px solid var(--green)}
   .strategy-rollup{border:1px solid var(--line);border-radius:8px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden;margin-top:12px}
+  .strategy-ladder{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+  .strategy-step{background:#fffdf8;padding:10px;min-width:0}
+  .strategy-step span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
+  .strategy-step strong{display:block;margin-top:4px;font-size:12px;line-height:1.25}
   .strategy-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;border-bottom:1px solid var(--line)}
   .strategy-path{border:1px solid var(--soft);border-radius:8px;background:#fff;padding:12px;display:grid;gap:8px}
   .strategy-path h3{margin:0;font-size:14px}
@@ -248,6 +252,11 @@
   .strategy-flow div{border:1px solid var(--soft);border-radius:7px;background:#fff;padding:9px}
   .strategy-flow span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
   .strategy-flow strong{display:block;margin-top:3px;font-size:12px}
+  .gate-table{padding:0 14px 14px;background:#fffdf8}
+  .gate-table table{min-width:0}
+  .gate-table th,.gate-table td{position:static;text-align:left;font-size:11px;white-space:normal;vertical-align:top}
+  .gate-table th{text-transform:uppercase;letter-spacing:.08em;font-size:9px}
+  .gate-badge{display:inline-flex;border:1px solid #ead18f;background:var(--amber2);color:var(--amber);border-radius:999px;padding:2px 7px;font-size:10px;font-weight:900;white-space:nowrap}
   .detail-filters{display:grid;gap:10px;padding:12px 14px;border-top:1px solid var(--soft);border-bottom:1px solid var(--line);background:#fffdf8}
   .detail-filter-group{display:grid;gap:6px}
   .detail-filter-group h4{margin:0;font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
@@ -365,7 +374,7 @@
     .brand span{display:none}
     .hero h1{font-size:23px}
     .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route,.strategy-paths{grid-template-columns:1fr}
-    .strategy-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .strategy-ladder,.strategy-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
     .trend-body{grid-template-columns:1fr}
     .plan-builder{border-left:0;border-top:1px solid var(--line)}
     .benchmark-grid,.service-location,.layer-grid{grid-template-columns:1fr}
@@ -391,7 +400,7 @@
   <header class="topbar">
     <div class="brand">
       <div class="mark">FC</div>
-      <div><b>ClearBooks Growth Brief V4</b><span>Paid and organic keyword strategy, services, locations, competitors, and scored components</span></div>
+      <div><b>ClearBooks Growth Brief V5</b><span>Execution pathway gates, services, locations, competitors, and scored components</span></div>
     </div>
     <nav class="topnav" aria-label="Report sections">
       <a href="#outcome">Outcome</a>
@@ -555,34 +564,53 @@
           <div class="score-tip"><b>Recommendation:</b> use fractional CFO / outsourced finance as the first paid-search test. Keep dental CPA, startup finance, e-commerce, sales tax, and creator/accounting themes in organic research until proof and economics justify paid budget.</div>
         </section>
         <section class="strategy-rollup" id="keyword-strategy">
-          <div class="phead"><h2>Keyword strategy roll-up: paid launch vs organic moat</h2><span class="meta">connects bottom-up keyword research to the top forecast</span></div>
+          <div class="phead"><h2>Execution pathway: objective to channel gates</h2><span class="meta">connects top-down objective logic to bottom-up Ads and SEO kickoff inputs</span></div>
+          <div class="strategy-ladder">
+            <div class="strategy-step"><span>Objective</span><strong>Grow high-margin recurring revenue</strong></div>
+            <div class="strategy-step"><span>Business context</span><strong>National CPA firm; CA offices support proof</strong></div>
+            <div class="strategy-step"><span>Service themes</span><strong>Fractional CFO first; backup recurring niches</strong></div>
+            <div class="strategy-step"><span>Ads candidates</span><strong>Planner-validated paid-search forecast</strong></div>
+            <div class="strategy-step"><span>SEO seeds</span><strong>Topical map and rankable entry points</strong></div>
+            <div class="strategy-step"><span>Approval gates</span><strong>Human approval before spend or build</strong></div>
+          </div>
           <div class="strategy-paths">
             <article class="strategy-path">
-              <h3>Google Ads path: high-intent demand capture</h3>
-              <p>Planner-first Ads research should answer one narrow question: which ready-to-buy keyword theme deserves paid budget first?</p>
+              <h3>Ads forecast candidates</h3>
+              <p>Use paid search only where a service theme has commercial intent, budget-fit CPC, measurable consultation flow, and recurring-retainer upside.</p>
               <ul>
-                <li><b>Source of truth:</b> Google Keyword Planner volume, CPC, and competition.</li>
-                <li><b>Selection logic:</b> buyer intent, CPC realism, budget fit, service economics, and negative-keyword risk.</li>
-                <li><b>ClearBooks decision:</b> launch fractional CFO / outsourced finance first; keep other niches out of paid launch until proof improves.</li>
-                <li><b>Calculator socket:</b> adds controllable short-term volume through clicks -> calls -> clients -> recurring revenue.</li>
+                <li><b>Recommended first candidate:</b> Fractional CFO / outsourced finance.</li>
+                <li><b>Inputs:</b> objective weight, service economics, Keyword Planner demand/CPC, budget cap, landing-page readiness, exclusions, and capacity.</li>
+                <li><b>Forecast socket:</b> spend -> clicks -> calls -> clients -> recurring revenue, capped by service-level capacity.</li>
+                <li><b>Gate:</b> requires approval before spend, campaign draft, tracking setup, or launch.</li>
               </ul>
             </article>
             <article class="strategy-path">
-              <h3>SEO Sniper path: authority and entry points</h3>
-              <p>Organic research should not copy the Ads launch list. It should map the full topical surface and choose rankable entry pages.</p>
+              <h3>SEO blueprint seeds</h3>
+              <p>Use organic work to build durable service authority and proof coverage, not to mirror every paid keyword.</p>
               <ul>
-                <li><b>Source of truth:</b> keyword sets, local/niche SERPs, competitor pages, and service/location coverage.</li>
-                <li><b>Selection logic:</b> parent topics, weak SERPs, page-type fit, SERP overlap, and cannibalization control.</li>
-                <li><b>ClearBooks decision:</b> build organic coverage for dental CPA, startup accounting, e-commerce/sales tax, and supporting fractional CFO proof.</li>
-                <li><b>Calculator socket:</b> compounds medium-term volume and raises website/trust conversion through better proof and landing-page fit.</li>
+                <li><b>Recommended first seed set:</b> Fractional CFO proof plus dental CPA, startup finance, e-commerce/sales tax, and creator/accounting support pages.</li>
+                <li><b>Inputs:</b> service taxonomy, physical offices, true service areas, national-remote flag, competitor context, audit gaps, and proof constraints.</li>
+                <li><b>Blueprint socket:</b> parent topics -> page architecture -> entry points -> internal links -> content briefs.</li>
+                <li><b>Gate:</b> requires approval before page-map generation or content build.</li>
               </ul>
             </article>
           </div>
           <div class="strategy-flow">
-            <div><span>Objective</span><strong>Grow high-margin recurring revenue</strong></div>
-            <div><span>Paid test</span><strong>One controllable Ads theme first</strong></div>
-            <div><span>Organic build</span><strong>Topical map plus rankable entry points</strong></div>
-            <div><span>Forecast link</span><strong>Paid volume now, SEO volume later</strong></div>
+            <div><span>Ads contract</span><strong>AdsLaunchCandidate + AdsApprovalGate</strong></div>
+            <div><span>SEO contract</span><strong>SeoBlueprintSeed + SeoApprovalGate</strong></div>
+            <div><span>Shared source</span><strong>Objective, services, locations, assumptions, provenance</strong></div>
+            <div><span>Execution rule</span><strong>No spend or blueprint generation until gates pass</strong></div>
+          </div>
+          <div class="gate-table">
+            <table>
+              <thead><tr><th>Gate</th><th>Decision required</th><th>Why it matters</th><th>Required evidence</th><th>Approval</th></tr></thead>
+              <tbody>
+                <tr><td><span class="gate-badge">Ads budget</span></td><td>Can FC spend against the first paid-search candidate?</td><td>Prevents modeled demand from becoming unapproved media spend.</td><td>Budget cap, offer, tracking, destination page, negatives.</td><td>Owner + FC</td></tr>
+                <tr><td><span class="gate-badge">Ads learning</span></td><td>What makes the test continue, pause, or pivot?</td><td>Keeps the paid test tied to qualified calls and CAC, not clicks.</td><td>CPL target, booked-call target, lead-quality review cadence.</td><td>FC proposes, owner accepts</td></tr>
+                <tr><td><span class="gate-badge">SEO scope</span></td><td>Which service pages are in the first content sprint?</td><td>Prevents broad content from diluting the objective.</td><td>Approved service themes, proof sources, page list, publishing access.</td><td>Owner + FC</td></tr>
+                <tr><td><span class="gate-badge">Measurement</span></td><td>Which outcomes replace assumptions?</td><td>Turns the brief into an operating baseline.</td><td>Source capture, call/form tracking, new-client source and retainer data.</td><td>Owner + FC</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
         <section class="benchmark-table matrix-table">
@@ -1848,6 +1876,14 @@ const PROVENANCE = [
   ['channels.custom','Revenue channels','owner/client input','Additional owner-added channels allow partner referrals, Gusto/QuickBooks partner flow, creator communities, accelerators, events, or other sources','low','needs owner confirmation','owner editable','Keeps the model extensible beyond the default channel set'],
   ['plan.channels','Build the plan: revenue channels, Revenue channels','scenario toggle from revenueChannels','Build-the-plan rows are generated from the same revenue channel list used by the page; Directories / LSA remain locked until verified','medium','scenario only','owner editable','Keeps the chart controls aligned with modeled, owner-added, and confirmed channels'],
   ['plan.capacity','Build the plan chart panel','owner input','New clients the business can onboard per month, distributed across service-level capacity assumptions','medium','needs owner confirmation','owner editable','Caps the modeled upside so the plan does not exceed operational capacity'],
+  ['strategy.execution_pathway','Execution pathway','AI-derived + calculated','Objective, business context, service themes, channel candidates, and approval gates are connected into one execution pathway','medium','resolved_assumed','fc editable','Explains how top-down strategy becomes downstream Ads and SEO kickoff inputs without implying automatic execution'],
+  ['strategy.service_themes','Execution pathway: service themes','meeting notes + FC calibrated service taxonomy','Service themes are ranked by objective fit, economics, demand, proof readiness, and channel suitability','medium','needs owner confirmation','owner editable','Controls which themes become Ads candidates, SEO blueprint seeds, or deferred research'],
+  ['ads.forecast_candidates','Execution pathway: Ads forecast candidates','Google Keyword Planner + calculated funnel','Ads candidates convert approved service themes into Planner-grounded spend, click, lead, client, CAC, and revenue forecasts','high','source-backed; needs client account validation','fc editable','Creates the AdsLaunchCandidate contract before any Google Ads setup or spend'],
+  ['seo.blueprint_seeds','Execution pathway: SEO blueprint seeds','SEO Sniper strategy model + website audit + competitor context','SEO seeds convert approved themes, locations, service areas, proof constraints, and exclusions into blueprint-generation inputs','medium','source-backed plus analysis; needs content/proof approval','fc editable','Creates the SeoBlueprintSeed contract before topical map or content generation'],
+  ['approval.ads_budget_gate','Execution pathway: approval gates','workflow status','Ads budget gate requires owner and FC approval of budget cap, offer, tracking, destination page, and negatives before spend','medium','needs approval','workflow','Blocks Google Ads setup from turning a forecast into unapproved media spend'],
+  ['approval.ads_learning_gate','Execution pathway: approval gates','workflow status','Ads learning gate defines continue, pause, and pivot criteria based on qualified calls, CAC, CPL, and lead quality','medium','needs approval','workflow','Keeps the paid test tied to business outcomes instead of clicks'],
+  ['approval.seo_scope_gate','Execution pathway: approval gates','workflow status','SEO scope gate requires approval of first-sprint service pages, proof sources, content scope, and publishing access','medium','needs approval','workflow','Blocks SEO Sniper blueprint/content generation until scope and proof are accepted'],
+  ['approval.measurement_gate','Execution pathway: approval gates','workflow status','Measurement gate defines which tracked outcomes replace assumptions in the operating baseline','medium','needs approval','workflow','Turns the brief into a measurable service-delivery baseline'],
   ['avgJobValue','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Average first-retainer value is modeled per key service, then blended by service mix','medium','needs owner confirmation','owner editable','Drives revenue forecast without flattening bookkeeping, tax, advisory, and CFO economics'],
   ['closeRate','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Lead-to-client close rate is modeled per key service','medium','needs owner confirmation','owner editable','Converts leads into new clients by service mix'],
   ['grossMargin','Editable assumptions, service/channel assumptions','FC calibrated per-service assumption','Gross margin is modeled per key service before blending into the forecast','medium','needs owner confirmation','owner editable','Drives profit after CAC by service economics'],
