@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FlashCrafter Growth Brief V5 - execution pathway gates</title>
+<title>FlashCrafter Growth Brief V6 - live discovery glue</title>
 <style>
   :root{
     --bg:#f6f3ed;
@@ -252,6 +252,22 @@
   .strategy-flow div{border:1px solid var(--soft);border-radius:7px;background:#fff;padding:9px}
   .strategy-flow span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}
   .strategy-flow strong{display:block;margin-top:3px;font-size:12px}
+  .strategy-note{margin:12px 14px 0;border:1px solid #c7ddcf;background:#f4fbf7;border-radius:8px;padding:10px 12px;color:var(--green);font-size:12px;line-height:1.45}
+  .strategy-note b{color:var(--green2)}
+  .discovery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;border-top:1px solid var(--line);background:#fffdf8}
+  .discovery-card{border:1px solid var(--soft);border-radius:8px;background:#fff;padding:12px;display:grid;gap:8px}
+  .discovery-card h3{margin:0;font-size:14px}
+  .discovery-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.4}
+  .discovery-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:12px;line-height:1.45}
+  .keyword-pill{display:inline-flex;align-items:center;border:1px solid var(--soft);border-radius:999px;padding:2px 7px;font-size:10px;font-weight:900;background:#fff;color:var(--muted);white-space:nowrap}
+  .keyword-pill.ads{border-color:#c7ddcf;background:#f4fbf7;color:var(--green)}
+  .keyword-pill.seo{border-color:#ead18f;background:var(--amber2);color:var(--amber)}
+  .keyword-pill.negative{border-color:#f0c2b9;background:#fff5f2;color:var(--red)}
+  .keyword-pill.both{border-color:#bdd2ea;background:#f4f8ff;color:#2f5f95}
+  .route-table{padding:0 14px 14px;background:#fffdf8}
+  .route-table table{min-width:0}
+  .route-table th,.route-table td{position:static;text-align:left;font-size:11px;white-space:normal;vertical-align:top}
+  .route-table th{text-transform:uppercase;letter-spacing:.08em;font-size:9px}
   .gate-table{padding:0 14px 14px;background:#fffdf8}
   .gate-table table{min-width:0}
   .gate-table th,.gate-table td{position:static;text-align:left;font-size:11px;white-space:normal;vertical-align:top}
@@ -373,7 +389,7 @@
     .topbar{margin:-14px -12px 14px;padding:10px 12px;align-items:flex-start}
     .brand span{display:none}
     .hero h1{font-size:23px}
-    .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route,.strategy-paths{grid-template-columns:1fr}
+    .rail,.cards,.drill,.split,.module-grid,.commitments,.score-grid,.route,.strategy-paths,.discovery-grid{grid-template-columns:1fr}
     .strategy-ladder,.strategy-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
     .trend-body{grid-template-columns:1fr}
     .plan-builder{border-left:0;border-top:1px solid var(--line)}
@@ -400,7 +416,7 @@
   <header class="topbar">
     <div class="brand">
       <div class="mark">FC</div>
-      <div><b>ClearBooks Growth Brief V5</b><span>Execution pathway gates, services, locations, competitors, and scored components</span></div>
+      <div><b>ClearBooks Growth Brief V6</b><span>Live discovery glue, services, locations, competitors, and scored components</span></div>
     </div>
     <nav class="topnav" aria-label="Report sections">
       <a href="#outcome">Outcome</a>
@@ -561,51 +577,84 @@
             </thead>
             <tbody id="nicheForecastRows"></tbody>
           </table>
-          <div class="score-tip"><b>Recommendation:</b> use fractional CFO / outsourced finance as the first paid-search test. Keep dental CPA, startup finance, e-commerce, sales tax, and creator/accounting themes in organic research until proof and economics justify paid budget.</div>
+          <div class="score-tip"><b>Discovery read:</b> use the live keyword universe to decide the paid launch. Core CPA/bookkeeping/tax terms are Ads-eligible today; fractional CFO is a high-value SEO-first hypothesis unless the next API expansion proves enough transactional paid demand.</div>
         </section>
         <section class="strategy-rollup" id="keyword-strategy">
-          <div class="phead"><h2>Execution pathway: objective to channel gates</h2><span class="meta">connects top-down objective logic to bottom-up Ads and SEO kickoff inputs</span></div>
+          <div class="phead"><h2>Live discovery glue: objective to channel gates</h2><span class="meta">LLM themes + keyword API expansion + LLM intent routing</span></div>
+          <div class="strategy-note"><b>Important:</b> the report does not assume the winning keyword theme. It starts with an FC/LLM hypothesis, expands the real keyword universe per theme, then uses a second LLM pass to classify intent, group terms, and route each theme into Ads, SEO, both, or neither.</div>
           <div class="strategy-ladder">
             <div class="strategy-step"><span>Objective</span><strong>Grow high-margin recurring revenue</strong></div>
-            <div class="strategy-step"><span>Business context</span><strong>National CPA firm; CA offices support proof</strong></div>
-            <div class="strategy-step"><span>Service themes</span><strong>Fractional CFO first; backup recurring niches</strong></div>
-            <div class="strategy-step"><span>Ads candidates</span><strong>Planner-validated paid-search forecast</strong></div>
-            <div class="strategy-step"><span>SEO seeds</span><strong>Topical map and rankable entry points</strong></div>
+            <div class="strategy-step"><span>Glue A</span><strong>LLM extracts 8 candidate service themes</strong></div>
+            <div class="strategy-step"><span>Glue B</span><strong>DataForSEO / Planner expands keywords per theme</strong></div>
+            <div class="strategy-step"><span>LLM classifier</span><strong>Tags transactional, commercial, informational, topical</strong></div>
+            <div class="strategy-step"><span>Glue C</span><strong>Ads and SEO use different lenses</strong></div>
             <div class="strategy-step"><span>Approval gates</span><strong>Human approval before spend or build</strong></div>
+          </div>
+          <div class="discovery-grid">
+            <article class="discovery-card">
+              <h3>Glue A: identity -> service themes</h3>
+              <p>LLM uses business identity, meeting notes, website, services, locations, objectives, and exclusions to produce candidate themes. This is not a static taxonomy.</p>
+              <ul>
+                <li><b>Input:</b> CPA firm, recurring bookkeeping, tax strategy, fractional CFO, physical CA offices, national remote service.</li>
+                <li><b>Output:</b> a theme set that becomes the shared pivot for Ads, SEO, assumptions, and approval gates.</li>
+                <li><b>Production rule:</b> theme extraction and keyword-to-theme assignment are LLM steps, with prompts/versioning/provenance.</li>
+              </ul>
+            </article>
+            <article class="discovery-card">
+              <h3>Glue B: real discovery -> tagged universe</h3>
+              <p>Each theme calls DataForSEO / Keyword Planner for related terms, local and national volumes, CPC ranges, competition, and SERP clues. A second LLM pass analyzes the full pool.</p>
+              <ul>
+                <li><b>Ads lens:</b> local/market transactional terms, low/high CPC, commercial intent, negative candidates.</li>
+                <li><b>SEO lens:</b> informational and topical long-tail, including small local volume but large national demand.</li>
+                <li><b>Failure mode:</b> zero terms for a theme means the expansion batch was incomplete, not that the theme is dead.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="route-table">
+            <table>
+              <thead><tr><th>Theme discovered by LLM</th><th>API expansion evidence</th><th>LLM intent read</th><th>Ads lens</th><th>SEO lens</th><th>Route</th></tr></thead>
+              <tbody id="themeDiscoveryRows"></tbody>
+            </table>
+          </div>
+          <div class="route-table">
+            <table>
+              <thead><tr><th>Keyword universe sample</th><th>Theme assignment</th><th>Local volume</th><th>National volume</th><th>CPC range</th><th>LLM tag</th><th>Used by</th></tr></thead>
+              <tbody id="keywordUniverseRows"></tbody>
+            </table>
           </div>
           <div class="strategy-paths">
             <article class="strategy-path">
-              <h3>Ads forecast candidates</h3>
-              <p>Use paid search only where a service theme has commercial intent, budget-fit CPC, measurable consultation flow, and recurring-retainer upside.</p>
+              <h3>Glue C1: Ads runnable bundle</h3>
+              <p>Ads keeps only high-intent, relevant keywords after the LLM classifier. Informational/topical terms become negatives or SEO-only evidence.</p>
               <ul>
-                <li><b>Recommended first candidate:</b> Fractional CFO / outsourced finance.</li>
-                <li><b>Inputs:</b> objective weight, service economics, Keyword Planner demand/CPC, budget cap, landing-page readiness, exclusions, and capacity.</li>
-                <li><b>Forecast socket:</b> spend -> clicks -> calls -> clients -> recurring revenue, capped by service-level capacity.</li>
+                <li><b>Runnable output:</b> ad groups by theme, exact/phrase keywords, negatives, geo, low/high CPC, volume, spend scenarios, forecast.</li>
+                <li><b>ClearBooks current read:</b> core transactional CPA/bookkeeping/tax terms can run; fractional CFO routes SEO-only until transactional Ads volume is proven.</li>
+                <li><b>Forecast socket:</b> budget -> low/base/high CPC clicks -> qualified leads -> clients -> CAC -> recurring revenue.</li>
                 <li><b>Gate:</b> requires approval before spend, campaign draft, tracking setup, or launch.</li>
               </ul>
             </article>
             <article class="strategy-path">
-              <h3>SEO blueprint seeds</h3>
-              <p>Use organic work to build durable service authority and proof coverage, not to mirror every paid keyword.</p>
+              <h3>Glue C2: SEO Sniper runnable bundle</h3>
+              <p>SEO keeps all themes plus the informational long-tail Ads drops, because topical/national content can win even when local transactional volume is small.</p>
               <ul>
-                <li><b>Recommended first seed set:</b> Fractional CFO proof plus dental CPA, startup finance, e-commerce/sales tax, and creator/accounting support pages.</li>
-                <li><b>Inputs:</b> service taxonomy, physical offices, true service areas, national-remote flag, competitor context, audit gaps, and proof constraints.</li>
-                <li><b>Blueprint socket:</b> parent topics -> page architecture -> entry points -> internal links -> content briefs.</li>
+                <li><b>Runnable output:</b> SiteInfo, seed themes, keyword clusters, competitors, geos, proof gaps, page types, exclusions, and blueprint run controls.</li>
+                <li><b>ClearBooks current read:</b> tax strategy, fractional CFO, entity setup, and catch-up bookkeeping become SEO-first authority paths.</li>
+                <li><b>Blueprint socket:</b> tagged universe -> topical map -> page architecture -> entry points -> internal links -> content briefs.</li>
                 <li><b>Gate:</b> requires approval before page-map generation or content build.</li>
               </ul>
             </article>
           </div>
           <div class="strategy-flow">
-            <div><span>Ads contract</span><strong>AdsLaunchCandidate + AdsApprovalGate</strong></div>
-            <div><span>SEO contract</span><strong>SeoBlueprintSeed + SeoApprovalGate</strong></div>
-            <div><span>Shared source</span><strong>Objective, services, locations, assumptions, provenance</strong></div>
-            <div><span>Execution rule</span><strong>No spend or blueprint generation until gates pass</strong></div>
+            <div><span>Glue A</span><strong>LLM ThemeDiscoveryPacket</strong></div>
+            <div><span>Glue B</span><strong>KeywordDiscoveryUniverse</strong></div>
+            <div><span>Glue C/D</span><strong>AdsBundle + SeoSniperBundle + routing</strong></div>
+            <div><span>Execution rule</span><strong>Approve Ads / Approve SEO before running</strong></div>
           </div>
           <div class="gate-table">
             <table>
               <thead><tr><th>Gate</th><th>Decision required</th><th>Why it matters</th><th>Required evidence</th><th>Approval</th></tr></thead>
               <tbody>
-                <tr><td><span class="gate-badge">Ads budget</span></td><td>Can FC spend against the first paid-search candidate?</td><td>Prevents modeled demand from becoming unapproved media spend.</td><td>Budget cap, offer, tracking, destination page, negatives.</td><td>Owner + FC</td></tr>
+                <tr><td><span class="gate-badge">Ads budget</span></td><td>Can FC spend against the selected Ads bundle?</td><td>Prevents modeled demand from becoming unapproved media spend.</td><td>Budget cap, offer, tracking, destination page, negatives.</td><td>Owner + FC</td></tr>
                 <tr><td><span class="gate-badge">Ads learning</span></td><td>What makes the test continue, pause, or pivot?</td><td>Keeps the paid test tied to qualified calls and CAC, not clicks.</td><td>CPL target, booked-call target, lead-quality review cadence.</td><td>FC proposes, owner accepts</td></tr>
                 <tr><td><span class="gate-badge">SEO scope</span></td><td>Which service pages are in the first content sprint?</td><td>Prevents broad content from diluting the objective.</td><td>Approved service themes, proof sources, page list, publishing access.</td><td>Owner + FC</td></tr>
                 <tr><td><span class="gate-badge">Measurement</span></td><td>Which outcomes replace assumptions?</td><td>Turns the brief into an operating baseline.</td><td>Source capture, call/form tracking, new-client source and retainer data.</td><td>Owner + FC</td></tr>
@@ -826,13 +875,13 @@ Volume score = readiness/opportunity explanation, not direct jobs</div>
 
 <script>
 const OBJECTIVES = [
-  ['revenue','Grow high-margin recurring revenue','Use the fractional CFO / outsourced finance niche to attract better recurring clients instead of more low-value tax and Upwork work.','Fractional CFO paid-search gem','Keyword Planner shows fractional CFO / outsourced finance as the strongest first paid-search test: enough national demand, commercial intent, and direct fit with ClearBooks recurring-retainer goals.','medium','30 days','Qualified booked calls'],
+  ['revenue','Grow high-margin recurring revenue','Use discovery to find recurring-retainer demand without defaulting to low-value tax and Upwork work.','Discovery-led recurring revenue path','The current keyword universe routes core CPA/bookkeeping/tax terms to Ads + SEO and routes fractional CFO to SEO-first until live paid-search expansion proves transactional demand.','medium','30 days','Qualified booked calls'],
   ['margin','Improve profit margin','Shift demand toward higher-retainer bookkeeping, financial reporting, tax strategy, and fractional CFO relationships.','Margin protection plan','If pricing floors and source tracking are explicit, profit can rise faster than raw lead volume.','medium','45 days','Profit after CAC'],
   ['capacity','Fill near-term capacity','Add controllable demand for open bookkeeping, tax, and advisory onboarding capacity.','Near-term pipeline fill','If paid search and conversion proof focus on ready-to-hire clients, unused monthly capacity can be filled before organic gains compound.','medium','14 days','Utilization impact'],
   ['cac','Reduce cost per acquired client','Reduce blended CAC by tracking source, service line, and first-retainer value.','Attribution and CAC reset','If every new client is tied back to a source and service type, weak spend can be capped while qualified pipeline stays stable.','high','30 days','CAC'],
   ['stability','Stabilize lead flow','Balance organic, GBP, paid, partner, and referral demand so pipeline does not swing month to month.','Lead-flow stabilizer','If demand is diversified across owned, paid, and partner channels, monthly client acquisition becomes less referral-dependent.','medium','60 days','Pipeline variance'],
   ['top3','Become top 3 locally','Win more map-pack and organic visibility for priority CPA and bookkeeping searches near office markets.','Local top-3 climb','If GBP relevance, review velocity, and location proof improve together, local visibility can expand across Irvine, San Francisco, Los Angeles, and San Diego markets.','low','90 days','Local visibility'],
-  ['service','Grow a specific service line','Prioritize fractional CFO / outsourced finance for paid search, with dental CPA, startup accounting, e-commerce, and sales tax as organic backup niches.','Service-line expansion','If ads isolate the strongest niche first and organic covers several backup niches, ClearBooks can test demand without spraying paid budget across every audience.','medium','45 days','Service mix'],
+  ['service','Grow a specific service line','Discover which service line deserves paid budget and which should build organic authority first.','Service-line expansion','If the keyword universe is classified by intent before routing, ClearBooks can test transactional demand without spraying paid budget across every audience.','medium','45 days','Service mix'],
   ['diversify','Diversify lead sources','Reduce dependence on referrals by adding paid search, organic, partner, and direct website demand.','Source diversification','If paid search, organic, partners, and GBP each carry a measurable role, no single source can stall client growth.','medium','60 days','Source mix'],
   ['reviews','Improve reviews/reputation','Increase review velocity and make client proof more visible before consultation requests.','Trust compounding loop','If review generation and proof placement run monthly, close rate improves and paid traffic becomes easier to convert.','high','30 days','Review velocity'],
   ['scale','Scale aggressively','Push qualified demand while protecting service delivery capacity and onboarding quality.','Scale with guardrails','If capacity, close rate, CAC, and first-retainer value are measured weekly, spend can scale only when the next acquired client is profitable.','medium','21 days','Spend-to-profit ratio']
@@ -859,8 +908,8 @@ const DATA = {
   'website.proofDepth':'Thin',
   'search.monthlyDemand':'19,850',
   'search.modeledCpc':'$28.76',
-  'ads.openSlot':'Fractional CFO paid-search gem',
-  'forecast.niche_candidates':'Fractional CFO / outsourced finance ranks #1 of 8 tested niche groups',
+  'ads.openSlot':'Core CPA/bookkeeping/tax Ads candidate',
+  'forecast.niche_candidates':'Discovery universe routes themes into Ads, SEO, both, or deferred',
   'seo.servicePages':'Fractional CFO + 4 backup niche clusters',
   'seo.cityPages':'National niche pages + selective CA/NY proof',
   'visibility.top3':'10%',
@@ -878,7 +927,7 @@ const BUSINESS_CONTEXT = {
   serviceAreaOnly:false,
   physicalAddress:'200 Spectrum Center Drive, STE 300, Irvine, CA 92618',
   services:[
-    {key:'fractional-cfo-outsourced-finance', label:'Fractional CFO / outsourced finance', share:45, avgTicket:4000, closeRate:25, grossMargin:65, capacity:5, adSpend:2000, cpc:28.76, cpl:822, seoDifficulty:'medium-high', benchmark:'first paid-search launch gem'},
+    {key:'fractional-cfo-outsourced-finance', label:'Fractional CFO / outsourced finance', share:45, avgTicket:4000, closeRate:25, grossMargin:65, capacity:5, adSpend:0, cpc:28.76, cpl:822, seoDifficulty:'medium-high', benchmark:'SEO-first unless live Ads expansion proves transactional demand'},
     {key:'outsourced-bookkeeping-accounting', label:'Outsourced bookkeeping & accounting', share:20, avgTicket:1800, closeRate:25, grossMargin:60, capacity:8, adSpend:0, cpc:45.85, cpl:1310, seoDifficulty:'medium', benchmark:'recurring service support theme'},
     {key:'dental-cpa', label:'Dental CPA', share:15, avgTicket:3000, closeRate:25, grossMargin:62, capacity:4, adSpend:0, cpc:20.05, cpl:573, seoDifficulty:'medium', benchmark:'strong vertical backup niche'},
     {key:'startup-accounting-safe-equity', label:'Startup accounting / SAFEs / equity', share:12, avgTicket:3000, closeRate:22, grossMargin:63, capacity:4, adSpend:0, cpc:71.06, cpl:2030, seoDifficulty:'high', benchmark:'organic authority and proof theme'},
@@ -907,7 +956,7 @@ const COMPETITORS = [
 ]
 
 const NICHE_FORECASTS = [
-  {rank:1, niche:'Fractional CFO / outsourced finance', demand:19850, cpc:28.76, competition:34, clicks:69.5, calls:2.43, clients:.61, mrr:2434, role:'first paid-search launch', note:'Best balance of volume, paid intent, and recurring-retainer fit.'},
+  {rank:1, niche:'Transactional CPA core', demand:19850, cpc:47.00, competition:54, clicks:42.6, calls:1.49, clients:.37, mrr:1489, role:'Ads + SEO candidate', note:'High-intent CPA, tax prep, and bookkeeping searches can be tested with strict negatives and qualification.'},
   {rank:2, niche:'Outsourced accounting/bookkeeping', demand:12100, cpc:45.85, competition:11, clicks:43.6, calls:1.53, clients:.38, mrr:687, role:'organic/supporting paid theme', note:'Large demand, but offer must filter out lower-value bookkeeping buyers.'},
   {rank:3, niche:'Dental CPA', demand:2050, cpc:20.05, competition:36, clicks:99.7, calls:3.49, clients:.87, mrr:2618, role:'vertical backup', note:'Attractive economics, but needs proof of dental-specific credibility before first paid push.'},
   {rank:4, niche:'E-commerce CPA/accounting', demand:1290, cpc:49.10, competition:31, clicks:40.7, calls:1.43, clients:.36, mrr:891, role:'organic page candidate', note:'Potential recurring fit, but CPC is high for first test.'},
@@ -915,6 +964,30 @@ const NICHE_FORECASTS = [
   {rank:6, niche:'Business valuation / acquisition / SBA', demand:430, cpc:10.37, competition:28, clicks:43.0, calls:1.51, clients:.38, mrr:828, role:'lead magnet', note:'Useful pain-point content if it leads into recurring finance work.'},
   {rank:7, niche:'Sales tax / nexus', demand:270, cpc:51.54, competition:37, clicks:27.0, calls:.95, clients:.24, mrr:354, role:'diagnostic content', note:'Good qualifier for larger operators, weak standalone paid economics.'},
   {rank:8, niche:'Creator / influencer CPA', demand:130, cpc:35.09, competition:63, clicks:13.0, calls:.46, clients:.11, mrr:205, role:'organic test only', note:'Too little paid-search demand for the first budget.'}
+]
+
+const THEME_DISCOVERY = [
+  {theme:'Transactional CPA core', evidence:'cpa san francisco, cpa near me, tax preparation, bookkeeping services', read:'commercial / local transactional', ads:'eligible: high intent, CPC must be capped', seo:'service landing pages + local proof', route:'both'},
+  {theme:'Fractional CFO / outsourced finance', evidence:'fractional cfo, outsourced cfo services, virtual cfo services', read:'mixed: strong strategic fit, thin local transactional proof', ads:'hold unless Planner validates transactional volume', seo:'authority cluster + comparison pages', route:'seo'},
+  {theme:'Tax strategy and planning', evidence:'tax planning, small business tax deductions, s corp tax strategy', read:'mostly informational and advisory', ads:'exclude broad informational terms', seo:'topic cluster with lead magnets', route:'seo'},
+  {theme:'Entity setup / S corp vs LLC', evidence:'s corp vs llc, should i form an s corp, llc taxed as s corp', read:'informational but high national demand', ads:'negative / remarketing only', seo:'national topical entry point', route:'seo'},
+  {theme:'Catch-up bookkeeping', evidence:'catch up bookkeeping, clean up bookkeeping services', read:'commercial but urgency/proof dependent', ads:'test only with specific offer', seo:'problem-aware service pages', route:'both'},
+  {theme:'Dental CPA', evidence:'dental cpa, accountant for dentists, dental practice bookkeeping', read:'niche commercial, proof gap', ads:'defer until proof page exists', seo:'vertical proof and niche landing pages', route:'seo'},
+  {theme:'Startup accounting', evidence:'startup accountant, startup bookkeeping, accounting for funded startups', read:'commercial + research blend', ads:'expensive; narrow exact only later', seo:'startup/founder topical map', route:'seo'},
+  {theme:'E-commerce / sales tax', evidence:'sales tax nexus, ecommerce accountant, Shopify sales tax', read:'diagnostic and high-consideration', ads:'not first paid test', seo:'diagnostic authority cluster', route:'seo'}
+]
+
+const KEYWORD_UNIVERSE = [
+  {keyword:'cpa san francisco', theme:'Transactional CPA core', local:'210/mo', national:'2,900/mo', cpc:'$34-$72', tag:'transactional', used:'both'},
+  {keyword:'bookkeeping services', theme:'Transactional CPA core', local:'260/mo', national:'12,100/mo', cpc:'$28-$64', tag:'commercial', used:'both'},
+  {keyword:'tax preparation', theme:'Transactional CPA core', local:'480/mo', national:'74,000/mo', cpc:'$18-$49', tag:'transactional', used:'both'},
+  {keyword:'fractional cfo services', theme:'Fractional CFO / outsourced finance', local:'20/mo', national:'1,900/mo', cpc:'$22-$61', tag:'commercial', used:'seo'},
+  {keyword:'outsourced finance department', theme:'Fractional CFO / outsourced finance', local:'10/mo', national:'390/mo', cpc:'$18-$45', tag:'commercial', used:'seo'},
+  {keyword:'s corp vs llc', theme:'Entity setup / S corp vs LLC', local:'140/mo', national:'27,100/mo', cpc:'$3-$14', tag:'informational', used:'seo'},
+  {keyword:'how much does a cpa cost', theme:'Transactional CPA core', local:'10/mo', national:'1,600/mo', cpc:'$2-$11', tag:'informational', used:'seo'},
+  {keyword:'small business tax deductions', theme:'Tax strategy and planning', local:'30/mo', national:'2,400/mo', cpc:'$4-$18', tag:'informational', used:'seo'},
+  {keyword:'catch up bookkeeping', theme:'Catch-up bookkeeping', local:'40/mo', national:'1,300/mo', cpc:'$16-$42', tag:'commercial', used:'both'},
+  {keyword:'do i need a bookkeeper', theme:'Transactional CPA core', local:'10/mo', national:'590/mo', cpc:'$2-$9', tag:'informational', used:'seo'}
 ]
 
 const MODEL_LAYERS = {
@@ -925,7 +998,7 @@ const MODEL_LAYERS = {
     ['GBP','GBP Profile Accuracy','Primary category, services, images, profile fields, and office details.',58,'fair','Office locations and category are public, but GBP categories, photos, services, and profile completeness need confirmation.']
   ],
   serviceLocation:[
-    ['ADS','Google Ads','Search volume, CPC, intent, and conversion economics vary by selected niche plus service area.',68,'fair','Keyword Planner has identified fractional CFO / outsourced finance as the first paid-search candidate; account history and conversion tracking still need access.'],
+    ['ADS','Google Ads','Search volume, CPC, intent, and conversion economics vary by selected theme plus service area.',68,'fair','The current discovery universe routes core CPA/bookkeeping/tax terms to Ads eligibility while fractional CFO remains SEO-first until transactional paid demand is proven. Account history and conversion tracking still need access.'],
     ['DIR','Directories / LSA','CPA directory, Google screening, and Local Services eligibility vary by category and market.',28,'weak','Treat as unresolved: CPA eligibility and screening are not verified, so this is not included as an active channel.'],
     ['SEO','SEO / Maps rank','Rank, landing pages, and difficulty must be evaluated per niche, service, and proof cluster.',44,'weak','National niche pages matter more than map-pack proximity; audit issues and thin proof still limit organic opportunity capture.'],
     ['AREA','Service areas','National remote markets behave differently from office-based map-pack proximity.',61,'fair','All-50-state CPA reach creates opportunity, but requires niche authority rather than only local pack coverage.']
@@ -933,7 +1006,7 @@ const MODEL_LAYERS = {
 }
 
 let revenueChannels = [
-  {id:'google_ads', name:'Google Ads', source:'Keyword Planner modeled: fractional CFO / outsourced finance is the first paid-search launch candidate; other niches stay organic until validated.', status:'modeled', jobs:.61, avgJob:4000, cost:2000, locked:true, planEnabled:true},
+  {id:'google_ads', name:'Google Ads', source:'Discovery-modeled: Ads uses only transactional/commercial core CPA, bookkeeping, and tax terms; informational and topical terms become negatives or SEO-only.', status:'modeled', jobs:.37, avgJob:4000, cost:2000, locked:true, planEnabled:true},
   {id:'lsa', name:'Directories / LSA', source:'Hard gate: keep off until CPA category eligibility, screening, directory economics, and account verification are confirmed.', status:'blocked', jobs:0, avgJob:1300, cost:0, locked:true, planEnabled:false},
   {id:'seo_maps', name:'SEO / content', source:'Modeled: organic coverage across fractional CFO, dental CPA, startup finance, e-commerce, and sales tax niches compounds over 3-6 months.', status:'modeled', jobs:2.6, avgJob:2600, cost:1800, locked:true, planEnabled:true},
   {id:'website_inbound', name:'Website / inbound', source:'Owner input — current monthly consultation requests and average first-retainer value are not API-visible.', status:'confirm', jobs:0, avgJob:0, cost:0, locked:false, planEnabled:false},
@@ -977,7 +1050,7 @@ const COMPONENTS = [
     signals:[
       ['component.visibility.top3','Local top 3 coverage','10% modeled','coverage rate',30,28,'Rank-grid evidence still needs API pull; offices create potential, but current local coverage is modeled weak'],
       ['component.visibility.notFound','Not-found coverage','64% modeled','inverse coverage',30,20,'Large part of the service-location grid is assumed not visible until rank data is pulled'],
-      ['component.visibility.keywordDemand','Search demand','niche x service area','demand index',82,18,'Keyword Planner shows 19,850 monthly searches for the fractional CFO / outsourced finance group nationally'],
+      ['component.visibility.keywordDemand','Search demand','theme x service area','demand index',82,18,'Keyword expansion should be run per discovered theme; prototype rows show both local transactional and national informational demand'],
       ['component.visibility.content','Niche coverage','5 niche clusters','coverage ratio',58,18,'Coverage should be evaluated as niche-service intent, not only broad CPA service pages'],
       ['component.visibility.competition','Competitor gap','4 modeled competitors','quality state',56,16,'Competitor gap uses the named competition set shown in the Your competition today section']
     ]
@@ -988,9 +1061,9 @@ const COMPONENTS = [
     role:'volume',
     effectLabel:'paid-search readiness',
     signals:[
-      ['component.ads.intent','Keyword intent','fractional CFO','quality state',86,24,'Fractional CFO searches map directly to the desired higher-retainer recurring work'],
-      ['component.ads.cpl','Modeled CPL','$822 lead placeholder','efficiency ratio',58,24,'CPL is modeled from $28.76 CPC and a 3.5% click-to-booked-call assumption until account data replaces it'],
-      ['component.ads.slot','Auction pressure','medium / 34 index','quality state',62,16,'Keyword Planner returned medium aggregate competition for the first paid-search candidate'],
+      ['component.ads.intent','Keyword intent','core CPA terms','quality state',78,24,'Ads should include only transactional/commercial terms after LLM classification; informational terms become negatives or SEO-only'],
+      ['component.ads.cpl','Modeled CPL','$1,343 lead placeholder','efficiency ratio',48,24,'CPL is modeled from a brutal $47 blended CPA click and a 3.5% click-to-booked-call assumption until account data replaces it'],
+      ['component.ads.slot','Auction pressure','high / CPA index','quality state',46,16,'CPA clicks are expensive; campaign scope must use tight intent, negatives, and budget guardrails'],
       ['component.ads.tracking','Conversion tracking','partial','quality state',52,20,'Consultation-to-client feedback must be wired before scaling spend'],
       ['component.ads.offer','Offer clarity','staff alternative','quality state',66,16,'The meeting surfaced a clear offer: full CPA + fractional CFO support as a staff alternative']
     ]
@@ -1026,7 +1099,7 @@ let viewMode = 'both'
 let customObjective = ''
 let selectedHorizonIndex = 0
 let adsDetailExcluded = {
-  services:new Set(BUSINESS_CONTEXT.services.slice(1).map(service => service.key)),
+  services:new Set(),
   markets:new Set(),
   types:new Set()
 }
@@ -1136,7 +1209,7 @@ function renderGoogleAdsDetail(){
   const filtered = filteredServiceLocationPairs()
   document.getElementById('googleAdsFilters').innerHTML = `
     <div class="detail-filter-summary">
-      <span><b>${filtered.length} of ${pairs.length}</b> service-location rows shown. Default view focuses on the first paid-search niche; expand filters to inspect every service and market.</span>
+      <span><b>${filtered.length} of ${pairs.length}</b> service-location rows shown. Default view focuses on the current Ads-eligible core terms; expand filters to inspect every service and market.</span>
       <button class="btn" type="button" data-ads-detail-reset>Show all</button>
     </div>
     <div class="detail-filter-group"><h4>Services</h4><div class="detail-filter-options">${BUSINESS_CONTEXT.services.map(service => adsDetailFilterChip('services',service.key,service.label)).join('')}</div></div>
@@ -1165,6 +1238,41 @@ function renderNicheForecasts(){
       <td>${one(row.clicks)} clicks · ${one(row.calls)} calls</td>
       <td>${one(row.clients)}<span class="channel-source">${money(row.mrr)} modeled new MRR</span></td>
       <td><span class="channel-confirm">${esc(row.role)}</span></td>
+    </tr>
+  `).join('')
+}
+
+function routeBadge(route){
+  const cls = route === 'both' ? 'both' : route === 'seo' ? 'seo' : route === 'ads' ? 'ads' : 'negative'
+  const label = route === 'both' ? 'Ads + SEO' : route === 'seo' ? 'SEO-only' : route === 'ads' ? 'Ads-only' : 'exclude'
+  return `<span class="keyword-pill ${cls}">${label}</span>`
+}
+
+function intentBadge(tag, used){
+  const cls = tag === 'informational' ? 'seo' : used === 'both' ? 'both' : used === 'ads' ? 'ads' : 'seo'
+  return `<span class="keyword-pill ${cls}">${esc(tag)}</span>`
+}
+
+function renderKeywordDiscovery(){
+  document.getElementById('themeDiscoveryRows').innerHTML = THEME_DISCOVERY.map(row => `
+    <tr>
+      <td><b>${esc(row.theme)}</b></td>
+      <td>${esc(row.evidence)}</td>
+      <td>${esc(row.read)}</td>
+      <td>${esc(row.ads)}</td>
+      <td>${esc(row.seo)}</td>
+      <td>${routeBadge(row.route)}</td>
+    </tr>
+  `).join('')
+  document.getElementById('keywordUniverseRows').innerHTML = KEYWORD_UNIVERSE.map(row => `
+    <tr>
+      <td><b>${esc(row.keyword)}</b></td>
+      <td>${esc(row.theme)}</td>
+      <td>${esc(row.local)}</td>
+      <td>${esc(row.national)}</td>
+      <td>${esc(row.cpc)}</td>
+      <td>${intentBadge(row.tag,row.used)}</td>
+      <td>${routeBadge(row.used)}</td>
     </tr>
   `).join('')
 }
@@ -1759,7 +1867,7 @@ function renderDrilldown(){
   document.getElementById('websiteMultiplier').textContent = one(owner.websiteMultiplier) + 'x'
   document.getElementById('websiteBar').style.width = Math.max(18,Math.min(100,owner.websiteMultiplier*58)) + '%'
   document.getElementById('paidText').textContent =
-    `Keyword Planner shows ${val('search.monthlyDemand')} monthly searches for the fractional CFO / outsourced finance cluster at ${val('search.modeledCpc')} modeled CPC. Treat this as the first paid-search test while Google Ads account history and conversion tracking are connected.`
+    `Keyword discovery shows ${val('search.monthlyDemand')} monthly searches in the modeled universe at ${val('search.modeledCpc')} legacy CPC. Treat this as a placeholder until live DataForSEO / Keyword Planner expansion and LLM intent routing replace the embedded sample rows.`
   document.getElementById('organicText').textContent =
     BUSINESS_CONTEXT.serviceAreaOnly
       ? `Service-area-only mode: organic/local organic pages carry more of the forecast because there is no physical storefront anchor for map-pack proximity.`
@@ -1779,9 +1887,9 @@ function renderDrilldown(){
 
 const MODULES = [
   ['RG','Reviews/GBP','Review request loop, GBP category/content cleanup, proof placement, and monthly review velocity target.'],
-  ['GA','Google Ads','Focused fractional CFO / outsourced finance test with consultation-to-client feedback and CAC guardrails.'],
+  ['GA','Google Ads','Discovery-routed high-intent Ads bundle with strict negatives, consultation-to-client feedback, and CAC guardrails.'],
   ['DR','Directories / LSA','Eligibility research, screening checklist, directory economics, and incremental consultation tracking if viable.'],
-  ['WS','Web/SEO','Audit cleanup, consult path, proof blocks, fractional CFO landing page, organic niche pages, and conversion event measurement.'],
+  ['WS','Web/SEO','Audit cleanup, consult path, proof blocks, SEO-first fractional CFO authority, organic niche pages, and conversion event measurement.'],
   ['ON','Onboarding','Access collection, source baseline, offer boundaries, reporting setup, and first 30-day operating cadence.'],
   ['AT','Source/channel attribution','New-client source capture, service-line economics, CAC/ROAS reporting, and assumption replacement.']
 ]
@@ -1866,8 +1974,8 @@ const PROVENANCE = [
   ['model.service_location_layer','Two-layer model, Revenue channels detail','report architecture assumption','Google Ads, Directories/LSA, SEO rank, search volume, and CPC are modeled as niche plus service-area pairs','medium','resolved_assumed','read only','Prevents forecasts from using one flat market/category value for all niches and services'],
   ['model.business_layer_scores','Two-layer model','FC calibrated score summary','Business-level status scores summarize current GBP reputation, website, competitor context, and GBP profile accuracy before service-location forecasting','medium','resolved_assumed','fc editable','Shows today’s business-level status quo as weak/fair/strong'],
   ['model.service_location_layer_scores','Two-layer model','FC calibrated score summary','Service-location status scores summarize Ads, Directories/LSA, SEO/Maps, and service-area readiness across service-location pairs','medium','resolved_assumed','fc editable','Shows today’s service-location status quo as weak/fair/strong'],
-  ['forecast.niche_candidates','Niche forecast table, Revenue channels','Google Ads Keyword Planner via FlashCrafter manager account','A 15-seed national Keyword Planner batch returned 240 rows and ranked fractional CFO / outsourced finance as the first paid-search candidate','high','source-backed; needs client account validation','fc editable','Selects the first paid-search test without spreading budget across every niche'],
-  ['benchmark.service_location_search_cpc','Revenue channels, Google Ads detail','Keyword Planner + FC calibrated assumptions','Search volume and CPC are varied by niche, service share, and service-area difficulty; fractional CFO is modeled at 19,850 monthly searches and $28.76 CPC','high','source-backed; needs client account validation','fc editable','Explains why the first paid test should not inherit generic CPA economics'],
+  ['forecast.niche_candidates','Niche forecast table, Revenue channels','Google Ads Keyword Planner via FlashCrafter manager account + LLM routing','The embedded sample rows demonstrate discovery-first routing; production must run live expansion per theme before selecting the paid candidate','medium','prototype embedded; needs live expansion','fc editable','Prevents selecting the first paid test before the keyword universe is discovered'],
+  ['benchmark.service_location_search_cpc','Revenue channels, Google Ads detail','Keyword Planner/DataForSEO + FC calibrated assumptions','Search volume and CPC are varied by theme, service share, and service-area difficulty; Ads should use low/high CPC by location and keyword group','medium','prototype embedded; needs live expansion','fc editable','Explains why paid forecasts must not use one flat CPA category value'],
   ['channels.google_ads','Revenue channels','derived from forecast assumptions','Google Ads jobs, ticket, and spend are modeled from spend, CPL, close rate, and service mix','medium','scenario only','derived','Shows modeled paid-search revenue separate from other revenue channels'],
   ['channels.lsa','Revenue channels','derived from forecast assumptions','Directories / LSA are hard-blocked until category eligibility, screening, and economics are verified','low','needs verification','derived','Shows unresolved directory/LSA opportunity without adding phantom jobs'],
   ['channels.seo_maps','Revenue channels','derived from forecast assumptions','SEO/Maps/content jobs and costs come from GBP/Web/SEO lead assumptions and service investment','medium','scenario only','derived','Separates organic/local revenue from paid channels'],
@@ -1877,9 +1985,12 @@ const PROVENANCE = [
   ['plan.channels','Build the plan: revenue channels, Revenue channels','scenario toggle from revenueChannels','Build-the-plan rows are generated from the same revenue channel list used by the page; Directories / LSA remain locked until verified','medium','scenario only','owner editable','Keeps the chart controls aligned with modeled, owner-added, and confirmed channels'],
   ['plan.capacity','Build the plan chart panel','owner input','New clients the business can onboard per month, distributed across service-level capacity assumptions','medium','needs owner confirmation','owner editable','Caps the modeled upside so the plan does not exceed operational capacity'],
   ['strategy.execution_pathway','Execution pathway','AI-derived + calculated','Objective, business context, service themes, channel candidates, and approval gates are connected into one execution pathway','medium','resolved_assumed','fc editable','Explains how top-down strategy becomes downstream Ads and SEO kickoff inputs without implying automatic execution'],
-  ['strategy.service_themes','Execution pathway: service themes','meeting notes + FC calibrated service taxonomy','Service themes are ranked by objective fit, economics, demand, proof readiness, and channel suitability','medium','needs owner confirmation','owner editable','Controls which themes become Ads candidates, SEO blueprint seeds, or deferred research'],
-  ['ads.forecast_candidates','Execution pathway: Ads forecast candidates','Google Keyword Planner + calculated funnel','Ads candidates convert approved service themes into Planner-grounded spend, click, lead, client, CAC, and revenue forecasts','high','source-backed; needs client account validation','fc editable','Creates the AdsLaunchCandidate contract before any Google Ads setup or spend'],
-  ['seo.blueprint_seeds','Execution pathway: SEO blueprint seeds','SEO Sniper strategy model + website audit + competitor context','SEO seeds convert approved themes, locations, service areas, proof constraints, and exclusions into blueprint-generation inputs','medium','source-backed plus analysis; needs content/proof approval','fc editable','Creates the SeoBlueprintSeed contract before topical map or content generation'],
+  ['strategy.service_themes','Live discovery glue: Glue A','LLM-derived from identity, meeting notes, website, services, locations, and objective','Service themes are discovered by LLM and used as the shared pivot for Ads, SEO, assumptions, and approval gates','medium','prototype embedded; production requires live LLM run','fc editable','Prevents hardcoding the paid or SEO strategy before discovery'],
+  ['keywords.discovery_universe','Live discovery glue: Glue B','DataForSEO / Google Keyword Planner expansion per theme','Keyword universe stores related terms, local/national volume, low/high CPC, competition, and raw provider rows per discovered theme','medium','prototype embedded; production requires live API expansion','fc editable','Feeds both Ads and SEO from one source of keyword truth'],
+  ['keywords.intent_classification','Live discovery glue: LLM classifier','LLM-derived from keyword pool, SERP clues, volumes, CPC, and service economics','Each keyword is tagged as transactional, commercial, informational, topical, negative, or ambiguous and assigned back to a theme','medium','prototype embedded; production requires LLM classifier run','fc editable','Lets Ads and SEO use different lenses without deterministic keyword heuristics'],
+  ['ads.forecast_candidates','Live discovery glue: Glue C1 Ads bundle','LLM-classified high-intent keywords + Keyword Planner/DataForSEO CPC and volume + calculated funnel','Ads candidates convert transactional/commercial keywords into ad groups, negatives, low/base/high CPC forecasts, spend scenarios, CAC, and revenue','high','source-backed; needs client account validation','fc editable','Creates the AdsLaunchCandidate contract before any Google Ads setup or spend'],
+  ['seo.blueprint_seeds','Live discovery glue: Glue C2 SEO bundle','LLM-classified informational/topical keywords + SEO Sniper strategy model + audit + competitors','SEO seeds convert all approved themes plus informational long-tail into SiteInfo, topical clusters, page architecture inputs, and Sniper run controls','medium','source-backed plus analysis; needs content/proof approval','fc editable','Creates the SeoBlueprintSeed contract before topical map or content generation'],
+  ['strategy.routing','Live discovery glue: Glue D routing','LLM-derived synthesis + deterministic approval state','Routing marks each theme as Ads, SEO, both, deferred, or excluded based on intent, CPC, volume, proof, service economics, and objective fit','medium','prototype embedded; production requires LLM synthesis','fc editable','Explains why a theme such as fractional CFO may route SEO-only if transactional Ads volume is not proven'],
   ['approval.ads_budget_gate','Execution pathway: approval gates','workflow status','Ads budget gate requires owner and FC approval of budget cap, offer, tracking, destination page, and negatives before spend','medium','needs approval','workflow','Blocks Google Ads setup from turning a forecast into unapproved media spend'],
   ['approval.ads_learning_gate','Execution pathway: approval gates','workflow status','Ads learning gate defines continue, pause, and pivot criteria based on qualified calls, CAC, CPL, and lead quality','medium','needs approval','workflow','Keeps the paid test tied to business outcomes instead of clicks'],
   ['approval.seo_scope_gate','Execution pathway: approval gates','workflow status','SEO scope gate requires approval of first-sprint service pages, proof sources, content scope, and publishing access','medium','needs approval','workflow','Blocks SEO Sniper blueprint/content generation until scope and proof are accepted'],
@@ -1900,9 +2011,9 @@ const PROVENANCE = [
   ['channel.paidCpl','Source/channel economics card','derived','Blended paid CPL from Google Ads and verified directory/LSA assumptions','medium','scenario only','derived','Explains CAC and spend efficiency'],
   ['website.quoteFriction','Website/conversion strength card','supplied website audit + FC assessment','Consult path exists but audit issues and proof placement suggest conversion friction','medium','needs conversion tracking','fc editable','Prioritizes web conversion fixes'],
   ['website.proofDepth','Website/conversion strength card','supplied website audit + FC assessment','Audit and page review suggest service proof should be more visible across consultation paths','medium','needs owner proof library','fc editable','Supports proof placement recommendation'],
-  ['search.monthlyDemand','Paid traffic opportunity card','Google Ads Keyword Planner','Fractional CFO / outsourced finance keyword cluster returned 19,850 national monthly searches','high','source-backed; needs client account validation','fc editable','Sizes first paid-search opportunity'],
-  ['search.modeledCpc','Paid traffic opportunity card','Google Ads Keyword Planner + FC model','Weighted modeled CPC for the fractional CFO / outsourced finance cluster is $28.76','high','source-backed; needs client account validation','fc editable','Feeds paid traffic economics'],
-  ['ads.openSlot','Paid traffic opportunity card','Google Ads Keyword Planner + meeting notes','Fractional CFO / outsourced finance is selected as the first paid-search slot based on demand, CPC, and recurring-retainer fit','high','source-backed; needs ad account validation','fc editable','Supports initial paid-search test'],
+  ['search.monthlyDemand','Paid traffic opportunity card','Google Ads Keyword Planner/DataForSEO','Monthly demand must be pulled per discovered theme and geography; embedded sample rows are only proof of shape','medium','prototype embedded; needs live expansion','fc editable','Sizes paid and organic opportunity without assuming the winning theme'],
+  ['search.modeledCpc','Paid traffic opportunity card','Google Ads Keyword Planner/DataForSEO + FC model','CPC should use low/high ranges per keyword group and location; CPA clicks are expected to be expensive','medium','prototype embedded; needs live expansion','fc editable','Feeds paid traffic economics'],
+  ['ads.openSlot','Paid traffic opportunity card','LLM routing + Google Ads evidence','The Ads slot should be selected only after live expansion and classification; current read favors transactional core terms over broad fractional CFO paid bidding','medium','prototype embedded; needs ad account validation','fc editable','Supports initial paid-search test without hardcoding the winner'],
   ['seo.servicePages','Organic/SEO card','meeting notes + website audit + Keyword Planner','Organic coverage should include fractional CFO plus four backup niche clusters: dental CPA, startup finance, e-commerce/sales tax, and creator/accounting research','medium','source-backed plus analysis','fc editable','Guides SEO work scope'],
   ['seo.cityPages','Organic/SEO card','meeting notes + public contact page','National niche pages and selective CA/NY proof matter more than city-page volume because Sugam can serve all 50 states','medium','source-backed plus analysis','fc editable','Guides local/national coverage work'],
   ['visibility.top3','Top service-area map row, organic card','mock rank-grid over OpenStreetMap','Prototype grid assumes limited top-3 map coverage per service-location pair','mock','mock unresolved','fc editable','Sets local visibility objective'],
@@ -1977,6 +2088,7 @@ function renderAll(){
   renderBenchmarks()
   renderRevenueChannels()
   renderNicheForecasts()
+  renderKeywordDiscovery()
   renderScoringModel()
   renderForecast()
   renderDrilldown()
