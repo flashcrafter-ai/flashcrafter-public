@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GLZ Drywall Message Approval Preview | July 2026</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #18212f;
+        --muted: #5c6778;
+        --line: #d8dde6;
+        --panel: #f6f8fb;
+        --accent: #126c58;
+        --accent-soft: #e7f3ef;
+        --warn: #9a5a13;
+        --warn-soft: #fff4df;
+        --bg: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 56px;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+        margin-bottom: 28px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin: 0 0 8px;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 52px);
+        line-height: 1;
+        letter-spacing: 0;
+        margin: 0 0 14px;
+      }
+      h2 {
+        font-size: 23px;
+        line-height: 1.2;
+        margin: 32px 0 12px;
+      }
+      h3 {
+        font-size: 17px;
+        margin: 0 0 8px;
+      }
+      p { margin: 0 0 14px; }
+      .subhead {
+        color: var(--muted);
+        max-width: 760px;
+        font-size: 18px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        font-size: 13px;
+        background: #fff;
+      }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        margin: 16px 0;
+      }
+      .approval {
+        background: var(--warn-soft);
+        border: 1px solid #f0d49b;
+        border-radius: 8px;
+        padding: 18px;
+        margin: 20px 0;
+      }
+      .message {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 22px;
+        margin: 18px 0;
+        background: #fff;
+        box-shadow: 0 10px 24px rgba(24, 33, 47, .08);
+      }
+      .message p { margin-bottom: 16px; }
+      .label {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      li { margin: 6px 0; }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        margin-top: 36px;
+        padding-top: 16px;
+        font-size: 13px;
+      }
+      @media (max-width: 520px) {
+        main { width: min(100% - 24px, 960px); padding-top: 28px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Approval preview</p>
+        <h1>GLZ Drywall report send and meeting reschedule copy</h1>
+        <p class="subhead">Draft client message for Richard / GLZ. This is a preview for approval only. Sending must go through the normal FlashCrafter communications gate before any message is delivered.</p>
+        <div class="meta">
+          <span class="pill">Prepared: July 8, 2026</span>
+          <span class="pill">Recipient: Richard / GLZ Drywall</span>
+          <span class="pill">Channel: To be approved before sending</span>
+        </div>
+      </header>
+
+      <section aria-labelledby="routing">
+        <h2 id="routing">Approval Status</h2>
+        <div class="approval">
+          <h3>Not sent</h3>
+          <p>This packet is only a message preview. The final message should be reviewed, approved, and sent through the normal client communications gate. No GHL reminder or outbound client communication is created by this artifact.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="draft">
+        <h2 id="draft">Draft Message Copy</h2>
+        <div class="message">
+          <span class="label">Subject / opening</span>
+          <p>Richard, I put together a quick performance report for GLZ covering May 8 through July 7.</p>
+
+          <span class="label">Body</span>
+          <p>The drywall campaign generated 2,311 impressions, 130 clicks, and 25 tracked leads from $2,030.72 in ad spend. That puts the average cost per lead at $81.23, with a 5.63% click-through rate and $15.62 average cost per click.</p>
+
+          <p>The strongest activity came from the active <strong>glz-01 - Drywall Repair &amp; Install</strong> campaign. The next optimization work I recommend is tightening the search terms, keeping coverage on the drywall searches that are producing leads, and reducing spend on searches that clicked but did not turn into tracked leads.</p>
+
+          <p>Here is the report for review: [insert approved public report link]</p>
+
+          <p>Can we get a short meeting rescheduled so we can review the lead quality together and confirm which drywall jobs you want the campaign to prioritize next?</p>
+
+          <span class="label">Close</span>
+          <p>Thanks,<br>Tom</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="notes">
+        <h2 id="notes">Approval Notes</h2>
+        <div class="panel">
+          <ul>
+            <li>The final send should include the approved public report URL.</li>
+            <li>The message is framed around results and next-step review, not billing or internal operations.</li>
+            <li>Before sending, confirm the recipient/channel and route through the standard comms approval gate.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        Prepared for internal approval and client-safe review. This artifact does not send messages, schedule reminders, or modify GHL.
+      </footer>
+    </main>
+  </body>
+</html>

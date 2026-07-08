@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GLZ Drywall Performance Report | May 8 - July 7, 2026</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #18212f;
+        --muted: #5c6778;
+        --line: #d8dde6;
+        --panel: #f6f8fb;
+        --accent: #126c58;
+        --accent-soft: #e7f3ef;
+        --warn: #9a5a13;
+        --warn-soft: #fff4df;
+        --bg: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 56px;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+        margin-bottom: 28px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin: 0 0 8px;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1;
+        letter-spacing: 0;
+        margin: 0 0 14px;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 34px 0 12px;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      p { margin: 0 0 14px; }
+      .subhead {
+        color: var(--muted);
+        max-width: 760px;
+        font-size: 18px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        font-size: 13px;
+        background: #fff;
+      }
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 16px;
+        background: #fff;
+        min-height: 118px;
+      }
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+      .metric strong {
+        display: block;
+        font-size: 28px;
+        line-height: 1.1;
+      }
+      .metric small {
+        display: block;
+        color: var(--muted);
+        margin-top: 8px;
+        font-size: 12px;
+      }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        margin: 16px 0;
+      }
+      .callout {
+        background: var(--accent-soft);
+        border: 1px solid #b9dcd2;
+        border-radius: 8px;
+        padding: 18px;
+        margin: 22px 0;
+      }
+      .warn {
+        background: var(--warn-soft);
+        border-color: #f0d49b;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 14px 0 22px;
+        font-size: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 10px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        background: #f9fafc;
+      }
+      .num { text-align: right; white-space: nowrap; }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      li { margin: 6px 0; }
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        margin-top: 36px;
+        padding-top: 16px;
+        font-size: 13px;
+      }
+      @media (max-width: 820px) {
+        main { width: min(100% - 24px, 1120px); padding-top: 28px; }
+        .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        table { display: block; overflow-x: auto; white-space: nowrap; }
+      }
+      @media (max-width: 520px) {
+        .metric-grid { grid-template-columns: 1fr; }
+        .metric strong { font-size: 24px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Google Ads performance review</p>
+        <h1>GLZ Drywall performance report</h1>
+        <p class="subhead">A client-facing summary of Google Ads results for May 8 through July 7, 2026, focused on lead volume, spend efficiency, and the next improvements for the active drywall campaign.</p>
+        <div class="meta">
+          <span class="pill">Report period: May 8 - July 7, 2026</span>
+          <span class="pill">Prepared: July 8, 2026</span>
+          <span class="pill">Active campaign: glz-01 - Drywall Repair &amp; Install</span>
+        </div>
+      </header>
+
+      <section aria-labelledby="summary">
+        <h2 id="summary">Summary</h2>
+        <div class="metric-grid">
+          <div class="metric"><span>Impressions</span><strong>2,311</strong><small>Times ads appeared in search results.</small></div>
+          <div class="metric"><span>Clicks</span><strong>130</strong><small>People who clicked through from the ads.</small></div>
+          <div class="metric"><span>Leads / conversions</span><strong>25</strong><small>Tracked lead actions during the period.</small></div>
+          <div class="metric"><span>Ad spend</span><strong>$2,030.72</strong><small>Total Google Ads spend.</small></div>
+          <div class="metric"><span>Click-through rate</span><strong>5.63%</strong><small>Clicks divided by impressions.</small></div>
+          <div class="metric"><span>Average CPC</span><strong>$15.62</strong><small>Average cost per click.</small></div>
+          <div class="metric"><span>Cost per lead</span><strong>$81.23</strong><small>Average cost per tracked lead.</small></div>
+          <div class="metric"><span>Conversion rate</span><strong>19.23%</strong><small>Tracked lead rate from ad clicks.</small></div>
+        </div>
+        <div class="callout">
+          <h3>Bottom line</h3>
+          <p>The active drywall repair and installation campaign generated 25 tracked leads from 130 clicks at an average cost of $81.23 per lead. The campaign is producing measurable demand, and the next work should focus on tightening keyword quality and shifting budget toward the search terms that are already converting efficiently.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="campaign">
+        <h2 id="campaign">Campaign Performance</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Status</th>
+              <th class="num">Impressions</th>
+              <th class="num">Clicks</th>
+              <th class="num">Spend</th>
+              <th class="num">Leads</th>
+              <th class="num">CTR</th>
+              <th class="num">Avg. CPC</th>
+              <th class="num">CPL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>glz-01 - Drywall Repair &amp; Install</td>
+              <td>Active</td>
+              <td class="num">2,311</td>
+              <td class="num">130</td>
+              <td class="num">$2,030.72</td>
+              <td class="num">25</td>
+              <td class="num">5.63%</td>
+              <td class="num">$15.62</td>
+              <td class="num">$81.23</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="terms">
+        <h2 id="terms">What Is Working</h2>
+        <div class="panel">
+          <h3>Strong lead-producing searches</h3>
+          <p>Several drywall repair searches converted below the account's average cost per lead, including "drywall crack repair," "dry wallers near me," "repair drywall near me," "wall fixer near me," "drywall services near me," and "dry wall installation."</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Search term</th>
+              <th class="num">Clicks</th>
+              <th class="num">Spend</th>
+              <th class="num">Leads</th>
+              <th class="num">CPL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>drywall crack repair</td><td class="num">1</td><td class="num">$6.42</td><td class="num">2</td><td class="num">$3.21</td></tr>
+            <tr><td>dry wallers near me</td><td class="num">2</td><td class="num">$15.27</td><td class="num">1</td><td class="num">$15.27</td></tr>
+            <tr><td>repair drywall near me</td><td class="num">1</td><td class="num">$15.96</td><td class="num">1</td><td class="num">$15.96</td></tr>
+            <tr><td>wall fixer near me</td><td class="num">1</td><td class="num">$16.79</td><td class="num">1</td><td class="num">$16.79</td></tr>
+            <tr><td>drywall services near me</td><td class="num">1</td><td class="num">$16.93</td><td class="num">1</td><td class="num">$16.93</td></tr>
+            <tr><td>dry wall installation</td><td class="num">1</td><td class="num">$22.25</td><td class="num">1</td><td class="num">$22.25</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="opportunities">
+        <h2 id="opportunities">Improvement Opportunities</h2>
+        <div class="panel">
+          <h3>Keyword quality and spend control</h3>
+          <p>Some higher-volume drywall searches are producing leads, but they also carry higher average click costs or lower quality scores. The practical next step is to improve ad and landing-page alignment around the strongest drywall repair terms, while reducing wasted spend on searches that have clicked without converting.</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Evidence</th>
+              <th>Client-safe next step</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High-volume core terms</td>
+              <td>"sheetrock repair service" and "drywall installation service" produced 15 combined leads.</td>
+              <td>Keep coverage active and continue improving ad relevance for these services.</td>
+            </tr>
+            <tr>
+              <td>Higher-cost near-me terms</td>
+              <td>"drywallers near me" and "drywall contractors near me" converted, but at $130.13 and $125.16 per lead.</td>
+              <td>Review bids, ad copy, and landing-page match before scaling these terms further.</td>
+            </tr>
+            <tr>
+              <td>Clicked terms with no leads</td>
+              <td>"drywall repair columbus ohio" spent $85.84 with 4 clicks and no tracked leads in this period.</td>
+              <td>Add negatives or tighten matching where searches are not producing leads.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="next">
+        <h2 id="next">Recommended Next Steps</h2>
+        <div class="callout warn">
+          <h3>Suggested agenda for the next client check-in</h3>
+          <ul>
+            <li>Review whether the 25 tracked leads match what GLZ saw by phone, form, and text.</li>
+            <li>Confirm which drywall lead types are most valuable: repair, installation, ceiling repair, water damage, or sheetrock work.</li>
+            <li>Approve keyword cleanup so spend moves away from non-converting searches and toward proven repair terms.</li>
+            <li>Decide whether to keep the current drywall campaign as the main focus before expanding other service campaigns.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        Data source: Google Ads campaign, keyword, and search-term exports for May 8 - July 7, 2026. This report is prepared for client review and omits internal operational notes.
+      </footer>
+    </main>
+  </body>
+</html>
