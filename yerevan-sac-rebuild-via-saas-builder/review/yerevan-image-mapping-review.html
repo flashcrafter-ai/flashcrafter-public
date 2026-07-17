@@ -25,8 +25,8 @@
       color: var(--text);
       font: 15px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    button, input, select { font: inherit; }
-    button, select, input[type="search"] {
+    button, input, select, textarea { font: inherit; }
+    button, select, input[type="search"], textarea {
       color: var(--text);
       background: #171512;
       border: 1px solid var(--line);
@@ -137,6 +137,17 @@
     .choice b, .choice small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .choice small { color: var(--muted); margin-top: 3px; }
     .choice.selected { border-color: var(--green); box-shadow: 0 0 0 1px var(--green) inset; }
+    .decision-panel { padding: 15px; border-top: 1px solid var(--line); background: #151310; }
+    .decision-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .decision-heading span { color: var(--muted); font-size: 12px; }
+    .decision-actions { display: grid; grid-template-columns: .8fr 1fr 1.45fr; gap: 8px; }
+    .decision-action { min-height: 44px; text-align: center; }
+    .decision-action[data-decision="keep"].selected { color: #17120a; background: var(--gold); border-color: var(--gold); font-weight: 750; }
+    .decision-action[data-decision="replace"].selected { color: #08130b; background: var(--green); border-color: var(--green); font-weight: 750; }
+    .decision-action[data-decision="remove"].selected { color: #1b0807; background: var(--red); border-color: var(--red); font-weight: 750; }
+    .review-note-label { display: block; margin-top: 11px; color: var(--muted); font-size: 12px; }
+    .review-note { display: block; width: 100%; min-height: 66px; margin-top: 5px; padding: 9px 10px; resize: vertical; }
+    .review-safety { margin-top: 8px; color: #928679; font-size: 11px; }
     .empty { padding: 60px 20px; text-align: center; color: var(--muted); }
     .load-status { padding: 24px; text-align: center; color: var(--muted); }
     @media (max-width: 1080px) {
@@ -150,6 +161,7 @@
       .controls input { grid-column: 1 / -1; }
       .compare, .compare.has-override { grid-template-columns: 1fr; }
       .choices { grid-template-columns: 1fr; }
+      .decision-actions { grid-template-columns: 1fr; }
       .card-head { grid-template-columns: 1fr; }
       .meta { text-align: left; white-space: normal; }
       .frame { min-height: 210px; }
@@ -161,7 +173,7 @@
     <div class="title-row">
       <div>
         <h1>Yerevan image mapping review</h1>
-        <div class="subtitle">AI original → portfolio proposal → contextual override where the proposal is weak.</div>
+        <div class="subtitle">AI original → portfolio proposal → explicit keep, replace, or remove review decision.</div>
       </div>
       <div class="review-badge">Review only · no site changes</div>
     </div>
@@ -173,7 +185,7 @@
       <button id="fit" type="button">Fit images</button>
       <button id="export" type="button">Export choices CSV</button>
     </div>
-    <div class="toolbar-note">Scroll continuously through every mapping. Click a candidate or contextual override to select it locally; no choice modifies the website.</div>
+    <div class="toolbar-note">Scroll continuously through every mapping. Choose keep, replacement, or remove and add an optional note. Choices stay in this browser until exported; no choice modifies the website.</div>
     <div class="source-links">Source sheets:
       <a href="contact-sheets/portfolio-dishes.png" target="_blank">portfolio dishes</a>
       <a href="contact-sheets/portfolio-interiors.png" target="_blank">portfolio interiors</a>
@@ -194,15 +206,38 @@
   <script>
     const data = JSON.parse(document.getElementById('mapping-data').textContent);
     const LOAD_BATCH = 24;
+    const EXPORT_SCHEMA_VERSION = '1';
+    const SITE_SLUG = 'yerevan-sac-rebuild-via-saas-builder';
+    const SNAPSHOT_SHA = '9af22d772beb8b61206cfc764abea9ac2f487e4c';
+    const STORAGE_KEY = 'yerevan-image-review-decisions-v2';
     const state = { search: '', category: '', missing: '', contain: false, visibleCount: LOAD_BATCH, renderedCount: 0 };
-    const selections = JSON.parse(localStorage.getItem('yerevan-image-review-selections') || '{}');
+    const parseStored = key => { try { return JSON.parse(localStorage.getItem(key) || '{}'); } catch { return {}; } };
+    const legacySelections = parseStored('yerevan-image-review-selections');
+    const reviews = parseStored(STORAGE_KEY);
     const el = Object.fromEntries(['stats','search','category','missing','fit','export','resultCount','cards','loadStatus'].map(id => [id, document.getElementById(id)]));
 
     const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
     const basename = url => { try { return decodeURIComponent(new URL(url).pathname.split('/').pop()); } catch { return url; } };
     const candidates = mapping => [mapping.recommendedCandidate, ...(mapping.alternates || [])].filter(Boolean);
     const allCandidates = mapping => [...candidates(mapping), mapping.contextOverride].filter(Boolean);
-    const selectedCandidate = mapping => allCandidates(mapping).find(c => c.url === selections[mapping.aiUrl]) || mapping.recommendedCandidate;
+    const defaultCandidate = mapping => mapping.recommendedCandidate;
+    const reviewFor = mapping => {
+      const saved = reviews[mapping.aiUrl];
+      if (saved && ['keep','replace','remove'].includes(saved.decision)) {
+        return { decision: saved.decision, selectedUrl: saved.selectedUrl || defaultCandidate(mapping).url, note: saved.note || '', touched: saved.touched !== false };
+      }
+      const legacyUrl = legacySelections[mapping.aiUrl];
+      if (legacyUrl) return { decision: 'replace', selectedUrl: legacyUrl, note: '', touched: true };
+      return { decision: 'replace', selectedUrl: defaultCandidate(mapping).url, note: '', touched: false };
+    };
+    const selectedCandidate = mapping => {
+      const review = reviewFor(mapping);
+      return allCandidates(mapping).find(candidate => candidate.url === review.selectedUrl) || defaultCandidate(mapping);
+    };
+    const saveReview = (mapping, update) => {
+      reviews[mapping.aiUrl] = { ...reviewFor(mapping), ...update, touched: true };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+    };
     const aspectStyle = mapping => {
       const ratio = Math.max(.55, Math.min(2.1, Number(mapping.targetAspectRatio) || 1.35));
       return 'aspect-ratio:' + ratio;
@@ -216,7 +251,7 @@
         '<span class="stat"><strong>' + Object.keys(data.categoryCounts).length + '</strong> categories</span>',
         '<span class="stat"><strong>' + missingTotal + '</strong> missing-category placements</span>',
         '<span class="stat"><strong>' + data.contextOverrideCount + '</strong> contextual overrides</span>',
-        '<span class="stat"><strong>' + Object.keys(selections).length + '</strong> reviewed choices</span>'
+        '<span class="stat"><strong>' + data.mappings.filter(mapping => reviewFor(mapping).touched).length + '</strong> reviewed choices</span>'
       ].join('');
       Object.keys(data.categoryCounts).sort().forEach(category => {
         const option = document.createElement('option');
@@ -253,6 +288,7 @@
     }
 
     function cardHtml(mapping, absoluteIndex) {
+      const review = reviewFor(mapping);
       const selected = selectedCandidate(mapping);
       const missing = mapping.missingCategory ? '<div class="missing">Gap: ' + escapeHtml(mapping.missingCategory) + '</div>' : '';
       const override = mapping.contextOverride;
@@ -263,11 +299,20 @@
         '<div class="meta">' + missing + '<div>' + mapping.routeCount + ' route' + (mapping.routeCount === 1 ? '' : 's') + ' · ' + escapeHtml(mapping.placementType) + ' · ratio ' + escapeHtml(mapping.targetAspectRatio) + '</div></div></div>' +
         '<div class="compare ' + (override ? 'has-override' : '') + '">' +
           '<div class="side"><div class="side-title"><strong class="before-label">Before · AI generated</strong><a href="' + escapeHtml(mapping.aiUrl) + '" target="_blank" rel="noreferrer">open</a></div><div class="frame ' + (state.contain ? 'contain' : '') + '" style="' + aspectStyle(mapping) + '"><img loading="lazy" src="' + escapeHtml(mapping.aiUrl) + '" alt="AI-generated original"></div><div class="filename">' + escapeHtml(mapping.fileName || basename(mapping.aiUrl)) + '</div></div>' +
-          '<div class="side"><div class="side-title"><strong class="after-label">After · selected proposal</strong><a class="after-link" href="' + escapeHtml(selected.url) + '" target="_blank" rel="noreferrer">open</a></div><div class="frame ' + (state.contain ? 'contain' : '') + '" style="' + aspectStyle(mapping) + '"><img class="after-img" loading="lazy" src="' + escapeHtml(selected.url) + '" alt="Proposed verified replacement"></div><div class="candidate-name">' + escapeHtml(selected.label || basename(selected.url)) + '</div><div class="candidate-meta">' + escapeHtml(selected.source) + ' · ' + escapeHtml(selected.orientation) + (selected.websiteEnabled === false ? ' · portfolio flag currently disabled' : '') + '</div></div>' +
+          '<div class="side"><div class="side-title"><strong class="after-label">Replacement candidate preview</strong><a class="after-link" href="' + escapeHtml(selected.url) + '" target="_blank" rel="noreferrer">open</a></div><div class="frame ' + (state.contain ? 'contain' : '') + '" style="' + aspectStyle(mapping) + '"><img class="after-img" loading="lazy" src="' + escapeHtml(selected.url) + '" alt="Proposed verified replacement"></div><div class="candidate-name">' + escapeHtml(selected.label || basename(selected.url)) + '</div><div class="candidate-meta">' + escapeHtml(selected.source) + ' · ' + escapeHtml(selected.orientation) + (selected.websiteEnabled === false ? ' · portfolio flag currently disabled' : '') + '</div></div>' +
           overrideHtml +
         '</div>' +
         '<div class="crop"><strong>Crop guidance:</strong> ' + escapeHtml(mapping.cropGuidance) + '</div>' +
         '<div class="choices">' + candidates(mapping).map((candidate, index) => choiceHtml(mapping, candidate, index, selected)).join('') + '</div>' +
+        '<div class="decision-panel"><div class="decision-heading"><strong>Review decision</strong><span>' + (review.touched ? 'Saved in this browser' : 'Default proposal · not yet reviewed') + '</span></div>' +
+          '<div class="decision-actions">' +
+            '<button class="decision-action ' + (review.decision === 'keep' ? 'selected' : '') + '" type="button" data-ai="' + escapeHtml(mapping.aiUrl) + '" data-decision="keep">Keep/include existing</button>' +
+            '<button class="decision-action ' + (review.decision === 'replace' ? 'selected' : '') + '" type="button" data-ai="' + escapeHtml(mapping.aiUrl) + '" data-decision="replace">Use selected replacement</button>' +
+            '<button class="decision-action ' + (review.decision === 'remove' ? 'selected' : '') + '" type="button" data-ai="' + escapeHtml(mapping.aiUrl) + '" data-decision="remove">Remove completely from this webpage/website</button>' +
+          '</div>' +
+          '<label class="review-note-label">Reviewer note (preserved in CSV)<textarea class="review-note" data-ai="' + escapeHtml(mapping.aiUrl) + '" placeholder="Optional rationale, crop request, or placement note">' + escapeHtml(review.note) + '</textarea></label>' +
+          '<div class="review-safety">Review decision only. This does not delete, replace, publish, or deploy any website asset.</div>' +
+        '</div>' +
       '</article>';
     }
 
@@ -307,14 +352,42 @@
       }
     }
 
+    const EXPORT_HEADERS = ['schema_version','site_slug','snapshot_sha','asset_id','ai_url','decision','selected_url','selected_label','selected_source','routes','route_count','placement_type','ancestor_stitch','category','crop_guidance','reviewer_note','context_override_url','context_override_reason'];
+    const csvQuote = value => '"' + String(value ?? '').replaceAll('"','""') + '"';
+    function exportRecord(mapping) {
+      const review = reviewFor(mapping);
+      const candidate = selectedCandidate(mapping);
+      const selected = review.decision === 'keep'
+        ? { url: mapping.aiUrl, label: 'Keep/include existing', source: 'existing-site-asset' }
+        : review.decision === 'remove'
+          ? { url: '', label: '', source: '' }
+          : candidate;
+      return {
+        schema_version: EXPORT_SCHEMA_VERSION,
+        site_slug: SITE_SLUG,
+        snapshot_sha: SNAPSHOT_SHA,
+        asset_id: mapping.fileName || basename(mapping.aiUrl),
+        ai_url: mapping.aiUrl,
+        decision: review.decision,
+        selected_url: selected.url,
+        selected_label: selected.label,
+        selected_source: selected.source,
+        routes: (mapping.routes || []).join('|'),
+        route_count: mapping.routeCount,
+        placement_type: mapping.placementType,
+        ancestor_stitch: mapping.ancestorStitch,
+        category: mapping.category,
+        crop_guidance: mapping.cropGuidance,
+        reviewer_note: review.note,
+        context_override_url: mapping.contextOverride?.url,
+        context_override_reason: mapping.contextOverride?.overrideReason
+      };
+    }
+    const buildExportRecords = (mappings = data.mappings) => mappings.map(exportRecord);
+    const serializeCsv = records => [EXPORT_HEADERS.join(','), ...records.map(record => EXPORT_HEADERS.map(header => csvQuote(record[header])).join(','))].join('\r\n');
+
     function exportCsv() {
-      const headers = ['ai_url','chosen_url','chosen_label','chosen_source','context_override_url','context_override_reason','category','routes','crop_guidance'];
-      const quote = value => '"' + String(value ?? '').replaceAll('"','""') + '"';
-      const rows = data.mappings.map(mapping => {
-        const chosen = selectedCandidate(mapping);
-        return [mapping.aiUrl, chosen.url, chosen.label, chosen.source, mapping.contextOverride?.url, mapping.contextOverride?.overrideReason, mapping.category, mapping.routes.join('|'), mapping.cropGuidance].map(quote).join(',');
-      });
-      const blob = new Blob([[headers.join(','), ...rows].join('\n')], {type: 'text/csv'});
+      const blob = new Blob([serializeCsv(buildExportRecords())], {type: 'text/csv;charset=utf-8'});
       const anchor = document.createElement('a');
       anchor.href = URL.createObjectURL(blob);
       anchor.download = 'yerevan-reviewed-image-mapping.csv';
@@ -330,16 +403,33 @@
     document.addEventListener('click', event => {
       const choice = event.target.closest('.choice, .select-override');
       if (choice) {
-        selections[choice.dataset.ai] = choice.dataset.url;
-        localStorage.setItem('yerevan-image-review-selections', JSON.stringify(selections));
+        const mapping = data.mappings.find(item => item.aiUrl === choice.dataset.ai);
+        saveReview(mapping, { decision: 'replace', selectedUrl: choice.dataset.url });
+        populateSelectionCount();
+        render(false);
+        return;
+      }
+      const decision = event.target.closest('.decision-action');
+      if (decision) {
+        const mapping = data.mappings.find(item => item.aiUrl === decision.dataset.ai);
+        saveReview(mapping, { decision: decision.dataset.decision });
         populateSelectionCount();
         render(false);
       }
     });
+    document.addEventListener('input', event => {
+      const note = event.target.closest('.review-note');
+      if (!note) return;
+      const mapping = data.mappings.find(item => item.aiUrl === note.dataset.ai);
+      saveReview(mapping, { note: note.value });
+      populateSelectionCount();
+    });
     function populateSelectionCount() {
       const stats = el.stats.querySelectorAll('.stat');
-      if (stats[5]) stats[5].innerHTML = '<strong>' + Object.keys(selections).length + '</strong> reviewed choices';
+      if (stats[5]) stats[5].innerHTML = '<strong>' + data.mappings.filter(mapping => reviewFor(mapping).touched).length + '</strong> reviewed choices';
     }
+
+    window.__YEREVAN_REVIEW_TEST__ = { data, reviews, saveReview, reviewFor, exportRecord, buildExportRecords, serializeCsv, headers: EXPORT_HEADERS, storageKey: STORAGE_KEY };
 
     populateHeader();
     render();
