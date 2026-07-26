@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "slug": "old-stone-landscaping-llc-2824e0b72cba",
+  "status": "ready",
+  "observedAt": "2026-07-26T14:56:24.040Z",
+  "business": {
+    "name": "Old Stone Landscaping LLC",
+    "primaryCategory": "Landscaper",
+    "primaryLocation": "OR",
+    "phone": "+1503-309-1431",
+    "website": "https://oldstonelandscapingllc.com/",
+    "services": [
+      "Landscape design",
+      "Installation of plants and features",
+      "Lawn care"
+    ],
+    "excludedServices": [],
+    "serviceLocations": [
+      {
+        "label": "OR",
+        "latitude": 45.580661,
+        "longitude": -122.374392
+      }
+    ]
+  },
+  "demand": [
+    {
+      "service": "Landscape design",
+      "keyword": "landscape design near me",
+      "location": "OR",
+      "state": "ready",
+      "monthlySearches": 40,
+      "competition": "LOW",
+      "lowTopPageBid": 2.62048,
+      "highTopPageBid": 6.760336,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T14:56:24.040Z"
+    },
+    {
+      "service": "Installation of plants and features",
+      "keyword": "installation of plants and features near me",
+      "location": "OR",
+      "state": "ready",
+      "monthlySearches": 0,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T14:56:24.040Z"
+    },
+    {
+      "service": "Lawn care",
+      "keyword": "lawn care near me",
+      "location": "OR",
+      "state": "ready",
+      "monthlySearches": 210,
+      "competition": "HIGH",
+      "lowTopPageBid": 5.678182,
+      "highTopPageBid": 16.37339,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T14:56:24.040Z"
+    }
+  ],
+  "grids": [
+    {
+      "service": "Landscape design",
+      "keyword": "landscape design near me",
+      "location": "OR",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T15:00:21.525Z"
+    },
+    {
+      "service": "Installation of plants and features",
+      "keyword": "installation of plants and features near me",
+      "location": "OR",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T14:58:21.478Z"
+    },
+    {
+      "service": "Lawn care",
+      "keyword": "lawn care near me",
+      "location": "OR",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T15:00:21.525Z"
+    }
+  ],
+  "insight": {
+    "headline": "Visibility has room to expand.",
+    "body": "Old Stone Landscaping LLC is missing from 1% of the measured OR grid for Landscape design.",
+    "basis": [
+      "Landscape design in OR",
+      "0% top-three coverage",
+      "1% not found"
+    ]
+  },
+  "unavailable": []
+}
