@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "slug": "real-texas-plumbing-heating-and-air-e2432518637b",
-  "status": "partial",
-  "observedAt": "2026-07-26T04:40:13.238Z",
+  "status": "ready",
+  "observedAt": "2026-07-26T05:54:20.818Z",
   "business": {
     "name": "Real Texas Plumbing - Heating and Air",
     "primaryCategory": "Septic system service",
@@ -28,25 +28,35 @@
       "service": "Septic system installation",
       "keyword": "septic system installation near me",
       "location": "Lago Vista, TX",
-      "state": "failed",
+      "state": "ready",
+      "monthlySearches": 10,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T05:00:24.112Z"
+      "observedAt": "2026-07-26T05:54:20.818Z"
     },
     {
       "service": "Septic tank repair",
       "keyword": "septic tank repair near me",
       "location": "Lago Vista, TX",
-      "state": "failed",
+      "state": "ready",
+      "monthlySearches": 10,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T05:00:24.112Z"
+      "observedAt": "2026-07-26T05:54:20.818Z"
     },
     {
       "service": "Septic tank pumping",
       "keyword": "septic tank pumping near me",
       "location": "Lago Vista, TX",
-      "state": "failed",
+      "state": "ready",
+      "monthlySearches": 10,
+      "competition": "HIGH",
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T05:00:24.112Z"
+      "observedAt": "2026-07-26T05:54:20.818Z"
     }
   ],
   "grids": [
@@ -249,21 +259,5 @@
       "1% not found"
     ]
   },
-  "unavailable": [
-    {
-      "section": "demand",
-      "subject": "septic system installation near me",
-      "message": "Search demand was unavailable when this snapshot was prepared."
-    },
-    {
-      "section": "demand",
-      "subject": "septic tank repair near me",
-      "message": "Search demand was unavailable when this snapshot was prepared."
-    },
-    {
-      "section": "demand",
-      "subject": "septic tank pumping near me",
-      "message": "Search demand was unavailable when this snapshot was prepared."
-    }
-  ]
+  "unavailable": []
 }
