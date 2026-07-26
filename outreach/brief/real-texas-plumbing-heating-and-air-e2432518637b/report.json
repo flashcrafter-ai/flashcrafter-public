@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "slug": "real-texas-plumbing-heating-and-air-e2432518637b",
+  "status": "partial",
+  "observedAt": "2026-07-26T04:42:13.265Z",
+  "business": {
+    "name": "Real Texas Plumbing - Heating and Air",
+    "primaryCategory": "Septic system service",
+    "primaryLocation": "Lago Vista, TX",
+    "phone": "+1512-662-2949",
+    "website": "https://realtexasplumbing.com/",
+    "services": [
+      "Septic system installation",
+      "Septic tank repair",
+      "Septic tank pumping"
+    ],
+    "excludedServices": [],
+    "serviceLocations": [
+      {
+        "label": "Lago Vista, TX",
+        "latitude": 30.4551126,
+        "longitude": -97.9903251
+      }
+    ]
+  },
+  "demand": [
+    {
+      "service": "Septic system installation",
+      "keyword": "septic system installation near me",
+      "location": "Lago Vista, TX",
+      "state": "failed",
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T04:42:13.265Z"
+    },
+    {
+      "service": "Septic tank repair",
+      "keyword": "septic tank repair near me",
+      "location": "Lago Vista, TX",
+      "state": "failed",
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T04:42:13.265Z"
+    },
+    {
+      "service": "Septic tank pumping",
+      "keyword": "septic tank pumping near me",
+      "location": "Lago Vista, TX",
+      "state": "failed",
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T04:42:13.265Z"
+    }
+  ],
+  "grids": [
+    {
+      "service": "Septic system installation",
+      "keyword": "septic system installation near me",
+      "location": "Lago Vista, TX",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T04:41:14.185Z"
+    },
+    {
+      "service": "Septic tank repair",
+      "keyword": "septic tank repair near me",
+      "location": "Lago Vista, TX",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T04:42:13.265Z"
+    },
+    {
+      "service": "Septic tank pumping",
+      "keyword": "septic tank pumping near me",
+      "location": "Lago Vista, TX",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T04:42:13.265Z"
+    }
+  ],
+  "insight": {
+    "headline": "Visibility has room to expand.",
+    "body": "Real Texas Plumbing - Heating and Air is missing from 1% of the measured Lago Vista, TX grid for Septic system installation.",
+    "basis": [
+      "Septic system installation in Lago Vista, TX",
+      "0% top-three coverage",
+      "1% not found"
+    ]
+  },
+  "unavailable": [
+    {
+      "section": "demand",
+      "subject": "septic system installation near me",
+      "message": "Search demand was unavailable when this snapshot was prepared."
+    },
+    {
+      "section": "demand",
+      "subject": "septic tank repair near me",
+      "message": "Search demand was unavailable when this snapshot was prepared."
+    },
+    {
+      "section": "demand",
+      "subject": "septic tank pumping near me",
+      "message": "Search demand was unavailable when this snapshot was prepared."
+    }
+  ]
+}
