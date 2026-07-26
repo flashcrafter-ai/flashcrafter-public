@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "slug": "high-prairie-designs-a5c16954f413",
+  "status": "ready",
+  "observedAt": "2026-07-26T16:48:27.703Z",
+  "business": {
+    "name": "High prairie designs",
+    "primaryCategory": "Fabrication engineer",
+    "primaryLocation": "Tulsa, OK",
+    "phone": "+1918-629-4483",
+    "website": "http://www.highprairiedesigns.com/",
+    "services": [
+      "Fabrication engineering",
+      "Design consultation",
+      "Prototyping"
+    ],
+    "excludedServices": [],
+    "serviceLocations": [
+      {
+        "label": "Tulsa, OK",
+        "latitude": 36.1488,
+        "longitude": -96.0019003
+      }
+    ]
+  },
+  "demand": [
+    {
+      "service": "Fabrication engineering",
+      "keyword": "fabrication engineering near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "monthlySearches": 10,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T16:48:27.703Z"
+    },
+    {
+      "service": "Design consultation",
+      "keyword": "design consultation near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "monthlySearches": 0,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T16:48:27.703Z"
+    },
+    {
+      "service": "Prototyping",
+      "keyword": "prototyping near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "monthlySearches": 10,
+      "lowTopPageBid": 0,
+      "highTopPageBid": 0,
+      "source": "google_ads_keyword_planner",
+      "observedAt": "2026-07-26T16:48:27.703Z"
+    }
+  ],
+  "grids": [
+    {
+      "service": "Fabrication engineering",
+      "keyword": "fabrication engineering near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T16:50:26.795Z"
+    },
+    {
+      "service": "Design consultation",
+      "keyword": "design consultation near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": 5
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": 5
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": 10
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": 5
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": 6
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": 12
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": 7
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": 7
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": 18
+        }
+      ],
+      "summary": {
+        "avgRank": 8.3,
+        "top3Pct": 0,
+        "notFoundPct": 0
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T16:50:26.795Z"
+    },
+    {
+      "service": "Prototyping",
+      "keyword": "prototyping near me",
+      "location": "Tulsa, OK",
+      "state": "ready",
+      "gridSize": 3,
+      "gridSpacingM": 3219,
+      "scanType": "local_finder",
+      "points": [
+        {
+          "row": 0,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "rank": null
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "rank": null
+        }
+      ],
+      "summary": {
+        "avgRank": null,
+        "top3Pct": 0,
+        "notFoundPct": 1
+      },
+      "source": "dataforseo_rank_grid",
+      "observedAt": "2026-07-26T16:50:26.795Z"
+    }
+  ],
+  "insight": {
+    "headline": "Visibility has room to expand.",
+    "body": "High prairie designs is missing from 1% of the measured Tulsa, OK grid for Fabrication engineering.",
+    "basis": [
+      "Fabrication engineering in Tulsa, OK",
+      "0% top-three coverage",
+      "1% not found"
+    ]
+  },
+  "unavailable": []
+}
