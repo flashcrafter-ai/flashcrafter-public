@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "slug": "real-texas-plumbing-heating-and-air-e2432518637b",
   "status": "partial",
-  "observedAt": "2026-07-26T04:44:13.431Z",
+  "observedAt": "2026-07-26T04:45:13.334Z",
   "business": {
     "name": "Real Texas Plumbing - Heating and Air",
     "primaryCategory": "Septic system service",
@@ -30,7 +30,7 @@
       "location": "Lago Vista, TX",
       "state": "failed",
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T04:44:13.431Z"
+      "observedAt": "2026-07-26T04:45:13.334Z"
     },
     {
       "service": "Septic tank repair",
@@ -38,7 +38,7 @@
       "location": "Lago Vista, TX",
       "state": "failed",
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T04:44:13.431Z"
+      "observedAt": "2026-07-26T04:45:13.334Z"
     },
     {
       "service": "Septic tank pumping",
@@ -46,7 +46,7 @@
       "location": "Lago Vista, TX",
       "state": "failed",
       "source": "google_ads_keyword_planner",
-      "observedAt": "2026-07-26T04:44:13.431Z"
+      "observedAt": "2026-07-26T04:45:13.334Z"
     }
   ],
   "grids": [
